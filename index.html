@@ -19,13 +19,17 @@ section h2{font-size:18px;margin:0 0 10px}.muted{color:var(--muted);font-size:13
 .empty{padding:30px;text-align:center;color:var(--muted)}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
 @media(min-width:700px){main{padding:22px}.day h2{font-size:21px}}
+.photo{width:100%;height:190px;object-fit:cover;border-radius:13px;margin-top:13px;background:#e9edf5}
+.photo-caption{font-size:12px;color:var(--muted);margin-top:5px}
+.bilingual{font-weight:600}
 </style>
 </head>
 <body>
 <header><h1 id="title"></h1><p id="subtitle"></p></header>
 <main>
   <div class="toolbar" id="nav"></div>
-  <input class="search" id="search" placeholder="搜尋景點、城市、交通、飯店…">
+  <div class="card" style="padding:10px 14px"><strong>行程起點：</strong>2/3（三）＝ Day 1；Day 編號依 trip-data.js 日期順序自動產生。</div>
+<input class="search" id="search" placeholder="搜尋景點、城市、交通、飯店…">
   <div id="app"></div>
 </main>
 <footer>行程資料與網頁程式分離：修改行程只需要編輯 trip-data.js，不要修改 index.html。</footer>
@@ -36,6 +40,32 @@ document.getElementById('title').textContent=D.title;
 document.getElementById('subtitle').textContent=D.subtitle;
 
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+
+const IMAGE_MAP = {
+  "2/3":"https://images.unsplash.com/photo-1540339832862-474599807836?auto=format&fit=crop&w=1200&q=80",
+  "2/4":"https://images.unsplash.com/photo-1516550893923-42d6c1f0c7e9?auto=format&fit=crop&w=1200&q=80",
+  "2/5":"https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1200&q=80",
+  "2/6":"https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+  "2/7":"https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80",
+  "2/8":"https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1200&q=80",
+  "2/9":"https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=1200&q=80",
+  "2/10":"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
+  "2/11":"https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1200&q=80",
+  "2/12":"https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1200&q=80",
+  "2/13":"https://images.unsplash.com/photo-1516550893923-42d6c1f0c7e9?auto=format&fit=crop&w=1200&q=80",
+  "2/14":"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=80",
+  "2/15":"https://images.unsplash.com/photo-1522083165195-3424ed129620?auto=format&fit=crop&w=1200&q=80"
+};
+function photoFor(date,title){
+  const url=IMAGE_MAP[date];
+  if(!url) return '';
+  const safeTitle=esc(title);
+  return `<img class="photo" src="${url}" alt="${safeTitle}" loading="lazy"
+    onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,${encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect width="1200" height="500" fill="#e9edf5"/><text x="600" y="240" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#657084">'+safeTitle.replace(/'/g,'')+'</text><text x="600" y="300" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#8a94a6">Travel Photo</text></svg>'
+    )}'">`;
+}
+
 function render(filter=''){
   const q=filter.trim().toLowerCase();
   const days=D.days.filter(d=>!q || JSON.stringify(d).toLowerCase().includes(q));
@@ -51,6 +81,7 @@ function render(filter=''){
   days.forEach((d)=>{
     const n=D.days.indexOf(d)+1;
     html+=`<article class="card day" id="day-${n}">
+      ${photoFor(d.date,d.title)}
       <div class="day-head"><div><div class="day-no">DAY ${n}</div><h2>${esc(d.title)}</h2><div class="city">${esc(d.city)}</div></div><div class="date">${esc(d.date)}（${esc(d.weekday)}）</div></div>
       <div class="timeline">${d.items.map(x=>`<div class="row"><div class="time">${esc(x[0])}</div><div>${esc(x[1])}</div></div>`).join('')}</div>
       <div class="note"><strong>注意：</strong>${esc(d.notes)}<br><span class="muted">住宿：${esc(d.hotel)}</span></div>
