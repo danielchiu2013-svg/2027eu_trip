@@ -1,0 +1,12 @@
+{
+  "name": "2027 中歐冬季旅程",
+  "short_name": "2027 中歐旅程",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f8",
+  "theme_color": "#0b1220",
+  "lang": "zh-Hant",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
