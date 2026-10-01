@@ -100,7 +100,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=nav-fix-2"></script>
+<script src="trip-data.js?v=nav-fix-3"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -113,7 +113,7 @@ function go(view, scroll=true){
   $$('.view').forEach(v=>v.classList.toggle('hidden',v.id!==view));
   $$('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
   $$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b.dataset.goto===view));
-  if(scroll && view!=='overview') window.scrollTo({top:0,behavior:'smooth'});
+  if(scroll && view!=='overview') window.scrollTo({top:0,behavior:'instant'});
 }
 function typeLabel(type){return ({flight:'航班',transfer:'轉機',transit:'移動',rest:'休息',arrival:'抵達',hotel:'住宿',photo:'攝影',place:'景點',food:'餐食',drive:'自駕',car:'租車',train:'火車',adventure:'體驗',airport:'機場'})[type]||type}
 function renderDays(q=''){
