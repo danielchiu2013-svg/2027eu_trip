@@ -135,8 +135,8 @@ function renderPlaces(q=''){
   const needle=q.trim().toLowerCase();
   const list=D.places.filter(p=>!needle || JSON.stringify(p).toLowerCase().includes(needle));
   $('#placeGrid').innerHTML=list.length?list.map(p=>`<article class="card place-card">
-    <img class="place-img" src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">
-    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">圖片：Wikimedia Commons／公開圖片來源</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div></div></article>`).join(''):`<div class="card empty">找不到景點。</div>`;
+    <img class="place-img" src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.display='none'">
+    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source"><a href="${esc(p.imageSource||p.image)}" target="_blank" rel="noopener">圖片來源／原圖</a></div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div></div></article>`).join(''):`<div class="card empty">找不到景點。</div>`;
 }
 function renderFlights(){
   $('#flightList').innerHTML=D.flights.map(f=>`<div class="list-row"><div class="list-main"><b>${esc(f.date)}（${esc(f.weekday)}）　<span class="flight-code">${esc(f.flight)}</span></b><div>${esc(f.route)}</div></div><div class="list-action">${esc(f.time)}</div></div>`).join('');
@@ -171,3 +171,4 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 </script>
 </body>
 </html>
+
