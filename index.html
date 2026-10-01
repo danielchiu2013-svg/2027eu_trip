@@ -100,7 +100,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=nav-fix-5"></script>
+<script src="trip-data.js?v=nav-fix-6"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -166,7 +166,7 @@ document.addEventListener('click',e=>{
 $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
-$('#placeGrid').addEventListener('click',e=>{const a=e.target.closest('[data-day-link]');if(!a)return;e.preventDefault();$('#daySearch').value='';renderDays();go('days',false);requestAnimationFrame(()=>requestAnimationFrame(()=>{const target=document.getElementById('day-'+a.dataset.day);if(!target)return;const header=document.querySelector('header').getBoundingClientRect().height;const tools=$('.sticky-tools').getBoundingClientRect().height;const top=target.getBoundingClientRect().top+window.scrollY-header-tools-12;scrollNow(top)}))});
+$('#placeGrid').addEventListener('click',e=>{const a=e.target.closest('[data-day-link]');if(!a)return;e.preventDefault();const id='day-'+a.dataset.day;$('#daySearch').value='';renderDays();go('days',false);setTimeout(()=>{const target=document.getElementById(id);if(!target)return;target.style.scrollMarginTop=(document.querySelector('header').getBoundingClientRect().height+$('.sticky-tools').getBoundingClientRect().height+12)+'px';history.replaceState(null,'',location.pathname+location.search);location.hash=id},0)});
 renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}
 </script>
