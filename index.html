@@ -100,20 +100,20 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=places-zh-1"></script>
+<script src="trip-data.js?v=nav-fix-1"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 let currentView='overview';
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function go(view){
+function go(view, scroll=true){
   if(!document.getElementById(view)) return;
   currentView=view;
   $$('.view').forEach(v=>v.classList.toggle('hidden',v.id!==view));
   $$('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
   $$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b.dataset.goto===view));
-  if(view!=='overview') window.scrollTo({top:0,behavior:'smooth'});
+  if(scroll && view!=='overview') window.scrollTo({top:0,behavior:'smooth'});
 }
 function typeLabel(type){return ({flight:'航班',transfer:'轉機',transit:'移動',rest:'休息',arrival:'抵達',hotel:'住宿',photo:'攝影',place:'景點',food:'餐食',drive:'自駕',car:'租車',train:'火車',adventure:'體驗',airport:'機場'})[type]||type}
 function renderDays(q=''){
@@ -165,7 +165,7 @@ document.addEventListener('click',e=>{
 $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
-$('#placeGrid').addEventListener('click',e=>{const a=e.target.closest('[data-day-link]');if(!a)return;e.preventDefault();go('days');setTimeout(()=>document.getElementById('day-'+a.dataset.day)?.scrollIntoView({behavior:'smooth',block:'start'}),60)});
+$('#placeGrid').addEventListener('click',e=>{const a=e.target.closest('[data-day-link]');if(!a)return;e.preventDefault();$('#daySearch').value='';renderDays();go('days',false);requestAnimationFrame(()=>requestAnimationFrame(()=>{const target=document.getElementById('day-'+a.dataset.day);if(!target)return;const header=document.querySelector('header').getBoundingClientRect().height;const tools=$('.sticky-tools').getBoundingClientRect().height;const top=target.getBoundingClientRect().top+window.scrollY-header-tools-12;window.scrollTo({top,behavior:'smooth'})}))});
 renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}
 </script>
