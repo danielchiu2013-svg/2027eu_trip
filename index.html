@@ -97,14 +97,16 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=cityoverview-winterphotos-20261002"></script>
+<script src="trip-data.js?v=cityoverview-winterphotos-20261002b"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 let currentView='overview';
-const attractionZh=[['Fisherman’s Bastion','漁人堡'],["Fisherman's Bastion",'漁人堡'],['Matthias Church','馬提亞斯教堂'],['Szentendre','聖安德烈'],['Buda Castle','布達城堡'],['Jaszczurówka','亞斯楚羅夫卡'],['Pęksowy Brzyzek','彭克索維布日策克'],['Gubałówka','古巴沃夫卡山'],['Krupówki','克魯波夫基街'],['Kasprowy Wierch','卡斯普羅維峰'],['Snowmobile','雪地摩托車'],['Wawel Cathedral','瓦維爾主教座堂'],['Wawel Castle','瓦維爾城堡'],['Kanonicza Street','卡諾尼察街'],['Grodzka Street','格羅茲卡街'],['Main Market Square','中央集市廣場'],['Cloth Hall','紡織會館'],["St Mary’s Basilica",'聖母聖殿'],['Central Market Hall','中央市場大廳'],['Hungarian Parliament','匈牙利國會大廈'],['Shoes on the Danube','多瑙河畔之鞋'],['St. Stephen’s Basilica','聖史蒂芬大教堂'],['Chain Bridge','塞切尼鏈橋'],['Schönbrunn Palace','熊布朗宮'],['Belvedere Palace','美景宮'],['Hofburg','霍夫堡皇宮'],['Stephansdom','聖史蒂芬主教座堂'],['Graben','格拉本大街'],['Kohlmarkt','科爾市場街'],['Štrbské Pleso','斯特爾布斯克湖區'],['Batthyány tér','巴蒂亞尼廣場'],['Váci utca','瓦茨街'],['Danube','多瑙河'],['Old Town','老城區']];
-function localizeAttractions(value){let s=String(value??'');for(const [en,zh] of attractionZh)s=s.replaceAll(en,`${zh} ${en}`);if(s==='Wawel'||s.startsWith('Wawel →'))s=s.replaceAll('Wawel','瓦維爾 Wawel');if(s==='Schönbrunn')s='熊布朗宮 Schönbrunn';if(s==='St Mary’s')s='聖母聖殿 St Mary’s';if(s.includes('Parliament')&&!s.includes('匈牙利國會大廈'))s=s.replaceAll('Parliament','國會大廈 Parliament');if(s.includes('Basilica')&&!s.includes('聖史蒂芬大教堂'))s=s.replaceAll('Basilica','大教堂 Basilica');if(s==='Cathedral')s='主教座堂 Cathedral';return s}
+const attractionZh=[['Fisherman’s Bastion','漁人堡'],["Fisherman's Bastion",'漁人堡'],['Matthias Church','馬提亞斯教堂'],['Szentendre','聖安德烈'],['Buda Castle','布達城堡'],['Jaszczurówka','亞斯楚羅夫卡'],['Pęksowy Brzyzek','彭克索維布日策克'],['Gubałówka','古巴沃夫卡山'],['Krupówki','克魯波夫基街'],['Kasprowy Wierch','卡斯普羅維峰'],['Snowmobile','雪地摩托車'],['Wawel Cathedral','瓦維爾主教座堂'],['Wawel Castle','瓦維爾城堡'],['Wawel','瓦維爾'],['Kanonicza Street','卡諾尼察街'],['Grodzka Street','格羅茲卡街'],['Main Market Square','中央集市廣場'],['Cloth Hall','紡織會館'],["St Mary’s Basilica",'聖母聖殿'],["St Mary’s",'聖母聖殿'],['Central Market Hall','中央市場大廳'],['Central Market','中央市場'],['Hungarian Parliament','匈牙利國會大廈'],['Parliament','國會大廈'],['Shoes on the Danube','多瑙河畔之鞋'],['St. Stephen’s Basilica','聖史蒂芬大教堂'],['Basilica','大教堂'],['Chain Bridge','塞切尼鏈橋'],['Schönbrunn Palace','熊布朗宮'],['Schönbrunn','熊布朗宮'],['Belvedere Palace','美景宮'],['Belvedere','美景宮'],['Hofburg','霍夫堡皇宮'],['Stephansdom','聖史蒂芬主教座堂'],['Graben','格拉本大街'],['Kohlmarkt','科爾市場街'],['Štrbské Pleso','斯特爾布斯克湖區'],['Batthyány tér','巴蒂亞尼廣場'],['Váci utca','瓦茨街'],['Danube','多瑙河'],['Old Town','老城區'],['Cathedral','主教座堂'],['Zakopane','扎科帕內'],['Kraków','克拉科夫']];
+const attractionPattern=new RegExp(attractionZh.map(([en])=>en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|'),'g');
+const attractionChinese=new Map(attractionZh);
+function localizeAttractions(value){return String(value??'').replace(attractionPattern,en=>`${attractionChinese.get(en)} ${en}`)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function scrollNow(top){document.scrollingElement.scrollTop=top;}
 function go(view, scroll=true){
