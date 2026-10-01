@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v20';
+const CACHE = '2027eu-app-v21';
 const VERSIONED_SHELL = [
-  './index.html?v=cityoverview-winterphotos-20261002',
-  './trip-data.js?v=cityoverview-winterphotos-20261002',
+  './index.html?v=cityoverview-winterphotos-20261002b',
+  './trip-data.js?v=cityoverview-winterphotos-20261002b',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=cityoverview-winterphotos-20261002', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=cityoverview-winterphotos-20261002b', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
