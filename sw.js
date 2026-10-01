@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v23';
+const CACHE = '2027eu-app-v24';
 const VERSIONED_SHELL = [
-  './index.html?v=overview-dates-commons-primary-20261002d',
-  './trip-data.js?v=overview-dates-commons-primary-20261002d',
+  './index.html?v=overview-dates-commons-primary-20261002e',
+  './trip-data.js?v=overview-dates-commons-primary-20261002e',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=overview-dates-commons-primary-20261002d', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=overview-dates-commons-primary-20261002e', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
