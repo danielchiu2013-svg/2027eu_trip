@@ -25,7 +25,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .list-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.list-row:last-child{border-bottom:0}.list-main b{font-size:14px}.list-main div{font-size:12px;color:var(--muted);margin-top:2px}.list-action{align-self:center;white-space:nowrap}.list-action a{font-size:12px;font-weight:800;text-decoration:none}.flight-code{font-weight:900}.route{color:var(--muted);font-size:12px}.badge{display:inline-block;padding:4px 7px;border-radius:7px;background:#edf5ff;color:#1d4f91;font-size:11px;font-weight:800}
 .check-group{padding:12px 0;border-bottom:1px solid var(--line)}.check-group:last-child{border-bottom:0}.check-group-title{font-size:12px;color:var(--muted);font-weight:800;margin-bottom:7px}.check{display:flex;gap:10px;align-items:flex-start;padding:7px 0}.check input{width:18px;height:18px;accent-color:var(--accent);margin-top:2px}.check label{font-size:13px}.check.done label{text-decoration:line-through;color:#98a1af}.progress{height:8px;background:#edf0f4;border-radius:999px;overflow:hidden;margin-top:9px}.progress i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:.2s}
 .notice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.notice{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}.notice b{font-size:14px}.notice p{margin:5px 0 0;font-size:12px;color:var(--muted)}
-.overview-route{font-size:13px;font-weight:850;line-height:1.7;padding:12px 14px;border-radius:13px;background:#f3f6ff;color:#263e83;margin-bottom:10px}.overview-itinerary{display:grid}.overview-city{padding:13px 2px;border-bottom:1px solid var(--line)}.overview-city:last-child{border-bottom:0}.overview-city-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.overview-city h3{font-size:15px;margin:0;font-weight:900}.overview-date{font-size:11px;font-weight:850;color:var(--accent);white-space:nowrap}.overview-city p{font-size:12px;color:var(--muted);margin:4px 0;line-height:1.6}.overview-city-itinerary{font-size:12px;line-height:1.65;margin-top:5px}.overview-stay{font-size:11px;color:#576579;margin-top:4px}
+.overview-route{font-size:13px;font-weight:850;line-height:1.7;padding:12px 14px;border-radius:13px;background:#f3f6ff;color:#263e83;margin-bottom:10px}.overview-itinerary{display:grid}.overview-city{padding:13px 2px;border-bottom:1px solid var(--line)}.overview-city:last-child{border-bottom:0}.overview-city-head{display:flex;justify-content:flex-start;align-items:baseline;gap:10px}.overview-city h3{font-size:15px;margin:0;font-weight:900}.overview-date{font-size:11px;font-weight:850;color:var(--accent);white-space:nowrap;order:-1}.overview-city p{font-size:12px;color:var(--muted);margin:4px 0;line-height:1.6}.overview-city-itinerary{font-size:12px;line-height:1.65;margin-top:5px}.overview-stay{font-size:11px;color:#576579;margin-top:4px}
 .empty{text-align:center;padding:30px;color:var(--muted)}.hidden{display:none!important}footer{text-align:center;font-size:11px;color:#8a93a3;padding:20px 10px}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:25;padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center}.bottom-nav .inner{width:100%;max-width:700px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.bottom-nav button{border:0;background:transparent;padding:6px;border-radius:10px;color:#667085;font-size:11px;font-weight:800}.bottom-nav button.active{background:#eef2ff;color:#2f50bf}
 @media(max-width:680px){.summary-grid{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:repeat(2,1fr)}.place-grid{grid-template-columns:1fr}.place-img{height:180px}.day-cover{height:165px}.sticky-tools{top:82px}}
@@ -48,18 +48,19 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
       <div class="summary-grid">
         <div class="stat"><b>13</b><span>天數</span></div><div class="stat"><b>12</b><span>晚住宿</span></div><div class="stat"><b>3</b><span>同行</span></div><div class="stat"><b>2/3</b><span>Day 1 起點</span></div>
       </div>
-      <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看景點</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#" data-goto="checklist">出發清單</a></div>
+      <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看攝影景點</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#" data-goto="checklist">出發清單</a></div>
     </div>
     <div class="section-title">行程濃縮概要</div>
     <div class="card summary">
       <div class="overview-route">台北 → 新加坡 → 維也納 → 布達佩斯 → 高塔特拉山區 → Zakopane → 克拉科夫 → 布達佩斯 → 維也納 → 台北</div>
       <div class="overview-itinerary">
-        <article class="overview-city"><div class="overview-city-head"><h3>布達佩斯 Budapest</h3><span class="overview-date">2/4–2/5、2/10–2/11</span></div><p>多瑙河兩岸串起王宮山城與佩斯市中心；冬日河岸夜景、溫泉與咖啡館是城市特色。</p><div class="overview-city-itinerary"><b>行程：</b>2/4 維也納機場搭火車抵達、入住及河岸散步；2/5 聖安德烈老城、布達城堡區、馬提亞斯教堂、漁人堡；2/10 克拉科夫長途自駕返回、還車休息；2/11 中央市場、瓦茨街、聖史蒂芬大教堂、國會大廈、多瑙河畔之鞋、鏈橋。</div><div class="overview-stay"><b>住宿：</b>2/4–2/5 InterContinental Budapest；2/10–2/11 Sleek premium Aprqtment with Park</div></article>
-        <article class="overview-city"><div class="overview-city-head"><h3>斯特爾布斯克湖區 Štrbské Pleso</h3><span class="overview-date">2/6</span></div><p>高塔特拉山中的湖畔度假區，冬季以雪峰、冰湖與山林景觀為主。</p><div class="overview-city-itinerary"><b>行程：</b>自布達佩斯取車，經 Miskolc、Košice、Prešov、Poprad，傍晚抵達湖區。</div><div class="overview-stay"><b>住宿：</b>Hotel Panorama</div></article>
-        <article class="overview-city"><div class="overview-city-head"><h3>Zakopane 扎科帕內</h3><span class="overview-date">2/7–2/8</span></div><p>波蘭塔特拉山城，以木造山地建築、山景步道、冬季活動和高地人飲食文化聞名。</p><div class="overview-city-itinerary"><b>行程：</b>2/7 湖區自駕前往，參觀亞斯楚羅夫卡木造教堂、彭克索維布日策克墓園、古巴沃夫卡山與克魯波夫基街；2/8 Kuźnice 接駁、卡斯普羅維峰纜車及雪地摩托車。</div><div class="overview-stay"><b>住宿：</b>Aparthotel Cristina</div></article>
-        <article class="overview-city"><div class="overview-city-head"><h3>克拉科夫 Kraków</h3><span class="overview-date">2/9</span></div><p>保存完整的中世紀老城與波蘭王室古蹟，主廣場、教堂和石板街區適合步行。</p><div class="overview-city-itinerary"><b>行程：</b>Zakopane 自駕抵達後遊瓦維爾城堡與主教座堂、卡諾尼察街、中央集市廣場、聖母聖殿及老城夜景。</div><div class="overview-stay"><b>住宿：</b>Holiday Inn Krakow City Centre</div></article>
-        <article class="overview-city"><div class="overview-city-head"><h3>維也納 Vienna</h3><span class="overview-date">2/12–2/13</span></div><p>帝國宮殿、古典音樂與咖啡館交織的城市；歷史市中心適合以步行和大眾運輸串遊。</p><div class="overview-city-itinerary"><b>行程：</b>2/12 搭 Railjet／EC 抵達，遊聖史蒂芬主教座堂、格拉本與科爾市場街；2/13 熊布朗宮、美景宮、霍夫堡皇宮。</div><div class="overview-stay"><b>住宿：</b>InterContinental Vienna</div></article>
-        <article class="overview-city"><div class="overview-city-head"><h3>返程｜維也納 → 新加坡 → 台北</h3><span class="overview-date">2/14–2/15</span></div><p>2/14 清晨前往維也納機場搭乘 TR61，於新加坡轉搭 TR874，2/15 抵達台北。</p><div class="overview-stay"><b>住宿：</b>2/14 機上</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>出發｜台北 → 新加坡</h3><span class="overview-date">2/3（三）</span></div><p>搭乘 TR867 前往新加坡，夜間轉機後接 TR60 飛往維也納。</p><div class="overview-city-itinerary"><b>行程：</b>16:40 台北起飛，21:15 抵達新加坡；確認轉機登機門與行李直掛。</div><div class="overview-stay"><b>住宿：</b>機上／新加坡樟宜機場轉機</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>布達佩斯 Budapest</h3><span class="overview-date">2/4（四）–2/5（五）・2/10（三）–2/11（四）</span></div><p>多瑙河兩岸串起王宮山城與佩斯市中心；冬日河岸夜景、溫泉與咖啡館是城市特色。</p><div class="overview-city-itinerary"><b>行程：</b>2/4（四）維也納機場搭火車抵達、入住及河岸散步；2/5（五）聖安德烈老城、布達城堡區、馬提亞斯教堂、漁人堡；2/10（三）克拉科夫長途自駕返回、還車休息；2/11（四）中央市場、瓦茨街、聖史蒂芬大教堂、國會大廈、多瑙河畔之鞋、鏈橋。</div><div class="overview-stay"><b>住宿：</b>2/4（四）–2/5（五）InterContinental Budapest；2/10（三）–2/11（四）Sleek premium Aprqtment with Park</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>斯特爾布斯克湖區 Štrbské Pleso</h3><span class="overview-date">2/6（六）</span></div><p>高塔特拉山中的湖畔度假區，冬季以雪峰、冰湖與山林景觀為主。</p><div class="overview-city-itinerary"><b>行程：</b>自布達佩斯取車，經 Miskolc、Košice、Prešov、Poprad，傍晚抵達湖區。</div><div class="overview-stay"><b>住宿：</b>Hotel Panorama</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>Zakopane 扎科帕內</h3><span class="overview-date">2/7（日）–2/8（一）</span></div><p>波蘭塔特拉山城，以木造山地建築、山景步道、冬季活動和高地人飲食文化聞名。</p><div class="overview-city-itinerary"><b>行程：</b>2/7（日）湖區自駕前往，參觀亞斯楚羅夫卡木造教堂、彭克索維布日策克墓園、古巴沃夫卡山與克魯波夫基街；2/8（一）Kuźnice 接駁、卡斯普羅維峰纜車及雪地摩托車。</div><div class="overview-stay"><b>住宿：</b>Aparthotel Cristina</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>克拉科夫 Kraków</h3><span class="overview-date">2/9（二）</span></div><p>保存完整的中世紀老城與波蘭王室古蹟，主廣場、教堂和石板街區適合步行。</p><div class="overview-city-itinerary"><b>行程：</b>Zakopane 自駕抵達後遊瓦維爾城堡與主教座堂、卡諾尼察街、中央集市廣場、聖母聖殿及老城夜景。</div><div class="overview-stay"><b>住宿：</b>Holiday Inn Krakow City Centre</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>維也納 Vienna</h3><span class="overview-date">2/12（五）–2/13（六）</span></div><p>帝國宮殿、古典音樂與咖啡館交織的城市；歷史市中心適合以步行和大眾運輸串遊。</p><div class="overview-city-itinerary"><b>行程：</b>2/12（五）搭 Railjet／EC 抵達，遊聖史蒂芬主教座堂、格拉本與科爾市場街；2/13（六）熊布朗宮、美景宮、霍夫堡皇宮。</div><div class="overview-stay"><b>住宿：</b>InterContinental Vienna</div></article>
+        <article class="overview-city"><div class="overview-city-head"><h3>返程｜維也納 → 新加坡 → 台北</h3><span class="overview-date">2/14（日）–2/15（一）</span></div><p>2/14（日）清晨前往維也納機場搭乘 TR61，於新加坡轉搭 TR874，2/15（一）抵達台北。</p><div class="overview-stay"><b>住宿：</b>2/14（日）機上</div></article>
       </div>
     </div>
   </section>
@@ -71,8 +72,8 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   </section>
 
   <section id="places" class="view hidden">
-    <div class="section-title">景點</div>
-    <input id="placeSearch" class="search" placeholder="搜尋景點／英文名稱">
+    <div class="section-title">攝影景點</div>
+    <input id="placeSearch" class="search" placeholder="搜尋景點／英文名稱／鏡頭…">
     <div id="placeGrid" class="place-grid" style="margin-top:12px"></div>
   </section>
 
@@ -97,7 +98,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=cityoverview-winterphotos-20261002b"></script>
+<script src="trip-data.js?v=overview-dates-commons-primary-20261002c"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -136,9 +137,9 @@ function renderDays(q=''){
 function renderPlaces(q=''){
   const needle=q.trim().toLowerCase();
   const list=D.places.filter(p=>!needle || JSON.stringify(p).toLowerCase().includes(needle));
-  $('#placeGrid').innerHTML=list.length?list.map(p=>{const photos=p.images?.length===3?p.images:[p.image];return `<article class="card place-card">
-    <div class="place-gallery">${photos.map((src,i)=>`<img class="place-img" src="${esc(src)}" alt="${esc(p.name)} 冬季照片 ${i+1}" loading="lazy" onerror="this.remove()">`).join('')}</div>
-    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((src,i)=>`<a href="${esc(p.imageSources?.[i]||p.imageSource||src)}" target="_blank" rel="noopener">照片 ${i+1} 來源</a>`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div></div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
+  $('#placeGrid').innerHTML=list.length?list.map(p=>{const extra=(p.images||[]).map((src,index)=>({src,source:p.imageSources?.[index]||p.imageSource||src}));const photos=[{src:p.image,source:p.imageSource||p.image},...extra.filter(x=>x.src&&x.src!==p.image).slice(0,2)];return `<article class="card place-card">
+    <div class="place-gallery">${photos.map((photo,i)=>`<img class="place-img" src="${esc(photo.src)}" alt="${esc(p.name)} ${i===0?'景點主圖':'所在地照片 '+i}" loading="lazy" onerror="this.remove()">`).join('')}</div>
+    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((photo,i)=>`<a href="${esc(photo.source)}" target="_blank" rel="noopener">${i===0?'景點主圖':'所在地照片'} 來源</a>`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div></div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
 }
 function renderFlights(){
   $('#flightList').innerHTML=D.flights.map(f=>`<div class="list-row"><div class="list-main"><b>${esc(f.date)}（${esc(f.weekday)}）　<span class="flight-code">${esc(f.flight)}</span></b><div>${esc(f.route)}</div></div><div class="list-action">${esc(f.time)}</div></div>`).join('');
