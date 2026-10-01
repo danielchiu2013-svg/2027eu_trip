@@ -1,6 +1,52 @@
-const CACHE='2027eu-app-v8';
-const SHELL=['./','./index.html','./trip-data.js?v=places-zh-1','./manifest.webmanifest','./icon.svg'];
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(caches.match(e.request).then(cached=>cached||fetch(e.request).then(r=>{const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy)).catch(()=>{});return r}).catch(()=>cached)))})
+const CACHE = '2027eu-app-v9';
+const VERSIONED_SHELL = [
+  './index.html?v=places-zh-1',
+  './trip-data.js?v=places-zh-1',
+  './manifest.webmanifest',
+  './icon.svg'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then(cache => cache.addAll(VERSIONED_SHELL))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  if (request.method !== 'GET') return;
+
+  const isPage = request.mode === 'navigate' || (request.headers.get('accept') || '').includes('text/html');
+  if (isPage) {
+    event.respondWith(
+      fetch(request, { cache: 'no-store' })
+        .then(response => {
+          if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
+          return response;
+        })
+        .catch(async () => await caches.match(new URL('./index.html?v=places-zh-1', self.registration.scope).href) || await caches.match(request))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request)
+      .then(cached => cached || fetch(request)
+        .then(response => {
+          caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
+          return response;
+        })
+        .catch(() => cached))
+  );
+});
 
