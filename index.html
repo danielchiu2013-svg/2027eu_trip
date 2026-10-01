@@ -100,14 +100,14 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=nav-fix-4"></script>
+<script src="trip-data.js?v=nav-fix-5"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 let currentView='overview';
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function scrollNow(top){const root=document.documentElement;const previous=root.style.scrollBehavior;root.style.scrollBehavior='auto';window.scrollTo(0,top);root.style.scrollBehavior=previous;}
+function scrollNow(top){document.scrollingElement.scrollTop=top;}
 function go(view, scroll=true){
   if(!document.getElementById(view)) return;
   currentView=view;
