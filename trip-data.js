@@ -15,12 +15,12 @@ const TRIP_DATA = {
     { date: "2/15", weekday: "一", flight: "TR874", route: "Singapore SIN → Taipei TPE", time: "08:30–13:15" }
   ],
   hotels: [
-    { date: "2/4–2/6", hotel: "InterContinental Budapest", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Budapest" },
-    { date: "2/6–2/7", hotel: "Hotel Panorama", city: "Štrbské Pleso", map: "https://www.google.com/maps/search/?api=1&query=Hotel+Panorama+Strbske+Pleso" },
-    { date: "2/7–2/9", hotel: "Aparthotel Cristina", city: "Zakopane", map: "https://www.google.com/maps/search/?api=1&query=Aparthotel+Cristina+Zakopane" },
-    { date: "2/9–2/10", hotel: "Holiday Inn Krakow City Centre", city: "Kraków", map: "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Krakow+City+Centre" },
-    { date: "2/10–2/12", hotel: "IntercityHotel Budapest", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=IntercityHotel+Budapest" },
-    { date: "2/12–2/14", hotel: "InterContinental Vienna", city: "Vienna", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Vienna" }
+    { date: "2/4–2/5", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Budapest" },
+    { date: "2/6", hotel: "Hotel Panorama（全景酒店）", city: "Štrbské Pleso", map: "https://www.google.com/maps/search/?api=1&query=Hotel+Panorama+Strbske+Pleso" },
+    { date: "2/7–2/8", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", city: "Zakopane", map: "https://www.google.com/maps/search/?api=1&query=Aparthotel+Cristina+Zakopane" },
+    { date: "2/9", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", city: "Kraków", map: "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Krakow+City+Centre" },
+    { date: "2/10–2/11", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=Sleek+premium+Aprqtment+with+Park+Budapest" },
+    { date: "2/12–2/13", hotel: "InterContinental Vienna（維也納洲際酒店）", city: "Vienna", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Vienna" }
   ],
   checklist: [
     { id: "passport", label: "護照／旅行文件", group: "出發前" },
@@ -51,14 +51,14 @@ const TRIP_DATA = {
       notes: ["TPE 報到時直接確認行李是否可一路掛到 VIE。", "若為分開票券，是否需要入境新加坡／重新托運，以現場航空公司指示為準。"]
     },
     {
-      date: "2/4", weekday: "四", title: "抵達維也納 → 布達佩斯", city: "Vienna → Budapest", hotel: "InterContinental Budapest", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
+      date: "2/4", weekday: "四", title: "抵達維也納 → 布達佩斯", city: "Vienna → Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
       summary: "抵達日保持輕量：交通、入住、休息，傍晚只做多瑙河夜景。",
       highlights: ["08:30 VIE", "前往 Budapest", "入住", "Danube／Chain Bridge 夜景"],
       items: [
         ["08:30–10:30", "arrival", "抵達 Vienna VIE", "入境、領行李；時間視排隊情況調整", "約 2h"],
         ["10:30–11:00", "transit", "VIE → Wien Hbf", "Railjet／S-Bahn；確認月台與轉乘方式", "約 30m"],
         ["約 11:00–14:00", "train", "Wien Hbf → Budapest-Keleti", "選直達 Railjet／EC；2027 班次以 ÖBB 開售時刻為準", "約 3h"],
-        ["14:00–15:00", "transit", "Keleti → InterContinental Budapest", "大行李建議計程車；辦理入住或寄放行李", "約 1h"],
+        ["14:00–15:00", "transit", "Keleti → InterContinental Budapest（布達佩斯洲際酒店）", "大行李建議計程車；辦理入住或寄放行李", "約 1h"],
         ["15:00–17:00", "rest", "入住／休息／補水", "抵達日不安排需預約的景點", "2h"],
         ["17:00–18:00", "photo", "多瑙河河岸（選擇性）", "體力許可再散步；Chain Bridge 外觀", "1h"],
         ["18:00 後", "food", "晚餐與休息", "依精神狀況就近用餐", ""]
@@ -66,7 +66,7 @@ const TRIP_DATA = {
       notes: ["長途飛行與跨境轉乘日，保留彈性，不把河岸散步列為必到。", "列車班次與票價尚未開放，出發前依 ÖBB／MÁV 正式時刻表確認。"]
     },
     {
-      date: "2/5", weekday: "五", title: "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion", city: "Budapest", hotel: "InterContinental Budapest", theme: "city", photo: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
+      date: "2/5", weekday: "五", title: "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion", city: "Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
       summary: "一次完成 Szentendre 與 Buda Castle 區；Fisherman’s Bastion 不在後續重複。",
       highlights: ["Szentendre 老城", "Buda Castle", "Matthias Church", "Fisherman’s Bastion 日落"],
       items: [
@@ -85,7 +85,7 @@ const TRIP_DATA = {
       notes: ["Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。", "Fisherman’s Bastion 已在本日完成，2/11 不再排。"]
     },
     {
-      date: "2/6", weekday: "六", title: "Budapest → Miskolc → Košice → Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+      date: "2/6", weekday: "六", title: "Budapest → Miskolc → Košice → Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
       summary: "長途冬季自駕日，以高速／快速道路與路況緩衝為主。",
       highlights: ["10:00 SIXT", "約 380 km", "跨境：HU → SK", "山區冬季路況"],
       items: [
@@ -96,13 +96,13 @@ const TRIP_DATA = {
         ["15:00–15:30", "rest", "Košice 補給", "不安排正式觀光", "30m"],
         ["15:30–17:30", "drive", "Košice → Prešov → Poprad", "山區／冬季預留緩衝", "約 2h"],
         ["17:30–18:15", "drive", "Poprad → Štrbské Pleso", "山區路段", "約 45m"],
-        ["18:15–19:00", "hotel", "Hotel Panorama", "入住", ""],
+        ["18:15–19:00", "hotel", "Hotel Panorama（全景酒店）", "入住", ""],
         ["19:00–20:00", "food", "晚餐", "", "1h"]
       ],
       notes: ["跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "冬季胎四條；雪鏈作為備用。"]
     },
     {
-      date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Pęksowy Brzyzek → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
+      date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Pęksowy Brzyzek → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
       summary: "09:00 退房後自駕至 Zakopane，途中安排 Jaszczurówka 與 Pęksowy Brzyzek，再走 Gubałówka、Krupówki。",
       highlights: ["09:00 出發", "Jaszczurówka", "Pęksowy Brzyzek", "Gubałówka", "Krupówki"],
       items: [
@@ -114,13 +114,13 @@ const TRIP_DATA = {
         ["13:45–14:15", "transit", "停車／前往 Gubałówka 下站", "停合法付費停車場，車內勿留貴重物", "30m"],
         ["14:15–16:00", "photo", "Gubałówka", "搭纜車或步行上山，依風雪與營運狀況", "1h45"],
         ["16:00–17:30", "photo", "Krupówki", "黃昏街景；可在此用晚餐", "1h30"],
-        ["17:30–18:00", "transit", "前往 Aparthotel Cristina", "確認停車與最晚入住方式", "30m"],
+        ["17:30–18:00", "transit", "前往 Aparthotel Cristina（克莉絲蒂娜公寓酒店）", "確認停車與最晚入住方式", "30m"],
         ["18:00 後", "hotel", "入住、與朋友會合／晚餐", "Morskie Oko 支線的回程交通須先確認", ""]
       ],
-      notes: ["Aparthotel Cristina 無行李服務；16:00 前不提供標準入住。", "車內只放一般行李；護照、相機、現金等貴重物品隨身。", "冬季跨境山區行駛務必保留緩衝。"]
+      notes: ["Aparthotel Cristina（克莉絲蒂娜公寓酒店） 無行李服務；16:00 前不提供標準入住。", "車內只放一般行李；護照、相機、現金等貴重物品隨身。", "冬季跨境山區行駛務必保留緩衝。"]
     },
     {
-      date: "2/8", weekday: "一", title: "Kasprowy Wierch → Snowmobile", city: "Zakopane / Kościelisko", hotel: "Aparthotel Cristina", theme: "winter", photo: "https://www.pkl.pl/data/pages/338/cp_cp_cp_20200108_a6500ab606436ab2.jpg",
+      date: "2/8", weekday: "一", title: "Kasprowy Wierch → Snowmobile", city: "Zakopane / Kościelisko", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://www.pkl.pl/data/pages/338/cp_cp_cp_20200108_a6500ab606436ab2.jpg",
       summary: "09:00 出發前往 Kuźnice，上午搭 Kasprowy 纜車，下午只排已確認集合點的 Snowmobile。",
       highlights: ["09:00 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "14:30 Snowmobile"],
       items: [
@@ -137,7 +137,7 @@ const TRIP_DATA = {
       notes: ["Jaszczurówka 與 Pęksowy Brzyzek 已移至 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
     },
     {
-      date: "2/9", weekday: "二", title: "Zakopane → Kraków｜Wawel → Old Town", city: "Zakopane → Kraków", hotel: "Holiday Inn Krakow City Centre", theme: "city", photo: "https://dcontent.inviacdn.net/shared/img/web-830/2018/1/11/m0/537301.jpg",
+      date: "2/9", weekday: "二", title: "Zakopane → Kraków｜Wawel → Old Town", city: "Zakopane → Kraków", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", theme: "city", photo: "https://dcontent.inviacdn.net/shared/img/web-830/2018/1/11/m0/537301.jpg",
       summary: "只住 Kraków 一晚，將核心老城一次走完；不塞 Schindler Factory／Kazimierz。",
       highlights: ["Wawel", "Cathedral", "Kanonicza", "Main Market Square", "St Mary’s", "Old Town 夜景"],
       items: [
@@ -152,10 +152,10 @@ const TRIP_DATA = {
         ["17:30–18:00", "place", "St Mary’s Basilica", "外觀或可入內部分；先核對宗教活動與遊客時段", "30m"],
         ["晚上", "photo", "Kraków Old Town 夜景", "主要步行", ""]
       ],
-      notes: ["Holiday Inn Krakow City Centre 內有受控停車，但名額有限，建議預訂／確認。", "租車為外國車牌，進入 Kraków SCT 前依當時規定完成登錄。", "大型行李盡量留在飯店，不帶進老城核心。"]
+      notes: ["Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店） 內有受控停車，但名額有限，建議預訂／確認。", "租車為外國車牌，進入 Kraków SCT 前依當時規定完成登錄。", "大型行李盡量留在飯店，不帶進老城核心。"]
     },
     {
-      date: "2/10", weekday: "三", title: "Kraków → Budapest", city: "Kraków → Budapest", hotel: "IntercityHotel Budapest", theme: "drive", photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=82",
+      date: "2/10", weekday: "三", title: "Kraków → Budapest", city: "Kraków → Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "drive", photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=82",
       summary: "09:00 出發，安排休息與冬季路況緩衝；抵達 Budapest 後還車並休息。",
       highlights: ["09:00 出發", "純駕駛約 5.5–6.5h", "16:00–17:00 還車區間", "不排景點"],
       items: [
@@ -169,7 +169,7 @@ const TRIP_DATA = {
       notes: ["不要為了塞景點壓縮高速路程緩衝。", "Kraków SCT 登錄與還車地點依實際租車車牌／訂單資料處理。"]
     },
     {
-      date: "2/11", weekday: "四", title: "Central Market → Váci utca → Basilica → Parliament → Shoes on the Danube → Chain Bridge", city: "Budapest", hotel: "IntercityHotel Budapest", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
+      date: "2/11", weekday: "四", title: "Central Market → Váci utca → Basilica → Parliament → Shoes on the Danube → Chain Bridge", city: "Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
       summary: "Budapest 第二個完整拍攝日，集中 Pest＋Danube；不回 Buda Castle。",
       highlights: ["Central Market Hall", "Váci utca／Basilica", "Parliament", "Shoes on the Danube", "Chain Bridge 藍調"],
       items: [
@@ -189,13 +189,13 @@ const TRIP_DATA = {
       notes: ["Parliament 可拍兩個方向：Kossuth Lajos tér 近拍，以及 Batthyány tér 對岸全景。", "不重複 Fisherman’s Bastion。"]
     },
     {
-      date: "2/12", weekday: "五", title: "Budapest → Vienna", city: "Budapest → Vienna", hotel: "InterContinental Vienna", theme: "train", photo: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1400&q=82",
+      date: "2/12", weekday: "五", title: "Budapest → Vienna", city: "Budapest → Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "train", photo: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1400&q=82",
       summary: "退房後搭直達 Railjet／EC 前往 Wien Hbf；抵達後只走市中心夜景。",
       highlights: ["Budapest-Keleti", "直達 Railjet／EC", "Wien Hbf", "Stephansdom", "Graben／Kohlmarkt"],
       items: [
         ["09:00–09:30", "hotel", "退房並前往 Budapest-Keleti", "預留找月台與候車時間", "30m"],
         ["約 10:00–13:00", "train", "Budapest → Wien Hbf", "直達 Railjet／EC；2027 班次開售後選定", "約 2h40–3h"],
-        ["13:00–13:30", "transit", "Wien Hbf → InterContinental Vienna", "大行李搭計程車，或依 Wiener Linien 路線規劃", "約 30m"],
+        ["13:00–13:30", "transit", "Wien Hbf → InterContinental Vienna（維也納洲際酒店）", "大行李搭計程車，或依 Wiener Linien 路線規劃", "約 30m"],
         ["13:30–16:00", "hotel", "寄放行李／午餐／休息", "依房間是否可提前入住調整", "2h30"],
         ["16:00–17:00", "photo", "Stephansdom", "外觀拍攝；入內遵守禮拜時間", "1h"],
         ["17:00–18:00", "photo", "Graben／Kohlmarkt", "步行街景與商店立面", "1h"],
@@ -204,7 +204,7 @@ const TRIP_DATA = {
       notes: ["國際火車票常在出發前數月逐步開放；2027 班次以 ÖBB 最終時刻表為準。", "不再安排 Szentendre；此日專心換城市。"]
     },
     {
-      date: "2/13", weekday: "六", title: "Schönbrunn → Belvedere → Hofburg", city: "Vienna", hotel: "InterContinental Vienna", theme: "city", photo: "https://www.avanse.com/blogs/images/Blog-10july.jpg",
+      date: "2/13", weekday: "六", title: "Schönbrunn → Belvedere → Hofburg", city: "Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "city", photo: "https://www.avanse.com/blogs/images/Blog-10july.jpg",
       summary: "09:00 出發參觀 Schönbrunn、Belvedere、Hofburg；市中心教堂與街景已於前一晚完成。",
       highlights: ["09:00 出發", "Schönbrunn", "Belvedere", "Hofburg", "市區自由晚餐"],
       items: [
