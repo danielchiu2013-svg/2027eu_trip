@@ -25,6 +25,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .list-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.list-row:last-child{border-bottom:0}.list-main b{font-size:14px}.list-main div{font-size:12px;color:var(--muted);margin-top:2px}.list-action{align-self:center;white-space:nowrap}.list-action a{font-size:12px;font-weight:800;text-decoration:none}.flight-code{font-weight:900}.route{color:var(--muted);font-size:12px}.badge{display:inline-block;padding:4px 7px;border-radius:7px;background:#edf5ff;color:#1d4f91;font-size:11px;font-weight:800}
 .check-group{padding:12px 0;border-bottom:1px solid var(--line)}.check-group:last-child{border-bottom:0}.check-group-title{font-size:12px;color:var(--muted);font-weight:800;margin-bottom:7px}.check{display:flex;gap:10px;align-items:flex-start;padding:7px 0}.check input{width:18px;height:18px;accent-color:var(--accent);margin-top:2px}.check label{font-size:13px}.check.done label{text-decoration:line-through;color:#98a1af}.progress{height:8px;background:#edf0f4;border-radius:999px;overflow:hidden;margin-top:9px}.progress i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:.2s}
 .notice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.notice{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}.notice b{font-size:14px}.notice p{margin:5px 0 0;font-size:12px;color:var(--muted)}
+.overview-route{font-size:13px;font-weight:850;line-height:1.7;padding:12px 14px;border-radius:13px;background:#f3f6ff;color:#263e83;margin-bottom:10px}.overview-itinerary{display:grid}.overview-row{display:grid;grid-template-columns:82px 1fr;gap:12px;padding:11px 2px;border-bottom:1px solid var(--line)}.overview-row:last-child{border-bottom:0}.overview-date{font-size:12px;font-weight:900;color:var(--accent);white-space:nowrap;padding-top:2px}.overview-main b{font-size:13px}.overview-main p{font-size:12px;color:var(--muted);margin:3px 0 0;line-height:1.55}.overview-stay{font-size:11px;color:#576579;margin-top:4px}
 .empty{text-align:center;padding:30px;color:var(--muted)}.hidden{display:none!important}footer{text-align:center;font-size:11px;color:#8a93a3;padding:20px 10px}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:25;padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center}.bottom-nav .inner{width:100%;max-width:700px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.bottom-nav button{border:0;background:transparent;padding:6px;border-radius:10px;color:#667085;font-size:11px;font-weight:800}.bottom-nav button.active{background:#eef2ff;color:#2f50bf}
 @media(max-width:680px){.hero-row{grid-template-columns:1fr}.count{text-align:left}.summary-grid{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:repeat(2,1fr)}.place-grid{grid-template-columns:1fr}.place-img{height:180px}.day-cover{height:165px}.sticky-tools{top:94px}}
@@ -49,20 +50,16 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
       </div>
       <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看攝影景點</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#" data-goto="checklist">出發清單</a></div>
     </div>
-    <div class="section-title">這趟旅行的節奏</div>
-    <div class="notice-grid">
-      <div class="notice"><b>2/3–2/4｜長途＋恢復</b><p>新加坡轉機後抵達 VIE，抵達日只做 Budapest 夜景。</p></div>
-      <div class="notice"><b>2/5｜Budapest 完成 Buda 區</b><p>Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion。</p></div>
-      <div class="notice"><b>2/6–2/10｜冬季自駕主段</b><p>HU → SK → PL，再回 Budapest 還車；這段留足道路緩衝。</p></div>
-      <div class="notice"><b>2/11–2/13｜城市攝影</b><p>Budapest Pest／Danube → Vienna 宮殿與市中心夜景。</p></div>
-    </div>
-    <div class="section-title">目前固定的租車重點</div>
+    <div class="section-title">行程濃縮概要</div>
     <div class="card summary">
-      <div class="notice-grid">
-        <div class="notice"><b>SIXT Budapest</b><p>2/6 10:00 取車，2/10 返還。跨境許可需包含斯洛伐克與波蘭。</p></div>
-        <div class="notice"><b>冬季胎</b><p>以四條冬季胎為前提，雪鏈作備用；山區路況以當日官方資訊為準。</p></div>
-        <div class="notice"><b>Kraków SCT</b><p>租車為外國車牌，取得實際車牌後依 2027 規則完成登錄。</p></div>
-        <div class="notice"><b>行李</b><p>3 × 29 吋。Aparthotel Cristina 2/7 先遊覽再 16:00 後入住，貴重物品隨身。</p></div>
+      <div class="overview-route">台北 → 新加坡 → 維也納 → 布達佩斯 → 高塔特拉山區 → Zakopane → 克拉科夫 → 布達佩斯 → 維也納 → 台北</div>
+      <div class="overview-itinerary">
+        <div class="overview-row"><div class="overview-date">2/3–2/5</div><div class="overview-main"><b>出發、抵達布達佩斯與布達區</b><p>台北經新加坡轉機抵達維也納，前往布達佩斯；聖安德烈老城、布達城堡、馬提亞斯教堂、漁人堡。</p><div class="overview-stay">住宿｜InterContinental Budapest（2/4–2/5）</div></div></div>
+        <div class="overview-row"><div class="overview-date">2/6</div><div class="overview-main"><b>布達佩斯 → 斯洛伐克 → 斯特爾布斯克湖區</b><p>自駕經 Miskolc、Košice、Prešov、Poprad，抵達高塔特拉山區。</p><div class="overview-stay">住宿｜Hotel Panorama（2/6）</div></div></div>
+        <div class="overview-row"><div class="overview-date">2/7–2/8</div><div class="overview-main"><b>斯特爾布斯克湖區 → Zakopane</b><p>木造教堂、名人墓園、古巴沃夫卡山與克魯波夫基街；隔日前往卡斯普羅維峰搭纜車並安排雪地摩托車。</p><div class="overview-stay">住宿｜Aparthotel Cristina（2/7–2/8）</div></div></div>
+        <div class="overview-row"><div class="overview-date">2/9–2/10</div><div class="overview-main"><b>Zakopane → 克拉科夫 → 布達佩斯</b><p>瓦維爾城堡與克拉科夫老城；隔日長途返回布達佩斯。</p><div class="overview-stay">住宿｜Holiday Inn Krakow City Centre（2/9）；Sleek premium Aprqtment with Park（2/10–2/11）</div></div></div>
+        <div class="overview-row"><div class="overview-date">2/11–2/13</div><div class="overview-main"><b>布達佩斯 → 維也納</b><p>布達佩斯國會大廈、多瑙河畔之鞋、聖史蒂芬大教堂與中央市場；搭火車前往維也納，參觀熊布朗宮、美景宮、霍夫堡皇宮。</p><div class="overview-stay">住宿｜InterContinental Vienna（2/12–2/13）</div></div></div>
+        <div class="overview-row"><div class="overview-date">2/14–2/15</div><div class="overview-main"><b>返程｜維也納 → 新加坡 → 台北</b><p>2/14 自維也納搭機，2/15 抵達台北，行程結束。</p><div class="overview-stay">住宿｜2/14 夜宿機上</div></div></div>
       </div>
     </div>
   </section>
@@ -100,7 +97,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=nav-fix-7"></script>
+<script src="trip-data.js?v=nav-fix-8"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
