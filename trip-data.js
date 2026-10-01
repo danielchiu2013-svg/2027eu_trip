@@ -19,7 +19,7 @@ const TRIP_DATA = {
     { date: "2/6", hotel: "Hotel Panorama（全景酒店）", city: "Štrbské Pleso", map: "https://www.google.com/maps/search/?api=1&query=Hotel+Panorama+Strbske+Pleso" },
     { date: "2/7–2/8", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", city: "Zakopane", map: "https://www.google.com/maps/search/?api=1&query=Aparthotel+Cristina+Zakopane" },
     { date: "2/9", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", city: "Kraków", map: "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Krakow+City+Centre" },
-    { date: "2/10–2/11", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=Sleek+premium+Aprqtment+with+Park+Budapest" },
+    { date: "02/10-02/11", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=Sleek+premium+Aprqtment+with+Park+Budapest" },
     { date: "2/12–2/13", hotel: "InterContinental Vienna（維也納洲際酒店）", city: "Vienna", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Vienna" }
   ],
   checklist: [
@@ -163,7 +163,7 @@ const TRIP_DATA = {
         ["12:00–12:45", "rest", "服務區午餐／駕駛休息", "不要為趕還車壓縮休息", "45m"],
         ["12:45–16:00", "drive", "繼續前往 Budapest SIXT", "純駕駛約 5.5–6.5 小時；如延誤先聯絡門市", "約 3h15"],
         ["16:00–17:00", "car", "SIXT Budapest 還車", "依訂單門市營業時間；檢查油量、車況與文件", "1h"],
-        ["17:00 後", "hotel", "IntercityHotel Budapest", "前往飯店、入住與休息", ""],
+        ["17:00 後", "hotel", "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", "前往 Budapest 公寓、入住與休息；依實際住宿地址安排採買", ""],
         ["晚上", "rest", "不安排景點", "把體力留給 2/11", ""]
       ],
       notes: ["不要為了塞景點壓縮高速路程緩衝。", "Kraków SCT 登錄與還車地點依實際租車車牌／訂單資料處理。"]
