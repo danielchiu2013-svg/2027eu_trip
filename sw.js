@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v24';
+const CACHE = '2027eu-app-v25';
 const VERSIONED_SHELL = [
-  './index.html?v=overview-dates-commons-primary-20261002e',
-  './trip-data.js?v=overview-dates-commons-primary-20261002e',
+  './index.html?v=shared-booking-list-20261005a',
+  './trip-data.js?v=shared-booking-list-20261005a',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=overview-dates-commons-primary-20261002e', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=shared-booking-list-20261005a', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
@@ -49,4 +49,5 @@ self.addEventListener('fetch', event => {
         .catch(() => cached))
   );
 });
+
 
