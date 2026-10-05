@@ -27,13 +27,7 @@ const TRIP_DATA = {
     { id: "idp", label: "台灣國際駕照＋台灣駕照", group: "租車" },
     { id: "sixt", label: "SIXT 跨境許可：斯洛伐克＋波蘭", group: "租車" },
     { id: "winter-tires", label: "確認 4 條冬季胎／雪鏈備用", group: "租車" },
-    { id: "hu-vignette", label: "匈牙利 e-vignette", group: "租車" },
-    { id: "sk-vignette", label: "斯洛伐克 e-vignette", group: "租車" },
     { id: "krakow-sct", label: "確認租車車牌後完成 Kraków SCT 登錄", group: "租車" },
-    { id: "kasprowy", label: "Kasprowy Wierch 纜車票", group: "預約" },
-    { id: "snowmobile", label: "Snowmobile 預約", group: "預約" },
-    { id: "train", label: "Budapest → Vienna 火車票", group: "預約" },
-    { id: "airport-transfer", label: "2/14 清晨 VIE 接送／計程車", group: "交通" },
     { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" }
   ],
   // 共用預約待辦：網站所有訪客都會看到。確認訂妥後請更新 status；修改此區即可同步公開清單。
@@ -47,7 +41,7 @@ const TRIP_DATA = {
     { id: "train-budapest-vienna", label: "Budapest-Keleti → Wien Hbf Railjet／EC 火車票", group: "車票／交通預約", date: "2/12（五）上午", status: "待購票", detail: "選直達班次並確認 2027 時刻表、座位需求、行李與改票條件。", url: "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing" },
     { id: "schonbrunn-ticket", label: "熊布朗宮室內參觀門票／固定入場時段", group: "門票／活動預約", date: "2/13（六）上午", status: "待購票", detail: "行程目標約 09:30 入場；依 2027 冬季開放內容選票。只從官方售票頁進入，避免仿冒票站。", url: "https://www.schoenbrunn.at/en/tickets-and-prices/all-tickets-tours" },
     { id: "belvedere-ticket", label: "美景宮上宮指定時段門票", group: "門票／活動預約", date: "2/13（六）下午", status: "待購票", detail: "目標約 13:45 入場；確認上宮時段票及是否需要另排下宮或特展。", url: "https://www.belvedere.at/en/tickets" },
-    { id: "airport-transfer", label: "InterContinental Vienna → VIE 清晨接送預約", group: "車票／交通預約", date: "2/14（日）06:15", status: "待預約", detail: "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。" },
+    { id: "airport-transfer-booking", label: "InterContinental Vienna → VIE 清晨接送預約", group: "車票／交通預約", date: "2/14（日）06:15", status: "待預約", detail: "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。" },
     { id: "hu-vignette-purchase", label: "匈牙利高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "取車後、上高速前", status: "待辦理", detail: "先確認租車是否已含通行費；若需自購，核對車種、車牌與有效日期。", url: "https://ematrica.nemzetiutdij.hu/en" },
     { id: "sk-vignette-purchase", label: "斯洛伐克高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "進入收費路段前", status: "待辦理", detail: "先確認 SIXT 是否已提供或代購；若自購，只使用官方 eznamka 網站。", url: "https://eznamka.sk/en" }
   ],
