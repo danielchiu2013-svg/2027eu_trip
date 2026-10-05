@@ -66,187 +66,7 @@ const TRIP_DATA = {
       items: [
         ["08:30–10:30", "arrival", "抵達 Vienna VIE", "入境、領行李；時間視排隊情況調整", "約 2h"],
         ["10:30–11:00", "transit", "VIE → Wien Hbf", "Railjet／S-Bahn；確認月台與轉乘方式", "約 30m"],
-        ["約 11:00–14:00", "train", "Wien Hbf → Budapest-Keleti", "選直達 Railjet／EC；2027 班次以 ÖBB 開售時刻為準", "約 3h"],
-        ["14:00–15:00", "transit", "Keleti → InterContinental Budapest（布達佩斯洲際酒店）", "大行李建議計程車；辦理入住或寄放行李", "約 1h"],
-        ["15:00–17:00", "rest", "入住／休息／補水", "抵達日不安排需預約的景點", "2h"],
-        ["17:00–18:00", "photo", "多瑙河河岸（選擇性）", "體力許可再散步；Chain Bridge 外觀", "1h"],
-        ["18:00 後", "food", "晚餐與休息", "可選匈牙利燉牛肉湯 Gulyás 或雞肉紅椒燉 Paprikás csirke；抵達疲累就近用餐", ""]
-      ],
-      notes: ["長途飛行與跨境轉乘日，保留彈性，不把河岸散步列為必到。", "列車班次與票價尚未開放，出發前依 ÖBB／MÁV 正式時刻表確認。"]
-    },
-    {
-      date: "2/5", weekday: "五", title: "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion", city: "Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
-      summary: "一次完成 Szentendre 與 Buda Castle 區；Fisherman’s Bastion 不在後續重複。",
-      highlights: ["Szentendre 老城", "Buda Castle", "Matthias Church", "Fisherman’s Bastion 日落"],
-      items: [
-        ["09:00–09:15", "transit", "飯店 → Batthyány tér", "步行／市區電車；以 BudapestGO 查當日路線", "15m"],
-        ["約 09:15–10:00", "transit", "H5 → Szentendre", "約 40–45 分鐘；班次以當日公告為準", "40–45m"],
-        ["10:00–11:30", "place", "Szentendre 老城", "Fő tér、巷弄、河岸街景", "1h30"],
-        ["11:30–12:15", "food", "午餐｜匈牙利家常菜", "可試 Gulyás 燉牛肉湯或 Lángos 炸麵餅；冬季先確認餐廳營業", "45m"],
-        ["約 12:15–13:00", "transit", "Szentendre → Batthyány tér", "搭 H5 回市區", "45m"],
-        ["13:00–13:30", "transit", "前往 Buda Castle 區", "公車 16 或步行上城；依當日路況選擇", "30m"],
-        ["13:30–14:15", "place", "Buda Castle", "城堡區、庭院與 Danube 視角", "45m"],
-        ["14:15–15:00", "place", "Matthias Church", "室內開放與票務出發前確認", "45m"],
-        ["15:00–16:15", "photo", "Fisherman’s Bastion", "日光拍攝；露台收費區依現場規則", "1h15"],
-        ["16:15–17:00", "photo", "城堡區藍調時刻", "依當日日落時間微調", "45m"],
-        ["17:00 後", "food", "晚餐／返回飯店", "可選 Paprikás csirke 雞肉紅椒燉或 Gulyás；再搭公車 16／計程車下山", ""]
-      ],
-      notes: ["Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。", "Fisherman’s Bastion 已在本日完成，2/11 不再排。"]
-    },
-    {
-      date: "2/6", weekday: "六", title: "Budapest → Miskolc → Košice → Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
-      summary: "長途冬季自駕日，以高速／快速道路與路況緩衝為主。",
-      highlights: ["10:00 SIXT", "約 380 km", "跨境：HU → SK", "山區冬季路況"],
-      items: [
-        ["10:00", "car", "SIXT Budapest 取車", "確認冬季胎、跨境許可、車況、租車文件", ""],
-        ["10:30–12:30", "drive", "Budapest → Miskolc", "高速路段為主", "約 2h"],
-        ["12:30–13:15", "food", "午餐／休息", "Miskolc 附近找 Gulyás 燉牛肉湯或燉菜；安排駕駛休息", "45m"],
-        ["13:15–15:00", "drive", "Miskolc → Košice", "跨境進入 SK", "約 1h45"],
-        ["15:00–15:30", "rest", "Košice 補給", "不安排正式觀光", "30m"],
-        ["15:30–17:30", "drive", "Košice → Prešov → Poprad", "山區／冬季預留緩衝", "約 2h"],
-        ["17:30–18:15", "drive", "Poprad → Štrbské Pleso", "山區路段", "約 45m"],
-        ["18:15–19:00", "hotel", "Hotel Panorama（全景酒店）", "入住", ""],
-        ["19:00–20:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
-      ],
-      notes: ["跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "冬季胎四條；雪鏈作為備用。"]
-    },
-    {
-      date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Pęksowy Brzyzek → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
-      summary: "09:00 退房後自駕至 Zakopane，途中安排 Jaszczurówka 與 Pęksowy Brzyzek，再走 Gubałówka、Krupówki。",
-      highlights: ["09:00 出發", "Jaszczurówka", "Pęksowy Brzyzek", "Gubałówka", "Krupówki"],
-      items: [
-        ["09:00–09:30", "hotel", "早餐、退房與裝車", "貴重物品隨身；確認車況與天候", "30m"],
-        ["09:30–12:00", "drive", "Štrbské Pleso → Zakopane", "經 Poprad／Tatranská Javorina／Łysa Polana；冬季邊境路況留緩衝", "約 2h30"],
-        ["12:00–12:30", "photo", "Jaszczurówka 木造教堂", "先確認停車與教堂開放；尊重宗教場所拍攝規範", "30m"],
-        ["12:30–13:15", "food", "午餐｜波蘭高塔特拉料理", "可點 kwaśnica 酸菜湯、moskole 馬鈴薯餅；煙燻羊乳起司依冬季供應為準", "45m"],
-        ["13:15–13:45", "photo", "Pęksowy Brzyzek 歷史墓園", "確認冬季開放；安靜參觀並尊重墓園禮儀", "30m"],
-        ["13:45–14:15", "transit", "停車／前往 Gubałówka 下站", "停合法付費停車場，車內勿留貴重物", "30m"],
-        ["14:15–16:00", "photo", "Gubałówka", "搭纜車或步行上山，依風雪與營運狀況", "1h45"],
-        ["16:00–17:30", "photo", "Krupówki", "黃昏街景；可在此用晚餐", "1h30"],
-        ["17:30–18:00", "transit", "前往 Aparthotel Cristina（克莉絲蒂娜公寓酒店）", "確認停車與最晚入住方式", "30m"],
-        ["18:00 後", "hotel", "入住、與朋友會合／晚餐", "晚餐可選 kwaśnica 酸菜湯、pierogi 波蘭餃子或烤羊乳起司；用餐後回飯店休息", ""]
-      ],
-      notes: ["Aparthotel Cristina（克莉絲蒂娜公寓酒店） 無行李服務；16:00 前不提供標準入住。", "車內只放一般行李；護照、相機、現金等貴重物品隨身。", "冬季跨境山區行駛務必保留緩衝。"]
-    },
-    {
-      date: "2/8", weekday: "一", title: "Kasprowy Wierch → Snowmobile", city: "Zakopane / Kościelisko", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://www.pkl.pl/data/pages/338/cp_cp_cp_20200108_a6500ab606436ab2.jpg",
-      summary: "09:00 出發前往 Kuźnice，上午搭 Kasprowy 纜車，下午只排已確認集合點的 Snowmobile。",
-      highlights: ["09:00 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "14:30 Snowmobile"],
-      items: [
-        ["09:00–09:30", "transit", "飯店 → Kuźnice", "計程車／當地 minibus；私家車不可直達纜車站", "30m"],
-        ["09:30–10:00", "transit", "報到／候車", "預留排隊與纜車班次緩衝", "30m"],
-        ["10:00–12:30", "photo", "Kasprowy Wierch", "纜車與山頂雪景；受風雪、能見度與營運影響", "2h30"],
-        ["12:30–13:15", "transit", "下山並返回 Zakopane", "排隊時間視現場調整", "45m"],
-        ["13:15–14:00", "food", "午餐｜波蘭高塔特拉料理", "可點 kwaśnica 酸菜湯、moskole 馬鈴薯餅；煙燻羊乳起司依冬季供應為準", "45m"],
-        ["14:00–14:20", "transit", "前往 Snowmobile 集合點", "必須先取得業者確切地址與接駁方式", "20m"],
-        ["14:20–14:30", "adventure", "報到／裝備／安全說明", "依業者要求提前到場；不要把 5 分鐘當緩衝", "10m"],
-        ["14:30–16:30", "adventure", "Snowmobile", "Kościelisko／Butorów 區域；2h 體驗", "2h"],
-        ["18:00–19:30", "food", "晚餐｜波蘭山地料理", "可選 kwaśnica 酸菜湯、pierogi 波蘭餃子或烤羊乳起司；冬季起司供應依店家為準", "1h30"]
-      ],
-      notes: ["Jaszczurówka 與 Pęksowy Brzyzek 已移至 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
-    },
-    {
-      date: "2/9", weekday: "二", title: "Zakopane → Kraków｜Wawel → Old Town", city: "Zakopane → Kraków", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", theme: "city", photo: "https://dcontent.inviacdn.net/shared/img/web-830/2018/1/11/m0/537301.jpg",
-      summary: "只住 Kraków 一晚，將核心老城一次走完；不塞 Schindler Factory／Kazimierz。",
-      highlights: ["Wawel", "Cathedral", "Kanonicza", "Main Market Square", "St Mary’s", "Old Town 夜景"],
-      items: [
-        ["09:00–11:30", "drive", "Zakopane → Kraków", "冬季道路與進城車流預留緩衝", "約 2h30"],
-        ["11:30–12:00", "hotel", "抵達飯店／停車／寄放行李", "確認停車位；大行李留在飯店", "30m"],
-        ["12:00–13:00", "food", "午餐並步行至 Wawel", "找 żurek 酸裸麥湯或 pierogi 波蘭餃子；步行至 Wawel，避免再次移車", "1h"],
-        ["13:00–15:00", "place", "Wawel Castle 室內展覽／城堡區", "先買指定時段票；冬季展覽與最後入場依官網", "2h"],
-        ["15:00–15:45", "place", "Wawel Cathedral", "參觀區域及最後入場時間出發前確認", "45m"],
-        ["15:45–16:15", "photo", "Kanonicza Street", "步行前往老城", "30m"],
-        ["16:15–16:45", "photo", "Grodzka Street", "步行街拍", "30m"],
-        ["16:45–17:30", "photo", "Main Market Square／Cloth Hall", "廣場與建築外觀；依日落調整", "45m"],
-        ["17:30–18:00", "place", "St Mary’s Basilica", "外觀或可入內部分；先核對宗教活動與遊客時段", "30m"],
-        ["18:00–19:00", "food", "晚餐｜克拉科夫經典菜", "可試 bigos 燉酸菜肉或 pierogi；老城餐館用餐", "1h"],
-        ["19:00 後", "photo", "Kraków Old Town 夜景", "主要步行", ""]
-      ],
-      notes: ["Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店） 內有受控停車，但名額有限，建議預訂／確認。", "租車為外國車牌，進入 Kraków SCT 前依當時規定完成登錄。", "大型行李盡量留在飯店，不帶進老城核心。"]
-    },
-    {
-      date: "2/10", weekday: "三", title: "Kraków → Budapest", city: "Kraków → Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "drive", photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=82",
-      summary: "09:00 出發，安排休息與冬季路況緩衝；抵達 Budapest 後還車並休息。",
-      highlights: ["09:00 出發", "純駕駛約 5.5–6.5h", "16:00–17:00 還車區間", "不排景點"],
-      items: [
-        ["09:00–12:00", "drive", "Kraków → Slovakia 路段", "長途自駕；依導航與冬季路況", "約 3h"],
-        ["12:00–12:45", "rest", "服務區午餐／駕駛休息", "以熱湯或 Gulyás 匈牙利燉牛肉為優先；不要為趕還車壓縮休息", "45m"],
-        ["12:45–16:00", "drive", "繼續前往 Budapest SIXT", "純駕駛約 5.5–6.5 小時；如延誤先聯絡門市", "約 3h15"],
-        ["16:00–17:00", "car", "SIXT Budapest 還車", "依訂單門市營業時間；檢查油量、車況與文件", "1h"],
-        ["17:00 後", "hotel", "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", "前往 Budapest 公寓、入住與休息；依實際住宿地址安排採買", ""],
-        ["18:30–19:30", "food", "晚餐｜布達佩斯家常菜", "可選雞肉紅椒燉或 Gulyás 燉牛肉；按公寓地址找餐廳", "1h"],
-        ["19:30 後", "rest", "不安排景點", "把體力留給 2/11", ""]
-      ],
-      notes: ["不要為了塞景點壓縮高速路程緩衝。", "Kraków SCT 登錄與還車地點依實際租車車牌／訂單資料處理。"]
-    },
-    {
-      date: "2/11", weekday: "四", title: "Central Market → Váci utca → Basilica → Parliament → Shoes on the Danube → Chain Bridge", city: "Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
-      summary: "Budapest 第二個完整拍攝日，集中 Pest＋Danube；不回 Buda Castle。",
-      highlights: ["Central Market Hall", "Váci utca／Basilica", "Parliament", "Shoes on the Danube", "Chain Bridge 藍調"],
-      items: [
-        ["09:00–09:30", "transit", "前往 Central Market Hall", "", "30m"],
-        ["09:30–11:00", "place", "Central Market Hall", "市場建築與食物／小物", "1h30"],
-        ["11:00–11:30", "photo", "Váci utca", "街拍、商店立面", "30m"],
-        ["11:30–12:30", "place", "St. Stephen’s Basilica", "外觀／內部依開放時間", "1h"],
-        ["12:30–13:30", "food", "午餐｜布達佩斯經典菜", "可試 Gulyás 燉牛肉湯、Lángos 炸麵餅；市中心找當日營業店家", "1h"],
-        ["13:30–15:00", "photo", "Hungarian Parliament", "Kossuth Lajos tér 建築視角", "1h30"],
-        ["15:00–15:30", "photo", "Shoes on the Danube", "紀念地；保持安靜與尊重", "30m"],
-        ["15:30–16:15", "transit", "前往 Batthyány tér", "", "45m"],
-        ["16:15–17:15", "photo", "Batthyány tér", "多瑙河對岸 Parliament 全景", "1h"],
-        ["17:15–17:45", "transit", "前往 Chain Bridge", "", "30m"],
-        ["17:45–18:45", "photo", "Chain Bridge＋Danube", "黃昏、藍調時刻", "1h"],
-        ["18:45–19:45", "food", "晚餐｜匈牙利經典菜", "可選燉牛肉 Gulyás 或雞肉紅椒燉 Paprikás csirke", "1h"],
-        ["19:45 後", "photo", "Budapest 夜景", "返回飯店", ""]
-      ],
-      notes: ["Parliament 可拍兩個方向：Kossuth Lajos tér 近拍，以及 Batthyány tér 對岸全景。", "不重複 Fisherman’s Bastion。"]
-    },
-    {
-      date: "2/12", weekday: "五", title: "Budapest → Vienna", city: "Budapest → Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "train", photo: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1400&q=82",
-      summary: "退房後搭直達 Railjet／EC 前往 Wien Hbf；抵達後只走市中心夜景。",
-      highlights: ["Budapest-Keleti", "直達 Railjet／EC", "Wien Hbf", "Stephansdom", "Graben／Kohlmarkt"],
-      items: [
-        ["09:00–09:30", "hotel", "退房並前往 Budapest-Keleti", "預留找月台與候車時間", "30m"],
-        ["約 10:00–13:00", "train", "Budapest → Wien Hbf", "直達 Railjet／EC；2027 班次開售後選定", "約 2h40–3h"],
-        ["13:00–13:30", "transit", "Wien Hbf → InterContinental Vienna（維也納洲際酒店）", "大行李搭計程車，或依 Wiener Linien 路線規劃", "約 30m"],
-        ["13:30–16:00", "hotel", "寄放行李／午餐／休息", "午餐可吃 Wiener Schnitzel 維也納炸肉排；依房間是否可提前入住調整", "2h30"],
-        ["16:00–17:00", "photo", "Stephansdom", "外觀拍攝；入內遵守禮拜時間", "1h"],
-        ["17:00–18:00", "photo", "Graben／Kohlmarkt", "步行街景與商店立面", "1h"],
-        ["18:00 後", "food", "晚餐／返回飯店", "可選 Wiener Schnitzel 維也納炸肉排或 Tafelspitz 水煮牛肉；市中心步行", ""]
-      ],
-      notes: ["國際火車票常在出發前數月逐步開放；2027 班次以 ÖBB 最終時刻表為準。", "不再安排 Szentendre；此日專心換城市。"]
-    },
-    {
-      date: "2/13", weekday: "六", title: "Schönbrunn → Belvedere → Hofburg", city: "Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "city", photo: "https://www.avanse.com/blogs/images/Blog-10july.jpg",
-      summary: "09:00 出發參觀 Schönbrunn、Belvedere、Hofburg；市中心教堂與街景已於前一晚完成。",
-      highlights: ["09:00 出發", "Schönbrunn", "Belvedere", "Hofburg", "市區自由晚餐"],
-      items: [
-        ["09:00–09:30", "transit", "飯店 → Schönbrunn", "搭 U4／計程車；依入場時段與當日路線", "30m"],
-        ["09:30–12:00", "place", "Schönbrunn Palace", "宮殿＋庭園；2027 開放時間及票券再確認", "2h30"],
-        ["12:00–13:00", "food", "午餐", "Schönbrunn 周邊可找 Wiener Schnitzel 炸肉排、Gulasch 燉牛肉或香腸小吃", "1h"],
-        ["13:00–13:45", "transit", "前往 Belvedere", "U-Bahn／電車；用 Wiener Linien 查當日路線", "45m"],
-        ["13:45–15:30", "place", "Belvedere Palace", "上宮／庭園；室內展覽依時段票", "1h45"],
-        ["15:30–16:00", "transit", "前往 Hofburg", "電車／步行，依當日路況", "30m"],
-        ["16:00–16:45", "photo", "Hofburg 外觀與廣場", "戶外建築拍攝；不排室內博物館", "45m"],
-        ["16:45 後", "food", "晚餐／自由活動", "可選 Tafelspitz 水煮牛肉或 Wiener Schnitzel 維也納炸肉排；市中心景點已於 2/12 完成", ""]
-      ],
-      notes: ["Schönbrunn 的 2027 冬季營業時間與入場方式出發前重查。", "最後完整拍攝日，不安排高強度步行。"]
-    },
-    {
-      date: "2/14", weekday: "日", title: "Vienna → Singapore", city: "Vienna → Singapore", hotel: "機上", theme: "flight", photo: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1400&q=82",
-      summary: "最後一天只做機場轉移與航班。",
-      highlights: ["06:15 預約車出發", "約 06:45 抵達 VIE", "10:00 TR61"],
-      items: [
-        ["05:45–06:15", "hotel", "起床、退房與行李確認", "早餐採外帶或前一晚準備", "30m"],
-        ["06:15–06:45", "transit", "預約車：飯店 → VIE", "前一晚再次確認司機與集合點", "約 30m"],
-        ["06:45–09:00", "airport", "報到／托運／安檢／出境", "預留 3 小時以上國際線緩衝", "2h15"],
-        ["10:00", "flight", "TR61", "Vienna VIE → Singapore SIN", ""]
-      ],
-      notes: ["最後一天不排任何觀光。", "清晨交通以預約車／可靠計程車為主。"]
-    },
-    {
-      date: "2/15", weekday: "一", title: "Singapore → Taiwan", city: "Singapore → Taipei", hotel: "—", theme: "flight", photo: "https://images.unsplash.com/photo-1522083165195-3424ed129620?auto=format&fit=crop&w=1400&q=82",
-      summary: "抵達桃園，旅程結束。",
-      highlights: ["04:40 SIN", "08:30 TR874", "13:15 TPE"],
+        ["約 11:00–14:00", "train", "Wiehighlights: ["04:40 SIN", "08:30 TR874", "13:15 TPE"],
       items: [
         ["04:40", "arrival", "抵達 Singapore SIN", "轉機", ""],
         ["08:30", "flight", "TR874", "Singapore SIN → Taipei TPE", ""],
@@ -265,7 +85,6 @@ const TRIP_DATA = {
     { key:"Krupowki", name:"克魯波夫基街", en:"Krupówki Street", description:"Zakopane 熱鬧步行街，木造風格店舖、餐館與街頭小吃集中。", day:5, tag:"街拍／夜景", duration:"1h25", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakopane%20krup%C3%B3wki.jpg", images:["https://s30.flog.pl/media/foto/13961844_zakopane--krupowki-.jpg","https://d.wpimg.pl/999483127-325828036/Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg","https://static.webcamera.pl/camsbig/zakopane-krupowki-street-poland.jpg?nc=1764169738"], imageSources:["https://piotrzegar.flog.pl/wpis/13961844/zakopane--krupowki-","https://turystyka.wp.pl/zakopane-6049946277500033c","https://zakopane-krupowki-street-poland.webcamera.pl/"], map:"https://www.google.com/maps/search/?api=1&query=Krupowki+Zakopane" },
     { key:"Kasprowy", name:"卡斯普羅維峰", en:"Kasprowy Wierch", description:"搭纜車登上塔特拉高山觀景點；風雪可能影響營運，山頂注意保暖。", day:6, tag:"高山／雪景", duration:"3h", lens:"70–300mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kasprowy%20Wierch.jpg", images:["https://i.iplsc.com/000M9LTSPOCOG6KD-C323-F4.webp","https://z-ne.pl/images/20181115_-_PKL_Kasprowy_Wierch_1.jpg","https://ff4.xcdn.pl/i/I18FAAAABRQC7gAknnWJ/8d83d583f3bd6de6cdee2bf949b91692.jpg"], imageSources:["https://kobieta.interia.pl/podroze/news-ferie-w-pelni-a-w-zakopanem-pusto-malopolska-nigdy-zbytnio-n%2CnId%2C22545504","https://z-ne.pl/s%2Cdocid%2C59316%2Ctatry_kolej_linowa_pkl_na_kasprowy_wierch_przygotowana_na_sezon_zimowy.html","https://krakow.gosc.pl/doc/8076024.Zima-na-Podhalu-Kolejka-na-Kasprowy-Wierch-od-7-lutego-bedzie"], map:"https://www.google.com/maps/search/?api=1&query=Kasprowy+Wierch" },
     { key:"Jaszczurowka", name:"亞斯楚羅夫卡木造教堂", en:"Jaszczurówka Chapel", description:"山地木構風格的聖心教堂，可細看木作、屋頂與冬日林景。", day:5, tag:"木造建築", duration:"30m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", images:["https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://upload.wikimedia.org/wikipedia/commons/5/52/Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/uploads/seeing/tok308040229395/1666270144.jpg"], imageSources:["https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://commons.wikimedia.org/wiki/File:Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/warto-zobaczyc/1041%2Ckaplica-na-jaszczurowce-zakopane.html"], map:"https://www.google.com/maps/search/?api=1&query=Jaszczurowka+Chapel" },
-    { key:"Peksowy", name:"彭克索維布日策克名人墓園", en:"Cmentarz Zasłużonych na Pęksowym Brzyzku", description:"Zakopane 歷史墓園，木雕墓碑與名人紀念地並列，請保持安靜。", day:5, tag:"木造墓園／攝影禮儀", duration:"30m", lens:"16–55mm／X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Stary%20Cmentarz%20na%20Peksowym%20Brzyzku%20-%2003.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Stary_Cmentarz_na_Peksowym_Brzyzku_-_03.jpg", images:["https://v.wpimg.pl/M2JkOTk1YlMrCTlnREpvRmhRbT0CE2EQP0l1dkRSYgp4XnksXgV1AWUNJjgOQyhCJUUoJh5BLEU6RT84RFA9W2UdfnsPWD5CJgo2ew5cL1cuRHtnUwYvAyxdYmRTAXsffg94MUZQewAvRio3XQIvVnNSejEOAW9P","https://v.wpimg.pl/MTEyNmYzYjUkGzhedgFvIGdDbAQwWGF2MFt0T3YZYmB1SnwVakp_YGofJwE8CCgkKlcpHywKLCM1Vz4Bdhs9PWoPf0I9Ez4kKRg3QjwXLzEhVncPP0IuZXRJYw5sSCt5cUgtDHQbf2N2VCxfYUt8ZnMffVhuHm8p","https://v.wpimg.pl/YjA1ODk0dgsgUzl3REt7HmMLbS0CEnVINBN1ZkQBYFhxSWAiAlw8GCRBIGoMQiwaIEY_ahtcdgsxWGAyWh89AzJBIyUSHzwHI1Qra1kHbl4iVHl2RgZtWicceydaU3RSdFN5aQhTbQhxBHd9XwQ4WWNM"], imageSources:["https://turystyka.wp.pl/s/twoje7dni/cmentarz-jak-dzielo-sztuki-o-tej-porze-roku-przyciaga-mase-turystow-7216458907728480a","https://turystyka.wp.pl/ferie-w-zakopanem-tak-spedzilam-dzien-w-paszczy-lwa-6866376411613792a","https://turystyka.wp.pl/s/twoje7dni/cmentarz-jak-dzielo-sztuki-o-tej-porze-roku-przyciaga-mase-turystow-7216458907728480a"], map:"https://www.google.com/maps/search/?api=1&query=Peksowy+Brzyzek+Zakopane" },
     { key:"Snowmobile", name:"雪地摩托車體驗（Snowmobile）", en:"Snowmobile / Kościelisko", description:"由業者帶隊的雪地摩托體驗；集合地址、裝備和雪況須事先確認。", day:6, tag:"雪地活動", duration:"2h", lens:"X100VI／16–55mm", image:"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg", images:["https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","https://www.skutery.pl/wp-content/uploads/2023/02/6-1024x683.jpg","https://www.witowextreme.pl/uploads/files/images/58e5f5f432b76.jpg"], imageSources:["https://www.skutery.pl/oferta/","https://www.skutery.pl/","https://www.witowextreme.pl/en/snowmobiles-gallery"], map:"https://www.google.com/maps/search/?api=1&query=Snowmobile+Koscielisko" },
     { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王權與歷史核心，包括城堡建築、庭院和俯瞰維斯瓦河的高地。", day:7, tag:"古蹟／城堡", duration:"2h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
     { key:"WawelCathedral", name:"瓦維爾主教座堂", en:"Katedra Wawelska", description:"波蘭君主加冕與安葬之地，融合多時期建築，入場區域依規定。", day:7, tag:"教堂／歷史", duration:"30m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Cathedral%2C%20Krak%C3%B3w.JPG", images:["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560"], imageSources:["https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://parade.com/travel/cozy-winter-getaways"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Cathedral" },
@@ -287,6 +106,5 @@ const TRIP_DATA = {
     { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" }
   ]
 };
-
 
 
