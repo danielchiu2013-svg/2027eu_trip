@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v25';
+const CACHE = '2027eu-app-v26';
 const VERSIONED_SHELL = [
-  './index.html?v=shared-booking-list-20261005a',
-  './trip-data.js?v=shared-booking-list-20261005a',
+  './index.html?v=shared-booking-list-20261005b',
+  './trip-data.js?v=shared-booking-list-20261005b',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=shared-booking-list-20261005a', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=shared-booking-list-20261005b', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
