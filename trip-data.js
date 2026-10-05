@@ -36,6 +36,21 @@ const TRIP_DATA = {
     { id: "airport-transfer", label: "2/14 清晨 VIE 接送／計程車", group: "交通" },
     { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" }
   ],
+  // 共用預約待辦：網站所有訪客都會看到。確認訂妥後請更新 status；修改此區即可同步公開清單。
+  reservations: [
+    { id: "train-vie-budapest", label: "VIE → Budapest-Keleti 火車票（含 Wien Hbf 轉乘）", group: "車票／交通預約", date: "2/4（四）", status: "待購票", detail: "依落地與領行李時間選 Railjet／EC；確認 Wien Hbf 轉乘餘裕及抵達 Budapest-Keleti 的時間。", url: "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing" },
+    { id: "sixt-booking", label: "SIXT Budapest 取車／還車訂單與跨境許可", group: "租車／道路通行", date: "2/6（六）–2/10（三）", status: "待確認", detail: "核對取還車門市、營業時間、跨境斯洛伐克與波蘭許可、冬季胎、費用及保險；不要只依行程草案推定已訂妥。", url: "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP" },
+    { id: "kasprowy-ticket", label: "Kasprowy Wierch 纜車來回票／上山時段", group: "門票／活動預約", date: "2/8（一）上午", status: "待購票", detail: "選接近 10:00 的上山時段；確認票種、下山安排與風雪停駛退改規則。", url: "https://www.sklep.pkl.pl/en/" },
+    { id: "snowmobile-booking", label: "Zakopane／Kościelisko 雪地摩托車體驗", group: "門票／活動預約", date: "2/8（一）14:30", status: "待預約", detail: "尚未指定業者；先確認集合地址、接送、報到時間、三人名額、裝備、雪況不足時的取消／改期規則。", url: "https://www.google.com/maps/search/?api=1&query=snowmobile+Koscielisko+Zakopane" },
+    { id: "wawel-tickets", label: "瓦維爾城堡展覽／指定時段門票", group: "門票／活動預約", date: "2/9（二）", status: "待購票", detail: "選定欲參觀的展覽與時段；官方線上票通常於參觀日前約一個月開售，出發前再確認。", url: "https://bilety.wawel.krakow.pl/wawel" },
+    { id: "wawel-cathedral-entry", label: "瓦維爾主教座堂入場方式與開放時間", group: "門票／活動預約", date: "2/9（二）", status: "待確認", detail: "與城堡展覽票分開核對；確認大教堂、鐘樓或地下墓室是否要另購票，以及當日宗教活動時段。", url: "https://wawel.krakow.pl/en/explore" },
+    { id: "train-budapest-vienna", label: "Budapest-Keleti → Wien Hbf Railjet／EC 火車票", group: "車票／交通預約", date: "2/12（五）上午", status: "待購票", detail: "選直達班次並確認 2027 時刻表、座位需求、行李與改票條件。", url: "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing" },
+    { id: "schonbrunn-ticket", label: "熊布朗宮室內參觀門票／固定入場時段", group: "門票／活動預約", date: "2/13（六）上午", status: "待購票", detail: "行程目標約 09:30 入場；依 2027 冬季開放內容選票。只從官方售票頁進入，避免仿冒票站。", url: "https://www.schoenbrunn.at/en/tickets-and-prices/all-tickets-tours" },
+    { id: "belvedere-ticket", label: "美景宮上宮指定時段門票", group: "門票／活動預約", date: "2/13（六）下午", status: "待購票", detail: "目標約 13:45 入場；確認上宮時段票及是否需要另排下宮或特展。", url: "https://www.belvedere.at/en/tickets" },
+    { id: "airport-transfer", label: "InterContinental Vienna → VIE 清晨接送預約", group: "車票／交通預約", date: "2/14（日）06:15", status: "待預約", detail: "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。" },
+    { id: "hu-vignette-purchase", label: "匈牙利高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "取車後、上高速前", status: "待辦理", detail: "先確認租車是否已含通行費；若需自購，核對車種、車牌與有效日期。", url: "https://ematrica.nemzetiutdij.hu/en" },
+    { id: "sk-vignette-purchase", label: "斯洛伐克高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "進入收費路段前", status: "待辦理", detail: "先確認 SIXT 是否已提供或代購；若自購，只使用官方 eznamka 網站。", url: "https://eznamka.sk/en" }
+  ],
   days: [
     {
       date: "2/3", weekday: "三", title: "台灣出發 → 新加坡轉機", city: "Taipei → Singapore", hotel: "機上／轉機", theme: "flight", photo: "https://images.unsplash.com/photo-1540339832862-474599807836?auto=format&fit=crop&w=1400&q=82",
@@ -278,5 +293,6 @@ const TRIP_DATA = {
     { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" }
   ]
 };
+
 
 
