@@ -14,7 +14,7 @@
 - 3 × 29 吋行李
 - 固定飯店與航班依目前確認版本
 - 一般觀光日行程從 09:00 開始；長途航班、機場移動與長途交通日按實際班次／路況安排
-- 2/7 將 Jaszczurówka、Pęksowy Brzyzek 移至 Zakopane 抵達日；2/8 保留 Kasprowy Wierch 與 Snowmobile
+- 2/7 Zakopane 抵達日安排 Jaszczurówka、Gubałówka 與 Krupówki；不前往 Pęksowy Brzyzek；2/8 保留 Kasprowy Wierch 與 Snowmobile
 - 修正景點卡片 Day 編號：2/11=D9、2/12=D10、2/13=D11
 - 圖片卡片顯示圖片來源／原圖連結；失效圖片自動隱藏
 
