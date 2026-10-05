@@ -28,11 +28,12 @@ const TRIP_DATA = {
     { id: "sixt", label: "SIXT 跨境許可：斯洛伐克＋波蘭", group: "租車" },
     { id: "winter-tires", label: "確認 4 條冬季胎／雪鏈備用", group: "租車" },
     { id: "krakow-sct", label: "確認租車車牌後完成 Kraków SCT 登錄", group: "租車" },
-    { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" }
+    { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" },
+    { id: "budapest-day-pass", label: "確認布達佩斯搭車是否需要買一日券", group: "車票／交通" }
   ],
   // 共用預約待辦：網站所有訪客都會看到。確認訂妥後請更新 status；修改此區即可同步公開清單。
   reservations: [
-    { id: "train-vie-budapest", label: "VIE → Budapest-Keleti 火車票（含 Wien Hbf 轉乘）", group: "車票／交通預約", date: "2/4（四）", status: "待購票", detail: "依落地與領行李時間選 Railjet／EC；確認 Wien Hbf 轉乘餘裕及抵達 Budapest-Keleti 的時間。", url: "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing" },
+    { id: "flixbus-vie-budapest", label: "VIE → Budapest FlixBus 車票", group: "車票／交通預約", date: "2/4（四）", status: "待購票", detail: "確認機場上車站、班次與行李規則；核對 Budapest 下車站及前往 InterContinental Budapest 的末段交通。", url: "https://www.flixbus.com/" },
     { id: "sixt-booking", label: "SIXT Budapest 取車／還車訂單與跨境許可", group: "租車／道路通行", date: "2/6（六）–2/10（三）", status: "待確認", detail: "核對取還車門市、營業時間、跨境斯洛伐克與波蘭許可、冬季胎、費用及保險；不要只依行程草案推定已訂妥。", url: "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP" },
     { id: "kasprowy-ticket", label: "Kasprowy Wierch 纜車來回票／上山時段", group: "門票／活動預約", date: "2/8（一）上午", status: "待購票", detail: "選接近 10:00 的上山時段；確認票種、下山安排與風雪停駛退改規則。", url: "https://www.sklep.pkl.pl/en/" },
     { id: "snowmobile-booking", label: "Zakopane／Kościelisko 雪地摩托車體驗", group: "門票／活動預約", date: "2/8（一）14:30", status: "待預約", detail: "尚未指定業者；先確認集合地址、接送、報到時間、三人名額、裝備、雪況不足時的取消／改期規則。", url: "https://www.google.com/maps/search/?api=1&query=snowmobile+Koscielisko+Zakopane" },
@@ -61,18 +62,17 @@ const TRIP_DATA = {
     },
     {
       date: "2/4", weekday: "四", title: "抵達維也納 → 布達佩斯", city: "Vienna → Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
-      summary: "抵達日保持輕量：交通、入住、休息，傍晚只做多瑙河夜景。",
-      highlights: ["08:30 VIE", "前往 Budapest", "入住", "Danube／Chain Bridge 夜景"],
+      summary: "抵達日搭 FlixBus 前往布達佩斯，入住休息，傍晚視體力欣賞多瑙河夜景。",
+      highlights: ["08:30 VIE", "機場搭 FlixBus 前往 Budapest", "入住", "Danube／Chain Bridge 夜景"],
       items: [
         ["08:30–10:30", "arrival", "抵達 Vienna VIE", "入境、領行李；時間視排隊情況調整", "約 2h"],
-        ["10:30–11:00", "transit", "VIE → Wien Hbf", "Railjet／S-Bahn；確認月台與轉乘方式", "約 30m"],
-        ["約 11:00–14:00", "train", "Wien Hbf → Budapest-Keleti", "選直達 Railjet／EC；2027 班次以 ÖBB 開售時刻為準", "約 3h"],
-        ["14:00–15:00", "transit", "Keleti → InterContinental Budapest（布達佩斯洲際酒店）", "大行李建議計程車；辦理入住或寄放行李", "約 1h"],
+        ["依班次", "bus", "Vienna Airport → Budapest｜FlixBus", "直接從維也納機場搭車；出發時間、站點與車程依購票班次確認", "待確認"],
+        ["抵達後", "transit", "FlixBus 下車站 → InterContinental Budapest（布達佩斯洲際酒店）", "依實際下車站安排大眾運輸或計程車；辦理入住或寄放行李", "待確認"],
         ["15:00–17:00", "rest", "入住／休息／補水", "抵達日不安排需預約的景點", "2h"],
         ["17:00–18:00", "photo", "多瑙河河岸（選擇性）", "體力許可再散步；Chain Bridge 外觀", "1h"],
         ["18:00 後", "food", "晚餐與休息", "可選匈牙利燉牛肉湯 Gulyás 或雞肉紅椒燉 Paprikás csirke；抵達疲累就近用餐", ""]
       ],
-      notes: ["長途飛行與跨境轉乘日，保留彈性，不把河岸散步列為必到。", "列車班次與票價尚未開放，出發前依 ÖBB／MÁV 正式時刻表確認。"]
+      notes: ["長途飛行與跨境移動日，保留彈性，不把河岸散步列為必到。", "FlixBus 班次、機場上車點及布達佩斯下車站以購票資訊為準；預留入境、領行李與延誤時間。"]
     },
     {
       date: "2/5", weekday: "五", title: "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion", city: "Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
@@ -285,5 +285,6 @@ const TRIP_DATA = {
     { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" }
   ]
 };
+
 
 
