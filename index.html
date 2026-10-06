@@ -99,7 +99,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=kosice-route-20261007a"></script>
+<script src="trip-data.js?v=kosice-tabs-20261007b"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -172,7 +172,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 $('#placeGrid').addEventListener('click',e=>{const a=e.target.closest('[data-day-link]');if(!a)return;$('#daySearch').value='';renderDays();go('days',false);const target=document.getElementById('day-'+a.dataset.day);if(target)target.style.scrollMarginTop=(document.querySelector('header').getBoundingClientRect().height+$('.sticky-tools').getBoundingClientRect().height+12)+'px'});
 renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=20261007a').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=20261007b').catch(()=>{}));}
 </script>
 </body>
 </html>
