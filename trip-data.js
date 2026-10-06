@@ -108,6 +108,7 @@ const TRIP_DATA = {
       ],
       notes: ["跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "冬季胎四條；雪鏈作為備用。"]
     },
+    {
       date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
       summary: "09:00 退房後自駕至 Zakopane，途中安排 Jaszczurówka，接著前往 Gubałówka、Krupówki。",
       highlights: ["09:00 出發", "Jaszczurówka", "Gubałówka", "Krupówki"],
