@@ -94,23 +94,20 @@ const TRIP_DATA = {
       notes: ["Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。", "Fisherman’s Bastion 已在本日完成，2/11 不再排。"]
     },
     {
-      date: "2/6", weekday: "六", title: "Budapest → Miskolc → Košice → Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
-      summary: "長途冬季自駕日，以高速／快速道路與路況緩衝為主。",
-      highlights: ["10:00 SIXT", "約 380 km", "跨境：HU → SK", "山區冬季路況"],
+      date: "2/6", weekday: "六", title: "Budapest → Košice（午餐）→ Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
+      summary: "長途冬季自駕日，跳過 Miskolc，直接前往 Košice 午餐，再續行至 Štrbské Pleso。",
+      highlights: ["10:00 SIXT", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
       items: [
         ["10:00", "car", "SIXT Budapest 取車", "確認冬季胎、跨境許可、車況、租車文件", ""],
-        ["10:30–12:30", "drive", "Budapest → Miskolc", "高速路段為主", "約 2h"],
-        ["12:30–13:15", "food", "午餐／休息", "Miskolc 附近找 Gulyás 燉牛肉湯或燉菜；安排駕駛休息", "45m"],
-        ["13:15–15:00", "drive", "Miskolc → Košice", "跨境進入 SK", "約 1h45"],
-        ["15:00–15:30", "rest", "Košice 補給", "不安排正式觀光", "30m"],
-        ["15:30–17:30", "drive", "Košice → Prešov → Poprad", "山區／冬季預留緩衝", "約 2h"],
-        ["17:30–18:15", "drive", "Poprad → Štrbské Pleso", "山區路段", "約 45m"],
-        ["18:15–19:00", "hotel", "Hotel Panorama（全景酒店）", "入住", ""],
-        ["19:00–20:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
+        ["10:30–13:30", "drive", "Budapest → Košice", "直接前往 Košice，不停留 Miskolc；依導航與路況調整", "約 3h"],
+        ["13:30–14:30", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
+        ["14:30–16:30", "drive", "Košice → Prešov → Poprad", "山區／冬季預留緩衝", "約 2h"],
+        ["16:30–17:15", "drive", "Poprad → Štrbské Pleso", "山區路段", "約 45m"],
+        ["17:15–18:00", "hotel", "Hotel Panorama（全景酒店）", "入住；依冬季路況保留彈性", ""],
+        ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
       notes: ["跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "冬季胎四條；雪鏈作為備用。"]
     },
-    {
       date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
       summary: "09:00 退房後自駕至 Zakopane，途中安排 Jaszczurówka，接著前往 Gubałówka、Krupówki。",
       highlights: ["09:00 出發", "Jaszczurówka", "Gubałówka", "Krupówki"],
