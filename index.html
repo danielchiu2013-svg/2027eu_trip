@@ -90,7 +90,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
     <div class="photo-toolbar"><span id="photoCount" role="status"></span><button type="button" id="photoReset">重設篩選</button><button type="button" id="photoFit">顯示全部篩選機位</button></div>
     <div class="card photo-map-card">
       <div id="photoMap" aria-label="可縮放的攝影機位地圖"></div>
-      <div class="photo-map-status"><span id="photoMapStatus" role="status">開啟此分頁時載入地圖；機位文字與導航連結可直接使用。</span><button type="button" id="photoRetry" class="hidden">重試載入</button></div>
+      <div class="photo-map-status"><span id="photoMapStatus" role="status">開啟此分頁時載入地圖；機位文字與位置連結可直接使用。</span><button type="button" id="photoRetry" class="hidden">重試載入</button></div>
     </div>
     <div id="photoSelected" aria-live="polite"></div>
     <div class="section-title">機位清單</div>
@@ -119,7 +119,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=photo-map-20261007d"></script>
+<script src="trip-data.js?v=photo-map-20261008a"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -178,8 +178,8 @@ const photoMarkers=new Map();
 function photoIndex(s){return photoSpots.indexOf(s)+1}
 function photoCoordinates(s){return `${s.lat},${s.lng}`}
 function photoGoogle(s){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(photoCoordinates(s))}
-function photoNav(s){return s.access==='cable'?photoGoogle(s):'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(photoCoordinates(s))+'&travelmode=walking'}
-function photoNavLabel(s){return s.access==='cable'?'纜車上站位置':'步行導航到站位'}
+function photoNav(s){return photoGoogle(s)}
+function photoNavLabel(s){return s.access==='cable'?'查看纜車上站位置':'查看機位位置'}
 function filteredPhotoSpots(){
   return photoSpots.filter(s=>(!photoState.city||s.city===photoState.city)&&(!photoState.date||s.dates.includes(photoState.date))&&(!photoState.placeKey||s.placeKeys.includes(photoState.placeKey))&&(!photoState.query||JSON.stringify(s).toLowerCase().includes(photoState.query)));
 }
@@ -204,9 +204,9 @@ function renderPhotoSpots(){
 }
 function renderPhotoSelected(){
   const s=photoSpots.find(s=>s.id===photoState.selected);
-  if(!s){$('#photoSelected').innerHTML='<div class="card summary photo-intro">點地圖編號或清單的「地圖看機位」查看拍攝方向與導航。</div>';return}
+  if(!s){$('#photoSelected').innerHTML='<div class="card summary photo-intro">點地圖編號或清單的「地圖看機位」查看拍攝方向與位置。</div>';return}
   const dayLinks=s.dates.map(date=>{const n=D.days.findIndex(d=>d.date===date)+1;return `<a href="#day-${n}" data-day-link="${n}">${esc(date)} 每日行程</a>`}).join('');
-  $('#photoSelected').innerHTML=`<article class="card photo-detail"><span class="photo-number">${photoIndex(s)}</span><span class="badge">${esc(s.city)} · ${esc(s.dates.join('／'))}</span><h3>${esc(s.name)}</h3><dl><dt>站位／方向</dt><dd>${esc(s.direction)}</dd><dt>建議時段</dt><dd>${esc(s.time)}</dd><dt>焦段建議</dt><dd>${esc(s.lens)}</dd></dl><div class="notes">${s.access==='cable'?'先搭纜車至上站，再於開放觀景範圍找站位。此連結只查看上站位置，不規劃步行登山路線。<br>':''}${esc(s.note)}</div><div class="place-actions"><a class="map" href="${photoNav(s)}" target="_blank" rel="noopener">${photoNavLabel(s)}</a><a href="${photoGoogle(s)}" target="_blank" rel="noopener">Google 地圖／街景</a>${dayLinks}</div><p class="photo-source">圖釘為站位區域參考，並非精密測量位置。構圖與焦段是拍攝建議。<a href="${esc(s.source)}" target="_blank" rel="noopener">景點／參考資料 ↗</a> · <a href="https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lng}#map=18/${s.lat}/${s.lng}" target="_blank" rel="noopener">核對地圖位置 ↗</a></p></article>`;
+  $('#photoSelected').innerHTML=`<article class="card photo-detail"><span class="photo-number">${photoIndex(s)}</span><span class="badge">${esc(s.city)} · ${esc(s.dates.join('／'))}</span><h3>${esc(s.name)}</h3><dl><dt>站位／方向</dt><dd>${esc(s.direction)}</dd><dt>建議時段</dt><dd>${esc(s.time)}</dd><dt>焦段建議</dt><dd>${esc(s.lens)}</dd></dl><div class="notes">${s.access==='cable'?'先搭纜車至上站，再於開放觀景範圍找站位。此連結只查看上站位置，不規劃步行登山路線。<br>':''}${esc(s.note)}</div><div class="place-actions"><a class="map" href="${photoNav(s)}" target="_blank" rel="noopener">${photoNavLabel(s)}</a>${dayLinks}</div><p class="photo-source">圖釘為站位區域參考，並非精密測量位置。構圖與焦段是拍攝建議。<a href="${esc(s.source)}" target="_blank" rel="noopener">景點／參考資料 ↗</a> · <a href="https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lng}#map=18/${s.lat}/${s.lng}" target="_blank" rel="noopener">核對地圖位置 ↗</a></p></article>`;
 }
 function photoIcon(s){
   return L.divIcon({className:'photo-pin'+(s.id===photoState.selected?' is-selected':''),html:`<span>${photoIndex(s)}</span>`,iconSize:[32,32],iconAnchor:[16,16]});
@@ -253,14 +253,14 @@ async function ensurePhotoMap(){
     }
     photoMap=L.map('photoMap',{scrollWheelZoom:false}).setView([48.5,19],6);
     const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'}).addTo(photoMap);
-    tiles.on('tileerror',()=>{$('#photoMapStatus').textContent='底圖暫時無法載入；仍可點圖釘或使用下方 Google 地圖導航。'});
+    tiles.on('tileerror',()=>{$('#photoMapStatus').textContent='底圖暫時無法載入；仍可點圖釘或使用下方 Google 地圖查看位置。'});
     photoLayer=L.layerGroup().addTo(photoMap);
     $('#photoMapStatus').textContent='編號對應下方機位清單；點圖釘看詳情。地圖需網路，機位文字可離線查看。';
     drawPhotoMarkers();
     requestAnimationFrame(()=>{photoMap.invalidateSize();if(currentView==='photo-map'){if(photoState.selected)selectPhotoSpot(photoState.selected,true);else fitPhotoMap()}});
   })().catch(()=>{
     if(photoMap){photoMap.remove();photoMap=null}
-    $('#photoMapStatus').textContent='地圖未能載入。可重試，或點下方機位查看 Google 地圖與步行導航。';$('#photoRetry').classList.remove('hidden');
+    $('#photoMapStatus').textContent='地圖未能載入。可重試，或點下方機位查看 Google 地圖標記位置。';$('#photoRetry').classList.remove('hidden');
   }).finally(()=>{photoMapLoading=null});
   return photoMapLoading;
 }
@@ -322,7 +322,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=photo-map-20261007d').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=photo-map-20261008a').catch(()=>{}));}
 </script>
 </body>
 </html>
