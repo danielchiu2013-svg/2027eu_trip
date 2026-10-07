@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v32';
+const CACHE = '2027eu-app-v33';
 const VERSIONED_SHELL = [
-  './index.html?v=photo-map-20261007c',
-  './trip-data.js?v=photo-map-20261007c',
+  './index.html?v=photo-map-20261007d',
+  './trip-data.js?v=photo-map-20261007d',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -36,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=photo-map-20261007c', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=photo-map-20261007d', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }

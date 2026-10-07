@@ -349,7 +349,8 @@ const TRIP_DATA = {
     "id": "parliament-across",
     "city": "Budapest",
     "dates": [
-      "2/5"
+      "2/5",
+      "2/11"
     ],
     "placeKeys": [
       "Parliament"
@@ -358,9 +359,9 @@ const TRIP_DATA = {
     "lat": 47.507,
     "lng": 19.0395,
     "direction": "從布達側河岸往東拍國會全貌，以河面作前景。",
-    "time": "白天；若另有時間可拍藍調",
+    "time": "2/5 順拍；2/11 原行程傍晚",
     "lens": "XF16–55mm；長焦壓縮立面",
-    "note": "2/5 經 Batthyány tér 時可順拍；不是 2/11 國會旁的同一側，勿為此臨時趕行程。",
+    "note": "2/5 經 Batthyány tér 時可順拍；2/11 原行程也在此拍對岸全景。與 Kossuth Lajos tér 近拍機位不同。",
     "source": "https://www.budapestinfo.hu/"
   },
   {
@@ -418,6 +419,7 @@ const TRIP_DATA = {
   },
   {
     "id": "gubalowka-view",
+    "access": "cable",
     "city": "Zakopane",
     "dates": [
       "2/7"
@@ -454,6 +456,7 @@ const TRIP_DATA = {
   },
   {
     "id": "kasprowy-top",
+    "access": "cable",
     "city": "Zakopane",
     "dates": [
       "2/8"
