@@ -252,6 +252,497 @@ const TRIP_DATA = {
       notes: ["回國後整理照片與租車／旅程文件備份。"]
     }
   ],
+  // 攝影圖釘為建議站位區域，日期只連結既有行程，不增加必到活動。
+  photoSpots: [
+  {
+    "id": "chain-river",
+    "city": "Budapest",
+    "dates": [
+      "2/4",
+      "2/11"
+    ],
+    "placeKeys": [
+      "ChainBridge"
+    ],
+    "name": "鏈橋｜佩斯側河岸步道",
+    "lat": 47.4986,
+    "lng": 19.0466,
+    "direction": "站在鏈橋南側的河岸步道，往西北拍橋體與布達城堡山。",
+    "time": "黃昏／藍調時刻",
+    "lens": "XF16–55mm；X100VI",
+    "note": "使用人行步道，避開車道與電車軌道；不保證每日亮燈時間。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "szentendre-square",
+    "city": "Szentendre",
+    "dates": [
+      "2/5"
+    ],
+    "placeKeys": [
+      "Szentendre"
+    ],
+    "name": "聖安德烈｜Fő tér 廣場",
+    "lat": 47.6678,
+    "lng": 19.0761,
+    "direction": "從廣場邊緣以石板路作前景，拍彩色立面與教堂塔尖。",
+    "time": "原行程上午",
+    "lens": "X100VI；XF16–55mm",
+    "note": "站位可沿廣場邊緣微調，避免擋住商店入口。",
+    "source": "https://iranyszentendre.hu/en/"
+  },
+  {
+    "id": "castle-terrace",
+    "city": "Budapest",
+    "dates": [
+      "2/5"
+    ],
+    "placeKeys": [
+      "Buda Castle"
+    ],
+    "name": "布達城堡｜東側觀景區",
+    "lat": 47.4963,
+    "lng": 19.0404,
+    "direction": "在城堡面向多瑙河的觀景區，往東北拍鏈橋與佩斯河岸。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm；長焦拍河岸細節",
+    "note": "標記為東側觀景區約略位置；施工圍籬或入口開放以現場為準。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "matthias-square",
+    "city": "Budapest",
+    "dates": [
+      "2/5"
+    ],
+    "placeKeys": [
+      "Matthias Church"
+    ],
+    "name": "馬提亞斯教堂｜聖三一廣場",
+    "lat": 47.5016,
+    "lng": 19.0328,
+    "direction": "由教堂西側廣場往東拍正面、尖塔與彩色屋瓦。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm",
+    "note": "廣角保持相機水平；室內攝影與腳架另依教堂規定。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "bastion-arches",
+    "city": "Budapest",
+    "dates": [
+      "2/5"
+    ],
+    "placeKeys": [
+      "Fisherman's Bastion"
+    ],
+    "name": "漁人堡｜面河拱廊",
+    "lat": 47.502,
+    "lng": 19.0345,
+    "direction": "沿面向多瑙河的拱廊，往東至東北以石拱框住國會大廈。",
+    "time": "下午／藍調時刻",
+    "lens": "XF16–55mm；長焦拍國會細節",
+    "note": "圖釘為拱廊區域；選可合法進入的露台，部分區域可能收費。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "parliament-across",
+    "city": "Budapest",
+    "dates": [
+      "2/5"
+    ],
+    "placeKeys": [
+      "Parliament"
+    ],
+    "name": "國會大廈｜Batthyány tér 對岸河岸",
+    "lat": 47.507,
+    "lng": 19.0395,
+    "direction": "從布達側河岸往東拍國會全貌，以河面作前景。",
+    "time": "白天；若另有時間可拍藍調",
+    "lens": "XF16–55mm；長焦壓縮立面",
+    "note": "2/5 經 Batthyány tér 時可順拍；不是 2/11 國會旁的同一側，勿為此臨時趕行程。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "kosice-cathedral",
+    "city": "Košice",
+    "dates": [
+      "2/6"
+    ],
+    "placeKeys": [],
+    "name": "科西策｜聖米迦勒禮拜堂旁",
+    "lat": 48.7202,
+    "lng": 21.2581,
+    "direction": "在大教堂南側、禮拜堂附近的行人區，往北拍聖伊莉莎白大教堂。",
+    "time": "午餐休息時順拍",
+    "lens": "XF16–55mm；X100VI",
+    "note": "只在午餐停留時間與停車位置允許時順拍；不另加教堂參觀行程。",
+    "source": "https://visitkosice.org/en/vidiet-a-zazit/st-elisabeths-cathedral"
+  },
+  {
+    "id": "lake-south",
+    "city": "Štrbské Pleso",
+    "dates": [
+      "2/6",
+      "2/7"
+    ],
+    "placeKeys": [
+      "Strbske"
+    ],
+    "name": "斯特爾布斯克湖｜南岸觀景步道",
+    "lat": 49.119782,
+    "lng": 20.058144,
+    "direction": "從南岸往北拍湖面、雪山與湖畔建築；用岸邊樹木作前景。",
+    "time": "2/7 早餐前若有餘裕；2/6 視到達天色",
+    "lens": "XF16–55mm；長焦取雪峰",
+    "note": "2/6 原定傍晚抵達，可能已暗；晨拍不延後 2/7 出發。只走開放步道，不踏上冰湖。",
+    "source": "https://www.outdooractive.com/en/poi/slovakia/view-to-the-strbske-pleso-lake/31493722/"
+  },
+  {
+    "id": "jas-chapel",
+    "city": "Zakopane",
+    "dates": [
+      "2/7"
+    ],
+    "placeKeys": [
+      "Jaszczurowka"
+    ],
+    "name": "Jaszczurówka｜木教堂前方步道",
+    "lat": 49.284355,
+    "lng": 20.001141,
+    "direction": "沿入口步道拍木造教堂與樹林，用斜側角度呈現屋頂層次。",
+    "time": "原行程中午",
+    "lens": "XF16–55mm；X100VI",
+    "note": "站位參考攝影座標；不用道路當機位，尊重宗教活動，樓梯結冰時改在較低處拍。",
+    "source": "https://malopolska.szlaki.pttk.pl/3074-pttk-malopolska-kaplica-najswietszego-serca-pana-jezusa"
+  },
+  {
+    "id": "gubalowka-view",
+    "city": "Zakopane",
+    "dates": [
+      "2/7"
+    ],
+    "placeKeys": [
+      "Gubalowka"
+    ],
+    "name": "Gubałówka｜上站旁觀景步道",
+    "lat": 49.306807,
+    "lng": 19.933019,
+    "direction": "在上站旁面山的觀景步道往南拍 Zakopane 與塔特拉山群峰。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm 拍全景；長焦取山峰",
+    "note": "圖釘靠近上站，沿面山步道選不被商攤遮擋的位置；不要進入滑雪道。",
+    "source": "https://www.sklep.pkl.pl/en/resorts/details%2C4%2Cgubalowka.html"
+  },
+  {
+    "id": "krupowki-street",
+    "city": "Zakopane",
+    "dates": [
+      "2/7"
+    ],
+    "placeKeys": [
+      "Krupowki"
+    ],
+    "name": "Krupówki｜中段步行街",
+    "lat": 49.2937,
+    "lng": 19.952,
+    "direction": "沿街道軸線拍燈光、木屋與行人；換方向找較少遮擋的背景。",
+    "time": "原行程黃昏／夜景",
+    "lens": "X100VI；XF16–55mm",
+    "note": "機位為步行街中段區域；留意人潮、積雪與車輛出入口。",
+    "source": "https://www.sklep.pkl.pl/en/resorts/details%2C4%2Cgubalowka.html"
+  },
+  {
+    "id": "kasprowy-top",
+    "city": "Zakopane",
+    "dates": [
+      "2/8"
+    ],
+    "placeKeys": [
+      "Kasprowy"
+    ],
+    "name": "Kasprowy Wierch｜纜車上站外",
+    "lat": 49.232,
+    "lng": 19.9817,
+    "direction": "在上站外開放觀景範圍拍周邊塔特拉群峰，依能見度選方向。",
+    "time": "原行程上午",
+    "lens": "XF16–55mm；長焦取雪峰",
+    "note": "標記為上站周邊，不是稜線登山路線；風雪時服從工作人員指示。",
+    "source": "https://mapakasprowy.pkl.pl/203-pkl-jeden-bilet-dwie-atrakcje"
+  },
+  {
+    "id": "wawel-courtyard",
+    "city": "Kraków",
+    "dates": [
+      "2/9"
+    ],
+    "placeKeys": [
+      "Wawel",
+      "WawelCathedral"
+    ],
+    "name": "瓦維爾｜城堡庭院",
+    "lat": 50.0542,
+    "lng": 19.9367,
+    "direction": "從庭院邊緣拍拱廊與對稱建築，以柱列製造前後層次。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm",
+    "note": "庭院開放與票務依現場；室內展覽的拍攝規定另行確認。",
+    "source": "https://www.krakow.com/guides/krakow-photography-guide"
+  },
+  {
+    "id": "kanonicza-street",
+    "city": "Kraków",
+    "dates": [
+      "2/9"
+    ],
+    "placeKeys": [
+      "Kanonicza"
+    ],
+    "name": "Kanonicza｜南段石板街",
+    "lat": 50.0558,
+    "lng": 19.9375,
+    "direction": "沿石板街向南拍通往瓦維爾的街景，或用門框與立面細節構圖。",
+    "time": "原行程下午／黃昏",
+    "lens": "X100VI；XF16–55mm",
+    "note": "選街邊站位，不擋通行；不進入私人庭院。",
+    "source": "https://www.krakow.com/guides/krakow-photography-guide"
+  },
+  {
+    "id": "market-mary",
+    "city": "Kraków",
+    "dates": [
+      "2/9"
+    ],
+    "placeKeys": [
+      "MainMarket",
+      "StMary"
+    ],
+    "name": "中央集市廣場｜紡織會館東側",
+    "lat": 50.0614,
+    "lng": 19.9383,
+    "direction": "由紡織會館東側往東拍聖母聖殿雙塔，以廣場行人作尺度。",
+    "time": "黃昏／夜景",
+    "lens": "XF16–55mm；X100VI",
+    "note": "標記為廣場站位區域；腳架不要堵住拱廊入口。",
+    "source": "https://www.krakow.com/guides/krakow-photography-guide"
+  },
+  {
+    "id": "cloth-arcades",
+    "city": "Kraków",
+    "dates": [
+      "2/9"
+    ],
+    "placeKeys": [
+      "ClothHall"
+    ],
+    "name": "紡織會館｜西側拱廊外",
+    "lat": 50.0615,
+    "lng": 19.9367,
+    "direction": "沿拱廊外緣斜拍柱列，或退到廣場拍會館長立面。",
+    "time": "黃昏／夜景",
+    "lens": "XF16–55mm；X100VI",
+    "note": "商店營業與人潮會影響站位，可沿廣場微調。",
+    "source": "https://www.krakow.com/guides/krakow-photography-guide"
+  },
+  {
+    "id": "market-budapest",
+    "city": "Budapest",
+    "dates": [
+      "2/11"
+    ],
+    "placeKeys": [
+      "CentralMarket"
+    ],
+    "name": "中央市場｜Fővám tér 廣場",
+    "lat": 47.4873,
+    "lng": 19.0573,
+    "direction": "由市場西側廣場往東拍正面與彩色屋頂。",
+    "time": "原行程上午",
+    "lens": "XF16–55mm",
+    "note": "圖釘在市場外廣場；室內另依現場允許範圍拍攝。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "vaci-street",
+    "city": "Budapest",
+    "dates": [
+      "2/11"
+    ],
+    "placeKeys": [
+      "Vaci"
+    ],
+    "name": "瓦茨街｜南段步行街",
+    "lat": 47.4891,
+    "lng": 19.056,
+    "direction": "以街道消失點、櫥窗與行人拍城市生活，順行程向北移動。",
+    "time": "原行程上午",
+    "lens": "X100VI；XF16–55mm",
+    "note": "不要為拍人像阻擋行人；近距離拍攝人物先取得同意。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "basilica-square",
+    "city": "Budapest",
+    "dates": [
+      "2/11"
+    ],
+    "placeKeys": [
+      "Basilica"
+    ],
+    "name": "聖史蒂芬大教堂｜前方廣場",
+    "lat": 47.5008,
+    "lng": 19.0524,
+    "direction": "從教堂西側廣場往東拍雙塔與圓頂；走到中軸取對稱構圖。",
+    "time": "原行程白天",
+    "lens": "XF16–55mm",
+    "note": "先在廣場拍外觀；圓頂登高與室內拍攝依票務及規定。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "parliament-square",
+    "city": "Budapest",
+    "dates": [
+      "2/11"
+    ],
+    "placeKeys": [
+      "Parliament"
+    ],
+    "name": "國會大廈｜Kossuth Lajos tér",
+    "lat": 47.5067,
+    "lng": 19.047,
+    "direction": "由國會東側廣場往西拍正面與圓頂，選較寬的視角容納立面。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm",
+    "note": "與對岸河岸機位不同；留意警戒線及臨時封閉區。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "shoes-river",
+    "city": "Budapest",
+    "dates": [
+      "2/11"
+    ],
+    "placeKeys": [
+      "Shoes"
+    ],
+    "name": "多瑙河畔之鞋｜紀念碑步道",
+    "lat": 47.5038,
+    "lng": 19.0448,
+    "direction": "在紀念碑旁步道低角度拍鞋雕塑，以河面與布達側作背景。",
+    "time": "原行程下午",
+    "lens": "X100VI；XF16–55mm",
+    "note": "以安靜方式拍攝，不踩踏雕塑，不跨越河岸邊緣。",
+    "source": "https://www.budapestinfo.hu/"
+  },
+  {
+    "id": "stephansplatz",
+    "city": "Vienna",
+    "dates": [
+      "2/12"
+    ],
+    "placeKeys": [
+      "Stephansdom"
+    ],
+    "name": "聖史蒂芬主教座堂｜西側廣場",
+    "lat": 48.2081,
+    "lng": 16.372,
+    "direction": "從西側廣場拍正面；移到西南側可將南塔與屋瓦一起入鏡。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm；X100VI",
+    "note": "站在廣場可通行範圍，室內拍攝規定另依教堂公告。",
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z"
+  },
+  {
+    "id": "graben-column",
+    "city": "Vienna",
+    "dates": [
+      "2/12"
+    ],
+    "placeKeys": [
+      "Graben"
+    ],
+    "name": "Graben｜瘟疫紀念柱附近",
+    "lat": 48.2086,
+    "lng": 16.3694,
+    "direction": "從步行街側邊斜拍紀念柱與街道立面，夜景保留店面燈光。",
+    "time": "原行程下午／夜景",
+    "lens": "X100VI；XF16–55mm",
+    "note": "機位為紀念柱附近區域，不擋住步行街主要動線。",
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z"
+  },
+  {
+    "id": "kohlmarkt-axis",
+    "city": "Vienna",
+    "dates": [
+      "2/12"
+    ],
+    "placeKeys": [
+      "Kohlmarkt"
+    ],
+    "name": "Kohlmarkt｜街道中段",
+    "lat": 48.2086,
+    "lng": 16.3673,
+    "direction": "沿街道往西南拍霍夫堡圓頂與精品櫥窗。",
+    "time": "原行程下午／夜景",
+    "lens": "X100VI；XF16–55mm",
+    "note": "站在行人區安全位置，不堵商店入口。",
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z"
+  },
+  {
+    "id": "schonbrunn-court",
+    "city": "Vienna",
+    "dates": [
+      "2/13"
+    ],
+    "placeKeys": [
+      "Schonbrunn"
+    ],
+    "name": "熊布朗宮｜前庭中軸",
+    "lat": 48.1855,
+    "lng": 16.313,
+    "direction": "從宮殿北側前庭沿中軸往南拍黃色正面與對稱窗列。",
+    "time": "原行程上午",
+    "lens": "XF16–55mm",
+    "note": "標記為前庭區域；不另加登高點，避免壓縮室內參觀時間。",
+    "source": "https://www.wien.info/en/livable-vienna/parks-green-spaces/baroque-gardens-palace-parks-340340"
+  },
+  {
+    "id": "belvedere-pond",
+    "city": "Vienna",
+    "dates": [
+      "2/13"
+    ],
+    "placeKeys": [
+      "Belvedere"
+    ],
+    "name": "美景宮｜上宮南側池畔",
+    "lat": 48.1908,
+    "lng": 16.3805,
+    "direction": "由上宮南側池畔往北拍宮殿正面，水面平靜時取倒影。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm",
+    "note": "二月池水可能結冰、排空或圍閉，不保證倒影；以開放步道站位。",
+    "source": "https://www.belvedere.at/en/belvedere/gardens"
+  },
+  {
+    "id": "hofburg-michael",
+    "city": "Vienna",
+    "dates": [
+      "2/13"
+    ],
+    "placeKeys": [
+      "Hofburg"
+    ],
+    "name": "霍夫堡｜Michaelerplatz 廣場",
+    "lat": 48.2076,
+    "lng": 16.366,
+    "direction": "從廣場往西南拍米迦勒翼圓頂與弧形立面。",
+    "time": "原行程下午",
+    "lens": "XF16–55mm；X100VI",
+    "note": "圖釘為廣場站位區域；留意馬車與行人動線。",
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z"
+  }
+],
   places: [
     { key:"Szentendre", name:"聖安德烈老城（Szentendre）", en:"Szentendre Old Town", description:"多瑙河畔的巴洛克小鎮，沿巷弄可看彩色立面、藝廊與河岸風景。", day:3, tag:"古城／街拍", duration:"2h", lens:"X100VI／16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/2/2c/Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg", images:["https://panadea.com/images/st4/utazasi-kalauz-utikonyv/hu-szentendre-magyarorszag-panadea-gb-sd-3044681-0065.jpg","https://cdn.borsonline.hu/2025/12/yBvx6_9cvl0n8Zzh9GbtxPn_R47hU7CovRujGy3h8tE/fit/1200/800/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2YwMTEwZTZmYTM2ZTRiNzM5N2RiYmRjNTZjYjBiM2Yw.webp","https://commons.wikimedia.org/wiki/Special:Redirect/file/Szentendre%20l%C3%A1tk%C3%A9p%20a%20Duna%20fel%C5%91l.jpg"], imageSources:["https://www.panadea.com/hu/utazasi-kalauz-utikonyv/europa/magyarorszag/budapest-es-kornyeke/dunakanyar/szentendre/fotogaleria/gal-002","https://www.borsonline.hu/belfoldi-utazas/2026/02/szentendre-latnivaloi-telen-is","https://commons.wikimedia.org/wiki/File:Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Szentendre+Old+Town" },
     { key:"Buda Castle", name:"布達城堡", en:"Budavári Palota", description:"布達城堡區俯瞰多瑙河與佩斯市區，可逛庭院並欣賞王宮外觀。", day:3, tag:"城堡／城市景", duration:"1h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Buda%20Castle.jpg", images:["https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg","https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://peika.bg/pictures/89277_715_.jpg"], imageSources:["https://welovebudapest.com/hely/budai-var","https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html"], map:"https://www.google.com/maps/search/?api=1&query=Buda+Castle+Budapest" },
@@ -283,6 +774,7 @@ const TRIP_DATA = {
     { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" }
   ]
 };
+
 
 
 

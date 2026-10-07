@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v31';
+const CACHE = '2027eu-app-v32';
 const VERSIONED_SHELL = [
-  './index.html?v=20261007b',
-  './trip-data.js?v=kosice-tabs-20261007b',
+  './index.html?v=photo-map-20261007c',
+  './trip-data.js?v=photo-map-20261007c',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -25,6 +25,8 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;
+  // Let map tiles and third-party resources use their own HTTP cache rules.
+  if (new URL(request.url).origin !== self.location.origin) return;
 
   const isPage = request.mode === 'navigate' || (request.headers.get('accept') || '').includes('text/html');
   if (isPage) {
@@ -34,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=20261007b', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=photo-map-20261007c', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
@@ -49,4 +51,5 @@ self.addEventListener('fetch', event => {
         .catch(() => cached))
   );
 });
+
 
