@@ -48,6 +48,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .country-mini{padding:10px 0;border-bottom:1px solid var(--line)}.country-mini:last-child{border-bottom:0}
 .phrase-row{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:8px;padding:9px 0;border-bottom:1px solid var(--line)}
 .phrase-row small{display:block;color:var(--muted);font-size:11px}.phrase-native{font-weight:750;overflow-wrap:anywhere}.phrase-table{margin:8px 0}
+.phrase-ipa,.phrase-reading{display:block;margin-top:5px;line-height:1.55;overflow-wrap:anywhere}.phrase-ipa{font-family:"Noto Sans","DejaVu Sans",sans-serif;font-size:12px;color:#53657b}.phrase-reading{font-size:12px;color:#31526b}.pronunciation-help>summary{font-size:12px}
 .reference-card{padding:12px 0;border-bottom:1px solid var(--line)}.reference-card:last-child{border-bottom:0}.reference-card h4{margin:4px 0 6px;font-size:14px}
 .reference-card p{margin:7px 0}.reference-meta{color:var(--muted);font-size:11px;line-height:1.6}.reference-difference{padding:9px 11px;background:#fff7e8;border-radius:10px}
 .reference-card a,.travel-content a{color:#3157d6;overflow-wrap:anywhere}.guide-links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
@@ -155,7 +156,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=language-20261008c"></script>
+<script src="trip-data.js?v=pronunciation-20261008d"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -196,16 +197,17 @@ function renderOutingBasics(){
 function guideCountries(date){return (D.travelGuide?.dayCountries?.[date]||[]).map(code=>D.travelGuide.countries.find(c=>c.code===code)).filter(Boolean)}
 function guideBlogs(date='',key=''){return (D.travelGuide?.blogs||[]).filter(b=>(!date||b.dates.includes(date))&&(!key||b.placeKeys.includes(key)))}
 function guideSources(list){return '<div class="outing-sources">'+list.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.name)+' ↗</a>').join('')+'</div>'}
-function phraseRows(rows,lang=''){return '<div class="phrase-table">'+rows.map(p=>'<div class="phrase-row"><div>'+esc(p[0])+'</div><div><span class="phrase-native" lang="'+esc(lang)+'">'+esc(p[1])+'</span>'+(p[2]?'<small>'+esc(p[2])+'</small>':'')+'</div></div>').join('')+'</div>'}
+function phraseRows(rows,lang=''){return '<div class="phrase-table">'+rows.map(p=>'<div class="phrase-row"><div>'+esc(p[0])+'</div><div><span class="phrase-native" lang="'+esc(lang)+'">'+esc(p[1])+'</span>'+(p[3]?'<span class="phrase-ipa">IPA '+esc(p[3].ipa)+'</span><span class="phrase-reading">英文拼讀 <span lang="en">'+esc(p[3].reading)+'</span></span>':'')+(p[2]?'<small>'+esc(p[2])+'</small>':'')+'</div></div>').join('')+'</div>'}
 function referenceCards(list){return list.map(b=>'<article class="reference-card"><h4>'+esc(b.title)+'</h4><div class="reference-meta">'+esc(b.author)+'<br>文章：'+esc(b.articleDate)+'<br>旅行：'+esc(b.travelDate)+'<br>'+esc(b.disclosure)+'</div><p><b>可參考：</b>'+esc(b.takeaway)+'</p><p class="reference-difference"><b>與你行程的差異：</b>'+esc(b.difference)+'</p><a href="'+esc(b.url)+'" target="_blank" rel="noopener">閱讀原遊記 ↗</a>'+(b.officialCheck?' · <a href="'+esc(b.officialCheck.url)+'" target="_blank" rel="noopener">'+esc(b.officialCheck.name)+' ↗</a>':'')+'</article>').join('')}
-function renderSituations(c){return '<details class="travel-details local-situations"><summary>當地語情境小抄 · 飯店／停車／拍照／結帳<span class="badge">'+esc(c.language)+' · 12 句</span></summary><div class="travel-content"><p class="outing-caption">左欄為中文；右欄為當地語，可直接出示給對方看。</p>'+phraseRows(c.situations,c.lang)+'<p class="outing-caption">句型參考；部分依本次三人、兩間房的情境改寫。</p>'+guideSources(c.languageSources)+'</div></details>'}
+function pronunciationHelp(c){const g=D.travelGuide.pronunciationGuide;return '<details class="travel-details pronunciation-help"><summary>發音提示 · '+esc(c.language)+'</summary><div class="travel-content"><p class="outing-caption">'+esc(g.note)+'</p>'+outingList(c.pronunciationHints)+'<h4>英文拼讀怎麼看</h4>'+outingList(g.key)+'<p class="outing-caption">音系與發音教學參考；小抄音標依基本讀法編寫，並非來源的逐句錄音轉寫。</p>'+guideSources(c.pronunciationSources)+'</div></details>'}
+function renderSituations(c){return '<details class="travel-details local-situations"><summary>當地語情境小抄 · 飯店／停車／拍照／結帳<span class="badge">'+esc(c.language)+' · 12 句</span></summary><div class="travel-content"><p class="outing-caption">左欄為中文；右欄依序是當地語、IPA 音標與英文拼讀。大寫表示重音；特殊音請展開「發音提示」。</p>'+phraseRows(c.situations,c.lang)+'<p class="outing-caption">句型參考；部分依本次三人、兩間房的情境改寫。</p>'+guideSources(c.languageSources)+'</div></details>'}
 function renderDayCulture(d){
   const list=guideCountries(d.date);if(!list.length)return '';
-  return '<details class="travel-details day-culture"><summary>當地文化 · 語言與地雷<span class="badge">'+esc(list.map(c=>c.name).join(' → '))+'</span></summary><div class="travel-content">'+list.map(c=>'<div class="country-mini"><h4>'+esc(c.name)+' · '+esc(c.currency)+'</h4>'+phraseRows([c.phrases[0],c.phrases[2]],c.lang)+outingList(c.quick)+renderSituations(c)+'<button type="button" class="photo-link" data-country-link="'+esc(c.code)+'">完整文化與語言小抄</button></div>').join('')+'</div></details>';
+  return '<details class="travel-details day-culture"><summary>當地文化 · 語言與地雷<span class="badge">'+esc(list.map(c=>c.name).join(' → '))+'</span></summary><div class="travel-content">'+list.map(c=>'<div class="country-mini"><h4>'+esc(c.name)+' · '+esc(c.currency)+'</h4>'+pronunciationHelp(c)+phraseRows([c.phrases[0],c.phrases[2]],c.lang)+outingList(c.quick)+renderSituations(c)+'<button type="button" class="photo-link" data-country-link="'+esc(c.code)+'">完整文化與語言小抄</button></div>').join('')+'</div></details>';
 }
 function renderDayReferences(d){const list=guideBlogs(d.date);return list.length?'<details class="travel-details day-references"><summary>近期遊記參考 · '+list.length+' 篇</summary><div class="travel-content">'+referenceCards(list)+'</div></details>':''}
 function renderPlaceReferences(p){const list=guideBlogs('',p.key);return list.length?'<details class="travel-details place-references"><summary>遊記與實拍參考 · '+list.length+' 篇</summary><div class="travel-content">'+referenceCards(list)+'</div></details>':''}
-function renderCountry(c){return '<details class="travel-details country-guide" id="culture-'+esc(c.code)+'"><summary>'+esc(c.name)+'<span class="badge">'+esc(c.language)+' · '+esc(c.currency)+'</span></summary><div class="travel-content"><p>'+esc(c.intro)+'</p><h4>問候與常用短句</h4>'+phraseRows(c.phrases,c.lang)+renderSituations(c)+'<h4>文化與禮貌</h4>'+outingList(c.etiquette)+'<h4>容易踩雷</h4>'+outingList(c.avoid)+'<p class="outing-caption">查核：'+esc(D.travelGuide.checkedDate)+' · 禮貌建議及規則參考如下</p>'+guideSources(c.sources)+'</div></details>'}
+function renderCountry(c){return '<details class="travel-details country-guide" id="culture-'+esc(c.code)+'"><summary>'+esc(c.name)+'<span class="badge">'+esc(c.language)+' · '+esc(c.currency)+'</span></summary><div class="travel-content"><p>'+esc(c.intro)+'</p>'+pronunciationHelp(c)+'<h4>問候與常用短句</h4>'+phraseRows(c.phrases,c.lang)+renderSituations(c)+'<h4>文化與禮貌</h4>'+outingList(c.etiquette)+'<h4>容易踩雷</h4>'+outingList(c.avoid)+'<p class="outing-caption">查核：'+esc(D.travelGuide.checkedDate)+' · 禮貌建議及規則參考如下</p>'+guideSources(c.sources)+'</div></details>'}
 function renderGuide(){
   const g=D.travelGuide;if(!g)return;
   const code=$('#guideCountry').value;
@@ -415,7 +417,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 initGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=language-20261008c').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=pronunciation-20261008d').catch(()=>{}));}
 </script>
 </body>
 </html>

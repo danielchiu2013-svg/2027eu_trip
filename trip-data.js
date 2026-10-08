@@ -72,32 +72,56 @@ const TRIP_DATA = {
           [
             "你好／日安",
             "Jó napot!",
-            "進店、飯店櫃檯"
+            "進店、飯店櫃檯",
+            {
+              "ipa": "/ˈjoː ˈnɒpot/",
+              "reading": "YOH NAH-pot"
+            }
           ],
           [
             "晚上好",
             "Jó estét!",
-            "晚間見面"
+            "晚間見面",
+            {
+              "ipa": "/ˈjoː ˈɛʃteːt/",
+              "reading": "YOH ESH-tayt"
+            }
           ],
           [
             "謝謝",
             "Köszönöm.",
-            "接受協助、用餐後"
+            "接受協助、用餐後",
+            {
+              "ipa": "/ˈkøsønøm/",
+              "reading": "KEU-seu-neum"
+            }
           ],
           [
             "不好意思",
             "Elnézést!",
-            "引起注意、借過"
+            "引起注意、借過",
+            {
+              "ipa": "/ˈɛlneːzeːʃt/",
+              "reading": "EL-nay-zaysht"
+            }
           ],
           [
             "再見",
             "Viszontlátásra!",
-            "離開店家"
+            "離開店家",
+            {
+              "ipa": "/ˈvisontlaːtaːʃrɒ/",
+              "reading": "VEE-sont-laa-taash-rah"
+            }
           ],
           [
             "請結帳",
             "A számlát kérem!",
-            "餐廳"
+            "餐廳",
+            {
+              "ipa": "/ɒ ˈsaːmlaːt ˈkeːrɛm/",
+              "reading": "ah SAAM-laat KAY-rem"
+            }
           ]
         ],
         "quick": [
@@ -130,57 +154,127 @@ const TRIP_DATA = {
         "situations": [
           [
             "能用英文嗎？",
-            "Beszél angolul?"
+            "Beszél angolul?",
+            "",
+            {
+              "ipa": "/ˈbɛseːl ˈɒŋɡolul/",
+              "reading": "BEH-sayl AHNG-go-lool"
+            }
           ],
           [
             "我們有三位。",
-            "Hárman vagyunk."
+            "Hárman vagyunk.",
+            "",
+            {
+              "ipa": "/ˈhaːrmɒn ˈvɒɟuŋk/",
+              "reading": "HAAR-mahn VAH-dyoonk"
+            }
           ],
           [
             "我今天有訂房。",
-            "Mára van szobafoglalásom."
+            "Mára van szobafoglalásom.",
+            "",
+            {
+              "ipa": "/ˈmaːrɒ vɒn ˈsobɒfoɡlɒlaːʃom/",
+              "reading": "MAA-rah vahn SO-bah-fog-lah-laa-shom"
+            }
           ],
           [
             "我們訂了兩間房。",
-            "Két szobát foglaltunk."
+            "Két szobát foglaltunk.",
+            "",
+            {
+              "ipa": "/keːt ˈsobaːt ˈfoɡlɒltuŋk/",
+              "reading": "KAYT SO-baat FOG-lahl-toonk"
+            }
           ],
           [
             "請問停車場在哪裡？",
-            "Hol van a parkoló?"
+            "Hol van a parkoló?",
+            "",
+            {
+              "ipa": "/hol vɒn ɒ ˈpɒrkoloː/",
+              "reading": "HOL vahn ah PAHR-ko-loh"
+            }
           ],
           [
             "請問怎麼繳停車費？",
-            "Hogyan fizethetek a parkolásért?"
+            "Hogyan fizethetek a parkolásért?",
+            "",
+            {
+              "ipa": "/ˈhoɟɒn ˈfizɛthɛtɛk ɒ ˈpɒrkolaːʃeːrt/",
+              "reading": "HO-dyahn FEE-zet-heh-tek ah PAHR-ko-laa-shayrt"
+            }
           ],
           [
             "可以寄放行李嗎？",
-            "Itt hagyhatjuk a csomagjainkat?"
+            "Itt hagyhatjuk a csomagjainkat?",
+            "",
+            {
+              "ipa": "/itː ˈhɒɟhɒtjuk ɒ ˈtʃomɒɡjɒinkɒt/",
+              "reading": "ITT HAHDY-haht-yook ah CHO-mahg-yah-in-kaht"
+            }
           ],
           [
             "可以拍照嗎？",
-            "Szabad itt fényképezni?"
+            "Szabad itt fényképezni?",
+            "",
+            {
+              "ipa": "/ˈsɒbɒd itː ˈfeːɲkeːpɛzni/",
+              "reading": "SAH-bahd ITT FAYNY-kay-pez-nee"
+            }
           ],
           [
             "請問廁所在哪裡？",
-            "Hol van a mosdó?"
+            "Hol van a mosdó?",
+            "",
+            {
+              "ipa": "/hol vɒn ɒ ˈmoʒdoː/",
+              "reading": "HOL vahn ah MOZH-doh"
+            }
           ],
           [
             "請給我們帳單。",
-            "A számlát kérem!"
+            "A számlát kérem!",
+            "",
+            {
+              "ipa": "/ɒ ˈsaːmlaːt ˈkeːrɛm/",
+              "reading": "ah SAAM-laat KAY-rem"
+            }
           ],
           [
             "帳單有包含服務費嗎？",
-            "A számla tartalmazza a szervizdíjat?"
+            "A számla tartalmazza a szervizdíjat?",
+            "",
+            {
+              "ipa": "/ɒ ˈsaːmlɒ ˈtɒrtɒlmɒzːɒ ɒ ˈsɛrvizdiːjɒt/",
+              "reading": "ah SAAM-lah TAHR-tahl-mahz-zah ah SEHR-veez-dee-yaht"
+            }
           ],
           [
             "請找零，謝謝。",
-            "Kérem a visszajárót, köszönöm."
+            "Kérem a visszajárót, köszönöm.",
+            "",
+            {
+              "ipa": "/ˈkeːrɛm ɒ ˈvisːɒjaːroːt ˈkøsønøm/",
+              "reading": "KAY-rem ah VEES-sah-yaa-roht KEU-seu-neum"
+            }
           ]
         ],
         "languageSources": [
           {
             "name": "HungarianPod101 · 旅遊基本句型",
             "url": "https://www.hungarianpod101.com/hungarianpod101-survival-phrases-curriculum/"
+          }
+        ],
+        "pronunciationHints": [
+          "重音通常在每個詞的第一音節；á、é、í、ó、ú、ő、ű 是長母音，不代表把重音移到那裡。",
+          "s 讀 sh，sz 讀 s，cs 讀 ch；gy、ny 為軟音。ö／ő 與 ü／ű 請配合圓唇提示；r 是舌尖音。"
+        ],
+        "pronunciationSources": [
+          {
+            "name": "JIPA · 匈牙利語音系參考（Szende）",
+            "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/hungarian/DF52EB096930FFBB3103006F0A618AD6"
           }
         ]
       },
@@ -195,32 +289,56 @@ const TRIP_DATA = {
           [
             "你好／日安",
             "Dobrý deň.",
-            "初次見面、進店"
+            "初次見面、進店",
+            {
+              "ipa": "/ˈdɔbriː ɟɛɲ/",
+              "reading": "DOH-bree DYEHNY"
+            }
           ],
           [
             "晚上好",
             "Dobrý večer.",
-            "晚間見面"
+            "晚間見面",
+            {
+              "ipa": "/ˈdɔbriː ˈvɛtʃɛr/",
+              "reading": "DOH-bree VEH-chehr"
+            }
           ],
           [
             "謝謝",
             "Ďakujem.",
-            "接受協助、用餐後"
+            "接受協助、用餐後",
+            {
+              "ipa": "/ˈɟakujɛm/",
+              "reading": "DYAH-koo-yem"
+            }
           ],
           [
             "請／麻煩您",
             "Prosím.",
-            "禮貌請求"
+            "禮貌請求",
+            {
+              "ipa": "/ˈprɔsiːm/",
+              "reading": "PROH-seem"
+            }
           ],
           [
             "不好意思",
             "Prepáčte.",
-            "借過、引起注意"
+            "借過、引起注意",
+            {
+              "ipa": "/ˈprɛpaːtʃcɛ/",
+              "reading": "PREH-paach-tyeh"
+            }
           ],
           [
             "再見",
             "Dovidenia.",
-            "離開店家"
+            "離開店家",
+            {
+              "ipa": "/ˈdɔviɟɛɲi̯a/",
+              "reading": "DOH-vee-dyeh-nyah"
+            }
           ]
         ],
         "quick": [
@@ -249,57 +367,127 @@ const TRIP_DATA = {
         "situations": [
           [
             "能用英文嗎？",
-            "Hovoríte po anglicky?"
+            "Hovoríte po anglicky?",
+            "",
+            {
+              "ipa": "/ˈɦɔvɔriːcɛ pɔ ˈaŋɡlitski/",
+              "reading": "HOH-voh-ree-tyeh poh AHNG-glits-kee"
+            }
           ],
           [
             "我們有三位。",
-            "Sme traja."
+            "Sme traja.",
+            "",
+            {
+              "ipa": "/smɛ ˈtraja/",
+              "reading": "SMEH TRAH-yah"
+            }
           ],
           [
             "我今天有訂房。",
-            "Mám rezerváciu izby na dnes."
+            "Mám rezerváciu izby na dnes.",
+            "",
+            {
+              "ipa": "/maːm ˈrɛzɛrvaːtsi̯u ˈizbi ˈna dɲɛs/",
+              "reading": "MAAM REH-zehr-vaa-tsyoo IZ-bee NAH DNYEHS"
+            }
           ],
           [
             "我們訂了兩間房。",
-            "Máme rezervované dve izby."
+            "Máme rezervované dve izby.",
+            "",
+            {
+              "ipa": "/ˈmaːmɛ ˈrɛzɛrvɔvanɛː dvɛ ˈizbi/",
+              "reading": "MAA-meh REH-zehr-voh-vah-neh DVEH IZ-bee"
+            }
           ],
           [
             "請問停車場在哪裡？",
-            "Kde je parkovisko?"
+            "Kde je parkovisko?",
+            "",
+            {
+              "ipa": "/ɡɟɛ jɛ ˈparkɔviskɔ/",
+              "reading": "GDYEH YEH PAHR-koh-vis-koh"
+            }
           ],
           [
             "請問怎麼繳停車費？",
-            "Ako môžem zaplatiť za parkovanie?"
+            "Ako môžem zaplatiť za parkovanie?",
+            "",
+            {
+              "ipa": "/ˈakɔ ˈmu̯ɔʒɛm ˈzaplacic za ˈparkɔvaɲi̯ɛ/",
+              "reading": "AH-koh MWOH-zhem ZAH-plah-tyi-ty ZAH PAHR-koh-vah-nyeh"
+            }
           ],
           [
             "可以寄放行李嗎？",
-            "Môžeme si tu nechať batožinu?"
+            "Môžeme si tu nechať batožinu?",
+            "",
+            {
+              "ipa": "/ˈmu̯ɔʒɛmɛ si tu ˈɲɛxac ˈbatɔʒinu/",
+              "reading": "MWOH-zheh-meh see too NYEH-kha-ty BAH-toh-zhi-noo"
+            }
           ],
           [
             "可以拍照嗎？",
-            "Môžem tu fotografovať?"
+            "Môžem tu fotografovať?",
+            "",
+            {
+              "ipa": "/ˈmu̯ɔʒɛm tu ˈfɔtɔɡrafɔvac/",
+              "reading": "MWOH-zhem too FOH-toh-grah-foh-va-ty"
+            }
           ],
           [
             "請問廁所在哪裡？",
-            "Kde je toaleta?"
+            "Kde je toaleta?",
+            "",
+            {
+              "ipa": "/ɡɟɛ jɛ ˈtɔalɛta/",
+              "reading": "GDYEH YEH TOH-ah-leh-tah"
+            }
           ],
           [
             "請給我們帳單。",
-            "Účet, prosím."
+            "Účet, prosím.",
+            "",
+            {
+              "ipa": "/ˈuːtʃɛt ˈprɔsiːm/",
+              "reading": "OO-cheht PROH-seem"
+            }
           ],
           [
             "帳單有包含服務費嗎？",
-            "Je poplatok za obsluhu zahrnutý v účte?"
+            "Je poplatok za obsluhu zahrnutý v účte?",
+            "",
+            {
+              "ipa": "/jɛ ˈpɔplatɔk za ˈɔpsluɦu ˈzaɦr̩nutiː v ˈuːtʃcɛ/",
+              "reading": "YEH POH-plah-tok ZAH OHPS-loo-hoo ZAH-hr-noo-tee v OOCH-tyeh"
+            }
           ],
           [
             "請找零，謝謝。",
-            "Prosím, vráťte mi zvyšok. Ďakujem."
+            "Prosím, vráťte mi zvyšok. Ďakujem.",
+            "",
+            {
+              "ipa": "/ˈprɔsiːm ˈvraːccɛ mi ˈzviʃɔk ˈɟakujɛm/",
+              "reading": "PROH-seem VRAA-tty-tyeh mee ZVIH-shok DYAH-koo-yem"
+            }
           ]
         ],
         "languageSources": [
           {
             "name": "IH Bratislava · 旅遊斯洛伐克語",
             "url": "https://www.ihbratislava.sk/en/t/essential-slovak-phrases-for-your-holiday-in-slovakia-959"
+          }
+        ],
+        "pronunciationHints": [
+          "重音通常在詞的第一音節；帶母音的短介詞可與後面的詞一起讀。長母音 á、é、í、ó、ú、ý 要拉長。",
+          "ď／ť／ň 是軟音；ch 讀 kh，ž 讀 zh。ô 近似連在一起的 uo，拼讀以 mwoh 等方式提示，不讀成兩個音節。r 可自己形成音節，例如 zahrnutý 中的 r。"
+        ],
+        "pronunciationSources": [
+          {
+            "name": "JIPA · 斯洛伐克語音系與重音（Hanulíková、Hamann）",
+            "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/slovak/8FAED24E8632229E4D95E7694BB96D72"
           }
         ]
       },
@@ -314,32 +502,56 @@ const TRIP_DATA = {
           [
             "你好／日安",
             "Dzień dobry.",
-            "初次見面、進店"
+            "初次見面、進店",
+            {
+              "ipa": "/dʑɛɲ ˈdɔbrɨ/",
+              "reading": "JENY DOH-brih"
+            }
           ],
           [
             "晚上好",
             "Dobry wieczór.",
-            "晚間見面"
+            "晚間見面",
+            {
+              "ipa": "/ˈdɔbrɨ ˈvjɛtʂur/",
+              "reading": "DOH-brih VYEH-choor"
+            }
           ],
           [
             "謝謝",
             "Dziękuję.",
-            "接受協助、用餐後"
+            "接受協助、用餐後",
+            {
+              "ipa": "/dʑɛŋˈkujɛ/",
+              "reading": "jen-KOO-yeh"
+            }
           ],
           [
             "請／麻煩您",
             "Proszę.",
-            "請求，也可表示請拿／不客氣"
+            "請求，也可表示請拿／不客氣",
+            {
+              "ipa": "/ˈprɔʂɛ/",
+              "reading": "PROH-sheh"
+            }
           ],
           [
             "不好意思",
             "Przepraszam.",
-            "借過、引起注意"
+            "借過、引起注意",
+            {
+              "ipa": "/pʂɛˈpraʂam/",
+              "reading": "psheh-PRAH-shahm"
+            }
           ],
           [
             "再見",
             "Do widzenia.",
-            "離開店家"
+            "離開店家",
+            {
+              "ipa": "/dɔ viˈd͡zɛɲa/",
+              "reading": "doh vee-DZEH-nyah"
+            }
           ]
         ],
         "quick": [
@@ -373,57 +585,127 @@ const TRIP_DATA = {
           [
             "能用英文嗎？",
             "Czy mówi Pan/Pani po angielsku?",
-            "Pan 對男性；Pani 對女性，出示時可指向適用的一個。"
+            "Pan 對男性；Pani 對女性，出示時可指向適用的一個。",
+            {
+              "ipa": "/tʂɨ ˈmuvi pan (ˈpaɲi) pɔ aŋˈɡʲɛlsku/",
+              "reading": "CHIH MOO-vee PAHN (PAH-nyee) poh ahng-GYEHL-skoo"
+            }
           ],
           [
             "我們有三位。",
-            "Są nas trzy osoby."
+            "Są nas trzy osoby.",
+            "",
+            {
+              "ipa": "/sɔ̃ nas tʂɨ ɔˈsɔbɨ/",
+              "reading": "SOHN nahs CHIH oh-SOH-bih"
+            }
           ],
           [
             "我今天有訂房。",
-            "Mam rezerwację pokoju na dzisiaj."
+            "Mam rezerwację pokoju na dzisiaj.",
+            "",
+            {
+              "ipa": "/mam rɛzɛrˈvat͡sjɛ pɔˈkɔju na ˈdʑiɕaj/",
+              "reading": "MAHM reh-zehr-VAH-tsyeh poh-KOH-yoo nah JEE-shy"
+            }
           ],
           [
             "我們訂了兩間房。",
-            "Mamy zarezerwowane dwa pokoje."
+            "Mamy zarezerwowane dwa pokoje.",
+            "",
+            {
+              "ipa": "/ˈmamɨ zarɛzɛrvɔˈvanɛ dva pɔˈkɔjɛ/",
+              "reading": "MAH-mih zah-reh-zehr-voh-VAH-neh DVAH poh-KOH-yeh"
+            }
           ],
           [
             "請問停車場在哪裡？",
-            "Gdzie jest parking?"
+            "Gdzie jest parking?",
+            "",
+            {
+              "ipa": "/ɡdʑɛ jɛst ˈparkiŋk/",
+              "reading": "GJEH YEHST PAHR-kink"
+            }
           ],
           [
             "請問怎麼繳停車費？",
-            "Jak mogę zapłacić za parking?"
+            "Jak mogę zapłacić za parking?",
+            "",
+            {
+              "ipa": "/jak ˈmɔɡɛ zaˈpwat͡ɕit͡ɕ za ˈparkiŋk/",
+              "reading": "YAHK MOH-geh zah-PWAH-chyich ZAH PAHR-kink"
+            }
           ],
           [
             "可以寄放行李嗎？",
-            "Czy możemy zostawić tutaj bagaż?"
+            "Czy możemy zostawić tutaj bagaż?",
+            "",
+            {
+              "ipa": "/tʂɨ mɔˈʐɛmɨ zɔˈstavit͡ɕ ˈtutaj ˈbaɡaʂ/",
+              "reading": "CHIH moh-ZHEH-mih zoh-STAH-vich TOO-tie BAH-gahsh"
+            }
           ],
           [
             "可以拍照嗎？",
-            "Czy mogę tu robić zdjęcia?"
+            "Czy mogę tu robić zdjęcia?",
+            "",
+            {
+              "ipa": "/tʂɨ ˈmɔɡɛ tu ˈrɔbit͡ɕ ˈzdjɛɲt͡ɕa/",
+              "reading": "CHIH MOH-geh TOO ROH-bich ZDYEHNY-chyah"
+            }
           ],
           [
             "請問廁所在哪裡？",
-            "Gdzie jest toaleta?"
+            "Gdzie jest toaleta?",
+            "",
+            {
+              "ipa": "/ɡdʑɛ jɛst tɔaˈlɛta/",
+              "reading": "GJEH YEHST toh-ah-LEH-tah"
+            }
           ],
           [
             "請給我們帳單。",
-            "Poproszę rachunek."
+            "Poproszę rachunek.",
+            "",
+            {
+              "ipa": "/pɔˈprɔʂɛ raˈxunɛk/",
+              "reading": "poh-PROH-sheh rah-KHOO-nek"
+            }
           ],
           [
             "帳單有包含服務費嗎？",
-            "Czy opłata za obsługę jest wliczona w rachunek?"
+            "Czy opłata za obsługę jest wliczona w rachunek?",
+            "",
+            {
+              "ipa": "/tʂɨ ɔˈpwata za ɔpˈswuɡɛ jɛst vliˈtʂɔna v raˈxunɛk/",
+              "reading": "CHIH oh-PWAH-tah ZAH ohp-SWOO-geh YEHST vlee-CHOH-nah v rah-KHOO-nek"
+            }
           ],
           [
             "請找零，謝謝。",
-            "Poproszę resztę, dziękuję."
+            "Poproszę resztę, dziękuję.",
+            "",
+            {
+              "ipa": "/pɔˈprɔʂɛ ˈrɛʂtɛ dʑɛŋˈkujɛ/",
+              "reading": "poh-PROH-sheh RESH-teh jen-KOO-yeh"
+            }
           ]
         ],
         "languageSources": [
           {
             "name": "Exploring Polski · 常用波蘭語",
             "url": "https://www.exploringpolski.com/post/70-common-phrases-in-polish"
+          }
+        ],
+        "pronunciationHints": [
+          "重音通常落在倒數第二音節；字母 ł 近似英文 w，w 近似英文 v，j 近似英文 y。",
+          "sz／cz 是較硬的 sh／ch；ś／ć／ź／dź 是舌頭更靠前的軟音，英文拼讀只作近似。y /ɨ/ 比英文 sit 的 i 更靠舌頭中央；ą 帶鼻音，不是完整的 n。",
+          "句尾的 ę 常弱化鼻音或讀成 e；Pan 對男性，Pani 對女性，括號內為可替換的讀法。"
+        ],
+        "pronunciationSources": [
+          {
+            "name": "JIPA · 波蘭語音系參考（Jassem）",
+            "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/polish/8CDD2C699493A69A40A5E7D923629574"
           }
         ]
       },
@@ -438,32 +720,56 @@ const TRIP_DATA = {
           [
             "你好／日安",
             "Grüß Gott! / Guten Tag!",
-            "進店、飯店櫃檯"
+            "進店、飯店櫃檯",
+            {
+              "ipa": "/ɡʁyːs ɡɔt/ 或 /ˈɡuːtən taːk/",
+              "reading": "GRUES GOT / GOO-tuhn TAAK"
+            }
           ],
           [
             "晚上好",
             "Guten Abend!",
-            "晚間見面"
+            "晚間見面",
+            {
+              "ipa": "/ˈɡuːtən ˈaːbənt/",
+              "reading": "GOO-tuhn AA-buhnt"
+            }
           ],
           [
             "謝謝",
             "Danke.",
-            "接受協助、用餐後"
+            "接受協助、用餐後",
+            {
+              "ipa": "/ˈdaŋkə/",
+              "reading": "DAHNG-kuh"
+            }
           ],
           [
             "請／麻煩您",
             "Bitte.",
-            "禮貌請求，也可表示不客氣"
+            "禮貌請求，也可表示不客氣",
+            {
+              "ipa": "/ˈbɪtə/",
+              "reading": "BIH-tuh"
+            }
           ],
           [
             "不好意思",
             "Entschuldigung.",
-            "借過、引起注意"
+            "借過、引起注意",
+            {
+              "ipa": "/ɛntˈʃʊldɪɡʊŋ/",
+              "reading": "ent-SHOOL-di-goong"
+            }
           ],
           [
             "再見",
             "Auf Wiedersehen!",
-            "離開店家"
+            "離開店家",
+            {
+              "ipa": "/aʊ̯f ˈviːdɐzeːən/",
+              "reading": "OWF VEE-duhr-zay-uhn"
+            }
           ]
         ],
         "quick": [
@@ -500,57 +806,131 @@ const TRIP_DATA = {
         "situations": [
           [
             "能用英文嗎？",
-            "Sprechen Sie Englisch?"
+            "Sprechen Sie Englisch?",
+            "",
+            {
+              "ipa": "/ˈʃpʁɛçən ziː ˈɛŋlɪʃ/",
+              "reading": "SHPREH-hyuhn ZEE ENG-lish"
+            }
           ],
           [
             "我們有三位。",
-            "Wir sind zu dritt."
+            "Wir sind zu dritt.",
+            "",
+            {
+              "ipa": "/viːɐ̯ zɪnt tsuː dʁɪt/",
+              "reading": "VEER ZINT TSOO DRIT"
+            }
           ],
           [
             "我今天有訂房。",
-            "Ich habe für heute eine Zimmerreservierung."
+            "Ich habe für heute eine Zimmerreservierung.",
+            "",
+            {
+              "ipa": "/ɪç ˈhaːbə fyːɐ̯ ˈhɔʏ̯tə ˈaɪ̯nə ˈtsɪmɐʁezɛʁˌviːʁʊŋ/",
+              "reading": "IHY HAA-buh FUER HOY-tuh EYE-nuh TSIM-uhr-reh-zehr-vee-roong"
+            }
           ],
           [
             "我們訂了兩間房。",
-            "Wir haben zwei Zimmer gebucht."
+            "Wir haben zwei Zimmer gebucht.",
+            "",
+            {
+              "ipa": "/viːɐ̯ ˈhaːbən tsvaɪ̯ ˈtsɪmɐ ɡəˈbuːxt/",
+              "reading": "VEER HAA-buhn TSVYE TSIM-uhr guh-BOOKHT"
+            }
           ],
           [
             "請問停車場在哪裡？",
-            "Wo ist der Parkplatz?"
+            "Wo ist der Parkplatz?",
+            "",
+            {
+              "ipa": "/voː ɪst deːɐ̯ ˈpaʁkplats/",
+              "reading": "VOH IST DAIR PAHRK-plahts"
+            }
           ],
           [
             "請問怎麼繳停車費？",
-            "Wie kann ich die Parkgebühr bezahlen?"
+            "Wie kann ich die Parkgebühr bezahlen?",
+            "",
+            {
+              "ipa": "/viː kan ɪç diː ˈpaʁkɡəˌbyːɐ̯ bəˈtsaːlən/",
+              "reading": "VEE KAHN IHY DEE PAHRK-guh-buer buh-TSAH-luhn"
+            }
           ],
           [
             "可以寄放行李嗎？",
-            "Können wir unser Gepäck hier aufbewahren lassen?"
+            "Können wir unser Gepäck hier aufbewahren lassen?",
+            "",
+            {
+              "ipa": "/ˈkœnən viːɐ̯ ˈʊnzɐ ɡəˈpɛk hiːɐ̯ aʊ̯fbəˈvaːʁən ˈlasən/",
+              "reading": "KEU-nuhn VEER OON-zuhr guh-PEHK HEER owf-buh-VAA-ruhn LAH-suhn"
+            }
           ],
           [
             "可以拍照嗎？",
-            "Darf ich hier fotografieren?"
+            "Darf ich hier fotografieren?",
+            "",
+            {
+              "ipa": "/daʁf ɪç hiːɐ̯ fotoɡʁaˈfiːʁən/",
+              "reading": "DAHRF IHY HEER foh-toh-grah-FEE-ruhn"
+            }
           ],
           [
             "請問廁所在哪裡？",
-            "Wo ist die Toilette?"
+            "Wo ist die Toilette?",
+            "",
+            {
+              "ipa": "/voː ɪst diː to̯aˈlɛtə/",
+              "reading": "VOH IST DEE toh-ah-LEH-tuh"
+            }
           ],
           [
             "請給我們帳單。",
-            "Die Rechnung, bitte."
+            "Die Rechnung, bitte.",
+            "",
+            {
+              "ipa": "/diː ˈʁɛçnʊŋ ˈbɪtə/",
+              "reading": "DEE REH-hy-noong BIH-tuh"
+            }
           ],
           [
             "帳單有包含服務費嗎？",
-            "Ist die Servicegebühr in der Rechnung enthalten?"
+            "Ist die Servicegebühr in der Rechnung enthalten?",
+            "",
+            {
+              "ipa": "/ɪst diː ˈsœːɐ̯vɪsɡəˌbyːɐ̯ ɪn deːɐ̯ ˈʁɛçnʊŋ ɛntˈhaltən/",
+              "reading": "IST DEE SEUR-vis-guh-buer IN DAIR REH-hy-noong ent-HAHL-tuhn"
+            }
           ],
           [
             "請找零，謝謝。",
-            "Ich hätte gern mein Wechselgeld, bitte."
+            "Ich hätte gern mein Wechselgeld, bitte.",
+            "",
+            {
+              "ipa": "/ɪç ˈhɛtə ɡɛʁn maɪ̯n ˈvɛksəlɡɛlt ˈbɪtə/",
+              "reading": "IHY HEH-tuh GEHRN MYNE VEK-suhl-gelt BIH-tuh"
+            }
           ]
         ],
         "languageSources": [
           {
             "name": "GermanPod101 · 旅遊德語基本句型",
             "url": "https://www.germanpod101.com/blog/2019/11/21/german-travel-phrases/"
+          }
+        ],
+        "pronunciationHints": [
+          "使用標準德語作為參考；奧地利當地的 r、母音與語調可能不同。",
+          "w 讀 v，z 讀 ts，sch 讀 sh；ich 的 ch 用 hy 提示，gebucht 的 ch 用 kh 提示。ö／ü 不直接讀英文 o／u；eu／äu 近似 OY。"
+        ],
+        "pronunciationSources": [
+          {
+            "name": "Goethe-Institut · 德語發音練習",
+            "url": "https://www.goethe.de/prj/dlp/en/teachingmaterials/series/elementary_german_activities_and_exercises/pronunciation_training"
+          },
+          {
+            "name": "Duden · Service 發音",
+            "url": "https://www.duden.de/rechtschreibung/Service_Dienstleistung"
           }
         ]
       }
@@ -692,7 +1072,17 @@ const TRIP_DATA = {
           "url": "https://www.schoenbrunn.at/en/preserving-world-cultural-heritage-for-posterity"
         }
       }
-    ]
+    ],
+    "pronunciationGuide": {
+      "note": "IPA 為分詞讀法的參考音標；ˈ 後為重音，ː 表示拉長。英文拼讀為近似提示，大寫表示重音，連字號分開音節；不必照英文字的原本發音讀。自然連讀及地方口音可能不同。",
+      "key": [
+        "ah 如 father 的 a；eh 如 bed 的 e；ee 如 see 的 ee；oo 如 food 的 oo；ih 如 sit 的 i；uh 如 about 開頭的弱讀音。",
+        "sh 如 shop；zh 如 vision 中的 s；ch 如 chair；j 如 jam；y 如 yes；ny 接近 canyon 中的 ny。",
+        "kh 是喉後摩擦音，近似 Scottish loch 的 ch；hy 是舌頭靠前的輕摩擦音，用於德語 ich 的 ch，不讀成 k。",
+        "eu 表示 ö 類音：嘴唇圓起，舌頭維持 eh 的位置；ue 表示 ü 類音：嘴唇圓起，舌頭維持 ee 的位置。兩者都不是英文常見母音。",
+        "ty、dy 是帶軟化的 t、d 提示，舌頭前部抬起；不要把 y 額外讀成一個音節。OW 如 now；EYE 如 eye；OY 如 boy。"
+      ]
+    }
   },
   outingAdvice: {
     "checkedDate": "2026-10-08",
