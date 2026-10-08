@@ -31,6 +31,18 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .quick{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.bottom-nav .inner{grid-template-columns:repeat(5,1fr)}
 .photo-intro{font-size:13px;color:var(--muted);margin:6px 2px 14px}.photo-filters{display:grid;grid-template-columns:1fr 1fr 2fr;gap:10px}.photo-filters label{font-size:12px;color:var(--muted);font-weight:700;display:grid;gap:5px}.photo-filters select{width:100%;min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;color:var(--ink)}.photo-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0;font-size:12px}.photo-toolbar span{margin-right:auto;color:var(--muted)}.photo-toolbar button,.photo-map-status button,.photo-link{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 11px;font-size:12px;font-weight:750;cursor:pointer;color:var(--accent)}.photo-link{margin-top:12px}.photo-map-card{overflow:hidden}#photoMap{height:390px;background:#e7edf3;position:relative;z-index:0}.photo-map-status{padding:10px 12px;font-size:12px;color:var(--muted)}.photo-map-status button{margin-left:8px}.photo-spot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.photo-spot{margin:0;padding:14px;min-width:0}.photo-spot.selected{border-color:var(--accent);box-shadow:0 0 0 2px #dce4ff}.photo-spot h3,.photo-detail h3{font-size:16px;margin:4px 0 8px}.photo-spot p{font-size:12px;color:var(--muted);margin:5px 0}.photo-number{display:inline-flex;width:27px;height:27px;align-items:center;justify-content:center;border-radius:50%;background:var(--accent);color:white;font-weight:850;margin-right:7px;font-size:12px}.photo-detail{padding:16px}.photo-detail dl{display:grid;grid-template-columns:72px 1fr;gap:8px;font-size:13px;margin:12px 0}.photo-detail dt{font-weight:800;color:var(--muted)}.photo-detail dd{margin:0}.photo-detail .place-actions{flex-wrap:wrap}.photo-detail .place-actions a{flex:1 1 120px}.photo-pin{background:transparent;border:0}.photo-pin span{display:flex;width:32px;height:32px;align-items:center;justify-content:center;background:#3157d6;color:#fff;border:2px solid white;border-radius:50%;font-size:12px;font-weight:850;box-shadow:0 2px 7px #0005}.photo-pin.is-selected span{background:#db582c;transform:scale(1.15)}.photo-popup{font:13px/1.6 -apple-system,BlinkMacSystemFont,sans-serif}.photo-popup a{color:var(--accent);font-weight:800}.photo-source{font-size:11px;color:var(--muted)}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #91a7ff;outline-offset:3px}
 @media(max-width:680px){.summary-grid{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:repeat(2,1fr)}.place-grid{grid-template-columns:1fr}.place-img{height:180px}.day-cover{height:165px}.sticky-tools{top:82px}.photo-filters{grid-template-columns:1fr 1fr}.photo-search-label{grid-column:1/-1}.photo-spot-grid{grid-template-columns:1fr}#photoMap{height:330px}.photo-detail dl{grid-template-columns:64px 1fr}.bottom-nav button{padding:6px 2px}}
+
+.outing-guide{margin:12px 0;border:1px solid #dbe4f3;border-radius:14px;background:#f8faff;overflow:hidden}
+.outing-guide>summary{cursor:pointer;padding:13px 12px;font-size:13px;font-weight:850;color:#244791;touch-action:manipulation}
+.outing-guide>summary .badge{margin-left:8px}.outing-content{padding:0 13px 13px;font-size:13px}
+.outing-content h4{font-size:13px;margin:12px 0 5px}.outing-content ul,.outing-basics ul{padding-left:20px;margin:5px 0 10px}
+.outing-content li,.outing-basics li{margin:4px 0}.outing-caption{font-size:12px;color:var(--muted);line-height:1.6}
+.outing-basic-pack{margin-top:10px}.outing-basic-pack summary{cursor:pointer;font-size:12px;font-weight:750;padding:8px 0}
+.outing-basics{font-size:13px}.outing-outfit{margin:12px 0}.outing-outfit p{margin:5px 0}
+.outing-sources{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;margin-top:12px}
+.outing-sources a{color:#3157d6;overflow-wrap:anywhere}
+@media(max-width:600px){.outing-guide>summary .badge{display:block;width:max-content;max-width:100%;margin:6px 0 0}.outing-content{font-size:13px}}
+
 </style>
 </head>
 <body>
@@ -98,6 +110,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   </section>
 
   <section id="logistics" class="view hidden">
+    <div class="section-title">出門準備 · 穿搭與攜帶</div><div class="card summary outing-basics" id="outingBasics"></div>
     <div class="section-title">航班</div><div class="card summary" id="flightList"></div>
     <div class="section-title">住宿</div><div class="card summary" id="hotelList"></div>
     <div class="section-title">重要交通段</div>
@@ -105,7 +118,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
       <div class="notice"><b>VIE → Budapest</b><p>2/4 抵達日，交通方式最後確認；不要過早鎖死班次。</p></div>
       <div class="notice"><b>Budapest → Vienna</b><p>2/12 優先直達 Railjet／EC；2027 時刻表與開放售票後再訂。</p></div>
       <div class="notice"><b>Zakopane → Kuźnice</b><p>2/8 早上使用接駁／計程車等前往纜車站區，私家車不直達 Kuźnice。</p></div>
-      <div class="notice"><b>Vienna → VIE</b><p>2/14 06:30–06:45 從飯店出發，建議預約車。</p></div>
+      <div class="notice"><b>Vienna → VIE</b><p id="airportTransferInfo"></p></div>
     </div></div>
   </section>
 
@@ -119,7 +132,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=photo-map-20261008a"></script>
+<script src="trip-data.js?v=outing-20261008a"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -143,15 +156,30 @@ function go(view, scroll=true, updateHash=true){
   if(view==='photo-map') ensurePhotoMap();
 }
 function typeLabel(type){return ({flight:'航班',transfer:'轉機',transit:'移動',rest:'休息',arrival:'抵達',hotel:'住宿',photo:'攝影',place:'景點',food:'餐食',drive:'自駕',car:'租車',train:'火車',adventure:'體驗',airport:'機場'})[type]||type}
+
+function outingList(items){return '<ul>'+items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'}
+function outingSources(){return (D.outingAdvice?.sources||[]).map(x=>'<a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.name)+' ↗</a>').join('')}
+function renderOutingGuide(d){
+  const a=D.outingAdvice,g=a?.days?.[d.date];if(!g)return '';
+  return '<details class="outing-guide"><summary>出門準備 · 穿搭與攜帶<span class="badge">'+esc(g.label)+'</span></summary><div class="outing-content"><p class="outing-caption">'+esc(a.note)+'</p><h4>今天怎麼穿</h4>'+outingList(g.clothing)+'<h4>今天加帶</h4>'+outingList(g.items)+'<h4>攝影裝備</h4><p>'+esc(g.photo)+'</p><h4>出門前提醒</h4>'+outingList(g.notes)+'<details class="outing-basic-pack"><summary>每日基本包</summary>'+outingList(a.basicItems)+'</details><p class="outing-caption">建議資料查核：'+esc(a.checkedDate)+' · 冬季裝備資料見交通／住宿頁。</p></div></details>';
+}
+function renderOutingBasics(){
+  const a=D.outingAdvice;if(!a)return;
+  $('#outingBasics').innerHTML='<p class="outing-caption">'+esc(a.note)+'</p>'+a.outfits.map(x=>'<div class="outing-outfit"><b>'+esc(x.name)+'</b><p>'+esc(x.text)+'</p></div>').join('')+'<h3>每日基本包</h3>'+outingList(a.basicItems)+'<h3>攝影攜帶與保養</h3>'+outingList(a.photography)+'<h3>雪山與雪地摩托車</h3>'+outingList(a.mountainNotes)+'<p class="outing-caption">查核日期：'+esc(a.checkedDate)+'。穿搭與攜帶為行程建議；營運、租借及天氣出發前重查。</p><div class="outing-sources">'+outingSources()+'</div>';
+  const airport=D.days.find(d=>d.date==='2/14')?.items.find(x=>x[1]==='transit');
+  if(airport)$('#airportTransferInfo').textContent='2/14 '+airport[0]+' 飯店 → VIE；依每日行程預約接送。';
+}
+
 function renderDays(q=''){
   const needle=q.trim().toLowerCase();
-  const filtered=D.days.filter(d=>!needle || JSON.stringify(d).toLowerCase().includes(needle));
+  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date]]).toLowerCase().includes(needle));
   const html=filtered.map((d)=>{
     const n=D.days.indexOf(d)+1;
     return `<article class="card day-card" id="day-${n}">
       <img class="day-cover" src="${esc(d.photo)}" alt="${esc(d.title)}" loading="lazy" onerror="this.style.display='none'">
       <div class="day-body"><div class="day-top"><div><div class="day-label">DAY ${n}</div><div class="day-title">${esc(localizeAttractions(d.title))}</div><div class="day-city">${esc(d.city)}</div></div><div class="day-date">${esc(d.date)}（${esc(d.weekday)}）</div></div>
       <div class="chips">${d.highlights.map((x,i)=>`<span class="chip${i>3?' dark':''}">${esc(localizeAttractions(x))}</span>`).join('')}</div>
+      ${renderOutingGuide(d)}
       <div class="timeline">${d.items.map(x=>`<div class="item"><div class="time">${esc(x[0])}</div><div><div class="itype">${esc(localizeAttractions(x[2]))}<span class="badge">${esc(typeLabel(x[1]))}</span></div><div class="detail">${esc(x[3])}${x[4]?` <span class="duration">${esc(x[4])}</span>`:''}</div></div></div>`).join('')}</div>
       <div class="notes">${d.notes.map(x=>`<div>• ${esc(x)}</div>`).join('')}</div>
       ${photoDayButton(d.date)}</div></article>`;
@@ -321,8 +349,8 @@ $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
-renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=photo-map-20261008a').catch(()=>{}));}
+renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();renderOutingBasics();routeHash();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=outing-20261008a').catch(()=>{}));}
 </script>
 </body>
 </html>
