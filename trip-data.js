@@ -8,6 +8,517 @@ const TRIP_DATA = {
     start: "2027-02-03",
     end: "2027-02-15"
   },
+  travelGuide: {
+    "checkedDate": "2026-10-08",
+    "note": "文化禮貌是情境建議，並非每個人的固定習慣。先問候，再用簡單英文；看不懂時可直接出示短句。票價、營業、拍攝與交易規則出發前以官方及現場公告重查。",
+    "common": [
+      "先問候再提出問題；排隊、上下車與拍照時保留通道，音量放低。",
+      "教堂與紀念地先看參觀／拍攝告示，禮拜進行時保持安靜；拍攝人物近照先詢問。",
+      "餐廳先核對帳單是否含服務費，小費依服務與意願決定。刷卡前說清楚要付的總額，找零也直接說明。",
+      "不把語言、國籍或政治歷史當成玩笑；不確定對方會哪種語言時，先問是否能用英文。"
+    ],
+    "english": [
+      [
+        "能用英文嗎？",
+        "Do you speak English?"
+      ],
+      [
+        "我們有三位。",
+        "There are three of us."
+      ],
+      [
+        "我今天有訂房。",
+        "I have a reservation for today."
+      ],
+      [
+        "我們訂了兩間房。",
+        "We booked two rooms."
+      ],
+      [
+        "請問停車場在哪裡？",
+        "Where is the car park?"
+      ],
+      [
+        "請問怎麼繳停車費？",
+        "How do I pay for parking?"
+      ],
+      [
+        "可以寄放行李嗎？",
+        "Could we leave our luggage here?"
+      ],
+      [
+        "可以拍照嗎？",
+        "May I take photos here?"
+      ],
+      [
+        "請問廁所在哪裡？",
+        "Where is the toilet?"
+      ],
+      [
+        "請給我們帳單。",
+        "Could we have the bill, please?"
+      ],
+      [
+        "帳單有包含服務費嗎？",
+        "Is the service charge included?"
+      ],
+      [
+        "請找零，謝謝。",
+        "Could I have my change, please?"
+      ]
+    ],
+    "dayCountries": {
+      "2/3": [],
+      "2/4": [
+        "AT",
+        "HU"
+      ],
+      "2/5": [
+        "HU"
+      ],
+      "2/6": [
+        "HU",
+        "SK"
+      ],
+      "2/7": [
+        "SK",
+        "PL"
+      ],
+      "2/8": [
+        "PL"
+      ],
+      "2/9": [
+        "PL"
+      ],
+      "2/10": [
+        "PL",
+        "SK",
+        "HU"
+      ],
+      "2/11": [
+        "HU"
+      ],
+      "2/12": [
+        "HU",
+        "AT"
+      ],
+      "2/13": [
+        "AT"
+      ],
+      "2/14": [
+        "AT"
+      ],
+      "2/15": []
+    },
+    "countries": [
+      {
+        "code": "HU",
+        "name": "匈牙利",
+        "language": "匈牙利語",
+        "lang": "hu",
+        "currency": "HUF · 匈牙利福林",
+        "intro": "Budapest 是布達佩斯；Bucharest 是羅馬尼亞的布加勒斯特。匈牙利語與此行其他國家的語言不同，先用一句當地問候，再轉英文即可。",
+        "phrases": [
+          [
+            "你好／日安",
+            "Jó napot!",
+            "進店、飯店櫃檯"
+          ],
+          [
+            "晚上好",
+            "Jó estét!",
+            "晚間見面"
+          ],
+          [
+            "謝謝",
+            "Köszönöm.",
+            "接受協助、用餐後"
+          ],
+          [
+            "不好意思",
+            "Elnézést!",
+            "引起注意、借過"
+          ],
+          [
+            "再見",
+            "Viszontlátásra!",
+            "離開店家"
+          ],
+          [
+            "請結帳",
+            "A számlát kérem!",
+            "餐廳"
+          ]
+        ],
+        "quick": [
+          "先看帳單的 szervizdíj（服務費），再決定是否加小費。",
+          "問候可用 Jó napot；不要拿 Hungary／hungry 或 Budapest／Bucharest 開玩笑。"
+        ],
+        "etiquette": [
+          "不必記一套特殊儀式；友善、禮貌最實用。Szia 是較熟悉、隨意的招呼，初次接觸可先用 Jó napot。",
+          "官方提醒不要預設每個人都能說外語；備妥飯店地址、停車或訂單畫面可減少誤解。"
+        ],
+        "avoid": [
+          "結帳前核對 szervizdíj（服務費）；追加小費依意願，不因刷卡畫面提示就重複支付。",
+          "叫車使用可靠業者或 App；目的地與付款方式先確認。",
+          "多瑙河畔之鞋是紀念地，拍照時保持尊重，避免踩踏或坐在裝置上。"
+        ],
+        "sources": [
+          {
+            "name": "Visit Hungary｜文化與注意事項",
+            "url": "https://visithungary.com/articles/dos-and-dont%27s"
+          },
+          {
+            "name": "ELTE 大學｜匈牙利語短句",
+            "url": "https://www.elte.hu/en/about-hungary/hungarian-phrases"
+          },
+          {
+            "name": "匈牙利法規資料庫｜服務費規則",
+            "url": "https://njt.hu/jogszabaly/2024-44-20-2X"
+          }
+        ]
+      },
+      {
+        "code": "SK",
+        "name": "斯洛伐克",
+        "language": "斯洛伐克語",
+        "lang": "sk",
+        "currency": "EUR · 歐元",
+        "intro": "Slovakia 是斯洛伐克，與 Slovenia 斯洛維尼亞是不同國家。Košice 與 Štrbské Pleso 的店家可先用 Dobrý deň 問候。",
+        "phrases": [
+          [
+            "你好／日安",
+            "Dobrý deň.",
+            "初次見面、進店"
+          ],
+          [
+            "晚上好",
+            "Dobrý večer.",
+            "晚間見面"
+          ],
+          [
+            "謝謝",
+            "Ďakujem.",
+            "接受協助、用餐後"
+          ],
+          [
+            "請／麻煩您",
+            "Prosím.",
+            "禮貌請求"
+          ],
+          [
+            "不好意思",
+            "Prepáčte.",
+            "借過、引起注意"
+          ],
+          [
+            "再見",
+            "Dovidenia.",
+            "離開店家"
+          ]
+        ],
+        "quick": [
+          "與陌生人先用 Dobrý deň；正式服務情境使用禮貌語氣。",
+          "小費非強制，滿意桌邊服務時可湊整或約 5–10%。"
+        ],
+        "etiquette": [
+          "官方介紹正式關係常用敬語；Ahoj 較適合熟人或輕鬆場合。",
+          "若被邀進私人住家，先問是否脫鞋；店家與飯店公共區域依現場規定。"
+        ],
+        "avoid": [
+          "山區店家付款方式先問，身上留少量歐元；某篇遊記遇到只收現金，不代表整個國家都只收現金。",
+          "不要把 Slovakia 說成 Slovenia；提到現在的國家時使用 Slovakia。",
+          "Košice 中途停車仍帶走護照、相機與貴重物品；別把有管理或室內停車場視為不會失竊。"
+        ],
+        "sources": [
+          {
+            "name": "Slovakia Travel｜習俗、小費與停車提醒",
+            "url": "https://slovakia.travel/en/practical-information"
+          },
+          {
+            "name": "Visit Bratislava｜斯洛伐克語短句",
+            "url": "https://www.visitbratislava.com/informations/phrasebook/"
+          }
+        ]
+      },
+      {
+        "code": "PL",
+        "name": "波蘭",
+        "language": "波蘭語",
+        "lang": "pl",
+        "currency": "PLN · 波蘭茲羅提",
+        "intro": "Zakopane 與 Kraków 初次進店、餐廳或飯店，用 Dzień dobry 比隨意的 Cześć 更適合。",
+        "phrases": [
+          [
+            "你好／日安",
+            "Dzień dobry.",
+            "初次見面、進店"
+          ],
+          [
+            "晚上好",
+            "Dobry wieczór.",
+            "晚間見面"
+          ],
+          [
+            "謝謝",
+            "Dziękuję.",
+            "接受協助、用餐後"
+          ],
+          [
+            "請／麻煩您",
+            "Proszę.",
+            "請求，也可表示請拿／不客氣"
+          ],
+          [
+            "不好意思",
+            "Przepraszam.",
+            "借過、引起注意"
+          ],
+          [
+            "再見",
+            "Do widzenia.",
+            "離開店家"
+          ]
+        ],
+        "quick": [
+          "陌生人用 Dzień dobry；Cześć 較隨意。",
+          "2/7 是週日，零售店是否開門逐店確認，先備妥飲水零食。"
+        ],
+        "etiquette": [
+          "服務人員、年長陌生人先用正式問候；有需要再用英文短句。",
+          "Jaszczurówka、Wawel Cathedral 與 St Mary’s 都可能有禮拜或分區參觀規則，先確認入口與拍照告示。"
+        ],
+        "avoid": [
+          "波蘭多數週日有零售限制；有交易週日及業者／店型例外，不能把 Krupówki 餐廳開門推論為所有超市都開。",
+          "進教堂保持安靜、衣著得體；避免在禮拜時走動拍特寫，拍攝規定按各場館公告。",
+          "餐廳先看有無服務費；小費可依服務表現與意願決定，付現想找零就明確說明。"
+        ],
+        "sources": [
+          {
+            "name": "Exploring Polski｜母語教師的問候與禮貌短句",
+            "url": "https://www.exploringpolski.com/post/70-common-phrases-in-polish"
+          },
+          {
+            "name": "波蘭政府｜週日零售限制",
+            "url": "https://www.gov.pl/web/family/trade-on-sundays"
+          },
+          {
+            "name": "Wawel｜參觀規則（城堡，非主教座堂）",
+            "url": "https://wawel.krakow.pl/en/regulations-for-the-ticket-sales-and-exhibition-tours-at-the-wawel-royal-castle"
+          }
+        ]
+      },
+      {
+        "code": "AT",
+        "name": "奧地利",
+        "language": "德語",
+        "lang": "de",
+        "currency": "EUR · 歐元",
+        "intro": "維也納常見 Grüß Gott，也可用通用的 Guten Tag。咖啡館、餐廳與飯店先問候，再提出需求。",
+        "phrases": [
+          [
+            "你好／日安",
+            "Grüß Gott! / Guten Tag!",
+            "進店、飯店櫃檯"
+          ],
+          [
+            "晚上好",
+            "Guten Abend!",
+            "晚間見面"
+          ],
+          [
+            "謝謝",
+            "Danke.",
+            "接受協助、用餐後"
+          ],
+          [
+            "請／麻煩您",
+            "Bitte.",
+            "禮貌請求，也可表示不客氣"
+          ],
+          [
+            "不好意思",
+            "Entschuldigung.",
+            "借過、引起注意"
+          ],
+          [
+            "再見",
+            "Auf Wiedersehen!",
+            "離開店家"
+          ]
+        ],
+        "quick": [
+          "小費常見約 5–10%，先確認帳單是否已含。",
+          "2/14 週日返程，2/13 先準備早餐與途中零食。"
+        ],
+        "etiquette": [
+          "Grüß Gott 是日常問候，可簡單回覆同一句；不用逐字翻譯成宗教對話。",
+          "結帳想加小費時，付款前說清楚總額；例如帳單 €18，要付 €20，就說 Total twenty euros, please. 想找零則直接提出。"
+        ],
+        "avoid": [
+          "一般商店週日多休息，車站、機場或部分其他店型有例外；別把餐廳、博物館和超市視為同樣營業規則。",
+          "熊布朗宮目前允許個人非商業拍攝；禁止閃光燈、腳架與自拍棒。大於約 A4 的包、背包等須依規則寄存，出發前再查。",
+          "舊遊記的票價、可拍照區域與背包規則可能過時；進場時以官方及工作人員指示為準。"
+        ],
+        "sources": [
+          {
+            "name": "Vienna Tourist Board｜小費與付款",
+            "url": "https://www.wien.info/en/travel-info/tourist-info/money-needs-352200?set_language=en"
+          },
+          {
+            "name": "Vienna Tourist Board｜商店營業",
+            "url": "https://www.wien.info/en/travel-info/frequently-asked-questions-346338"
+          },
+          {
+            "name": "奧地利天主教會｜Grüß Gott 問候文化",
+            "url": "https://www.katholisch.at/englisch/welcome"
+          },
+          {
+            "name": "熊布朗宮｜現行拍攝與包袋規則",
+            "url": "https://www.schoenbrunn.at/en/preserving-world-cultural-heritage-for-posterity"
+          }
+        ]
+      }
+    ],
+    "blogs": [
+      {
+        "id": "budapest-winter",
+        "country": "HU",
+        "title": "布達佩斯冬季散步與暖身停靠",
+        "author": "Michelle Halpern · Live Like It’s the Weekend",
+        "url": "https://www.livelikeitstheweekend.com/budapest-in-winter-things-to-do/",
+        "articleDate": "更新 2025-09",
+        "travelDate": "聖誕季冬遊；實際年份未標明",
+        "disclosure": "含廣告與聯盟連結",
+        "dates": [
+          "2/4",
+          "2/5",
+          "2/11"
+        ],
+        "placeKeys": [
+          "Buda Castle",
+          "Matthias Church",
+          "Fisherman's Bastion",
+          "Parliament",
+          "Basilica",
+          "CentralMarket",
+          "ChainBridge",
+          "Vaci"
+        ],
+        "takeaway": "參考冬季城區照片、保暖配件與室內暖身停靠；作者把戶外散步與咖啡館、室內參觀穿插安排。",
+        "difference": "你在二月旅行，聖誕市集內容不直接適用；飯店、溫泉與其他推薦只作背景，不改動已確認安排。"
+      },
+      {
+        "id": "tatras-lakes",
+        "country": "SK",
+        "title": "湖畔構圖、Poprad 補給與 Košice 街景",
+        "author": "What You Know Travel",
+        "url": "https://whatyouknowtravel.com/view_post.php?id=10",
+        "articleDate": "發表 2025-09-23",
+        "travelDate": "2023 年；有划船／夏季健行，非冬季",
+        "disclosure": "個人鐵路旅行紀錄",
+        "dates": [
+          "2/6",
+          "2/7"
+        ],
+        "placeKeys": [
+          "Strbske"
+        ],
+        "takeaway": "湖畔照片可參考構圖；作者在 Poprad 採買，也記錄 Košice 市中心建築。只把這些作為停靠與補給線索。",
+        "difference": "你是二月自駕：划船、游泳、健行時間與夏季山路均不直接適用；文中票價與班次也不是 2027 資料。"
+      },
+      {
+        "id": "zakopane-photos",
+        "country": "PL",
+        "title": "Zakopane 冬景與 Gubałówka 照片",
+        "author": "Roberto · OurBigJourney",
+        "url": "https://www.ourbigjourney.com/zakopane-in-winter/",
+        "articleDate": "更新 2026-02",
+        "travelDate": "冬季；實際年份未標明",
+        "disclosure": "個人旅遊與攝影紀錄",
+        "dates": [
+          "2/7",
+          "2/8"
+        ],
+        "placeKeys": [
+          "Gubalowka",
+          "Krupowki",
+          "Kasprowy"
+        ],
+        "takeaway": "作者在晴朗早晨到 Gubałówka，文章照片可參考塔特拉山景；也記錄 Krupówki 冬夜街景與暖食。",
+        "difference": "你的 Gubałówka 在下午，光線與作者不同；文中夜間長程雪山健行需要不同能力與裝備，不套用到纜車觀景行程。"
+      },
+      {
+        "id": "zakopane-warmspell",
+        "country": "PL",
+        "title": "Zakopane 暖冬經驗與纜車緩衝",
+        "author": "Lucy Dodsworth · On the Luce",
+        "url": "https://www.ontheluce.com/things-to-do-in-zakopane-in-winter/",
+        "articleDate": "更新 2026-01-12",
+        "travelDate": "冬季遇暖天；實際年份未標明",
+        "disclosure": "受 Snomads 招待；含聯盟連結",
+        "dates": [
+          "2/7",
+          "2/8"
+        ],
+        "placeKeys": [
+          "Gubalowka",
+          "Krupowki",
+          "Kasprowy",
+          "Snowmobile"
+        ],
+        "takeaway": "作者的冬遊遇上暖天，提醒雪況不能用季節保證；文中 Kasprowy 纜車可能繁忙，可參考預約與排隊緩衝。",
+        "difference": "你是纜車觀景與雪地摩托車，雪況和業者仍要另外確認。文中的冰湖行走與稜線健行描述不作安全依據；限當日開放觀景範圍。"
+      },
+      {
+        "id": "krakow-december",
+        "country": "PL",
+        "title": "Kraków 冬季老城與 Wawel 外觀",
+        "author": "Ellen · OurBigJourney",
+        "url": "https://www.ourbigjourney.com/krakow-in-december/",
+        "articleDate": "作者標示 Updated Dec 25（未完整標示日期格式）",
+        "travelDate": "12 月；實際年份未標明",
+        "disclosure": "文章有導覽／票券連結，購票請回官方",
+        "dates": [
+          "2/9"
+        ],
+        "placeKeys": [
+          "Wawel",
+          "MainMarket",
+          "StMary",
+          "ClothHall",
+          "Kanonicza"
+        ],
+        "takeaway": "參考老城冬夜、暖食與 Wawel 外觀照片；作者到 Wawel 時只看外觀，並未參觀室內。",
+        "difference": "你的安排只有一個下午與晚上；文中聖誕市集、Auschwitz 和 Schindler 行程不直接套用，也不能用它判定 Wawel 室內需要多久。"
+      },
+      {
+        "id": "vienna-winter",
+        "country": "AT",
+        "title": "維也納兩日冬遊：宮殿外觀與步行量",
+        "author": "Jake Lee",
+        "url": "https://jakelee.co.uk/vienna-reviews/",
+        "articleDate": "發表 2024-01-02",
+        "travelDate": "2023-12-20–22（文內事件與日期可核對）",
+        "disclosure": "個人遊記及 Google Maps 評論",
+        "dates": [
+          "2/12",
+          "2/13"
+        ],
+        "placeKeys": [
+          "Schonbrunn",
+          "Belvedere",
+          "Hofburg"
+        ],
+        "takeaway": "作者遇雨；宮殿園區與咖啡館占用不少時間。可參考冬季空園構圖，安排室內休息並留意步行量。",
+        "difference": "2023 遊記寫室內禁拍，但現行熊布朗宮官方允許個人非商業拍攝、禁閃光燈與腳架。作者的票價、入場及安全感受僅為當時經驗。",
+        "officialCheck": {
+          "name": "核對熊布朗宮現行規則",
+          "url": "https://www.schoenbrunn.at/en/preserving-world-cultural-heritage-for-posterity"
+        }
+      }
+    ]
+  },
   outingAdvice: {
     "checkedDate": "2026-10-08",
     "note": "按二月冬季活動準備，並非每日天氣預報；出發前依氣溫、風、降水及個人怕冷程度調整。",

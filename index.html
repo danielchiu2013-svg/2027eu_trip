@@ -41,6 +41,19 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .outing-basics{font-size:13px}.outing-outfit{margin:12px 0}.outing-outfit p{margin:5px 0}
 .outing-sources{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;margin-top:12px}
 .outing-sources a{color:#3157d6;overflow-wrap:anywhere}
+.travel-details{margin:12px 0;border:1px solid #e2e7ee;border-radius:14px;background:#fff;overflow:hidden}
+.travel-details>summary{cursor:pointer;padding:13px;font-size:13px;font-weight:850;color:#31526b;touch-action:manipulation}
+.travel-content{padding:0 13px 13px;font-size:13px;line-height:1.65}.travel-content h4{margin:12px 0 5px;font-size:13px}
+.travel-content ul{padding-left:20px;margin:6px 0}.travel-content li{margin:5px 0}
+.country-mini{padding:10px 0;border-bottom:1px solid var(--line)}.country-mini:last-child{border-bottom:0}
+.phrase-row{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:8px;padding:9px 0;border-bottom:1px solid var(--line)}
+.phrase-row small{display:block;color:var(--muted);font-size:11px}.phrase-native{font-weight:750;overflow-wrap:anywhere}.phrase-table{margin:8px 0}
+.reference-card{padding:12px 0;border-bottom:1px solid var(--line)}.reference-card:last-child{border-bottom:0}.reference-card h4{margin:4px 0 6px;font-size:14px}
+.reference-card p{margin:7px 0}.reference-meta{color:var(--muted);font-size:11px;line-height:1.6}.reference-difference{padding:9px 11px;background:#fff7e8;border-radius:10px}
+.reference-card a,.travel-content a{color:#3157d6;overflow-wrap:anywhere}.guide-links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.guide-filter{display:flex;align-items:center;gap:10px;margin:12px 0;font-size:13px}.guide-filter select{padding:10px;border:1px solid var(--line);border-radius:10px;background:white;font:inherit;max-width:100%}
+.country-guide{scroll-margin-top:150px}.country-guide summary .badge{margin-left:8px}.guide-count{font-size:12px;color:var(--muted)}
+@media(max-width:600px){.phrase-row{grid-template-columns:minmax(72px,1fr) minmax(0,2fr)}.country-guide summary .badge{display:block;width:max-content;max-width:100%;margin:5px 0 0}}
 @media(max-width:600px){.outing-guide>summary .badge{display:block;width:max-content;max-width:100%;margin:6px 0 0}.outing-content{font-size:13px}}
 
 </style>
@@ -54,7 +67,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 </header>
 <main>
   <div class="sticky-tools"><div class="tabs" id="tabs">
-    <button data-view="overview" class="active">總覽</button><button data-view="days">每日</button><button data-view="places">景點</button><button data-view="photo-map">攝影機位</button><button data-view="logistics">交通／住宿</button><button data-view="checklist">清單</button>
+    <button data-view="overview" class="active">總覽</button><button data-view="days">每日</button><button data-view="places">景點</button><button data-view="photo-map">攝影機位</button><button data-view="logistics">交通／住宿</button><button data-view="guide">文化／遊記</button><button data-view="checklist">清單</button>
   </div></div>
 
   <section id="overview" class="view">
@@ -62,7 +75,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
       <div class="summary-grid">
         <div class="stat"><b>13</b><span>天數</span></div><div class="stat"><b>12</b><span>晚住宿</span></div><div class="stat"><b>3</b><span>同行</span></div><div class="stat"><b>2/3</b><span>Day 1 起點</span></div>
       </div>
-      <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看景點</a><a href="#photo-map" data-goto="photo-map">攝影機位地圖</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#" data-goto="checklist">出發清單</a></div>
+      <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看景點</a><a href="#photo-map" data-goto="photo-map">攝影機位地圖</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#guide" data-goto="guide">文化／遊記</a><a href="#" data-goto="checklist">出發清單</a></div>
     </div>
     <div class="section-title">行程濃縮概要</div>
     <div class="card summary">
@@ -81,7 +94,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 
   <section id="days" class="view hidden">
     <div class="section-title">每日行程</div>
-    <input id="daySearch" class="search" placeholder="搜尋日期、景點、交通、飯店…">
+    <input id="daySearch" class="search" placeholder="搜尋日期、景點、交通、穿搭、文化、遊記…">
     <div id="dayList"></div>
   </section>
 
@@ -109,7 +122,18 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
     <div id="photoSpotList" class="photo-spot-grid"></div>
   </section>
 
+  <section id="guide" class="view hidden" aria-label="文化語言與遊記參考">
+    <div class="section-title">文化／語言與遊記參考</div>
+    <div class="card summary"><p class="outing-caption" id="guideNote"></p><div class="guide-filter"><label for="guideCountry">查看國家</label><select id="guideCountry"><option value="">全部國家</option></select></div><p class="guide-count" id="guideCount"></p></div>
+    <div class="section-title">各國問候與容易踩雷的地方</div><div id="countryGuides"></div>
+    <details class="travel-details"><summary>四國通用 · 禮貌與拍照提醒</summary><div class="travel-content" id="guideCommon"></div></details>
+    <details class="travel-details"><summary>英文情境小抄 · 飯店／停車／拍照／結帳</summary><div class="travel-content" id="guideEnglish"></div></details>
+    <div class="section-title">近年遊記 · 經驗與照片參考</div>
+    <div class="card summary"><p class="outing-caption">優先參考近年發表／更新與冬季親身經驗；文章日期與旅行日期分開標示，未明寫的年份不推定。遊記摘要為參考線索；票價、營業、交通與拍攝規則回官方核對。</p><div id="guideBlogs" class="travel-content"></div></div>
+  </section>
+
   <section id="logistics" class="view hidden">
+    <div class="guide-links"><button type="button" class="photo-link" data-goto="guide">各國文化／問候語／近期遊記</button></div>
     <div class="section-title">出門準備 · 穿搭與攜帶</div><div class="card summary outing-basics" id="outingBasics"></div>
     <div class="section-title">航班</div><div class="card summary" id="flightList"></div>
     <div class="section-title">住宿</div><div class="card summary" id="hotelList"></div>
@@ -132,7 +156,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=outing-20261008a"></script>
+<script src="trip-data.js?v=guide-20261008b"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -170,9 +194,46 @@ function renderOutingBasics(){
   if(airport)$('#airportTransferInfo').textContent='2/14 '+airport[0]+' 飯店 → VIE；依每日行程預約接送。';
 }
 
+function guideCountries(date){return (D.travelGuide?.dayCountries?.[date]||[]).map(code=>D.travelGuide.countries.find(c=>c.code===code)).filter(Boolean)}
+function guideBlogs(date='',key=''){return (D.travelGuide?.blogs||[]).filter(b=>(!date||b.dates.includes(date))&&(!key||b.placeKeys.includes(key)))}
+function guideSources(list){return '<div class="outing-sources">'+list.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.name)+' ↗</a>').join('')+'</div>'}
+function phraseRows(rows,lang='en'){return '<div class="phrase-table">'+rows.map(p=>'<div class="phrase-row"><div>'+esc(p[0])+'</div><div><span class="phrase-native" lang="'+esc(lang)+'">'+esc(p[1])+'</span>'+(p[2]?'<small>'+esc(p[2])+'</small>':'')+'</div></div>').join('')+'</div>'}
+function referenceCards(list){return list.map(b=>'<article class="reference-card"><h4>'+esc(b.title)+'</h4><div class="reference-meta">'+esc(b.author)+'<br>文章：'+esc(b.articleDate)+'<br>旅行：'+esc(b.travelDate)+'<br>'+esc(b.disclosure)+'</div><p><b>可參考：</b>'+esc(b.takeaway)+'</p><p class="reference-difference"><b>與你行程的差異：</b>'+esc(b.difference)+'</p><a href="'+esc(b.url)+'" target="_blank" rel="noopener">閱讀原遊記 ↗</a>'+(b.officialCheck?' · <a href="'+esc(b.officialCheck.url)+'" target="_blank" rel="noopener">'+esc(b.officialCheck.name)+' ↗</a>':'')+'</article>').join('')}
+function renderDayCulture(d){
+  const list=guideCountries(d.date);if(!list.length)return '';
+  return '<details class="travel-details day-culture"><summary>當地文化 · 問候與地雷<span class="badge">'+esc(list.map(c=>c.name).join(' → '))+'</span></summary><div class="travel-content">'+list.map(c=>'<div class="country-mini"><h4>'+esc(c.name)+' · '+esc(c.currency)+'</h4>'+phraseRows([c.phrases[0],c.phrases[2]],c.lang)+outingList(c.quick)+'<button type="button" class="photo-link" data-country-link="'+esc(c.code)+'">完整文化與語言小抄</button></div>').join('')+'</div></details>';
+}
+function renderDayReferences(d){const list=guideBlogs(d.date);return list.length?'<details class="travel-details day-references"><summary>近期遊記參考 · '+list.length+' 篇</summary><div class="travel-content">'+referenceCards(list)+'</div></details>':''}
+function renderPlaceReferences(p){const list=guideBlogs('',p.key);return list.length?'<details class="travel-details place-references"><summary>遊記與實拍參考 · '+list.length+' 篇</summary><div class="travel-content">'+referenceCards(list)+'</div></details>':''}
+function renderCountry(c){return '<details class="travel-details country-guide" id="culture-'+esc(c.code)+'"><summary>'+esc(c.name)+'<span class="badge">'+esc(c.language)+' · '+esc(c.currency)+'</span></summary><div class="travel-content"><p>'+esc(c.intro)+'</p><h4>問候與常用短句</h4>'+phraseRows(c.phrases,c.lang)+'<h4>文化與禮貌</h4>'+outingList(c.etiquette)+'<h4>容易踩雷</h4>'+outingList(c.avoid)+'<p class="outing-caption">查核：'+esc(D.travelGuide.checkedDate)+' · 禮貌建議及規則參考如下</p>'+guideSources(c.sources)+'</div></details>'}
+function renderGuide(){
+  const g=D.travelGuide;if(!g)return;
+  const code=$('#guideCountry').value;
+  const countries=g.countries.filter(c=>!code||c.code===code),blogs=g.blogs.filter(b=>!code||b.country===code);
+  $('#countryGuides').innerHTML=countries.map(renderCountry).join('');
+  $('#guideBlogs').innerHTML=referenceCards(blogs);
+  $('#guideCount').textContent=countries.length+' 國 · '+blogs.length+' 篇遊記參考 · 查核 '+g.checkedDate;
+}
+function initGuide(){
+  const g=D.travelGuide;if(!g)return;
+  $('#guideNote').textContent=g.note;
+  $('#guideCountry').innerHTML='<option value="">全部國家</option>'+g.countries.map(c=>'<option value="'+esc(c.code)+'">'+esc(c.name)+'</option>').join('');
+  $('#guideCommon').innerHTML=outingList(g.common);
+  $('#guideEnglish').innerHTML=phraseRows(g.english);
+  $('#guideCountry').addEventListener('change',renderGuide);renderGuide();
+}
+function openCountry(code){
+  if(!D.travelGuide?.countries.some(c=>c.code===code))return;
+  $('#guideCountry').value='';renderGuide();go('guide',false,false);
+  history.replaceState(null,'','#culture-'+code);
+  const target=document.getElementById('culture-'+code);target.open=true;
+  target.style.scrollMarginTop=(document.querySelector('header').offsetHeight+$('.sticky-tools').offsetHeight+12)+'px';
+  target.scrollIntoView({behavior:'auto',block:'start'});
+}
+
 function renderDays(q=''){
   const needle=q.trim().toLowerCase();
-  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date]]).toLowerCase().includes(needle));
+  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date],guideCountries(d.date),guideBlogs(d.date)]).toLowerCase().includes(needle));
   const html=filtered.map((d)=>{
     const n=D.days.indexOf(d)+1;
     return `<article class="card day-card" id="day-${n}">
@@ -180,6 +241,8 @@ function renderDays(q=''){
       <div class="day-body"><div class="day-top"><div><div class="day-label">DAY ${n}</div><div class="day-title">${esc(localizeAttractions(d.title))}</div><div class="day-city">${esc(d.city)}</div></div><div class="day-date">${esc(d.date)}（${esc(d.weekday)}）</div></div>
       <div class="chips">${d.highlights.map((x,i)=>`<span class="chip${i>3?' dark':''}">${esc(localizeAttractions(x))}</span>`).join('')}</div>
       ${renderOutingGuide(d)}
+      ${renderDayCulture(d)}
+      ${renderDayReferences(d)}
       <div class="timeline">${d.items.map(x=>`<div class="item"><div class="time">${esc(x[0])}</div><div><div class="itype">${esc(localizeAttractions(x[2]))}<span class="badge">${esc(typeLabel(x[1]))}</span></div><div class="detail">${esc(x[3])}${x[4]?` <span class="duration">${esc(x[4])}</span>`:''}</div></div></div>`).join('')}</div>
       <div class="notes">${d.notes.map(x=>`<div>• ${esc(x)}</div>`).join('')}</div>
       ${photoDayButton(d.date)}</div></article>`;
@@ -188,10 +251,10 @@ function renderDays(q=''){
 }
 function renderPlaces(q=''){
   const needle=q.trim().toLowerCase();
-  const list=D.places.filter(p=>!needle || JSON.stringify(p).toLowerCase().includes(needle));
+  const list=D.places.filter(p=>!needle || JSON.stringify([p,guideBlogs('',p.key)]).toLowerCase().includes(needle));
   $('#placeGrid').innerHTML=list.length?list.map(p=>{const extra=(p.images||[]).map((src,index)=>({src,source:p.imageSources?.[index]||p.imageSource||src}));const photos=[{src:p.image,source:p.imageSource||p.image},...extra.filter(x=>x.src&&x.src!==p.image).slice(0,2)];return `<article class="card place-card">
     <div class="place-gallery">${photos.map((photo,i)=>`<img class="place-img" src="${esc(photo.src)}" alt="${esc(p.name)} ${i===0?'景點主圖':'所在地照片 '+i}" loading="lazy" onerror="this.remove()">`).join('')}</div>
-    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((photo,i)=>`<a href="${esc(photo.source)}" target="_blank" rel="noopener">${i===0?'景點主圖':'所在地照片'} 來源</a>`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div>${photoPlaceButton(p.key)}</div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
+    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((photo,i)=>`<a href="${esc(photo.source)}" target="_blank" rel="noopener">${i===0?'景點主圖':'所在地照片'} 來源</a>`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div>${photoPlaceButton(p.key)}${renderPlaceReferences(p)}</div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
 }
 function renderFlights(){
   $('#flightList').innerHTML=D.flights.map(f=>`<div class="list-row"><div class="list-main"><b>${esc(f.date)}（${esc(f.weekday)}）　<span class="flight-code">${esc(f.flight)}</span></b><div>${esc(f.route)}</div></div><div class="list-action">${esc(f.time)}</div></div>`).join('');
@@ -305,10 +368,11 @@ function openDay(n){
 }
 function routeHash(){
   const hash=location.hash.slice(1);
+  if(/^culture-(HU|SK|PL|AT)$/.test(hash)){openCountry(hash.slice(8));return}
   if(hash==='photo-map'){go('photo-map',true,false);return}
   if(hash.startsWith('photo-')){const id=hash.slice(6);if(photoSpots.some(s=>s.id===id)){openPhotoMap({id});return}}
   if(/^day-\d+$/.test(hash)){openDay(Number(hash.slice(4)));return}
-  if(['overview','days','places','logistics','checklist'].includes(hash))go(hash,true,false);
+  if(['overview','days','places','logistics','guide','checklist'].includes(hash))go(hash,true,false);
 }
 initPhotoFilters();renderPhotoSpots();
 ['photoCity','photoDate','photoSearch'].forEach(id=>$('#'+id).addEventListener(id==='photoSearch'?'input':'change',()=>{
@@ -340,6 +404,8 @@ function renderChecklist(){
   updateCheckProgress(state);
 }
 document.addEventListener('click',e=>{
+  const country=e.target.closest('[data-country-link]');
+  if(country){e.preventDefault();openCountry(country.dataset.countryLink);return}
   const tab=e.target.closest('#tabs button[data-view]');
   if(tab){ e.preventDefault(); go(tab.dataset.view); return; }
   const nav=e.target.closest('[data-goto]');
@@ -349,8 +415,8 @@ $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
-renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=outing-20261008a').catch(()=>{}));}
+initGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderChecklist();renderOutingBasics();routeHash();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=guide-20261008b').catch(()=>{}));}
 </script>
 </body>
 </html>
