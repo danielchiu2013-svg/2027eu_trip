@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v38';
+const CACHE = '2027eu-app-v39';
 const VERSIONED_SHELL = [
-  './index.html?v=pronunciation-20261008d',
-  './trip-data.js?v=pronunciation-20261008d',
+  './index.html?v=overview-20261008e',
+  './trip-data.js?v=overview-20261008e',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -36,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=pronunciation-20261008d', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=overview-20261008e', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }
