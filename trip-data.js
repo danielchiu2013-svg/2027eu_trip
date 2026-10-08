@@ -10,62 +10,12 @@ const TRIP_DATA = {
   },
   travelGuide: {
     "checkedDate": "2026-10-08",
-    "note": "文化禮貌是情境建議，並非每個人的固定習慣。先問候，再用簡單英文；看不懂時可直接出示短句。票價、營業、拍攝與交易規則出發前以官方及現場公告重查。",
+    "note": "文化禮貌是情境建議，並非每個人的固定習慣。基本語言提供中文與各國當地語對照，可直接出示短句；先問候，再提出需求。票價、營業、拍攝與交易規則出發前以官方及現場公告重查。",
     "common": [
       "先問候再提出問題；排隊、上下車與拍照時保留通道，音量放低。",
       "教堂與紀念地先看參觀／拍攝告示，禮拜進行時保持安靜；拍攝人物近照先詢問。",
       "餐廳先核對帳單是否含服務費，小費依服務與意願決定。刷卡前說清楚要付的總額，找零也直接說明。",
       "不把語言、國籍或政治歷史當成玩笑；不確定對方會哪種語言時，先問是否能用英文。"
-    ],
-    "english": [
-      [
-        "能用英文嗎？",
-        "Do you speak English?"
-      ],
-      [
-        "我們有三位。",
-        "There are three of us."
-      ],
-      [
-        "我今天有訂房。",
-        "I have a reservation for today."
-      ],
-      [
-        "我們訂了兩間房。",
-        "We booked two rooms."
-      ],
-      [
-        "請問停車場在哪裡？",
-        "Where is the car park?"
-      ],
-      [
-        "請問怎麼繳停車費？",
-        "How do I pay for parking?"
-      ],
-      [
-        "可以寄放行李嗎？",
-        "Could we leave our luggage here?"
-      ],
-      [
-        "可以拍照嗎？",
-        "May I take photos here?"
-      ],
-      [
-        "請問廁所在哪裡？",
-        "Where is the toilet?"
-      ],
-      [
-        "請給我們帳單。",
-        "Could we have the bill, please?"
-      ],
-      [
-        "帳單有包含服務費嗎？",
-        "Is the service charge included?"
-      ],
-      [
-        "請找零，謝謝。",
-        "Could I have my change, please?"
-      ]
     ],
     "dayCountries": {
       "2/3": [],
@@ -176,6 +126,62 @@ const TRIP_DATA = {
             "name": "匈牙利法規資料庫｜服務費規則",
             "url": "https://njt.hu/jogszabaly/2024-44-20-2X"
           }
+        ],
+        "situations": [
+          [
+            "能用英文嗎？",
+            "Beszél angolul?"
+          ],
+          [
+            "我們有三位。",
+            "Hárman vagyunk."
+          ],
+          [
+            "我今天有訂房。",
+            "Mára van szobafoglalásom."
+          ],
+          [
+            "我們訂了兩間房。",
+            "Két szobát foglaltunk."
+          ],
+          [
+            "請問停車場在哪裡？",
+            "Hol van a parkoló?"
+          ],
+          [
+            "請問怎麼繳停車費？",
+            "Hogyan fizethetek a parkolásért?"
+          ],
+          [
+            "可以寄放行李嗎？",
+            "Itt hagyhatjuk a csomagjainkat?"
+          ],
+          [
+            "可以拍照嗎？",
+            "Szabad itt fényképezni?"
+          ],
+          [
+            "請問廁所在哪裡？",
+            "Hol van a mosdó?"
+          ],
+          [
+            "請給我們帳單。",
+            "A számlát kérem!"
+          ],
+          [
+            "帳單有包含服務費嗎？",
+            "A számla tartalmazza a szervizdíjat?"
+          ],
+          [
+            "請找零，謝謝。",
+            "Kérem a visszajárót, köszönöm."
+          ]
+        ],
+        "languageSources": [
+          {
+            "name": "HungarianPod101 · 旅遊基本句型",
+            "url": "https://www.hungarianpod101.com/hungarianpod101-survival-phrases-curriculum/"
+          }
         ]
       },
       {
@@ -238,6 +244,62 @@ const TRIP_DATA = {
           {
             "name": "Visit Bratislava｜斯洛伐克語短句",
             "url": "https://www.visitbratislava.com/informations/phrasebook/"
+          }
+        ],
+        "situations": [
+          [
+            "能用英文嗎？",
+            "Hovoríte po anglicky?"
+          ],
+          [
+            "我們有三位。",
+            "Sme traja."
+          ],
+          [
+            "我今天有訂房。",
+            "Mám rezerváciu izby na dnes."
+          ],
+          [
+            "我們訂了兩間房。",
+            "Máme rezervované dve izby."
+          ],
+          [
+            "請問停車場在哪裡？",
+            "Kde je parkovisko?"
+          ],
+          [
+            "請問怎麼繳停車費？",
+            "Ako môžem zaplatiť za parkovanie?"
+          ],
+          [
+            "可以寄放行李嗎？",
+            "Môžeme si tu nechať batožinu?"
+          ],
+          [
+            "可以拍照嗎？",
+            "Môžem tu fotografovať?"
+          ],
+          [
+            "請問廁所在哪裡？",
+            "Kde je toaleta?"
+          ],
+          [
+            "請給我們帳單。",
+            "Účet, prosím."
+          ],
+          [
+            "帳單有包含服務費嗎？",
+            "Je poplatok za obsluhu zahrnutý v účte?"
+          ],
+          [
+            "請找零，謝謝。",
+            "Prosím, vráťte mi zvyšok. Ďakujem."
+          ]
+        ],
+        "languageSources": [
+          {
+            "name": "IH Bratislava · 旅遊斯洛伐克語",
+            "url": "https://www.ihbratislava.sk/en/t/essential-slovak-phrases-for-your-holiday-in-slovakia-959"
           }
         ]
       },
@@ -306,6 +368,63 @@ const TRIP_DATA = {
             "name": "Wawel｜參觀規則（城堡，非主教座堂）",
             "url": "https://wawel.krakow.pl/en/regulations-for-the-ticket-sales-and-exhibition-tours-at-the-wawel-royal-castle"
           }
+        ],
+        "situations": [
+          [
+            "能用英文嗎？",
+            "Czy mówi Pan/Pani po angielsku?",
+            "Pan 對男性；Pani 對女性，出示時可指向適用的一個。"
+          ],
+          [
+            "我們有三位。",
+            "Są nas trzy osoby."
+          ],
+          [
+            "我今天有訂房。",
+            "Mam rezerwację pokoju na dzisiaj."
+          ],
+          [
+            "我們訂了兩間房。",
+            "Mamy zarezerwowane dwa pokoje."
+          ],
+          [
+            "請問停車場在哪裡？",
+            "Gdzie jest parking?"
+          ],
+          [
+            "請問怎麼繳停車費？",
+            "Jak mogę zapłacić za parking?"
+          ],
+          [
+            "可以寄放行李嗎？",
+            "Czy możemy zostawić tutaj bagaż?"
+          ],
+          [
+            "可以拍照嗎？",
+            "Czy mogę tu robić zdjęcia?"
+          ],
+          [
+            "請問廁所在哪裡？",
+            "Gdzie jest toaleta?"
+          ],
+          [
+            "請給我們帳單。",
+            "Poproszę rachunek."
+          ],
+          [
+            "帳單有包含服務費嗎？",
+            "Czy opłata za obsługę jest wliczona w rachunek?"
+          ],
+          [
+            "請找零，謝謝。",
+            "Poproszę resztę, dziękuję."
+          ]
+        ],
+        "languageSources": [
+          {
+            "name": "Exploring Polski · 常用波蘭語",
+            "url": "https://www.exploringpolski.com/post/70-common-phrases-in-polish"
+          }
         ]
       },
       {
@@ -353,7 +472,7 @@ const TRIP_DATA = {
         ],
         "etiquette": [
           "Grüß Gott 是日常問候，可簡單回覆同一句；不用逐字翻譯成宗教對話。",
-          "結帳想加小費時，付款前說清楚總額；例如帳單 €18，要付 €20，就說 Total twenty euros, please. 想找零則直接提出。"
+          "結帳想加小費時，付款前說清楚總額；例如帳單 €18，要付 €20，就說 Insgesamt zwanzig Euro, bitte. 想找零則直接提出。"
         ],
         "avoid": [
           "一般商店週日多休息，車站、機場或部分其他店型有例外；別把餐廳、博物館和超市視為同樣營業規則。",
@@ -376,6 +495,62 @@ const TRIP_DATA = {
           {
             "name": "熊布朗宮｜現行拍攝與包袋規則",
             "url": "https://www.schoenbrunn.at/en/preserving-world-cultural-heritage-for-posterity"
+          }
+        ],
+        "situations": [
+          [
+            "能用英文嗎？",
+            "Sprechen Sie Englisch?"
+          ],
+          [
+            "我們有三位。",
+            "Wir sind zu dritt."
+          ],
+          [
+            "我今天有訂房。",
+            "Ich habe für heute eine Zimmerreservierung."
+          ],
+          [
+            "我們訂了兩間房。",
+            "Wir haben zwei Zimmer gebucht."
+          ],
+          [
+            "請問停車場在哪裡？",
+            "Wo ist der Parkplatz?"
+          ],
+          [
+            "請問怎麼繳停車費？",
+            "Wie kann ich die Parkgebühr bezahlen?"
+          ],
+          [
+            "可以寄放行李嗎？",
+            "Können wir unser Gepäck hier aufbewahren lassen?"
+          ],
+          [
+            "可以拍照嗎？",
+            "Darf ich hier fotografieren?"
+          ],
+          [
+            "請問廁所在哪裡？",
+            "Wo ist die Toilette?"
+          ],
+          [
+            "請給我們帳單。",
+            "Die Rechnung, bitte."
+          ],
+          [
+            "帳單有包含服務費嗎？",
+            "Ist die Servicegebühr in der Rechnung enthalten?"
+          ],
+          [
+            "請找零，謝謝。",
+            "Ich hätte gern mein Wechselgeld, bitte."
+          ]
+        ],
+        "languageSources": [
+          {
+            "name": "GermanPod101 · 旅遊德語基本句型",
+            "url": "https://www.germanpod101.com/blog/2019/11/21/german-travel-phrases/"
           }
         ]
       }
