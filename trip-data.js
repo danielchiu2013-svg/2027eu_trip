@@ -937,31 +937,283 @@ const TRIP_DATA = {
     ],
     "blogs": [
       {
-        "id": "budapest-winter",
+        "id": "danube-emma",
         "country": "HU",
-        "title": "布達佩斯冬季散步與暖身停靠",
-        "author": "Michelle Halpern · Live Like It’s the Weekend",
-        "url": "https://www.livelikeitstheweekend.com/budapest-in-winter-things-to-do/",
-        "articleDate": "更新 2025-09",
-        "travelDate": "聖誕季冬遊；實際年份未標明",
-        "disclosure": "含廣告與聯盟連結",
+        "language": "中文",
+        "title": "多瑙河夜遊：等船時間與旅行疲勞",
+        "author": "Emma Tsai · Emma 的意識界。",
+        "url": "https://vocus.cc/article/66912c67fd89780001704a02",
+        "articleDate": "發表 2024-07-12；更新 2025-06-23",
+        "travelDate": "夏季高溫旅行；實際年份未明寫",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/4",
+          "2/5"
+        ],
+        "placeKeys": [
+          "DanubeCruise",
+          "ChainBridge"
+        ],
+        "takeaway": "作者記錄等船加遊河花了兩個多小時，遊船後因疲累直接回住處。可參考夜景照片及活動前後的體力緩衝。",
+        "difference": "作者遇夏季高溫與生病；你在二月，需要防風保暖。等船經驗不是船公司固定報到規則，也不代表航程長度。"
+      },
+      {
+        "id": "danube-shine",
+        "country": "HU",
+        "language": "中文",
+        "title": "從船上拍國會大廈與多瑙河橋樑",
+        "author": "shine girl · shine 的幽美幻境",
+        "url": "https://blog.udn.com/shine016/180696974",
+        "articleDate": "發表 2024-08-22",
+        "travelDate": "2024 年 3 月奧匈跟團行程；本篇為白天遊船",
+        "disclosure": "中文旅客跟團圖文紀錄；本文未見業配／招待揭露或票券導購。",
+        "dates": [
+          "2/5"
+        ],
+        "placeKeys": [
+          "DanubeCruise",
+          "Parliament",
+          "ChainBridge"
+        ],
+        "takeaway": "大量船上實拍，可對照國會正面、城堡山與橋體構圖；作者也寫出逆光拍攝的困擾。",
+        "difference": "白天跟團，登船地點與你規劃的 Legenda Dock 7 不同；只參考構圖，不套用碼頭、光線或航線。"
+      },
+      {
+        "id": "budapest-peggy",
+        "country": "HU",
+        "language": "中文",
+        "title": "布達佩斯晝夜散步、遊船與漁人堡實拍",
+        "author": "珮姬 Peggy Liu",
+        "url": "https://vocus.cc/article/69ae43a6fd897800016a4c55",
+        "articleDate": "發表 2026-03-09",
+        "travelDate": "雪季中歐旅行；文中未明寫旅行日期",
+        "disclosure": "中文親身圖文紀錄；提到透過 Klook 購票，本文未見聯盟票券連結或業配揭露。",
         "dates": [
           "2/4",
           "2/5",
           "2/11"
         ],
         "placeKeys": [
-          "Buda Castle",
-          "Matthias Church",
+          "DanubeCruise",
           "Fisherman's Bastion",
           "Parliament",
-          "Basilica",
-          "CentralMarket",
-          "ChainBridge",
-          "Vaci"
+          "ChainBridge"
         ],
-        "takeaway": "參考冬季城區照片、保暖配件與室內暖身停靠；作者把戶外散步與咖啡館、室內參觀穿插安排。",
-        "difference": "你在二月旅行，聖誕市集內容不直接適用；飯店、溫泉與其他推薦只作背景，不改動已確認安排。"
+        "takeaway": "記錄一小時日落遊船、漁人堡不同光線與行李櫃實測；可參考河上和高處看國會的視角差別。",
+        "difference": "你排約 19:00 夜遊，與作者日落時段不同；船公司尚待購票確認。行李櫃是否容納你的箱子要按實際尺寸核對。"
+      },
+      {
+        "id": "szentendre-shine",
+        "country": "HU",
+        "language": "中文",
+        "title": "Szentendre 老城巷弄、廣場與高處屋瓦",
+        "author": "shine girl · shine 的幽美幻境",
+        "url": "https://blog.udn.com/shine016/180571207",
+        "articleDate": "發表 2024-06-06",
+        "travelDate": "2024-03-22；奧匈跟團紀錄",
+        "disclosure": "中文旅客跟團圖文紀錄；本文未見業配／招待揭露或票券導購。",
+        "dates": [
+          "2/5"
+        ],
+        "placeKeys": [
+          "Szentendre"
+        ],
+        "takeaway": "照片涵蓋 Fő tér、彩色巷弄、店面招牌與高處屋瓦；可先認識老城街景，再按現場光線取景。",
+        "difference": "作者一天走多瑙河灣三小鎮，你只到 Szentendre 再回布達城堡區；不增加 Visegrád 或 Esztergom，也不沿用跟團車程。"
+      },
+      {
+        "id": "strbske-ice2005",
+        "country": "SK",
+        "language": "中文",
+        "title": "Štrbské Pleso 湖畔、雪峰與 Poprad 小火車",
+        "author": "花鼠妹 · 花鼠妹的異想世界",
+        "url": "https://blog.udn.com/ice2005/189172427",
+        "articleDate": "發表 2026-06-27",
+        "travelDate": "2025 年 5 月（文中明寫五月湖景）",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/6"
+        ],
+        "placeKeys": [
+          "Strbske"
+        ],
+        "takeaway": "親拍湖畔、飯店與雪峰，記錄環湖及從 Poprad 搭 TEŽ 小火車的經驗；適合看湖岸構圖和地形。",
+        "difference": "五月未結冰湖景，你是二月自駕且傍晚抵達；不因此增加環湖或鐵路行程，不把作者票價與步行經驗套用到冰雪路面。"
+      },
+      {
+        "id": "gubalowka-ice2005",
+        "country": "PL",
+        "language": "中文",
+        "title": "Gubałówka 俯拍城鎮與塔特拉山；纜車停駛經驗",
+        "author": "花鼠妹 · 花鼠妹的異想世界",
+        "url": "https://blog.udn.com/ice2005/191346917",
+        "articleDate": "發表 2026-08-01",
+        "travelDate": "2025 年旅行；照片有綠地和野花，非二月冬景",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/7",
+          "2/8"
+        ],
+        "placeKeys": [
+          "Gubalowka",
+          "Kasprowy"
+        ],
+        "takeaway": "多張 Gubałówka 屋頂與遠山實拍，可辨認城鎮與山脈的相對位置。作者原定 Kasprowy 纜車停駛，記錄改變活動的經驗。",
+        "difference": "你只住兩晚，Gubałówka 排下午；不增加作者的海洋之眼或山區健行替代線，也不以綠地照片預測二月雪況。"
+      },
+      {
+        "id": "zakopane-jessie",
+        "country": "PL",
+        "language": "中文",
+        "title": "Zakopane 一月自駕、雪鏈尺寸與冬季花費",
+        "author": "Jessieeeeee · Jessie 英國散散步",
+        "url": "https://vocus.cc/article/67bcb4acfd89780001c0cf7e",
+        "articleDate": "發表 2025-03-06",
+        "travelDate": "2025-01-14–15",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/6",
+          "2/7",
+          "2/8",
+          "2/9"
+        ],
+        "placeKeys": [
+          "Gubalowka",
+          "Krupowki",
+          "Kasprowy",
+          "Snowmobile"
+        ],
+        "takeaway": "冬季自駕親身經驗：租車櫃檯給錯雪鏈尺寸、兩個雪場的差異，以及裝備和餐食實付費用。可提醒取車時核對裝備。",
+        "difference": "作者滑雪，你安排纜車觀景與雪地摩托車；不新增滑雪場、不把滑雪雪票當 Kasprowy 觀景票，也不沿用其租車公司的低價與車程。"
+      },
+      {
+        "id": "kasprowy-wenfong",
+        "country": "PL",
+        "language": "中文",
+        "title": "Kasprowy 纜車搭乘流程、回程限制與 Kuźnice 午餐",
+        "author": "小蚌蚌嬉遊記",
+        "url": "https://wenfong921.pixnet.net/blog/posts/1034238291",
+        "articleDate": "發表 2025-08-21",
+        "travelDate": "2025 年 7 月（日曜日現場購票）",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/7",
+          "2/8"
+        ],
+        "placeKeys": [
+          "Kasprowy",
+          "Krupowki"
+        ],
+        "takeaway": "圖文記錄 Kuźnice 公車、纜車兩段轉乘、票面回程限制與下山用餐。可先看現場標示及轉乘樣貌。",
+        "difference": "夏季現場購票，冬季人潮、路況與規則可能不同；你保留上午預約票。作者住宿、午休及票價是當次經驗，不替換你的酒店或時段。"
+      },
+      {
+        "id": "kasprowy-ahpu",
+        "country": "PL",
+        "language": "中文",
+        "title": "Kasprowy 四月雪山實拍：強風與回程時間",
+        "author": "阿噗",
+        "url": "https://vocus.cc/article/662939b7fd8978000194fb1e",
+        "articleDate": "發表 2024-04-25；更新 2024-05-15",
+        "travelDate": "2024-04-09",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/8"
+        ],
+        "placeKeys": [
+          "Kasprowy"
+        ],
+        "takeaway": "作者記錄到 Kuźnice 的小巴、兩段纜車及票面時間限制；山上仍有積雪和強風，因缺少雪地經驗放棄走上更高處。",
+        "difference": "四月平日排隊較少，不能推定二月也不用預約。你限開放觀景區；不加入文中的 Kalatówki 草原或雪山步行路線。"
+      },
+      {
+        "id": "krakow-ahpu",
+        "country": "PL",
+        "language": "中文",
+        "title": "Kraków 傍晚抵達、Wawel 外觀與老城人潮",
+        "author": "阿噗",
+        "url": "https://vocus.cc/article/663a2e31fd897800013a6697",
+        "articleDate": "發表 2024-05-07；更新 2024-05-13",
+        "travelDate": "2024-04-07（星期日）",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/9"
+        ],
+        "placeKeys": [
+          "Wawel",
+          "MainMarket",
+          "Kanonicza"
+        ],
+        "takeaway": "作者傍晚抵達後遇到老城人潮，改先到 Wawel 看外觀；可參考移動日如何保留景點順序彈性與傍晚構圖。",
+        "difference": "你從 Zakopane 自駕、星期二到訪，季節與人潮不同；不套用其 FlixBus 路線或個別手機無訊號經驗。"
+      },
+      {
+        "id": "krakow-yolo-winter",
+        "country": "PL",
+        "language": "中文",
+        "title": "Kraków 二月自由行：Wawel 參觀與步行疲勞",
+        "author": "新陳帶謝",
+        "url": "https://vocus.cc/article/65f185d8fd8978000135c744",
+        "articleDate": "發表 2024-03-13；更新 2025-03-12",
+        "travelDate": "2024-02-03–18 波蘭旅程；Kraków 段確切日期未明寫",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/9"
+        ],
+        "placeKeys": [
+          "Wawel",
+          "MainMarket",
+          "Kanonicza"
+        ],
+        "takeaway": "二月親身遊記，含 Wawel 外觀、當時展覽套票與大量步行後的膝蓋疲勞；可用來估計室內外切換及體力需求。",
+        "difference": "作者走多日波蘭行程，你只有一個下午和晚上；不新增鹽礦或集中營，舊套票與廁所條碼規則回官方確認。"
+      },
+      {
+        "id": "vienna-gary-winter",
+        "country": "AT",
+        "language": "中文",
+        "title": "維也納雪天：熊布朗宮步行、寄物與室內參觀",
+        "author": "葛瑞葡 · 有去有回",
+        "url": "https://vocus.cc/article/64e063dbfd8978000123e760",
+        "articleDate": "發表 2023-08-20；更新 2024-06-25",
+        "travelDate": "2023 年冬季（文中記錄農曆除夕雪天）",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/12",
+          "2/13"
+        ],
+        "placeKeys": [
+          "Schonbrunn"
+        ],
+        "takeaway": "作者記錄雪融泥水與結冰地面、從入口走到宮殿的距離、背包外套寄放及約一小時室內參觀。可參考冬季步行與暖身安排。",
+        "difference": "作者的舊套票和當時室內禁拍描述不當作現行規則；你一天看多座宮殿，需限制庭園步行，不追加納許市場。",
+        "officialCheck": {
+          "name": "核對熊布朗宮官方票券",
+          "url": "https://www.schoenbrunn.at/en/tickets-and-prices/all-tickets-tours"
+        }
+      },
+      {
+        "id": "vienna-brenda",
+        "country": "AT",
+        "language": "中文",
+        "title": "美景宮上宮、格拉本大街與咖啡館排隊實錄",
+        "author": "布蘭達的腰子 · 旅行遊記",
+        "url": "https://brenda1987.pixnet.net/blog/posts/10357887196",
+        "articleDate": "發表 2024-11-16",
+        "travelDate": "2024-04-23",
+        "disclosure": "中文親身圖文紀錄；本文未見業配／招待揭露或聯盟導購。",
+        "dates": [
+          "2/12",
+          "2/13"
+        ],
+        "placeKeys": [
+          "Belvedere",
+          "Graben",
+          "Stephansdom",
+          "Hofburg"
+        ],
+        "takeaway": "作者只買美景宮上宮票看《吻》，之後走市中心、記錄咖啡館未訂位的等待；適合比對展館選擇、街拍視角與用餐緩衝。",
+        "difference": "四月旅程與二月日照不同，文中票價不是 2027 價格；咖啡館只作休息線索，不增加固定必到餐廳。"
       },
       {
         "id": "tatras-lakes",
@@ -980,72 +1232,8 @@ const TRIP_DATA = {
           "Strbske"
         ],
         "takeaway": "湖畔照片可參考構圖；作者在 Poprad 採買，也記錄 Košice 市中心建築。只把這些作為停靠與補給線索。",
-        "difference": "你是二月自駕：划船、游泳、健行時間與夏季山路均不直接適用；文中票價與班次也不是 2027 資料。"
-      },
-      {
-        "id": "zakopane-photos",
-        "country": "PL",
-        "title": "Zakopane 冬景與 Gubałówka 照片",
-        "author": "Roberto · OurBigJourney",
-        "url": "https://www.ourbigjourney.com/zakopane-in-winter/",
-        "articleDate": "更新 2026-02",
-        "travelDate": "冬季；實際年份未標明",
-        "disclosure": "個人旅遊與攝影紀錄",
-        "dates": [
-          "2/7",
-          "2/8"
-        ],
-        "placeKeys": [
-          "Gubalowka",
-          "Krupowki",
-          "Kasprowy"
-        ],
-        "takeaway": "作者在晴朗早晨到 Gubałówka，文章照片可參考塔特拉山景；也記錄 Krupówki 冬夜街景與暖食。",
-        "difference": "你的 Gubałówka 在下午，光線與作者不同；文中夜間長程雪山健行需要不同能力與裝備，不套用到纜車觀景行程。"
-      },
-      {
-        "id": "zakopane-warmspell",
-        "country": "PL",
-        "title": "Zakopane 暖冬經驗與纜車緩衝",
-        "author": "Lucy Dodsworth · On the Luce",
-        "url": "https://www.ontheluce.com/things-to-do-in-zakopane-in-winter/",
-        "articleDate": "更新 2026-01-12",
-        "travelDate": "冬季遇暖天；實際年份未標明",
-        "disclosure": "受 Snomads 招待；含聯盟連結",
-        "dates": [
-          "2/7",
-          "2/8"
-        ],
-        "placeKeys": [
-          "Gubalowka",
-          "Krupowki",
-          "Kasprowy",
-          "Snowmobile"
-        ],
-        "takeaway": "作者的冬遊遇上暖天，提醒雪況不能用季節保證；文中 Kasprowy 纜車可能繁忙，可參考預約與排隊緩衝。",
-        "difference": "你是纜車觀景與雪地摩托車，雪況和業者仍要另外確認。文中的冰湖行走與稜線健行描述不作安全依據；限當日開放觀景範圍。"
-      },
-      {
-        "id": "krakow-december",
-        "country": "PL",
-        "title": "Kraków 冬季老城與 Wawel 外觀",
-        "author": "Ellen · OurBigJourney",
-        "url": "https://www.ourbigjourney.com/krakow-in-december/",
-        "articleDate": "作者標示 Updated Dec 25（未完整標示日期格式）",
-        "travelDate": "12 月；實際年份未標明",
-        "disclosure": "文章有導覽／票券連結，購票請回官方",
-        "dates": [
-          "2/9"
-        ],
-        "placeKeys": [
-          "Wawel",
-          "MainMarket",
-          "StMary",
-          "ClothHall",
-          "Kanonicza"
-        ],
-        "takeaway": "參考老城冬夜、暖食與 Wawel 外觀照片；作者到 Wawel 時只看外觀，並未參觀室內。",
-        "difference": "你的安排只有一個下午與晚上；文中聖誕市集、Auschwitz 和 Schindler 行程不直接套用，也不能用它判定 Wawel 室內需要多久。"
+        "difference": "你是二月自駕：划船、游泳、健行時間與夏季山路均不直接適用；文中票價與班次也不是 2027 資料。",
+        "language": "英文"
       },
       {
         "id": "vienna-winter",
@@ -1070,7 +1258,8 @@ const TRIP_DATA = {
         "officialCheck": {
           "name": "核對熊布朗宮現行規則",
           "url": "https://www.schoenbrunn.at/en/preserving-world-cultural-heritage-for-posterity"
-        }
+        },
+        "language": "英文"
       }
     ],
     "pronunciationGuide": {
@@ -1082,7 +1271,9 @@ const TRIP_DATA = {
         "eu 表示 ö 類音：嘴唇圓起，舌頭維持 eh 的位置；ue 表示 ü 類音：嘴唇圓起，舌頭維持 ee 的位置。兩者都不是英文常見母音。",
         "ty、dy 是帶軟化的 t、d 提示，舌頭前部抬起；不要把 y 額外讀成一個音節。OW 如 now；EYE 如 eye；OY 如 boy。"
       ]
-    }
+    },
+    "blogsCheckedDate": "2026-10-09",
+    "blogSelection": "優先中文、近年親身圖文；按本文可見內容篩選，排除明確業配、招待、聯盟票券導購與旅行社宣傳。文章日期與實際旅行日期分開標示，未寫明的年份不推定。"
   },
   outingAdvice: {
     "checkedDate": "2026-10-08",
@@ -1177,19 +1368,22 @@ const TRIP_DATA = {
         ]
       },
       "2/5": {
-        "label": "城市／長時間步行",
+        "label": "城市／長時間步行／晚間遊船",
         "clothing": [
           "薄保暖內層＋刷毛／羊毛中層＋防風保暖外套；長褲、冬襪、防水且能走整天的鞋。",
-          "城堡區與傍晚拍攝時加帽子、脖圍、手套；怕冷可加內搭褲。"
+          "城堡區與傍晚拍攝時加帽子、脖圍、手套；怕冷可加內搭褲。",
+          "遊船戶外甲板更需防風，帽子、脖圍和手套放隨手可取的位置。"
         ],
         "items": [
           "保溫瓶、點心、暖暖包",
           "相機備用電池",
-          "有結冰路況時攜鞋用防滑裝備"
+          "有結冰路況時攜鞋用防滑裝備",
+          "遊船電子票、集合碼頭資訊（購票後保存）"
         ],
         "photo": "標準變焦為主，街拍可用 X100VI；望遠按河岸細節需求帶。",
         "notes": [
-          "進室內脫外套或中層，步行時避免穿到流汗。"
+          "進室內脫外套或中層，步行時避免穿到流汗。",
+          "購票時確認室內保暖與戶外區；船上拍照以手持為主，避免玻璃反光。"
         ]
       },
       "2/6": {
@@ -1378,18 +1572,122 @@ const TRIP_DATA = {
   ],
   // 共用預約待辦：網站所有訪客都會看到。確認訂妥後請更新 status；修改此區即可同步公開清單。
   reservations: [
-    { id: "flixbus-vie-budapest", label: "VIE → Budapest FlixBus 車票", group: "車票／交通預約", date: "2/4（四）", status: "待購票", detail: "確認機場上車站、班次與行李規則；核對 Budapest 下車站及前往 InterContinental Budapest 的末段交通。", url: "https://www.flixbus.com/" },
-    { id: "sixt-booking", label: "SIXT Budapest 取車／還車訂單與跨境許可", group: "租車／道路通行", date: "2/6（六）–2/10（三）", status: "待確認", detail: "核對取還車門市、營業時間、跨境斯洛伐克與波蘭許可、冬季胎、費用及保險；不要只依行程草案推定已訂妥。", url: "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP" },
-    { id: "kasprowy-ticket", label: "Kasprowy Wierch 纜車來回票／上山時段", group: "門票／活動預約", date: "2/8（一）上午", status: "待購票", detail: "選接近 10:00 的上山時段；確認票種、下山安排與風雪停駛退改規則。", url: "https://www.sklep.pkl.pl/en/" },
-    { id: "snowmobile-booking", label: "Zakopane／Kościelisko 雪地摩托車體驗", group: "門票／活動預約", date: "2/8（一）14:30", status: "待預約", detail: "尚未指定業者；先確認集合地址、接送、報到時間、三人名額、裝備、雪況不足時的取消／改期規則。", url: "https://www.google.com/maps/search/?api=1&query=snowmobile+Koscielisko+Zakopane" },
-    { id: "wawel-tickets", label: "瓦維爾城堡展覽／指定時段門票", group: "門票／活動預約", date: "2/9（二）", status: "待購票", detail: "選定欲參觀的展覽與時段；官方線上票通常於參觀日前約一個月開售，出發前再確認。", url: "https://bilety.wawel.krakow.pl/wawel" },
-    { id: "wawel-cathedral-entry", label: "瓦維爾主教座堂入場方式與開放時間", group: "門票／活動預約", date: "2/9（二）", status: "待確認", detail: "與城堡展覽票分開核對；確認大教堂、鐘樓或地下墓室是否要另購票，以及當日宗教活動時段。", url: "https://wawel.krakow.pl/en/explore" },
-    { id: "train-budapest-vienna", label: "Budapest-Keleti → Wien Hbf Railjet／EC 火車票", group: "車票／交通預約", date: "2/12（五）上午", status: "待購票", detail: "選直達班次並確認 2027 時刻表、座位需求、行李與改票條件。", url: "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing" },
-    { id: "schonbrunn-ticket", label: "熊布朗宮室內參觀門票／固定入場時段", group: "門票／活動預約", date: "2/13（六）上午", status: "待購票", detail: "行程目標約 09:30 入場；依 2027 冬季開放內容選票。只從官方售票頁進入，避免仿冒票站。", url: "https://www.schoenbrunn.at/en/tickets-and-prices/all-tickets-tours" },
-    { id: "belvedere-ticket", label: "美景宮上宮指定時段門票", group: "門票／活動預約", date: "2/13（六）下午", status: "待購票", detail: "目標約 13:45 入場；確認上宮時段票及是否需要另排下宮或特展。", url: "https://www.belvedere.at/en/tickets" },
-    { id: "airport-transfer-booking", label: "InterContinental Vienna → VIE 清晨接送預約", group: "車票／交通預約", date: "2/14（日）06:15", status: "待預約", detail: "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。" },
-    { id: "hu-vignette-purchase", label: "匈牙利高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "取車後、上高速前", status: "待辦理", detail: "先確認租車是否已含通行費；若需自購，核對車種、車牌與有效日期。", url: "https://ematrica.nemzetiutdij.hu/en" },
-    { id: "sk-vignette-purchase", label: "斯洛伐克高速公路 e-vignette（依租車車牌購買）", group: "租車／道路通行", date: "進入收費路段前", status: "待辦理", detail: "先確認 SIXT 是否已提供或代購；若自購，只使用官方 eznamka 網站。", url: "https://eznamka.sk/en" }
+    {
+      "id": "flixbus-vie-budapest",
+      "label": "VIE → Budapest FlixBus 車票",
+      "group": "車票／交通預約",
+      "date": "2/4（四）",
+      "status": "待購票",
+      "detail": "確認機場上車站、班次與行李規則；核對 Budapest 下車站及前往 InterContinental Budapest 的末段交通。",
+      "url": "https://www.flixbus.com/"
+    },
+    {
+      "id": "danube-cruise-ticket",
+      "label": "2/5 多瑙河夜景遊船｜三人船票",
+      "group": "門票／活動預約",
+      "date": "2/5（五）約 19:00（規劃時段）",
+      "status": "待購票",
+      "detail": "首選 Legenda Danube Legend 約一小時觀光船（非晚餐船）。待 2027 班表確認後購買三人船票；核對時間、Dock 7 或實際碼頭、室內保暖、戶外拍攝區、報到與退改規則。",
+      "url": "https://legenda.hu/en/danube-legend"
+    },
+    {
+      "id": "sixt-booking",
+      "label": "SIXT Budapest 取車／還車訂單與跨境許可",
+      "group": "租車／道路通行",
+      "date": "2/6（六）–2/10（三）",
+      "status": "待確認",
+      "detail": "核對取還車門市、營業時間、跨境斯洛伐克與波蘭許可、冬季胎、費用及保險；不要只依行程草案推定已訂妥。",
+      "url": "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP"
+    },
+    {
+      "id": "kasprowy-ticket",
+      "label": "Kasprowy Wierch 纜車來回票／上山時段",
+      "group": "門票／活動預約",
+      "date": "2/8（一）上午",
+      "status": "待購票",
+      "detail": "選接近 10:00 的上山時段；確認票種、下山安排與風雪停駛退改規則。",
+      "url": "https://www.sklep.pkl.pl/en/"
+    },
+    {
+      "id": "snowmobile-booking",
+      "label": "Zakopane／Kościelisko 雪地摩托車體驗",
+      "group": "門票／活動預約",
+      "date": "2/8（一）14:30",
+      "status": "待預約",
+      "detail": "尚未指定業者；先確認集合地址、接送、報到時間、三人名額、裝備、雪況不足時的取消／改期規則。",
+      "url": "https://www.google.com/maps/search/?api=1&query=snowmobile+Koscielisko+Zakopane"
+    },
+    {
+      "id": "wawel-tickets",
+      "label": "瓦維爾城堡展覽／指定時段門票",
+      "group": "門票／活動預約",
+      "date": "2/9（二）",
+      "status": "待購票",
+      "detail": "選定欲參觀的展覽與時段；官方線上票通常於參觀日前約一個月開售，出發前再確認。",
+      "url": "https://bilety.wawel.krakow.pl/wawel"
+    },
+    {
+      "id": "wawel-cathedral-entry",
+      "label": "瓦維爾主教座堂入場方式與開放時間",
+      "group": "門票／活動預約",
+      "date": "2/9（二）",
+      "status": "待確認",
+      "detail": "與城堡展覽票分開核對；確認大教堂、鐘樓或地下墓室是否要另購票，以及當日宗教活動時段。",
+      "url": "https://wawel.krakow.pl/en/explore"
+    },
+    {
+      "id": "train-budapest-vienna",
+      "label": "Budapest-Keleti → Wien Hbf Railjet／EC 火車票",
+      "group": "車票／交通預約",
+      "date": "2/12（五）上午",
+      "status": "待購票",
+      "detail": "選直達班次並確認 2027 時刻表、座位需求、行李與改票條件。",
+      "url": "https://www.oebb.at/en/tickets-kundenkarten/online-mobile-ticketing"
+    },
+    {
+      "id": "schonbrunn-ticket",
+      "label": "熊布朗宮室內參觀門票／固定入場時段",
+      "group": "門票／活動預約",
+      "date": "2/13（六）上午",
+      "status": "待購票",
+      "detail": "行程目標約 09:30 入場；依 2027 冬季開放內容選票。只從官方售票頁進入，避免仿冒票站。",
+      "url": "https://www.schoenbrunn.at/en/tickets-and-prices/all-tickets-tours"
+    },
+    {
+      "id": "belvedere-ticket",
+      "label": "美景宮上宮指定時段門票",
+      "group": "門票／活動預約",
+      "date": "2/13（六）下午",
+      "status": "待購票",
+      "detail": "目標約 13:45 入場；確認上宮時段票及是否需要另排下宮或特展。",
+      "url": "https://www.belvedere.at/en/tickets"
+    },
+    {
+      "id": "airport-transfer-booking",
+      "label": "InterContinental Vienna → VIE 清晨接送預約",
+      "group": "車票／交通預約",
+      "date": "2/14（日）06:15",
+      "status": "待預約",
+      "detail": "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。"
+    },
+    {
+      "id": "hu-vignette-purchase",
+      "label": "匈牙利高速公路 e-vignette（依租車車牌購買）",
+      "group": "租車／道路通行",
+      "date": "取車後、上高速前",
+      "status": "待辦理",
+      "detail": "先確認租車是否已含通行費；若需自購，核對車種、車牌與有效日期。",
+      "url": "https://ematrica.nemzetiutdij.hu/en"
+    },
+    {
+      "id": "sk-vignette-purchase",
+      "label": "斯洛伐克高速公路 e-vignette（依租車車牌購買）",
+      "group": "租車／道路通行",
+      "date": "進入收費路段前",
+      "status": "待辦理",
+      "detail": "先確認 SIXT 是否已提供或代購；若自購，只使用官方 eznamka 網站。",
+      "url": "https://eznamka.sk/en"
+    }
   ],
   days: [
     {
@@ -1420,23 +1718,149 @@ const TRIP_DATA = {
       notes: ["長途飛行與跨境移動日，保留彈性，不把河岸散步列為必到。", "FlixBus 班次、機場上車點及布達佩斯下車站以購票資訊為準；預留入境、領行李與延誤時間。"]
     },
     {
-      date: "2/5", weekday: "五", title: "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion", city: "Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
-      summary: "一次完成 Szentendre 與 Buda Castle 區；Fisherman’s Bastion 不在後續重複。",
-      highlights: ["Szentendre 老城", "Buda Castle", "Matthias Church", "Fisherman’s Bastion 日落"],
-      items: [
-        ["09:00–09:15", "transit", "飯店 → Batthyány tér", "步行／市區電車；以 BudapestGO 查當日路線", "15m"],
-        ["約 09:15–10:00", "transit", "H5 → Szentendre", "約 40–45 分鐘；班次以當日公告為準", "40–45m"],
-        ["10:00–11:30", "place", "Szentendre 老城", "Fő tér、巷弄、河岸街景", "1h30"],
-        ["11:30–12:15", "food", "午餐｜匈牙利家常菜", "可試 Gulyás 燉牛肉湯或 Lángos 炸麵餅；冬季先確認餐廳營業", "45m"],
-        ["約 12:15–13:00", "transit", "Szentendre → Batthyány tér", "搭 H5 回市區", "45m"],
-        ["13:00–13:30", "transit", "前往 Buda Castle 區", "公車 16 或步行上城；依當日路況選擇", "30m"],
-        ["13:30–14:15", "place", "Buda Castle", "城堡區、庭院與 Danube 視角", "45m"],
-        ["14:15–15:00", "place", "Matthias Church", "室內開放與票務出發前確認", "45m"],
-        ["15:00–16:15", "photo", "Fisherman’s Bastion", "日光拍攝；露台收費區依現場規則", "1h15"],
-        ["16:15–17:00", "photo", "城堡區藍調時刻", "依當日日落時間微調", "45m"],
-        ["17:00 後", "food", "晚餐／返回飯店", "可選 Paprikás csirke 雞肉紅椒燉或 Gulyás；再搭公車 16／計程車下山", ""]
+      "date": "2/5",
+      "weekday": "五",
+      "title": "Szentendre → Buda Castle → Matthias Church → Fisherman’s Bastion → 多瑙河夜景遊船",
+      "city": "Budapest",
+      "hotel": "InterContinental Budapest（布達佩斯洲際酒店）",
+      "theme": "city",
+      "photo": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1400&q=82",
+      "summary": "白天 Szentendre 與布達城堡區，保留漁人堡日落；晚餐後搭約一小時多瑙河夜景遊船。",
+      "highlights": [
+        "Szentendre 老城",
+        "Buda Castle",
+        "Matthias Church",
+        "Fisherman’s Bastion 日落",
+        "多瑙河夜景遊船（約 19:00，待購票）"
       ],
-      notes: ["Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。", "Fisherman’s Bastion 已在本日完成，2/11 不再排。"]
+      "items": [
+        [
+          "09:00–09:15",
+          "transit",
+          "飯店 → Batthyány tér",
+          "步行／市區電車；以 BudapestGO 查當日路線",
+          "15m"
+        ],
+        [
+          "約 09:15–10:00",
+          "transit",
+          "H5 → Szentendre",
+          "約 40–45 分鐘；班次以當日公告為準",
+          "40–45m"
+        ],
+        [
+          "10:00–11:30",
+          "place",
+          "Szentendre 老城",
+          "Fő tér、巷弄、河岸街景",
+          "1h30"
+        ],
+        [
+          "11:30–12:15",
+          "food",
+          "午餐｜匈牙利家常菜",
+          "可試 Gulyás 燉牛肉湯或 Lángos 炸麵餅；冬季先確認餐廳營業",
+          "45m"
+        ],
+        [
+          "約 12:15–13:00",
+          "transit",
+          "Szentendre → Batthyány tér",
+          "搭 H5 回市區",
+          "45m"
+        ],
+        [
+          "13:00–13:30",
+          "transit",
+          "前往 Buda Castle 區",
+          "公車 16 或步行上城；依當日路況選擇",
+          "30m"
+        ],
+        [
+          "13:30–14:15",
+          "place",
+          "Buda Castle",
+          "城堡區、庭院與 Danube 視角",
+          "45m"
+        ],
+        [
+          "14:15–15:00",
+          "place",
+          "Matthias Church",
+          "室內開放與票務出發前確認",
+          "45m"
+        ],
+        [
+          "15:00–16:15",
+          "photo",
+          "Fisherman’s Bastion",
+          "日光拍攝；露台收費區依現場規則",
+          "1h15"
+        ],
+        [
+          "16:15–17:00",
+          "photo",
+          "城堡區藍調時刻",
+          "依當日日落時間微調",
+          "45m"
+        ],
+        [
+          "17:00–18:00",
+          "food",
+          "晚餐｜城堡區就近用餐",
+          "可選 Paprikás csirke 雞肉紅椒燉或 Gulyás；用餐後下山前往碼頭",
+          "1h"
+        ],
+        [
+          "18:00–18:40",
+          "transit",
+          "城堡區 → 多瑙河遊船碼頭",
+          "公車 16／計程車下山，再前往訂單指定碼頭；若選 Legenda，集合在 Dock 7（Jane Haining rakpart）；依路況留交通緩衝",
+          "約 40m"
+        ],
+        [
+          "18:40–19:00",
+          "rest",
+          "遊船報到／登船緩衝",
+          "規劃提早約 20 分鐘抵達；以實際船票的集合地點與報到要求為準",
+          "20m"
+        ],
+        [
+          "約 19:00–20:00",
+          "cruise",
+          "多瑙河夜景遊船｜Danube Legend（首選、待購票）",
+          "規劃約一小時觀光航程，欣賞國會大廈、鏈橋與城堡山夜景；不是晚餐船。2027 班表與票價待確認，購票後依實際時段調整",
+          "約 1h"
+        ],
+        [
+          "20:00 後",
+          "hotel",
+          "返回 InterContinental Budapest／休息",
+          "遊船後回飯店，隔天 10:00 SIXT 取車；不再加排其他夜間景點",
+          ""
+        ]
+      ],
+      "notes": [
+        "Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。",
+        "Fisherman’s Bastion 已在本日完成，2/11 不再排。",
+        "遊船安排 2/5，2/4 抵達日維持休息彈性。約 19:00 只是規劃時段：查核時官方仍為 2026 班表，尚未確認 2027-02-05 開航與座位，未完成訂票。",
+        "首選 Legenda Danube Legend（一小時觀光船）；購票時確認室內保暖、戶外拍攝區、碼頭與退改規則。二月河上風冷，短暫到戶外拍照後回室內。",
+        "船上拍攝以標準變焦為主，注意船身晃動與玻璃反光；提高快門速度並接受較高 ISO，腳架不適合在移動船上長曝光。"
+      ],
+      "sources": [
+        {
+          "name": "Legenda｜一小時夜景遊船",
+          "url": "https://legenda.hu/en/danube-legend"
+        },
+        {
+          "name": "Legenda｜官方班表（目前 2026）",
+          "url": "https://legenda.hu/en/timetable"
+        },
+        {
+          "name": "Legenda｜Dock 7 集合地點",
+          "url": "https://legenda.hu/en/directions"
+        }
+      ]
     },
     {
       date: "2/6", weekday: "六", title: "Budapest → Košice（午餐）→ Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
@@ -2119,7 +2543,8 @@ const TRIP_DATA = {
     { key:"Hofburg", name:"霍夫堡皇宮", en:"Hofburg Wien", description:"哈布斯堡冬宮群，外圍廣場與宏偉立面適合散步拍照。", day:11, tag:"宮殿／廣場", duration:"1h", lens:"16–55mm", image:"https://images.musement.com/cover/0165/16/thumb_16415080_cover_header.jpg?fit=crop&h=630&q=95&w=1200", images:["https://tabicoffret.com/uploads/AT20171202_1.jpg","https://www.burghauptmannschaft.at/dam/jcr%3A7858edf0-7b6f-4f27-9065-ed689fbbc551/HBW_Reichskanzleitrakt.jpg","https://upload.wikimedia.org/wikipedia/commons/6/6b/The_Hofburg_Winter_Palace_in_Vienna%2C_Austria._%2816556035096%29.jpg"], imageSources:["https://tabicoffret.com/article/73956/","https://www.burghauptmannschaft.at/Liegenschaften/Liegenschaften/Wien/Hofburg-Wien-/Reichskanzleitrakt.html","https://commons.wikimedia.org/wiki/File:The_Hofburg_Winter_Palace_in_Vienna,_Austria._(16556035096).jpg"], map:"https://www.google.com/maps/search/?api=1&query=Hofburg+Vienna" },
     { key:"Stephansdom", name:"維也納聖史蒂芬主教座堂", en:"St. Stephen’s Cathedral", description:"維也納市中心哥德式主教座堂，以彩色屋瓦與南塔聞名。", day:10, tag:"教堂／城市中心", duration:"45m", lens:"16–55mm／12mm", image:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/800px-Wien_-_Stephansdom_%281%29.JPG", images:["https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg","https://i.pinimg.com/originals/dd/5a/f5/dd5af558c0398bca3c02ccbfc922d003.jpg","https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg"], imageSources:["https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/","https://ca.pinterest.com/pin/snow-falling-vienna-austria-by-greg-sideris-gregsideris-on-instagram--700380179581940827/","https://www.austria.info/it/luoghi/hofburg/"], map:"https://www.google.com/maps/search/?api=1&query=Stephansdom+Vienna" },
     { key:"Graben", name:"格拉本大街", en:"Graben", description:"市中心歷史步行街，巴洛克瘟疫紀念柱與典雅店面是主要看點。", day:10, tag:"街景／夜景", duration:"1h", lens:"X100VI", image:"https://vienna.net/wp-content/uploads/2022/09/Wien_-_Graben_2.jpg", images:["https://i.pinimg.com/originals/dd/5a/f5/dd5af558c0398bca3c02ccbfc922d003.jpg","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg","https://www.ganz-wien.at/fileadmin/_processed_/5/7/xcsm_hofburg-heldenplatz-wien_tourismus-willfried_gredler-oxenbauer_511677032b.jpg.pagespeed.ic.ojmWBFFNnm.jpg"], imageSources:["https://ca.pinterest.com/pin/snow-falling-vienna-austria-by-greg-sideris-gregsideris-on-instagram--700380179581940827/","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/","https://www.ganz-wien.at/wien/sehenswuerdigkeiten/hofburg-wien-rundgang-durch-die-kaiserliche-residenz.html"], map:"https://www.google.com/maps/search/?api=1&query=Graben+Vienna" },
-    { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" }
+    { key:"Kohlmarkt", name:"科爾市場街", en:"Kohlmarkt", description:"連接霍夫堡與格拉本的精品街，可欣賞歷史立面與夜間櫥窗。", day:10, tag:"精品街／夜景", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20Kohlmarkt.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg", images:["https://fuutazbsb.filerobot.com/Freigegeben/Winterlicher-Michaelerplatz-in-der-Wiener-Innenstadt_Oesterreich-Werbung_sommertageblog.jpeg","https://assets.st-note.com/production/uploads/images/25481966/rectangle_large_type_2_42c8d47f67717e25c5ada99735281651.jpg?width=1280","https://i.pinimg.com/originals/c2/7d/d5/c27dd57399a8b514f05d0605fec36c17.jpg"], imageSources:["https://www.austria.info/it/luoghi/hofburg/","https://note.com/hyorowien/n/n615f91d4aa3b","https://www.pinterest.com/pin/snowy-vienna-is-very-beautiful-follow-us-vienna_go-vienna_go-ph-by-natalie_wien--80994493284645506/"], map:"https://www.google.com/maps/search/?api=1&query=Kohlmarkt+Vienna" },
+    {"key":"DanubeCruise","name":"多瑙河夜景遊船","en":"Danube Legend · Legenda","description":"2/5 晚上規劃約一小時觀光船，從河上看國會大廈、鏈橋與城堡山。首選 Legenda Dock 7；2027 時段及票價待確認，尚未購票。","day":3,"tag":"夜景／遊船／待購票","duration":"約 1h＋報到緩衝","lens":"16–55mm／X100VI；手持提高快門","image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg","map":"https://www.google.com/maps/search/?api=1&query=Legenda+Dock+7+Jane+Haining+rakpart+Budapest"}
   ]
 };
 
