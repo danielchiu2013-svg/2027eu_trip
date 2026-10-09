@@ -1,4 +1,704 @@
 const TRIP_DATA = {
+  transportGuide: {
+  "checkedDate": "2026-10-10",
+  "note": "依三人、冬季、既定住宿與交通方式整理。以下路線與時間為行程規劃，2027 班次、票價、路況與規則須在出發前再查；不代表已訂票。站名保留當地拼寫，便於現場找指標。",
+  "alerts": [
+    "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 保留 06:15 預約接送。",
+    "2/5 H5 到 Szentendre 超出 Budapest 市界；一般 Budapest 市區票不能單獨涵蓋全程。市界內與 Békásmegyer–Szentendre 區間須各有有效票。",
+    "2/8 Kuźnice 一般私家車禁入；用當地公車／合規計程車到纜車下站。2/9 入 Kraków：匈牙利車牌須先查 SCT 資格與登錄，並確認飯店合法車道。",
+    "2/6 17:15 抵達湖區不保證仍有日光；2/10 的 5.5–6.5h 是原草案純駕駛估算，不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
+  ],
+  "alertSources": [
+    {
+      "name": "Wiener Linien｜2026–2027 S-Bahn 工程",
+      "url": "https://www.wienerlinien.at/web/wl-en/modernisations/s-bahn-core-line-closure"
+    },
+    {
+      "name": "BKK｜H5 市界外旅遊票",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/suburban-railway-tour-ticket-h5-h8-h9-full-fare/"
+    },
+    {
+      "name": "PKL｜Kuźnice 交通與纜車 FAQ",
+      "url": "https://www.pkl.pl/post/kasprowy-wierch/news-kasprowy/zanim-wyruszysz-na-kasprowy-faq-kopia.html"
+    },
+    {
+      "name": "Kraków 市府｜SCT 車輛規則",
+      "url": "https://www.krakow.pl/otwarty_na_swiat_en/304104,artykul,low-emission-zone-in-krakow.html"
+    }
+  ],
+  "essentials": [
+    "取車前：三人的行李容量、四條冬季胎、適配雪鏈是否獲車廠／租車公司允許、HU→SK→PL 跨境書面許可、道路救援與還車門市／營業時間一起核對。AWD 不能取代冬季胎。",
+    "隨身文件：台灣駕照正本＋有效國際駕照、護照、租約、車籍／保險文件。確認租車公司接受的證件、駕駛人資格；國際駕照不能單獨使用。",
+    "取車拍照：四面車身、輪框、玻璃、內裝、油量／里程；找到警告三角牌、反光背心、急救包與補胎設備。背心放車內隨手可取的位置。",
+    "導航以路況與路牌為準：保留高速道路選項，不為省通行費選不熟的山路；每天核對封路／降雪。需要操作手機時，請乘客處理或停妥車再操作。",
+    "規劃每 1.5–2 小時休息，不等油箱見底。依油箱蓋確認 Diesel／B7 或 Petrol／95／E5／E10；AdBlue 不是柴油。加完確認油槍收好，再依站方指示報油泵號碼付款。",
+    "停車先看 P 標誌、付費時段、車牌登錄與付款方式；私人停車場／道路停車可能用不同系統。保存票據；相機、護照、現金隨身。",
+    "雪地先清除車頂、車窗、車燈上的雪與冰，拉長距離，避免急煞；霧、雪、隧道用近燈，不只靠日行燈。強風雪／結冰嚴重時取消非必要移動。",
+    "故障先到安全位置、開警示燈，能安全下車時穿背心並到護欄外；聯絡租車救援。有人受傷或有立即危險撥 112。不要在車流旁停留拍照。"
+  ],
+  "essentialSources": [
+    {
+      "name": "斯洛伐克政府｜道路交通規則",
+      "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+    },
+    {
+      "name": "ÖBB｜官方班次與購票",
+      "url": "https://www.oebb.at/en/"
+    },
+    {
+      "name": "FlixBus｜行李規則",
+      "url": "https://support.flixbus.com/global/en/luggage"
+    }
+  ],
+  "tickets": [
+    {
+      "city": "Budapest／Szentendre",
+      "steps": [
+        "BudapestGO 查路線；三人各持有效票，不能拿一張一般單程票輪流刷。",
+        "紙本單程票：地鐵在進站驗票線前打票；公車／電車／HÉV 上車後立即打票。普通單程票跨公車／電車換乘通常須另票；地鐵系統內可依票種換線。",
+        "24／72h 市區 travelcard 按票面開始時間使用，紙本不再打票；電子票／時間票依 App 指示完成啟用或掃碼，保持手機有電。",
+        "2/5 可用市區有效票＋H5 市界外票。H5 tour ticket 只涵蓋 Békásmegyer–Szentendre，可供最多十人同車廂同行，適合比較三人來回成本；不是全程團體市區票。",
+        "100E 機場巴士有專用票規則；本行程 2/4 抵達的是 VIE，勿誤買 BUD 機場交通。"
+      ],
+      "sources": [
+        {
+          "name": "BKK｜票券與驗票",
+          "url": "https://bkk.hu/en/tickets-and-passes/validation-of-paper-tickets/"
+        },
+        {
+          "name": "BKK｜H5 市界外旅遊票",
+          "url": "https://bkk.hu/en/tickets-and-passes/prices/suburban-railway-tour-ticket-h5-h8-h9-full-fare/"
+        },
+        {
+          "name": "BudapestGO｜路線查詢",
+          "url": "https://futar.bkk.hu/"
+        }
+      ]
+    },
+    {
+      "city": "Zakopane／Kuźnice",
+      "steps": [
+        "飯店在 Krupówki 周邊：以步行＋當地公車／計程車為主，避免反覆移車。",
+        "目前市府 10、12 等公車服務 Kuźnice；先查最近站與方向，路線號碼／班次依 2027 官網。不要把所有 minibus 都當市營公車。",
+        "市營車有單程、60 分鐘轉乘、24h 等票；依售票機／司機／App 指示購票及驗票，備少量 PLN。私營 minibus 要另核對票價與現金規則。",
+        "2/8 上山票與市區公車票分開；約 10:00 纜車票不能免除下站交通與候車時間。回程也留排隊緩衝。"
+      ],
+      "sources": [
+        {
+          "name": "Zakopane 市府｜公車路線",
+          "url": "https://www.zakopane.pl/komunikacjamiejska/rozklady-jazdy"
+        },
+        {
+          "name": "Zakopane 市府｜公車票種",
+          "url": "https://www.zakopane.pl/komunikacjamiejska/informacje-praktyczne"
+        },
+        {
+          "name": "PKL｜Kuźnice 交通與纜車 FAQ",
+          "url": "https://www.pkl.pl/post/kasprowy-wierch/news-kasprowy/zanim-wyruszysz-na-kasprowy-faq-kopia.html"
+        }
+      ]
+    },
+    {
+      "city": "高塔特拉／Štrbské Pleso",
+      "steps": [
+        "本次主線維持租車；湖區住宿附近以步行為主。若選用公共運輸備案，查 ZSSK 的 TEŽ 電氣鐵路及 Štrba–Štrbské Pleso 齒軌鐵路，兩者不是同一條線。",
+        "從 Poprad-Tatry 查至 Štrbské Pleso 的完整班次與轉乘，不假定每班直達。紙本區間票／預購票依票種指示打票；電子票按有效時間使用。",
+        "SMS 票不能假定台灣門號可用；優先 ZSSK 正式售票或車站。此備案不能替代跨境到 Zakopane 的已定自駕。"
+      ],
+      "sources": [
+        {
+          "name": "ZSSK｜高塔特拉鐵路",
+          "url": "https://www.zssk.sk/en/tatra-electric-railway-tez-and-cog-railway-oz-2/"
+        }
+      ]
+    },
+    {
+      "city": "Vienna／維也納",
+      "steps": [
+        "WienMobil 查地鐵、電車、公車；ÖBB／Scotty 查跨城及機場火車。地鐵沒有閘門也要有有效票。",
+        "紙本標示 Please validate 的票在開始旅程前打票；已印有效時間的票依票面，WienMobil 電子票按選定起始時間生效，不需再打紙本票。",
+        "市區單程票可沿一個方向換乘，不能拿同票折返；多次搭乘時比較當時在售的多日票，不沿用 2025 舊票種與價格。",
+        "Vienna core zone 市區票不含 VIE 機場外區、CAT 等特定產品。買機場交通時輸入完整起終點，不只買市區票。",
+        "2027 二月受 S-Bahn 工程影響：機場鐵路備案從 Wien Hbf 查當日長途列車；S7 需配合 St. Marx。2/14 以已排預約車為主。"
+      ],
+      "sources": [
+        {
+          "name": "Wiener Linien｜票券使用",
+          "url": "https://helpcenter.wienerlinien.at/s/topic/0TOQv0000001DXtOAM/unsere-tickets-richtig-nutzen?language=en_US"
+        },
+        {
+          "name": "維也納市區票範圍／機場不包含",
+          "url": "https://www.wienerlinien.at/web/wl-en/tickets/vienna-core-zone"
+        },
+        {
+          "name": "Wiener Linien｜2026–2027 S-Bahn 工程",
+          "url": "https://www.wienerlinien.at/web/wl-en/modernisations/s-bahn-core-line-closure"
+        },
+        {
+          "name": "WienMobil｜路線查詢",
+          "url": "https://www.wienmobil.at/"
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "code": "HU",
+      "name": "匈牙利 Hungary",
+      "speed": [
+        "50",
+        "90",
+        "110",
+        "130"
+      ],
+      "alcohol": "一般駕駛 0.0 g/L（零酒精）",
+      "rules": [
+        "城外白天也須開近燈或合規日行燈；夜間／能見度差改近燈。",
+        "黃燈應停，除非已太近而無法安全停下；紅＋黃仍等綠燈。",
+        "本次二月跨境山區要求租車配四條冬季胎；這是本次裝備要求，不把它寫成匈牙利全國一律強制冬季胎。"
+      ],
+      "toll": "M 系列收費道路先查有效 e-vignette。普通小客車常見 D1，但以車籍座位數、用途／類別判定；先問 SIXT 是否已含全國通行證。若未含，按實際車牌／國碼買有效期間覆蓋 2/6–2/10 的票，不重複買。",
+      "sources": [
+        {
+          "name": "歐盟／匈牙利交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/hungary/index_en.htm"
+        },
+        {
+          "name": "匈牙利官方｜高速通行證",
+          "url": "https://nemzetiutdij.hu/en/"
+        }
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "斯洛伐克 Slovakia",
+      "speed": [
+        "50",
+        "90",
+        "130*",
+        "130*"
+      ],
+      "alcohol": "一般駕駛 0.0 g/L（零酒精）",
+      "rules": [
+        "全年白天須近燈或合規日行燈；能見度差用近燈。",
+        "路面有連續積雪、冰或霜時，四輪須合規冬季胎。",
+        "塞車要留救援通道：最左車道向左，其餘向右；不跟著救援車鑽。高速道路穿越市區或特殊路段，核對現場限速與最新規定。"
+      ],
+      "toll": "收費 D／R 路段按 eZnamka 官方地圖核對。一般 ≤3.5t 小客車使用電子通行證；10 日票含指定起始日，2/6 起算可覆蓋本次兩次跨境用路。車牌、國碼、起日輸入後保留確認信，先查租車是否已含。",
+      "sources": [
+        {
+          "name": "斯洛伐克政府｜道路交通規則",
+          "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+        },
+        {
+          "name": "斯洛伐克政府｜速限與道路標誌",
+          "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+        },
+        {
+          "name": "斯洛伐克官方｜eZnamka",
+          "url": "https://eznamka.sk/en/evignettes/glossary"
+        }
+      ]
+    },
+    {
+      "code": "PL",
+      "name": "波蘭 Poland",
+      "speed": [
+        "50",
+        "90",
+        "100／120*",
+        "140"
+      ],
+      "alcohol": "一般駕駛須低於 0.2 g/L；本行程一律不喝酒開車",
+      "rules": [
+        "全天開合規車燈；夜間與能見度差用近燈。",
+        "快道路：單一車行道 100、雙車行道 120 km/h；一般道路雙車行道且各向至少兩線可為 100。住宅區標誌內 20，市區夜間也不是舊制 60。",
+        "紅燈旁小綠箭頭是「有條件轉彎」：先完全停車，再讓行人與有優先權車輛；不是直接通行的綠燈。",
+        "本次使用冬季胎是冬季山區安全要求；不寫成波蘭全國法定一律強制。"
+      ],
+      "toll": "小客車沒有全國統一 vignette；依實際路線核對國營／特許收費路段，不把大型車 e-TOLL 規則套到普通小客車。Kraków SCT 與停車／老城限制是另三件事。柴油小客車目前以 Euro 6 或 2014 年起製造判定；外國車牌先到 SCT 系統登錄／核對資格，勿靠 BMW 車型名稱推定。",
+      "sources": [
+        {
+          "name": "歐盟／波蘭交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+        },
+        {
+          "name": "波蘭警察｜各類道路速限",
+          "url": "https://info.policja.pl/ine/for-foreigners/police-tips-and-hints/road-safety/192726,Road-Safety.html"
+        },
+        {
+          "name": "Kraków 市府｜SCT 車輛規則",
+          "url": "https://www.krakow.pl/otwarty_na_swiat_en/304104,artykul,low-emission-zone-in-krakow.html"
+        },
+        {
+          "name": "Kraków SCT｜查詢／登錄",
+          "url": "https://sct.zdmk.krakow.pl/"
+        }
+      ]
+    },
+    {
+      "code": "AT",
+      "name": "奧地利 Austria",
+      "speed": [
+        "50",
+        "100",
+        "依道路標誌",
+        "130"
+      ],
+      "alcohol": "一般駕駛須低於 0.5 g/L；新手等類別更嚴格",
+      "rules": [
+        "本行程在奧地利使用公共運輸，這裡供意外改用車時查閱。",
+        "11/1–4/15 遇雪、雪泥或結冰，≤3.5t 車需四輪冬季胎；雪鏈替代條件很有限，不能視為普遍替代。",
+        "綠燈閃爍表示快轉黃，不是催你加速；黃燈應停，除非已無法安全停下。"
+      ],
+      "toll": "若改為在奧地利自駕：先確認跨境許可及 ASFINAG 通行證／分段收費。沒有開車就不用買。線上不同期限產品生效規則可能不同，購買時確認開始日與是否立即有效。",
+      "sources": [
+        {
+          "name": "歐盟／奧地利交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/austria/index_en.htm"
+        },
+        {
+          "name": "奧地利外交部｜開車資訊",
+          "url": "https://www.bmeia.gv.at/en/austrian-embassy-pretoria/travels-to-austria/driving-in-austria"
+        },
+        {
+          "name": "奧地利政府｜冬季胎規定",
+          "url": "https://www.oesterreich.gv.at/en/themen/mobilitaet/kfz/10/2/Seite.063100"
+        },
+        {
+          "name": "ASFINAG｜奧地利通行證",
+          "url": "https://www.asfinag.at/en/toll/vignette/digital-vignette/"
+        }
+      ]
+    }
+  ],
+  "speedNote": "單位 km/h；限 ≤3.5t、無拖車小客車的一般速限，現場標誌／施工／道路類別優先。*斯洛伐克特定路段與波蘭快道路須辨識道路類型；雪冰路面要低於上限。酒精數字是血液濃度 g/L，不是台灣呼氣值 mg/L；本行程統一零酒精。",
+  "signs": [
+    {
+      "key": "stop",
+      "name": "STOP／停車再開",
+      "look": "紅色八角形",
+      "action": "到停止線完全停妥，確認車輛／行人後才行駛；沒有線時在可看清交叉車流且不侵入的位置停。"
+    },
+    {
+      "key": "yield",
+      "name": "讓路／Give way",
+      "look": "倒三角紅框；波蘭常為黃底",
+      "action": "減速並讓優先車流；需要時停。圓環入口有此標誌時，讓環內車；不要只看到圓環圖案就推定優先權。"
+    },
+    {
+      "key": "priority",
+      "name": "優先道路",
+      "look": "黃色菱形",
+      "action": "表示所在道路具有優先權，仍遵守號誌、行人及轉彎義務；不是任何路口都能不減速。"
+    },
+    {
+      "key": "priority-end",
+      "name": "優先道路結束",
+      "look": "黃菱形加黑斜線",
+      "action": "之後不能再靠前一個黃菱形判斷；看下一路口號誌、讓路標誌與當地優先規則。"
+    },
+    {
+      "key": "no-entry",
+      "name": "禁止進入",
+      "look": "紅圓白橫槓",
+      "action": "不能由這方向進入，即使導航要你轉；常見於單行道反向入口。"
+    },
+    {
+      "key": "no-vehicles",
+      "name": "雙向禁止車輛通行",
+      "look": "紅框白圓",
+      "action": "不是限速解除。查看下方例外／時間附牌，租車或飯店訂房不自動取得進入資格。"
+    },
+    {
+      "key": "limit",
+      "name": "限速 50（示例）",
+      "look": "紅圈數字",
+      "action": "這裡數字是最高速度 km/h；進入村鎮也要注意聚落起點／區域牌，不等導航提醒。"
+    },
+    {
+      "key": "limit-end",
+      "name": "50 限制解除（示例）",
+      "look": "數字加斜線",
+      "action": "只解除指定限制，恢復適用的一般／區域限速；不表示可以不限速。"
+    },
+    {
+      "key": "no-parking",
+      "name": "禁止停車",
+      "look": "藍圓紅框單斜線",
+      "action": "不能停放車輛；短暫停靠的定義與例外依當地法規及附牌，不用雙黃燈當停車許可。"
+    },
+    {
+      "key": "no-stopping",
+      "name": "禁止停靠",
+      "look": "藍圓紅框紅叉",
+      "action": "限制比禁止停車嚴；不要停下上下客／拿行李。緊急情況按現場安全處理。"
+    },
+    {
+      "key": "chains",
+      "name": "必須裝雪鏈",
+      "look": "藍圓輪胎＋雪鏈",
+      "action": "依標誌及當地例外裝到規定驅動輪；四驅不自動免除。先確認車型能否裝鏈、尺寸與輪軸，不在車流旁臨時研究。"
+    },
+    {
+      "key": "one-way",
+      "name": "單行道",
+      "look": "藍底白箭頭",
+      "action": "只可依箭頭方向行駛；相鄰車道箭頭／自行車例外另看附牌，不因有人逆向就跟進。"
+    }
+  ],
+  "signNote": "以下為辨識用簡化示意，字型、底色及附牌各國可能不同。波蘭警告／讓路牌常見黃底；以現場全套標誌、時間與例外附牌判斷。紅綠燈優先於上述無號誌路口的優先牌；警察指揮依其指示。",
+  "signSources": [
+    {
+      "name": "WKO｜交通標誌圖表（奧地利）",
+      "url": "https://www.wko.at/noe/transportverkehr/befoerderungpkw/aus-und-weiterbildung/verkehrszeichen.pdf"
+    },
+    {
+      "name": "歐盟／波蘭交通規則",
+      "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+    },
+    {
+      "name": "斯洛伐克政府｜道路交通規則",
+      "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+    }
+  ],
+  "signals": [
+    [
+      "紅燈／紅＋黃",
+      "停在停止線前。紅＋黃只是準備變綠，不能先開；一般紅燈不能任意右轉。"
+    ],
+    [
+      "黃燈",
+      "能安全停車就停；已非常接近而無法安全停下時，按當地規則通過，不能加速搶燈。"
+    ],
+    [
+      "奧地利閃綠",
+      "快變黃，準備減速；不把它當作一直通行的綠燈。"
+    ],
+    [
+      "波蘭紅燈＋小綠箭頭",
+      "先完全停車，再按箭頭轉且讓行人及其他優先車流；與一般獨立方向綠燈不同。"
+    ],
+    [
+      "行人／電車／車道專用訊號",
+      "辨認自己車道的訊號。人形綠燈、電車白色棒狀訊號不是小客車綠燈；綠燈進路口前也確認出口不堵。"
+    ]
+  ],
+  "days": {
+    "2/4": {
+      "mode": "公共運輸／抵達",
+      "title": "VIE → Budapest → InterContinental Budapest",
+      "countries": [
+        "AT",
+        "HU"
+      ],
+      "steps": [
+        "08:30 抵達後先完成入境、行李與廁所；國際航班延誤可能影響巴士，選能承受延誤的班次與退改條件。",
+        "維持 FlixBus 方案：訂單起站要是 Vienna Airport／Flughafen Wien，不是 Vienna Erdberg；到機場長途巴士站按訂單站位候車，預留 20–30 分鐘找站及裝行李。",
+        "Budapest 下站依實際車票，不猜固定站。若 Népliget：M3 往 Deák Ferenc tér 再步行／合規計程車到飯店；若 Kelenföld：查 M4／轉乘或直接計程車。三人與大箱要確認可容納車型。",
+        "巴士行李艙放箱子，相機護照隨身；目前標準大件行李上限 80×50×30 cm／20 kg，個別班次依購票畫面。29 吋不保證符合，實際量外尺寸。",
+        "未鎖定 2027 巴士班次、抵達站及末段時間；這段約 3–4h 是規劃量級，仍以訂單時刻為準。"
+      ],
+      "sources": [
+        {
+          "name": "FlixBus｜VIE → Budapest",
+          "url": "https://global.flixbus.com/bus-routes/bus-vienna-airport-budapest"
+        },
+        {
+          "name": "FlixBus｜行李規則",
+          "url": "https://support.flixbus.com/global/en/luggage"
+        },
+        {
+          "name": "BudapestGO｜路線查詢",
+          "url": "https://futar.bkk.hu/"
+        }
+      ]
+    },
+    "2/5": {
+      "mode": "公共運輸／市區",
+      "title": "H5 聖安德烈 → 城堡山 → 遊船碼頭",
+      "countries": [
+        "HU"
+      ],
+      "steps": [
+        "飯店 → Batthyány tér：先查過河路線；可由 Deák Ferenc tér 搭 M2 往 Déli pályaudvar 方向，到 Batthyány tér 再找 H5 郊區鐵路。地鐵與 H5 是不同月台。",
+        "H5 去程看終點 Szentendre（不是提早終止的區間車），車上約 40–45 分鐘為草案估計；到站步行去 Fő tér 老城。回程往 Batthyány tér。",
+        "市界內需有效 Budapest 票／pass，Békásmegyer 以外另買 H5 區間票；三人同行可比較 H5 tour ticket，但仍需市區票。先買好來回，避免回程找售票點。",
+        "回市區後到城堡山：BudapestGO 查往 Dísz tér／Szentháromság tér，16 公車是候選；現場站位與方向再核對，步行上坡遇冰雪時改車。",
+        "18:00 晚餐後下山前往船票指定碼頭；首選 Legenda Dock 7／Jane Haining rakpart。查公車／計程車＋步行末段，留到約 18:40 抵達的緩衝；以實際 2027 船票為準。"
+      ],
+      "sources": [
+        {
+          "name": "BKK｜票券與驗票",
+          "url": "https://bkk.hu/en/tickets-and-passes/validation-of-paper-tickets/"
+        },
+        {
+          "name": "BKK｜H5 市界外旅遊票",
+          "url": "https://bkk.hu/en/tickets-and-passes/prices/suburban-railway-tour-ticket-h5-h8-h9-full-fare/"
+        },
+        {
+          "name": "BKK｜16 公車",
+          "url": "https://futar.bkk.hu/route/BKK_0160"
+        },
+        {
+          "name": "Legenda｜Dock 7 集合位置",
+          "url": "https://legenda.hu/en/directions"
+        }
+      ]
+    },
+    "2/6": {
+      "mode": "自駕／HU → SK",
+      "title": "Budapest → Košice → Prešov → Poprad → Štrbské Pleso",
+      "countries": [
+        "HU",
+        "SK"
+      ],
+      "steps": [
+        "10:00 SIXT 取車；訂單門市地址才是起點。完成輪胎、跨境文件、油量與車況拍照後再上路。",
+        "主要道路候選：Budapest 的 M3 → M30，經 Miskolc 附近但不進城／不加景點，往 Tornyosnémeti／Milhosť 邊界接 SK R4 → Košice。路線依當日施工與封路調整。",
+        "Košice 午餐：先選合法停車場再步行進中心，出發前記錄停車場名稱／車牌付費規則；不把禁行老城當導航終點。",
+        "Košice → Prešov → Poprad 優先查 D1 幹線；Poprad → 湖區查當日開放道路，最後上山可能有積雪、霧與彎道。",
+        "HU／SK 收費段在進入前確認通行證已生效。這天純駕駛原草案約 5h45，另加取車、午餐與休息；17:15 抵達可能已暗，不以趕天亮為由超速。必要時縮短非必要停留並通知飯店。"
+      ],
+      "sources": [
+        {
+          "name": "匈牙利官方｜高速通行證",
+          "url": "https://nemzetiutdij.hu/en/"
+        },
+        {
+          "name": "斯洛伐克官方｜eZnamka",
+          "url": "https://eznamka.sk/en/evignettes/glossary"
+        },
+        {
+          "name": "斯洛伐克政府｜道路交通規則",
+          "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+        }
+      ]
+    },
+    "2/7": {
+      "mode": "自駕／SK → PL",
+      "title": "Štrbské Pleso → Jaszczurówka → Zakopane",
+      "countries": [
+        "SK",
+        "PL"
+      ],
+      "steps": [
+        "維持 09:30–12:00 的原自駕草案；Štrbské Pleso → Poprad 方向接山區幹道 → Tatranská Javorina → Łysa Polana 邊界 → PL 960／961 → Jaszczurówka／Zakopane。先核對山區道路是否開放，約 2h30 不含額外雪況延誤。",
+        "上路前查雪胎、玻璃除霜與油量，山區不為追求最短路線穿小路；嚴重結冰時延後或另查安全路線。",
+        "Jaszczurówka 停合法車位，接著到 Gubałówka 下站周邊合法付費停車場；Krupówki 步行，不把街道本身當汽車導航終點。",
+        "Cristina 已知 16:00 前不提供標準入住及無行李服務；行李在車內完全遮蔽，相機證件隨身，停車不保證零風險。入住時問車位、出入方法與隔晨 Kuźnice 叫車。"
+      ],
+      "sources": [
+        {
+          "name": "斯洛伐克政府｜道路交通規則",
+          "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+        },
+        {
+          "name": "歐盟／波蘭交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+        },
+        {
+          "name": "PKL｜Kuźnice 交通與纜車 FAQ",
+          "url": "https://www.pkl.pl/post/kasprowy-wierch/news-kasprowy/zanim-wyruszysz-na-kasprowy-faq-kopia.html"
+        }
+      ]
+    },
+    "2/8": {
+      "mode": "公共運輸＋活動接駁",
+      "title": "Cristina → Kuźnice → Kasprowy → Snowmobile 集合點",
+      "countries": [
+        "PL"
+      ],
+      "steps": [
+        "09:00 出門：優先飯店預約合規計程車，或查 Krupówki Pomnik hr. Wł. Zamoyskiego 等附近站往 Kuźnice 的市營 10／12 等公車。班次／站位以當日公告，雪天不保證 30 分鐘。",
+        "Kuźnice 車道禁止一般私家車；不開租車直達纜車下站。若先開車到合法停車場，也要另算最後接駁與停車時間。",
+        "纜車下站地址 Kuźnice 14；約 09:30 到站、10:00 上山只是原規劃，先取得時段票並按要求報到。記下下山票規則，午餐後還要轉活動集合點。",
+        "回程市營公車／計程車到市區；Snowmobile 業者集合地址尚未指定，14:00–14:20 不能當固定可達保證。訂活動時確認是否接送、停車及提前報到時間，地址確認後才排實際末段。"
+      ],
+      "sources": [
+        {
+          "name": "Zakopane 市府｜公車路線",
+          "url": "https://www.zakopane.pl/komunikacjamiejska/rozklady-jazdy"
+        },
+        {
+          "name": "Zakopane 市府｜公車票種",
+          "url": "https://www.zakopane.pl/komunikacjamiejska/informacje-praktyczne"
+        },
+        {
+          "name": "PKL｜Kuźnice 交通與纜車 FAQ",
+          "url": "https://www.pkl.pl/post/kasprowy-wierch/news-kasprowy/zanim-wyruszysz-na-kasprowy-faq-kopia.html"
+        }
+      ]
+    },
+    "2/9": {
+      "mode": "自駕＋老城步行",
+      "title": "Zakopane → Kraków／Holiday Inn → Wawel",
+      "countries": [
+        "PL"
+      ],
+      "steps": [
+        "主要道路候選：Zakopane 的 DK47（Zakopianka）→ Nowy Targ／Rabka-Zdrój → S7／DK7 → Kraków；以導航與通行路段為準。09:00–11:30 是原草案，冬季及進城塞車可能延誤。",
+        "前一天核對匈牙利車牌的 Kraków SCT；準備車籍證明燃料／排放級別，依官方系統完成外國車牌登錄／資格確認。不要等到市中心再辦。",
+        "用飯店提供的合法停車入口作導航終點，預先確認車位及高度限制。SCT 通過不代表可以開進所有老城步行街。",
+        "停妥車、放好行李後維持步行 Wawel → Kanonicza／Grodzka → 主廣場；天冷走累可查當日市營電車，但不再移車找景點車位。"
+      ],
+      "sources": [
+        {
+          "name": "Kraków 市府｜SCT 車輛規則",
+          "url": "https://www.krakow.pl/otwarty_na_swiat_en/304104,artykul,low-emission-zone-in-krakow.html"
+        },
+        {
+          "name": "Kraków SCT｜查詢／登錄",
+          "url": "https://sct.zdmk.krakow.pl/"
+        },
+        {
+          "name": "歐盟／波蘭交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+        }
+      ]
+    },
+    "2/10": {
+      "mode": "自駕／PL → SK → HU",
+      "title": "Kraków → Budapest SIXT 還車",
+      "countries": [
+        "PL",
+        "SK",
+        "HU"
+      ],
+      "steps": [
+        "09:00 出發與16:00–17:00 還車維持原草案；先核對還車訂單地址與營業時間。出發前比較實際路程，純駕駛 5.5–6.5h 不含午餐、加油、塞車與雪況。",
+        "中部幹道候選：Kraków → Rabka／Chyżne → Trstená → Ružomberok → Banská Bystrica → Šahy → Budapest。各段有山區與一般道路，逐段核對；不照导航走 Tisovec 山區捷徑。",
+        "東側備選經 Prešov／Košice → R4／M30 → M3：若要少走不熟山路可比較，但繞行與時間可能增加。不能把東側備案也套成原 5.5–6.5h；先看實際路況及還車可行性。",
+        "HU／SK 通行證要涵蓋回程日期。每 1.5–2h 到服務區休息，午餐、最後加油都另計；若預估無法準時，提早聯絡 SIXT，不壓縮休息或超速。",
+        "按合約要求在還車前補油，保留收據；回到正確門市檢查里程、車況、個人物品及還車證明。還車後至公寓的交通必須按實際公寓地址安排。"
+      ],
+      "sources": [
+        {
+          "name": "匈牙利官方｜高速通行證",
+          "url": "https://nemzetiutdij.hu/en/"
+        },
+        {
+          "name": "斯洛伐克官方｜eZnamka",
+          "url": "https://eznamka.sk/en/evignettes/glossary"
+        },
+        {
+          "name": "斯洛伐克政府｜道路交通規則",
+          "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
+        },
+        {
+          "name": "歐盟／波蘭交通規則",
+          "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+        }
+      ]
+    },
+    "2/11": {
+      "mode": "公共運輸＋步行",
+      "title": "Pest 景點 → Batthyány tér → 鏈橋",
+      "countries": [
+        "HU"
+      ],
+      "steps": [
+        "租車已在 2/10 草案還車；今天從公寓實際地址查 BudapestGO，不假定固定起站。中央市場目的地可查 Fővám tér；站／路線依起點選。",
+        "中央市場 → Váci utca → Basilica → Kossuth Lajos tér／Parliament 維持步行主線，電車只作走累備案，避免重複過河。",
+        "去 Batthyány tér 對岸拍國會大廈：可步行至合適地鐵站轉 M2 往 Buda，到 Batthyány tér；詳細步行和轉乘按出發位置即時查。",
+        "Batthyány tér → Chain Bridge 可沿河步行，結冰／寒風時改市區車；回程看當時最後班次與公寓地址。一般單程票不要跨公車／電車重複使用。"
+      ],
+      "sources": [
+        {
+          "name": "BKK｜票券與驗票",
+          "url": "https://bkk.hu/en/tickets-and-passes/validation-of-paper-tickets/"
+        },
+        {
+          "name": "BudapestGO｜路線查詢",
+          "url": "https://futar.bkk.hu/"
+        }
+      ]
+    },
+    "2/12": {
+      "mode": "跨城火車＋市區地鐵",
+      "title": "Budapest-Keleti → Wien Hbf → InterContinental Vienna",
+      "countries": [
+        "HU",
+        "AT"
+      ],
+      "steps": [
+        "維持直達 Railjet／EC 優先；訂票起站核對 Budapest-Keleti，終點 Wien Hbf。2027 列車號／時刻未確認，不把每天固定班次先寫死。",
+        "公寓 → Keleti 依地址查 BKK；有大箱時預約足夠容量的車。建議提早約 30 分鐘到站找月台，出發站大看板再核對車次與終點。",
+        "三人車票與座位預訂分開核對；能選座時盡量同車廂。29 吋箱優先大型行李架，不預設頭頂架放得下；門口、逃生道不要堵。",
+        "到 Wien Hbf：查 U1 往 Leopoldau → Karlsplatz，轉 U4 往 Heiligenstadt → Stadtpark，再步行至飯店；這是候選走法，當日站內電梯／轉乘公告再查，大箱可改計程車。",
+        "Wien Hbf 到飯店的市區票與跨城火車票分開核對，跨城票不自動涵蓋所有地鐵。市區 S-Bahn 工程不等於直達 Wien Hbf 跨城車停駛，但出發前仍查工程改點。"
+      ],
+      "sources": [
+        {
+          "name": "ÖBB｜官方班次與購票",
+          "url": "https://www.oebb.at/en/"
+        },
+        {
+          "name": "WienMobil｜路線查詢",
+          "url": "https://www.wienmobil.at/"
+        },
+        {
+          "name": "Wiener Linien｜票券使用",
+          "url": "https://helpcenter.wienerlinien.at/s/topic/0TOQv0000001DXtOAM/unsere-tickets-richtig-nutzen?language=en_US"
+        },
+        {
+          "name": "Wiener Linien｜2026–2027 S-Bahn 工程",
+          "url": "https://www.wienerlinien.at/web/wl-en/modernisations/s-bahn-core-line-closure"
+        }
+      ]
+    },
+    "2/13": {
+      "mode": "公共運輸＋步行",
+      "title": "Stadtpark → Schönbrunn → Belvedere → Hofburg",
+      "countries": [
+        "AT"
+      ],
+      "steps": [
+        "飯店附近 Stadtpark 搭 U4 往 Hütteldorf → Schönbrunn，出站後步行至宮殿入口；依 09:30 入場目標留站到入口的步行緩衝。",
+        "Schönbrunn → 上美景宮（Upper Belvedere）：WienMobil 查 U4 轉電車／市區車＋步行，不只輸入 Belvedere 模糊終點；上宮與下宮不是同一入口。",
+        "美景宮 → Hofburg 查當日電車／步行組合；以已定景點順序安排，不加景點。回飯店整理行李，確認 2/14 車型、司機聯絡及集合點。",
+        "市區多次乘車比較當時在售多日票；若是紙本需打票種類，要在首次旅程開始前完成。"
+      ],
+      "sources": [
+        {
+          "name": "WienMobil｜路線查詢",
+          "url": "https://www.wienmobil.at/"
+        },
+        {
+          "name": "Wiener Linien｜票券使用",
+          "url": "https://helpcenter.wienerlinien.at/s/topic/0TOQv0000001DXtOAM/unsere-tickets-richtig-nutzen?language=en_US"
+        }
+      ]
+    },
+    "2/14": {
+      "mode": "預約車／機場",
+      "title": "InterContinental Vienna → VIE",
+      "countries": [
+        "AT"
+      ],
+      "steps": [
+        "維持 06:15 預約接送、約 06:45 到 VIE、10:00 TR61；交通時間是原規劃，出發前確認航空公司報到航廈、截止時間與道路情況。",
+        "確認三人＋大行李可裝車、飯店門口集合位置、費用／等待規則與司機聯絡。前晚確認，當天提早下樓。",
+        "車輛未到先聯絡業者／飯店安排合規計程車。公共運輸只作預先查好的備案：從 Wien Hbf 查機場長途列車；不臨時照舊遊記走 Wien Mitte 的 S7。",
+        "機場火車必須持涵蓋機場外區的票，Vienna core zone 票不足；清晨首班與工程班表以 2027 官方為準。"
+      ],
+      "sources": [
+        {
+          "name": "Wiener Linien｜2026–2027 S-Bahn 工程",
+          "url": "https://www.wienerlinien.at/web/wl-en/modernisations/s-bahn-core-line-closure"
+        },
+        {
+          "name": "維也納市區票範圍／機場不包含",
+          "url": "https://www.wienerlinien.at/web/wl-en/tickets/vienna-core-zone"
+        },
+        {
+          "name": "ÖBB｜官方班次與購票",
+          "url": "https://www.oebb.at/en/"
+        }
+      ]
+    }
+  }
+},
   title: "2027 中歐冬季旅程",
   subtitle: "2/3–2/15｜13 天 12 夜｜3 人｜攝影 × 古城 × 高塔特拉雪景",
   meta: {

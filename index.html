@@ -58,6 +58,9 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 @media(max-width:600px){.outing-guide>summary .badge{display:block;width:max-content;max-width:100%;margin:6px 0 0}.outing-content{font-size:13px}}
 
 .hotel-amenities{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0}.hotel-amenity{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:8px;background:#edf5f1;color:#28634a;font-size:12px;font-weight:750;white-space:nowrap}.hotel-amenity svg{width:17px;height:17px;flex:none}.list-main{min-width:0}.list-main .hotel-amenities{margin-top:8px}
+.transport-intro p{font-size:13px;margin:5px 0}.transport-jumps{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.transport-jumps a{font-size:12px;font-weight:750;background:#eef2ff;color:#2948a8;text-decoration:none;padding:8px 10px;border-radius:9px}.transport-alerts{background:#fff9e7;font-size:13px}.transport-alerts h3{margin:0;font-size:15px}.transport-alerts ul{padding-left:20px}.transport-alerts li{margin:8px 0}.transport-steps{padding-left:23px;margin:10px 0}.transport-steps li{margin:9px 0;line-height:1.75}.transport-route summary .badge,.day-transport summary .badge{margin-left:8px}.transport-rule-hint{font-weight:800;margin-top:16px;font-size:12px;color:#53657b}.transport-table-wrap{overflow-x:auto}.transport-table{border-collapse:collapse;width:100%;font-size:12px;text-align:left;min-width:340px}.transport-table caption{text-align:left;font-size:14px;font-weight:800;padding-bottom:9px}.transport-table th,.transport-table td{padding:10px 7px;border-bottom:1px solid var(--line)}.transport-table thead{background:#f3f6ff}.transport-sign-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.transport-sign{display:flex;align-items:flex-start;gap:13px;padding:13px;border:1px solid var(--line);border-radius:13px;background:#fbfcfe;min-width:0}.transport-sign svg{width:64px;height:64px;flex:none}.transport-sign h3{font-size:14px;margin:0 0 4px}.transport-sign p{font-size:12px;margin:4px 0;line-height:1.7}.transport-sign .transport-sign-look{color:var(--muted);font-size:11px}.transport-signal{border-bottom:1px solid var(--line);padding:10px 0}.transport-signal:last-of-type{border:0}.transport-signal h3{font-size:14px;margin:0}.transport-signal p{font-size:13px;margin:5px 0;color:#53657b}#transport-routes,#transport-tickets,#transport-rules,#transport-signs{scroll-margin-top:170px}
+@media(max-width:680px){.transport-sign-grid{grid-template-columns:1fr}.transport-route summary .badge,.day-transport summary .badge{display:block;max-width:100%;width:max-content;margin:5px 0 0}.transport-sign svg{width:57px;height:57px}.transport-sign{padding:12px;gap:11px}}
+
 </style>
 </head>
 <body>
@@ -135,16 +138,10 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 
   <section id="logistics" class="view hidden">
     <div class="guide-links"><button type="button" class="photo-link" data-goto="guide">各國文化／問候語／近期遊記</button></div>
+    <div id="transportGuide"></div>
     <div class="section-title">出門準備 · 穿搭與攜帶</div><div class="card summary outing-basics" id="outingBasics"></div>
     <div class="section-title">航班</div><div class="card summary" id="flightList"></div>
     <div class="section-title">住宿</div><div class="card summary" id="hotelList"></div>
-    <div class="section-title">重要交通段</div>
-    <div class="card summary"><div class="notice-grid">
-      <div class="notice"><b>VIE → Budapest</b><p>2/4 抵達日，交通方式最後確認；不要過早鎖死班次。</p></div>
-      <div class="notice"><b>Budapest → Vienna</b><p>2/12 優先直達 Railjet／EC；2027 時刻表與開放售票後再訂。</p></div>
-      <div class="notice"><b>Zakopane → Kuźnice</b><p>2/8 早上使用接駁／計程車等前往纜車站區，私家車不直達 Kuźnice。</p></div>
-      <div class="notice"><b>Vienna → VIE</b><p id="airportTransferInfo"></p></div>
-    </div></div>
   </section>
 
   <section id="checklist" class="view hidden">
@@ -157,7 +154,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=hotel-amenities-20261009a"></script>
+<script src="trip-data.js?v=transport-20261010a"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -192,7 +189,7 @@ function renderOutingBasics(){
   const a=D.outingAdvice;if(!a)return;
   $('#outingBasics').innerHTML='<p class="outing-caption">'+esc(a.note)+'</p>'+a.outfits.map(x=>'<div class="outing-outfit"><b>'+esc(x.name)+'</b><p>'+esc(x.text)+'</p></div>').join('')+'<h3>每日基本包</h3>'+outingList(a.basicItems)+'<h3>攝影攜帶與保養</h3>'+outingList(a.photography)+'<h3>雪山與雪地摩托車</h3>'+outingList(a.mountainNotes)+'<p class="outing-caption">查核日期：'+esc(a.checkedDate)+'。穿搭與攜帶為行程建議；營運、租借及天氣出發前重查。</p><div class="outing-sources">'+outingSources()+'</div>';
   const airport=D.days.find(d=>d.date==='2/14')?.items.find(x=>x[1]==='transit');
-  if(airport)$('#airportTransferInfo').textContent='2/14 '+airport[0]+' 飯店 → VIE；依每日行程預約接送。';
+  if(airport)if($('#airportTransferInfo'))$('#airportTransferInfo').textContent='2/14 '+airport[0]+' 飯店 → VIE；依每日行程預約接送。';
 }
 
 function guideCountries(date){return (D.travelGuide?.dayCountries?.[date]||[]).map(code=>D.travelGuide.countries.find(c=>c.code===code)).filter(Boolean)}
@@ -233,9 +230,46 @@ function openCountry(code){
   target.scrollIntoView({behavior:'auto',block:'start'});
 }
 
+function transportSignSvg(key){
+  const ring=(fill='#fff',stroke='#ca2738')=>'<circle cx="40" cy="40" r="31" fill="'+fill+'" stroke="'+stroke+'" stroke-width="7"/>';
+  const diamond='<path d="M40 4 76 40 40 76 4 40Z" fill="#fff" stroke="#333" stroke-width="1.5"/><path d="m40 13 27 27-27 27-27-27Z" fill="#f7cf3c"/>';
+  const svgs={
+    stop:'<path d="M26 6h28l20 20v28L54 74H26L6 54V26Z" fill="#ca2738" stroke="#fff" stroke-width="3"/><text x="40" y="47" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">STOP</text>',
+    yield:'<path d="M6 9h68L40 72Z" fill="#fff" stroke="#ca2738" stroke-width="8" stroke-linejoin="round"/>',
+    priority:diamond,
+    'priority-end':diamond+'<path d="M14 67 67 14M20 72 72 20" stroke="#333" stroke-width="3"/>',
+    'no-entry':ring('#ca2738')+'<path d="M18 40h44" stroke="#fff" stroke-width="12"/>',
+    'no-vehicles':ring(),
+    limit:ring()+'<text x="40" y="51" text-anchor="middle" fill="#172231" font-size="34" font-weight="800">50</text>',
+    'limit-end':ring('#fff','#666')+'<text x="40" y="51" text-anchor="middle" fill="#666" font-size="34" font-weight="800">50</text><path d="M17 64 64 17M12 57 57 12M23 69 69 23" stroke="#666" stroke-width="3"/>',
+    'no-parking':ring('#2467b4')+'<path d="M18 62 62 18" stroke="#ca2738" stroke-width="7"/>',
+    'no-stopping':ring('#2467b4')+'<path d="M18 62 62 18M18 18l44 44" stroke="#ca2738" stroke-width="7"/>',
+    chains:ring('#2467b4','#2467b4')+'<ellipse cx="40" cy="40" rx="20" ry="25" fill="none" stroke="#fff" stroke-width="4"/><path d="M27 21l25 38M23 32l24 29M32 17l24 29M27 59l26-39M23 47l22-29M34 63l23-33" fill="none" stroke="#fff" stroke-width="2.5"/>',
+    'one-way':'<rect x="5" y="10" width="70" height="60" rx="3" fill="#2467b4"/><path d="M16 33h30V22l20 18-20 18V47H16Z" fill="#fff"/>'
+  };
+  return '<svg viewBox="0 0 80 80" aria-hidden="true" focusable="false">'+(svgs[key]||'')+'</svg>';
+}
+function transportSteps(list){return '<ol class="transport-steps">'+list.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>'}
+function transportCountry(c){return '<details class="travel-details transport-country"><summary>'+esc(c.name)+'</summary><div class="travel-content"><p><b>酒精：</b>'+esc(c.alcohol)+'</p>'+outingList(c.rules)+'<h4>通行費／進城</h4><p>'+esc(c.toll)+'</p>'+guideSources(c.sources)+'</div></details>'}
+function renderDayTransport(d){
+ const g=D.transportGuide,t=g?.days?.[d.date];if(!t)return '';
+ return '<details class="travel-details day-transport"><summary>交通詳解 · 開車／搭車／轉乘<span class="badge">'+esc(t.mode)+'</span></summary><div class="travel-content"><h4>'+esc(t.title)+'</h4>'+transportSteps(t.steps)+guideSources(t.sources)+'<div class="transport-rule-hint">今日途經國家法規</div>'+g.countries.filter(c=>t.countries.includes(c.code)).map(transportCountry).join('')+'<p class="outing-caption">規劃時間與路線須按當日公告調整；查核 '+esc(g.checkedDate)+'。完整速限、票券操作及號誌圖解見交通／住宿。</p><button type="button" class="photo-link" data-goto="logistics">完整交通／法規／號誌</button></div></details>';
+}
+function renderTransportGuide(){
+ const g=D.transportGuide;if(!g)return;
+ $('#transportGuide').innerHTML='<div class="section-title">交通指南 · 開車與公共運輸</div><div class="card summary transport-intro"><p>'+esc(g.note)+'</p><p class="outing-caption">官方資料查核：'+esc(g.checkedDate)+'</p><div class="transport-jumps"><a href="#transport-routes">每日交通</a><a href="#transport-tickets">公共運輸票券</a><a href="#transport-rules">交通法規</a><a href="#transport-signs">號誌圖解</a></div></div>'+
+ '<div class="card summary transport-alerts"><h3>本次路線特別留意</h3>'+outingList(g.alerts)+guideSources(g.alertSources)+'</div>'+
+ '<div class="section-title" id="transport-routes">每日交通 · 從哪裡到哪裡</div>'+Object.entries(g.days).map(([date,t])=>'<details class="travel-details transport-route"><summary>'+esc(date)+' · '+esc(t.title)+'<span class="badge">'+esc(t.mode)+'</span></summary><div class="travel-content">'+transportSteps(t.steps)+guideSources(t.sources)+'</div></details>').join('')+
+ '<details class="travel-details"><summary>自駕實用操作 · 取車／導航／加油／停車／事故</summary><div class="travel-content">'+outingList(g.essentials)+guideSources(g.essentialSources)+'</div></details>'+
+ '<div class="section-title" id="transport-tickets">公共運輸 · 買票、驗票與換乘</div>'+g.tickets.map(t=>'<details class="travel-details transport-ticket"><summary>'+esc(t.city)+'</summary><div class="travel-content">'+transportSteps(t.steps)+guideSources(t.sources)+'</div></details>').join('')+
+ '<div class="section-title" id="transport-rules">四國交通法規 · 小客車</div><div class="card summary"><div class="transport-table-wrap"><table class="transport-table"><caption>一般速限（km/h）</caption><thead><tr><th scope="col">國家</th><th scope="col">市區</th><th scope="col">一般城外</th><th scope="col">快速道路</th><th scope="col">高速公路</th></tr></thead><tbody>'+g.countries.map(c=>'<tr><th scope="row">'+esc(c.name.split(' ')[0])+'</th>'+c.speed.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><p class="outing-caption">'+esc(g.speedNote)+'</p><p class="outing-caption">全程靠右行駛；三人都繫安全帶。一般高速巡航靠右，左側超車完成後安全返回；依車道與附牌限制行駛。</p></div>'+g.countries.map(transportCountry).join('')+
+ '<div class="section-title" id="transport-signs">常見標誌 · 看圖辨識</div><div class="card summary"><p class="outing-caption">'+esc(g.signNote)+'</p><div class="transport-sign-grid">'+g.signs.map(s=>'<article class="transport-sign">'+transportSignSvg(s.key)+'<div><h3>'+esc(s.name)+'</h3><p class="transport-sign-look">'+esc(s.look)+'</p><p>'+esc(s.action)+'</p></div></article>').join('')+'</div>'+guideSources(g.signSources)+'</div>'+
+ '<div class="section-title">紅綠燈與專用訊號</div><div class="card summary">'+g.signals.map(s=>'<div class="transport-signal"><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>').join('')+guideSources([g.countries.find(c=>c.code==='PL').sources[0],g.countries.find(c=>c.code==='AT').sources[0]])+'</div>';
+}
+
 function renderDays(q=''){
   const needle=q.trim().toLowerCase();
-  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date],guideCountries(d.date),guideBlogs(d.date)]).toLowerCase().includes(needle));
+  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date],guideCountries(d.date),guideBlogs(d.date),D.transportGuide?.days?.[d.date]]).toLowerCase().includes(needle));
   const html=filtered.map((d)=>{
     const n=D.days.indexOf(d)+1;
     return `<article class="card day-card" id="day-${n}">
@@ -243,6 +277,7 @@ function renderDays(q=''){
       <div class="day-body"><div class="day-top"><div><div class="day-label">DAY ${n}</div><div class="day-title">${esc(localizeAttractions(d.title))}</div><div class="day-city">${esc(d.city)}</div></div><div class="day-date">${esc(d.date)}（${esc(d.weekday)}）</div></div>
       <div class="chips">${d.highlights.map((x,i)=>`<span class="chip${i>3?' dark':''}">${esc(localizeAttractions(x))}</span>`).join('')}</div>
       ${renderHotelAmenities(D.hotels.find(h=>h.hotel===d.hotel))}
+      ${renderDayTransport(d)}
       ${renderOutingGuide(d)}
       ${renderDayCulture(d)}
       ${renderDayReferences(d)}
@@ -381,6 +416,7 @@ function openDay(n){
 }
 function routeHash(){
   const hash=location.hash.slice(1);
+  if(['transport-routes','transport-tickets','transport-rules','transport-signs'].includes(hash)){go('logistics',false,false);const target=document.getElementById(hash);if(target){target.style.scrollMarginTop=(document.querySelector('header').offsetHeight+$('.sticky-tools').offsetHeight+12)+'px';target.scrollIntoView({behavior:'auto',block:'start'})}return}
   if(/^culture-(HU|SK|PL|AT)$/.test(hash)){openCountry(hash.slice(8));return}
   if(hash==='photo-map'){go('photo-map',true,false);return}
   if(hash.startsWith('photo-')){const id=hash.slice(6);if(photoSpots.some(s=>s.id===id)){openPhotoMap({id});return}}
@@ -428,8 +464,8 @@ $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
-initGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=hotel-amenities-20261009a').catch(()=>{}));}
+initGuide();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderChecklist();renderOutingBasics();routeHash();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=transport-20261010a').catch(()=>{}));}
 </script>
 </body>
 </html>
