@@ -1555,10 +1555,10 @@ const TRIP_DATA = {
   ],
   hotels: [
     { date: "2/4–2/5", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Budapest" },
-    { date: "2/6", hotel: "Hotel Panorama（全景酒店）", city: "Štrbské Pleso", map: "https://www.google.com/maps/search/?api=1&query=Hotel+Panorama+Strbske+Pleso" },
-    { date: "2/7–2/8", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", city: "Zakopane", map: "https://www.google.com/maps/search/?api=1&query=Aparthotel+Cristina+Zakopane" },
+    { date: "2/6", hotel: "Hotel Panorama（全景酒店）", city: "Štrbské Pleso", amenities: ["kitchen","washing-machine","breakfast"], map: "https://www.google.com/maps/search/?api=1&query=Hotel+Panorama+Strbske+Pleso" },
+    { date: "2/7–2/8", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", city: "Zakopane", amenities: ["breakfast"], map: "https://www.google.com/maps/search/?api=1&query=Aparthotel+Cristina+Zakopane" },
     { date: "2/9", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", city: "Kraków", map: "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Krakow+City+Centre" },
-    { date: "02/10-02/11", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", city: "Budapest", map: "https://www.google.com/maps/search/?api=1&query=Sleek+premium+Aprqtment+with+Park+Budapest" },
+    { date: "02/10-02/11", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", city: "Budapest", amenities: ["kitchen","washing-machine"], map: "https://www.google.com/maps/search/?api=1&query=Sleek+premium+Aprqtment+with+Park+Budapest" },
     { date: "2/12–2/13", hotel: "InterContinental Vienna（維也納洲際酒店）", city: "Vienna", map: "https://www.google.com/maps/search/?api=1&query=InterContinental+Vienna" }
   ],
   checklist: [
