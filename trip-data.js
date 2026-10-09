@@ -6,7 +6,7 @@ const TRIP_DATA = {
     "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 保留 06:15 預約接送。",
     "2/5 H5 到 Szentendre 超出 Budapest 市界；一般 Budapest 市區票不能單獨涵蓋全程。市界內與 Békásmegyer–Szentendre 區間須各有有效票。",
     "2/8 Kuźnice 一般私家車禁入；用當地公車／合規計程車到纜車下站。2/9 入 Kraków：匈牙利車牌須先查 SCT 資格與登錄，並確認飯店合法車道。",
-    "2/6 17:15 抵達湖區不保證仍有日光；2/10 的 5.5–6.5h 是原草案純駕駛估算，不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
+    "2/6 09:00 SIXT 取車、預計 10:00 出發；沿用原車程估算約 16:45 抵達湖區，雪況／休息可能延誤，不保證天黑前到。2/10 的 5.5–6.5h 不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
   ],
   "alertSources": [
     {
@@ -28,6 +28,9 @@ const TRIP_DATA = {
   ],
   "essentials": [
     "取車前：三人的行李容量、四條冬季胎、適配雪鏈是否獲車廠／租車公司允許、HU→SK→PL 跨境書面許可、道路救援與還車門市／營業時間一起核對。AWD 不能取代冬季胎。",
+    "本次雪鏈建議：四輪冬季胎優先，另向 SIXT 預約一組適配雪鏈備用。高塔特拉／Zakopane 的上坡、飯店入口及停車場可能積雪；這是路線裝備建議，不代表全程必須安裝或每天必定用到。清雪後的乾燥柏油路不要裝鏈行駛。",
+    "何時需要裝鏈：依現場雪鏈標誌、附牌、管制與車輛說明操作。波蘭 C-18 要求至少兩個驅動輪裝鏈；斯洛伐克雪鏈標誌要求至少一個驅動軸使用雪鏈或等效裝置。四驅不自動豁免，沒有合規配備就改道或等候，不硬闖。",
+    "雪鏈取車核對：請門市按實際交付車款與輪胎尺寸確認適配、允許的輪軸／鏈條厚度、安裝方式及租約限制。BMW xDrive 不自行猜前輪或後輪，也不預先按車組名稱買鏈。先練習安裝，準備防水手套；車速依車輛及雪鏈說明書較低上限，恢復不需／不宜用鏈的路面時安全拆除。SIXT 雪鏈只在部分國家／季節提供，須向 Budapest 門市確認供應與費用。",
     "隨身文件：台灣駕照正本＋有效國際駕照、護照、租約、車籍／保險文件。確認租車公司接受的證件、駕駛人資格；國際駕照不能單獨使用。",
     "取車拍照：四面車身、輪框、玻璃、內裝、油量／里程；找到警告三角牌、反光背心、急救包與補胎設備。背心放車內隨手可取的位置。",
     "導航以路況與路牌為準：保留高速道路選項，不為省通行費選不熟的山路；每天核對封路／降雪。需要操作手機時，請乘客處理或停妥車再操作。",
@@ -37,6 +40,18 @@ const TRIP_DATA = {
     "故障先到安全位置、開警示燈，能安全下車時穿背心並到護欄外；聯絡租車救援。有人受傷或有立即危險撥 112。不要在車流旁停留拍照。"
   ],
   "essentialSources": [
+    {
+      "name": "SIXT｜冬季胎與雪鏈加購（供應依國家／季節）",
+      "url": "https://www.sixt.com/help-center/articles/how-do-i-add-extras-to-my-sixt-booking/"
+    },
+    {
+      "name": "波蘭警方｜C-18 雪鏈標誌與使用限制",
+      "url": "https://tarnow.policja.gov.pl/kt/ruch-drogowy/piatkowy-przepis/7051,Odc-46-przepisy-zwiazane-z-oponami-cz-1.html"
+    },
+    {
+      "name": "Slov-Lex｜雪鏈標誌 251（法規圖表）",
+      "url": "https://static.slov-lex.sk/pdf/SK/ZZ/2020/30/ZZ_2020_30_20200401.pdf"
+    },
     {
       "name": "斯洛伐克政府｜道路交通規則",
       "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
@@ -454,11 +469,12 @@ const TRIP_DATA = {
         "SK"
       ],
       "steps": [
-        "10:00 SIXT 取車；訂單門市地址才是起點。完成輪胎、跨境文件、油量與車況拍照後再上路。",
+        "09:00 SIXT 取車，預留至 10:00 辦理手續、車況拍照、裝行李、確認四輪冬季胎與適配雪鏈；預計 10:00 出發。訂單門市地址才是起點，取車時間與營業時間須核對租約。",
         "主要道路候選：Budapest 的 M3 → M30，經 Miskolc 附近但不進城／不加景點，往 Tornyosnémeti／Milhosť 邊界接 SK R4 → Košice。路線依當日施工與封路調整。",
         "Košice 午餐：先選合法停車場再步行進中心，出發前記錄停車場名稱／車牌付費規則；不把禁行老城當導航終點。",
         "Košice → Prešov → Poprad 優先查 D1 幹線；Poprad → 湖區查當日開放道路，最後上山可能有積雪、霧與彎道。",
-        "HU／SK 收費段在進入前確認通行證已生效。這天純駕駛原草案約 5h45，另加取車、午餐與休息；17:15 抵達可能已暗，不以趕天亮為由超速。必要時縮短非必要停留並通知飯店。"
+        "HU／SK 收費段在進入前確認通行證已生效。10:00 出發，沿用原草案純駕駛約 5h45＋午餐 1h，約 16:45 抵達只是規劃值，額外休息／風雪／塞車需另加時間；不保證天黑前到，不以趕日光為由超速。必要時縮短非必要停留並通知飯店。",
+        "湖區末段與飯店入口可能積雪：建議備適配雪鏈，先確認車廠／SIXT 允許的尺寸與輪軸；依當日路面、標誌與管制決定是否安裝。冬季胎與四驅不等於所有雪況都能通行。完整安裝前核對事項見自駕實用操作。"
       ],
       "sources": [
         {
@@ -2265,7 +2281,7 @@ const TRIP_DATA = {
     { id: "passport", label: "護照／旅行文件", group: "出發前" },
     { id: "idp", label: "台灣國際駕照＋台灣駕照", group: "租車" },
     { id: "sixt", label: "SIXT 跨境許可：斯洛伐克＋波蘭", group: "租車" },
-    { id: "winter-tires", label: "確認 4 條冬季胎／雪鏈備用", group: "租車" },
+    { id: "winter-tires", label: "確認四輪冬季胎／預約適配雪鏈備用（尺寸、輪軸、安裝許可）", group: "租車" },
     { id: "krakow-sct", label: "確認租車車牌後完成 Kraków SCT 登錄", group: "租車" },
     { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" },
     { id: "budapest-day-pass", label: "確認布達佩斯搭車是否需要買一日券", group: "車票／交通" }
@@ -2296,7 +2312,7 @@ const TRIP_DATA = {
       "group": "租車／道路通行",
       "date": "2/6（六）–2/10（三）",
       "status": "待確認",
-      "detail": "核對取還車門市、營業時間、跨境斯洛伐克與波蘭許可、冬季胎、費用及保險；不要只依行程草案推定已訂妥。",
+      "detail": "2/6 規劃 09:00 取車、10:00 出發；核對訂單時間、門市營業時間、跨境斯洛伐克與波蘭許可、四輪冬季胎、適配雪鏈供應／安裝許可、費用及保險。不要只依行程草案推定已訂妥。",
       "url": "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP"
     },
     {
@@ -2536,7 +2552,7 @@ const TRIP_DATA = {
           "20:00 後",
           "hotel",
           "返回 InterContinental Budapest／休息",
-          "遊船後回飯店，隔天 10:00 SIXT 取車；不再加排其他夜間景點",
+          "遊船後回飯店，隔天 09:00 SIXT 取車、預計 10:00 出發；不再加排其他夜間景點",
           ""
         ]
       ],
@@ -2565,17 +2581,17 @@ const TRIP_DATA = {
     {
       date: "2/6", weekday: "六", title: "Budapest → Košice（午餐）→ Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=82",
       summary: "長途冬季自駕日，跳過 Miskolc，直接前往 Košice 午餐，再續行至 Štrbské Pleso。",
-      highlights: ["10:00 SIXT", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
+      highlights: ["09:00 SIXT 取車", "預計 10:00 出發", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
       items: [
-        ["10:00", "car", "SIXT Budapest 取車", "確認冬季胎、跨境許可、車況、租車文件", ""],
-        ["10:30–13:30", "drive", "Budapest → Košice", "直接前往 Košice，不停留 Miskolc；依導航與路況調整", "約 3h"],
-        ["13:30–14:30", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
-        ["14:30–16:30", "drive", "Košice → Prešov → Poprad", "山區／冬季預留緩衝", "約 2h"],
-        ["16:30–17:15", "drive", "Poprad → Štrbské Pleso", "山區路段", "約 45m"],
-        ["17:15–18:00", "hotel", "Hotel Panorama（全景酒店）", "入住；依冬季路況保留彈性", ""],
+        ["09:00–10:00", "car", "SIXT Budapest 取車", "預留手續、車況拍照、裝行李；確認四輪冬季胎、適配雪鏈、跨境許可與文件，預計 10:00 出發", "1h"],
+        ["10:00–13:00", "drive", "Budapest → Košice", "直接前往 Košice，不停留 Miskolc；沿用原車程估算，額外休息與冬季延誤另加", "約 3h"],
+        ["13:00–14:00", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
+        ["14:00–16:00", "drive", "Košice → Prešov → Poprad", "沿用原車程估算；雪況／塞車可能延誤", "約 2h"],
+        ["16:00–16:45", "drive", "Poprad → Štrbské Pleso", "山區末段，依積雪、能見度與管制調整", "約 45m"],
+        ["約 16:45–18:00", "hotel", "Hotel Panorama（全景酒店）", "入住；16:45 為規劃值，不保證天黑前到，依冬季路況保留彈性", ""],
         ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
-      notes: ["跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "冬季胎四條；雪鏈作為備用。"]
+      notes: ["09:00 取車、預計 10:00 出發；約 16:45 抵達沿用原車程估算，額外休息、降雪與塞車會延後。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
     },
     {
       date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
