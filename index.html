@@ -154,7 +154,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=transport-20261010a"></script>
+<script src="trip-data.js?v=transport-20261010b"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -416,7 +416,7 @@ function openDay(n){
 }
 function routeHash(){
   const hash=location.hash.slice(1);
-  if(['transport-routes','transport-tickets','transport-rules','transport-signs'].includes(hash)){go('logistics',false,false);const target=document.getElementById(hash);if(target){target.style.scrollMarginTop=(document.querySelector('header').offsetHeight+$('.sticky-tools').offsetHeight+12)+'px';target.scrollIntoView({behavior:'auto',block:'start'})}return}
+  if(['transport-routes','transport-tickets','transport-rules','transport-signs'].includes(hash)){go('logistics',false,false);const target=document.getElementById(hash);if(target){const tools=$('.sticky-tools');target.style.scrollMarginTop=(Math.max(document.querySelector('header').offsetHeight,parseFloat(getComputedStyle(tools).top)||0)+tools.offsetHeight+12)+'px';target.scrollIntoView({behavior:'auto',block:'start'})}return}
   if(/^culture-(HU|SK|PL|AT)$/.test(hash)){openCountry(hash.slice(8));return}
   if(hash==='photo-map'){go('photo-map',true,false);return}
   if(hash.startsWith('photo-')){const id=hash.slice(6);if(photoSpots.some(s=>s.id===id)){openPhotoMap({id});return}}
@@ -465,7 +465,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 initGuide();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=transport-20261010a').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=transport-20261010b').catch(()=>{}));}
 </script>
 </body>
 </html>
