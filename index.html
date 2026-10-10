@@ -156,7 +156,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=collapse-20261010a"></script>
+<script src="trip-data.js?v=collapse-20261010b"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -441,7 +441,7 @@ function openDay(n){
   $('#daySearch').value='';renderDays();go('days',false,false);
   history.replaceState(null,'','#day-'+n);
   const target=document.getElementById('day-'+n);
-  if(target){const tools=$('.sticky-tools');target.style.scrollMarginTop=(Math.max(document.querySelector('header').offsetHeight,parseFloat(getComputedStyle(tools).top)||0)+tools.offsetHeight+12)+'px';target.scrollIntoView({behavior:'auto',block:'start'})}
+  if(target){const tools=$('.sticky-tools');target.style.scrollMarginTop=(Math.max(document.querySelector('header').offsetHeight,parseFloat(getComputedStyle(tools).top)||0)+tools.offsetHeight+12)+'px';target.scrollIntoView({behavior:'instant',block:'start'})}
 }
 function routeHash(){
   const hash=location.hash.slice(1);
@@ -494,7 +494,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 initGuide();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderOverviewDayLinks();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=collapse-20261010a').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=collapse-20261010b').catch(()=>{}));}
 </script>
 </body>
 </html>
