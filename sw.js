@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v46';
+const CACHE = '2027eu-app-v47';
 const VERSIONED_SHELL = [
-  './index.html?v=collapse-20261010b',
-  './trip-data.js?v=collapse-20261010b',
+  './index.html?v=flixbus-20261010a',
+  './trip-data.js?v=flixbus-20261010a',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -36,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=collapse-20261010b', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=flixbus-20261010a', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }

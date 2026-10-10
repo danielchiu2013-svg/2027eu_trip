@@ -1,7 +1,7 @@
 const TRIP_DATA = {
   transportGuide: {
   "checkedDate": "2026-10-10",
-  "note": "依三人、冬季、既定住宿與交通方式整理。以下路線與時間為行程規劃，2027 班次、票價、路況與規則須在出發前再查；不代表已訂票。站名保留當地拼寫，便於現場找指標。",
+  "note": "依三人、冬季、既定住宿與交通方式整理。已訂班次明確標示；其餘路線與時間為行程規劃，2027 班次、票價、路況與規則須在出發前再查。站名保留當地拼寫，便於現場找指標。",
   "alerts": [
     "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 保留 06:15 預約接送。",
     "2/5 H5 到 Szentendre 超出 Budapest 市界；一般 Budapest 市區票不能單獨涵蓋全程。市界內與 Békásmegyer–Szentendre 區間須各有有效票。",
@@ -408,11 +408,13 @@ const TRIP_DATA = {
         "HU"
       ],
       "steps": [
-        "08:30 抵達後先完成入境、行李與廁所；國際航班延誤可能影響巴士，選能承受延誤的班次與退改條件。",
-        "維持 FlixBus 方案：訂單起站要是 Vienna Airport／Flughafen Wien，不是 Vienna Erdberg；到機場長途巴士站按訂單站位候車，預留 20–30 分鐘找站及裝行李。",
-        "Budapest 下站依實際車票，不猜固定站。若 Népliget：M3 往 Deák Ferenc tér 再步行／合規計程車到飯店；若 Kelenföld：查 M4／轉乘或直接計程車。三人與大箱要確認可容納車型。",
+        "08:30 航班預定抵達 VIE，先完成入境、領行李與廁所；與已訂巴士 11:40 出發相隔 3 小時 10 分鐘，航班延誤或排隊仍可能壓縮緩衝。",
+        "FlixBus 已訂票：2027/2/4（四）11:40 Vienna Airport → 14:30 Budapest Népliget，3 人／3 個座位，票面車程 2 小時 50 分鐘；時間均為當地時間。",
+        "建議 11:10–11:20 到 Vienna Airport／Flughafen Wien 的訂單上車站候車，預留找站與裝行李時間；不是 Vienna Erdberg。車號、月台及座位號碼查看完整電子票，截圖未提供。",
+        "14:30 抵達 Budapest Népliget 後取行李，跟著 M3／Metro 指標進站，搭往 Újpest-központ 方向的 M3 至 Deák Ferenc tér；再步行到 InterContinental Budapest。地鐵約 10 分鐘，末段步行約 12–18 分鐘為估計；含等車、找電梯與行李，預留至約 15:15 到飯店，延誤時順延。兩站可找電梯／Lift 指標，當天在 BudapestGO 核對營運與電梯狀態。",
+        "三人帶大箱若疲累、下雪或路面結冰，可從 Népliget 直接搭合規計程車；叫車前確認車型能放下三個 29 吋行李箱。M3 方案不用轉乘其他地鐵。",
         "巴士行李艙放箱子，相機護照隨身；目前標準大件行李上限 80×50×30 cm／20 kg，個別班次依購票畫面。29 吋不保證符合，實際量外尺寸。",
-        "未鎖定 2027 巴士班次、抵達站及末段時間；這段約 3–4h 是規劃量級，仍以訂單時刻為準。"
+        "11:40–14:30 為已訂票班次；巴士實際抵達仍可能延誤。飯店末段與入住時間屬規劃，原有傍晚河岸散步維持選擇性。"
       ],
       "sources": [
         {
@@ -426,6 +428,14 @@ const TRIP_DATA = {
         {
           "name": "BudapestGO｜路線查詢",
           "url": "https://futar.bkk.hu/"
+        },
+        {
+          "name": "BKK｜M3 往 Újpest-központ 時刻表與無階梯通道",
+          "url": "https://bkk.hu/apps/menetrendek/storage/menetrendek/5264/930658.pdf"
+        },
+        {
+          "name": "BKK｜Deák Ferenc tér 站區地圖",
+          "url": "https://bkk.hu/downloads/map/205/"
         }
       ]
     },
@@ -2074,7 +2084,7 @@ const TRIP_DATA = {
           "河岸散步時加帽子、脖圍與手套；車內可脫外套。"
         ],
         "items": [
-          "FlixBus 票券與上下車站資訊",
+          "已訂 FlixBus 三人電子票：11:40 Vienna Airport → 14:30 Budapest Népliget；保存完整票券與上下車站資訊",
           "抵達日衣物、充電用品",
           "水與少量點心"
         ],
@@ -2293,8 +2303,8 @@ const TRIP_DATA = {
       "label": "VIE → Budapest FlixBus 車票",
       "group": "車票／交通預約",
       "date": "2/4（四）",
-      "status": "待購票",
-      "detail": "確認機場上車站、班次與行李規則；核對 Budapest 下車站及前往 InterContinental Budapest 的末段交通。",
+      "status": "已訂票",
+      "detail": "2027/2/4（四）11:40 Vienna Airport → 14:30 Budapest Népliget，3 人／3 個座位，車程 2h50（當地時間）。完整電子票核對車號、月台、座位號碼與行李額度；抵達後可搭 M3 至 Deák Ferenc tér 再步行，或搭合規計程車到 InterContinental Budapest。",
       "url": "https://www.flixbus.com/"
     },
     {
@@ -2421,17 +2431,18 @@ const TRIP_DATA = {
     },
     {
       date: "2/4", weekday: "四", title: "抵達維也納 → 布達佩斯", city: "Vienna → Budapest", hotel: "InterContinental Budapest（布達佩斯洲際酒店）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
-      summary: "抵達日搭 FlixBus 前往布達佩斯，入住休息，傍晚視體力欣賞多瑙河夜景。",
-      highlights: ["08:30 VIE", "機場搭 FlixBus 前往 Budapest", "入住", "Danube／Chain Bridge 夜景"],
+      summary: "FlixBus 三人車票已訂：11:40 Vienna Airport → 14:30 Budapest Népliget；抵達後前往飯店休息，傍晚視體力欣賞多瑙河夜景。",
+      highlights: ["08:30 VIE", "FlixBus 已訂票 · 3 人", "11:40 機場出發", "14:30 Népliget", "入住", "Danube／Chain Bridge 夜景"],
       items: [
         ["08:30–10:30", "arrival", "抵達 Vienna VIE", "入境、領行李；時間視排隊情況調整", "約 2h"],
-        ["依班次", "bus", "Vienna Airport → Budapest｜FlixBus", "直接從維也納機場搭車；出發時間、站點與車程依購票班次確認", "待確認"],
-        ["抵達後", "transit", "FlixBus 下車站 → InterContinental Budapest（布達佩斯洲際酒店）", "依實際下車站安排大眾運輸或計程車；辦理入住或寄放行李", "待確認"],
-        ["15:00–17:00", "rest", "入住／休息／補水", "抵達日不安排需預約的景點", "2h"],
+        ["10:30–11:40", "rest", "補水／簡餐／前往 FlixBus 上車站", "建議 11:10–11:20 到票券指定的 Vienna Airport 站位候車，預留找站與裝行李；入境或領行李延誤時調整", "規劃 1h10"],
+        ["11:40–14:30", "bus", "Vienna Airport → Budapest Népliget｜FlixBus 已訂票", "2027/2/4，3 人／3 個座位；時間為當地時間。完整電子票核對車號、月台、座位號碼與行李額度", "2h50"],
+        ["14:30–15:15", "transit", "Budapest Népliget → InterContinental Budapest（布達佩斯洲際酒店）", "取行李後搭 M3 往 Újpest-központ，在 Deák Ferenc tér 下車再步行；若疲累或路面結冰可直接搭合規計程車，確認三個 29 吋大箱能放下。此段為估計，巴士延誤時順延", "規劃約 45m"],
+        ["15:15–17:00", "rest", "入住／休息／補水", "抵達日不安排需預約的景點；實際抵達或入住較晚時順延休息", "規劃 1h45"],
         ["17:00–18:00", "photo", "多瑙河河岸（選擇性）", "體力許可再散步；Chain Bridge 外觀", "1h"],
         ["18:00 後", "food", "晚餐與休息", "可選匈牙利燉牛肉湯 Gulyás 或雞肉紅椒燉 Paprikás csirke；抵達疲累就近用餐", ""]
       ],
-      notes: ["長途飛行與跨境移動日，保留彈性，不把河岸散步列為必到。", "FlixBus 班次、機場上車點及布達佩斯下車站以購票資訊為準；預留入境、領行李與延誤時間。"]
+      notes: ["長途飛行與跨境移動日，保留彈性，不把河岸散步列為必到。", "FlixBus 三人車票已訂：11:40 Vienna Airport → 14:30 Budapest Népliget；保存完整電子票，車號、月台及座位號碼以票券為準。飯店交通時間是估計，入境、巴士或路況延誤時順延。"]
     },
     {
       "date": "2/5",
