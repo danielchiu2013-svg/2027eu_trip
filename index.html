@@ -149,7 +149,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 
   <section id="checklist" class="view hidden">
     <div class="section-title">預約／購票與出發清單</div>
-    <div class="card summary"><b>共用預約與票券</b><p class="muted" style="font-size:12px;margin:5px 0 0">預約內容與票券狀態由共用行程資料發布，所有網站訪客都看得到。勾選進度只存在目前瀏覽器，不會同步給其他人；預約完成後，請更新 trip-data.js 的 reservations.status 並重新發布，大家才會看到共同狀態。</p></div>
+    <div class="card summary"><b>共用預約與票券</b><p class="muted" style="font-size:12px;margin:5px 0 0">預約內容與票券狀態由共用行程資料發布，所有網站訪客都看得到。已購票項目預設勾選；你手動調整的勾選進度只存在目前瀏覽器，不會同步給其他人；預約完成後，請更新 trip-data.js 的 reservations.status 並重新發布，大家才會看到共同狀態。</p></div>
     <div class="card summary"><div id="checkProgressText" class="muted">0 / 0 已完成</div><div class="progress"><i id="checkProgress"></i></div></div>
     <div class="card summary" id="checklistList"></div>
   </section>
@@ -157,7 +157,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=flixbus-20261010a"></script>
+<script src="trip-data.js?v=checks-20261010a"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -469,17 +469,19 @@ document.addEventListener('click',e=>{
 });
 window.addEventListener('hashchange',routeHash);
 
+let transientChecks={};
 function loadChecks(){
-  try{return JSON.parse(localStorage.getItem('2027eu_checks')||'{}')||{}}catch{return {}}
+  try{const state=JSON.parse(localStorage.getItem('2027eu_checks')||'{}');return {...(state&&typeof state==='object'&&!Array.isArray(state)?state:{}),...transientChecks}}catch{return {...transientChecks}}
 }
-function saveChecks(state){localStorage.setItem('2027eu_checks',JSON.stringify(state));updateCheckProgress(state)}
+function saveChecks(state){transientChecks={...state};try{localStorage.setItem('2027eu_checks',JSON.stringify(state))}catch{}updateCheckProgress(state)}
 function allChecks(){return [...D.checklist,...(D.reservations||[])]}
+function isCheckDone(item,state){return typeof state[item.id]==='boolean'?state[item.id]:['已訂票','已購票'].includes(item.status)}
 function updateCheckProgress(state=loadChecks()){
-  const items=allChecks();const total=items.length;const done=items.filter(c=>state[c.id]).length;$('#checkProgressText').textContent=`${done} / ${total} 項個人已勾選（僅此瀏覽器）` ;$('#checkProgress').style.width=(total?done/total*100:0)+'%';
+  const items=allChecks();const total=items.length;const done=items.filter(c=>isCheckDone(c,state)).length;$('#checkProgressText').textContent=`${done} / ${total} 項已勾選` ;$('#checkProgress').style.width=(total?done/total*100:0)+'%';
 }
 function renderChecklist(){
   const state=loadChecks();const items=allChecks();const groups=[...new Set(items.map(x=>x.group))];
-  $('#checklistList').innerHTML=groups.map(g=>`<div class="check-group"><div class="check-group-title">${esc(g)}</div>${items.filter(x=>x.group===g).map(c=>`<div class="check-entry"><div class="check ${state[c.id]?'done':''}"><input type="checkbox" id="c-${esc(c.id)}" data-check="${esc(c.id)}" ${state[c.id]?'checked':''}><label for="c-${esc(c.id)}">${esc(c.label)}</label></div>${c.status||c.date?`<div class="check-meta">${c.status?`<span class="check-status${c.status==='已訂票'?' booked':''}">${esc(c.status)}</span>`:''}${c.date?`<span class="check-date">${esc(c.date)}</span>`:''}</div>`:''}${c.detail?`<div class="check-detail">${esc(c.detail)}</div>`:''}${c.url?`<a class="check-link" href="${esc(c.url)}" target="_blank" rel="noopener">官方資訊／查詢 ↗</a>`:''}</div>`).join('')}</div>`).join('');
+  $('#checklistList').innerHTML=groups.map(g=>`<div class="check-group"><div class="check-group-title">${esc(g)}</div>${items.filter(x=>x.group===g).map(c=>`<div class="check-entry"><div class="check ${isCheckDone(c,state)?'done':''}"><input type="checkbox" id="c-${esc(c.id)}" data-check="${esc(c.id)}" ${isCheckDone(c,state)?'checked':''}><label for="c-${esc(c.id)}">${esc(c.label)}</label></div>${c.status||c.date?`<div class="check-meta">${c.status?`<span class="check-status${['已訂票','已購票'].includes(c.status)?' booked':''}">${esc(c.status)}</span>`:''}${c.date?`<span class="check-date">${esc(c.date)}</span>`:''}</div>`:''}${c.detail?`<div class="check-detail">${esc(c.detail)}</div>`:''}${c.url?`<a class="check-link" href="${esc(c.url)}" target="_blank" rel="noopener">官方資訊／查詢 ↗</a>`:''}</div>`).join('')}</div>`).join('');
   updateCheckProgress(state);
 }
 document.addEventListener('click',e=>{
@@ -492,10 +494,10 @@ document.addEventListener('click',e=>{
 });
 $('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
-$('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();if(e.target.checked)st[id]=true;else delete st[id];saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
+$('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();st[id]=e.target.checked;saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 initGuide();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderOverviewDayLinks();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=flixbus-20261010a').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=checks-20261010a').catch(()=>{}));}
 </script>
 </body>
 </html>
