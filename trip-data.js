@@ -479,7 +479,8 @@ const TRIP_DATA = {
         "SK"
       ],
       "steps": [
-        "09:00 SIXT 取車，預留至 10:00 辦理手續、車況拍照、裝行李、確認四輪冬季胎與適配雪鏈；預計 10:00 出發。訂單門市地址才是起點，取車時間與營業時間須核對租約。",
+        "已預訂 2027/2/6 09:00 SIXT Budapest Chain Bridge 取車：Apáczai Csere János u. 12–14, Budapest, 1052。預留至 10:00 辦理手續、車況拍照、裝行李、確認四輪冬季胎與適配雪鏈；預計 10:00 出發。",
+        "取車後儘早取得實際車牌及車籍／排放資料，核對 SIXT 是否已辦 Kraków SCT 登錄；未完成則依官方系統申請，2/9 入城前確認資格。跨境書面許可與 SCT 是不同事項。",
         "主要道路候選：Budapest 的 M3 → M30，經 Miskolc 附近但不進城／不加景點，往 Tornyosnémeti／Milhosť 邊界接 SK R4 → Košice。路線依當日施工與封路調整。",
         "Košice 午餐：先選合法停車場再步行進中心，出發前記錄停車場名稱／車牌付費規則；不把禁行老城當導航終點。",
         "Košice → Prešov → Poprad 優先查 D1 幹線；Poprad → 湖區查當日開放道路，最後上山可能有積雪、霧與彎道。",
@@ -564,7 +565,7 @@ const TRIP_DATA = {
       ],
       "steps": [
         "主要道路候選：Zakopane 的 DK47（Zakopianka）→ Nowy Targ／Rabka-Zdrój → S7／DK7 → Kraków；以導航與通行路段為準。09:00–11:30 是原草案，冬季及進城塞車可能延誤。",
-        "前一天核對匈牙利車牌的 Kraków SCT；準備車籍證明燃料／排放級別，依官方系統完成外國車牌登錄／資格確認。不要等到市中心再辦。",
+        "2/6 取車後儘早辦 Kraków SCT，2/8 再確認申請狀態及通行資格。外國車牌即使符合排放／年份標準仍須登錄；準備實際車牌、車籍影本、品牌／型號、製造年份、燃料與 Euro 排放資料，未確認資格前不進入管制區。官方規則查核：2026/10/11，出發前再確認。",
         "用飯店提供的合法停車入口作導航終點，預先確認車位及高度限制。SCT 通過不代表可以開進所有老城步行街。",
         "停妥車、放好行李後維持步行 Wawel → Kanonicza／Grodzka → 主廣場；天冷走累可查當日市營電車，但不再移車找景點車位。"
       ],
@@ -592,11 +593,11 @@ const TRIP_DATA = {
         "HU"
       ],
       "steps": [
-        "09:00 出發與16:00–17:00 還車維持原草案；先核對還車訂單地址與營業時間。出發前比較實際路程，純駕駛 5.5–6.5h 不含午餐、加油、塞車與雪況。",
+        "09:00 出發維持規劃；訂單已確認 2027/2/10 19:30 在 SIXT Budapest Keleti Train Station 還車：Baross tér 7–8, Budapest, 1087，與取車門市不同。純駕駛 5.5–6.5h 不含午餐、加油、塞車與雪況；提早到可先詢問能否提前還車。",
         "中部幹道候選：Kraków → Rabka／Chyżne → Trstená → Ružomberok → Banská Bystrica → Šahy → Budapest。各段有山區與一般道路，逐段核對；不照导航走 Tisovec 山區捷徑。",
         "東側備選經 Prešov／Košice → R4／M30 → M3：若要少走不熟山路可比較，但繞行與時間可能增加。不能把東側備案也套成原 5.5–6.5h；先看實際路況及還車可行性。",
         "HU／SK 通行證要涵蓋回程日期。每 1.5–2h 到服務區休息，午餐、最後加油都另計；若預估無法準時，提早聯絡 SIXT，不壓縮休息或超速。",
-        "按合約要求在還車前補油，保留收據；回到正確門市檢查里程、車況、個人物品及還車證明。還車後至公寓的交通必須按實際公寓地址安排。"
+        "按合約要求在還車前補油，保留收據；預留時間找到 Keleti 還車入口／車位，門市地址不等於可停在車站前任意位置。向 SIXT 核對 19:30 現場交車或鑰匙投遞流程，截圖沒有確認營業時間。記錄里程、油量、車況及交還證明；還車後依公寓實際地址搭車，三人及行李需確認車型容量。"
       ],
       "sources": [
         {
@@ -624,7 +625,7 @@ const TRIP_DATA = {
         "HU"
       ],
       "steps": [
-        "租車已在 2/10 草案還車；今天從公寓實際地址查 BudapestGO，不假定固定起站。中央市場目的地可查 Fővám tér；站／路線依起點選。",
+        "租車訂單為 2/10 19:30 在 Budapest Keleti Train Station 還車；今天以公共運輸與步行為主。從公寓實際地址查 BudapestGO，不假定固定起站；中央市場目的地可查 Fővám tér。",
         "中央市場 → Váci utca → Basilica → Kossuth Lajos tér／Parliament 維持步行主線，電車只作走累備案，避免重複過河。",
         "去 Batthyány tér 對岸拍國會大廈：可步行至合適地鐵站轉 M2 往 Buda，到 Batthyány tér；詳細步行和轉乘按出發位置即時查。",
         "Batthyány tér → Chain Bridge 可沿河步行，結冰／寒風時改市區車；回程看當時最後班次與公寓地址。一般單程票不要跨公車／電車重複使用。"
@@ -2292,7 +2293,7 @@ const TRIP_DATA = {
     { id: "idp", label: "台灣國際駕照＋台灣駕照", group: "租車" },
     { id: "sixt", label: "SIXT 跨境許可：斯洛伐克＋波蘭", group: "租車" },
     { id: "winter-tires", label: "確認四輪冬季胎／預約適配雪鏈備用（尺寸、輪軸、安裝許可）", group: "租車" },
-    { id: "krakow-sct", label: "確認租車車牌後完成 Kraków SCT 登錄", group: "租車" },
+    { id: "krakow-sct", label: "Kraków 車輛進城許可｜SCT 外國車牌登錄與資格確認", group: "租車", date: "2/6 取車後儘早辦理；2/9 入城前確認", status: "待辦理", detail: "取車後取得實際車牌／登記國、車籍證明影本、品牌／型號、製造年份、燃料及 Euro 排放資料；先問 SIXT 是否已登錄，未完成則到官方系統申請並確認通行資格，保存確認畫面。外國車牌即使符合排放標準仍須登錄；尚未取得車牌，現在不能標記完成。SCT 資格不等於老城限制車道或飯店停車許可，另向 Holiday Inn 確認合法入口。依 2026/10/11 查核的官方規定整理，出發前再核對。", url: "https://sct.zdmk.krakow.pl/" },
     { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" },
     { id: "budapest-day-pass", label: "確認布達佩斯搭車是否需要買一日券", group: "車票／交通" }
   ],
@@ -2318,11 +2319,11 @@ const TRIP_DATA = {
     },
     {
       "id": "sixt-booking",
-      "label": "SIXT Budapest 取車／還車訂單與跨境許可",
+      "label": "SIXT Budapest 租車訂單｜已預訂",
       "group": "租車／道路通行",
       "date": "2/6（六）–2/10（三）",
-      "status": "待確認",
-      "detail": "2/6 規劃 09:00 取車、10:00 出發；核對訂單時間、門市營業時間、跨境斯洛伐克與波蘭許可、四輪冬季胎、適配雪鏈供應／安裝許可、費用及保險。不要只依行程草案推定已訂妥。",
+      "status": "已預訂",
+      "detail": "訂單截圖確認（當地時間）：2027/2/6 09:00 Budapest Chain Bridge 取車，Apáczai Csere János u. 12–14, Budapest, 1052；2027/2/10 19:30 Budapest Keleti Train Station 還車，Baross tér 7–8, Budapest, 1087。2/6 預計 10:00 出發。訂單已完成；跨境斯洛伐克／波蘭許可、冬季胎、雪鏈及保險另行核對，不能從此截圖推定已包含。",
       "url": "https://car-rental.sixt.com/php/terms/view?language=en_US&liso=HU&rtar=000&style=&tlang=en_US&view=EPP"
     },
     {
@@ -2594,7 +2595,7 @@ const TRIP_DATA = {
       summary: "長途冬季自駕日，跳過 Miskolc，直接前往 Košice 午餐，再續行至 Štrbské Pleso。",
       highlights: ["09:00 SIXT 取車", "預計 10:00 出發", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
       items: [
-        ["09:00–10:00", "car", "SIXT Budapest 取車", "預留手續、車況拍照、裝行李；確認四輪冬季胎、適配雪鏈、跨境許可與文件，預計 10:00 出發", "1h"],
+        ["09:00–10:00", "car", "SIXT Budapest Chain Bridge 取車｜已預訂", "訂單 09:00：Apáczai Csere János u. 12–14, Budapest, 1052；預留手續、車況拍照、裝行李，核對冬季胎／雪鏈與跨境許可，取得車牌及車籍資料辦 Kraków SCT；預計 10:00 出發", "1h"],
         ["10:00–13:00", "drive", "Budapest → Košice", "直接前往 Košice，不停留 Miskolc；沿用原車程估算，額外休息與冬季延誤另加", "約 3h"],
         ["13:00–14:00", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
         ["14:00–16:00", "drive", "Košice → Prešov → Poprad", "沿用原車程估算；雪況／塞車可能延誤", "約 2h"],
@@ -2659,18 +2660,18 @@ const TRIP_DATA = {
     },
     {
       date: "2/10", weekday: "三", title: "Kraków → Budapest", city: "Kraków → Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "drive", photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=82",
-      summary: "09:00 出發，安排休息與冬季路況緩衝；抵達 Budapest 後還車並休息。",
-      highlights: ["09:00 出發", "純駕駛約 5.5–6.5h", "16:00–17:00 還車區間", "不排景點"],
+      summary: "09:00 出發，保留休息與冬季路況緩衝；已預訂 19:30 在 Budapest Keleti Train Station 還車，之後前往公寓休息。",
+      highlights: ["09:00 出發", "純駕駛約 5.5–6.5h", "19:30 Keleti 還車｜已預訂", "不排景點"],
       items: [
         ["09:00–12:00", "drive", "Kraków → Slovakia 路段", "長途自駕；依導航與冬季路況", "約 3h"],
         ["12:00–12:45", "rest", "服務區午餐／駕駛休息", "以熱湯或 Gulyás 匈牙利燉牛肉為優先；不要為趕還車壓縮休息", "45m"],
-        ["12:45–16:00", "drive", "繼續前往 Budapest SIXT", "純駕駛約 5.5–6.5 小時；如延誤先聯絡門市", "約 3h15"],
-        ["16:00–17:00", "car", "SIXT Budapest 還車", "依訂單門市營業時間；檢查油量、車況與文件", "1h"],
-        ["17:00 後", "hotel", "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", "前往 Budapest 公寓、入住與休息；依實際住宿地址安排採買", ""],
-        ["18:30–19:30", "food", "晚餐｜布達佩斯家常菜", "可選雞肉紅椒燉或 Gulyás 燉牛肉；按公寓地址找餐廳", "1h"],
-        ["19:30 後", "rest", "不安排景點", "把體力留給 2/11", ""]
+        ["12:45–約 16:00", "drive", "繼續前往 Budapest", "純駕駛約 5.5–6.5 小時是估算；塞車／雪況會延後，如可能超過 19:30 還車先聯絡 SIXT", "約 3h15"],
+        ["抵達後–19:00", "rest", "路況緩衝／休息／還車前補油", "抵達時間為估算，保留休息、加油與市區交通時間；若提早到，先詢問能否提前還車，不額外排景點", "依路況"],
+        ["19:00–19:30", "car", "SIXT Budapest Keleti Train Station 還車準備", "Baross tér 7–8, Budapest, 1087；訂單還車時間 19:30。預先核對入口、停車位及晚間交還流程，拍油量／里程／車況並保留交還證明", "約 30m"],
+        ["19:30 後", "hotel", "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", "還車後按公寓實際地址搭車、入住；通知房東晚間抵達，入住及晚餐時間依交車／交通順延", ""],
+        ["入住後", "food", "晚餐／休息", "按實際時間選公寓附近營業餐廳或外帶，把體力留給 2/11", ""]
       ],
-      notes: ["不要為了塞景點壓縮高速路程緩衝。", "Kraków SCT 登錄與還車地點依實際租車車牌／訂單資料處理。"]
+      notes: ["不要為了塞景點壓縮高速路程緩衝。", "取車 Chain Bridge、還車 Keleti，兩處門市不同；2/10 19:30 為已預訂時間，現場交車／鑰匙投遞及提前還車須向 SIXT 核對。", "Kraków SCT 依實際車牌完成；回程出發前仍要確認通行資格。"]
     },
     {
       date: "2/11", weekday: "四", title: "Central Market → Váci utca → Basilica → Parliament → Shoes on the Danube → Chain Bridge", city: "Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
