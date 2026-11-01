@@ -1,4 +1,384 @@
 const TRIP_DATA = {
+  mobilityPlan: {
+  "checkedDate": "2026-11-01",
+  "note": "依目前三人行程整理購買建議，不代表已購票。市區票通常每人一張；高速通行證每輛車一份。2027 票種、票價與管制出發前再核對；已購狀態以共用預約資料為準。",
+  "products": {
+    "vie-airport": {
+      "title": "VIE → Wien Hbf 機場火車區間票",
+      "status": "待確認／購買",
+      "unit": "每人一張，三人",
+      "detail": "2/4 已購 RJX 63 從 Wien Hbf 起，不能推定含機場段。先核對完整票券；未含就另買 Flughafen Wien Bahnhof → Wien Hbf 的 Railjet／IC 車票。不是 CAT，也不由維也納市區票自動涵蓋。",
+      "url": "https://www.oebb.at/en/regionale-angebote/ueberregionale-angebote/anreise-zum-flughafen",
+      "reservationId": "vie-airport-link-ticket"
+    },
+    "rjx-out": {
+      "title": "2/4 Wien Hbf → Budapest-Keleti RJX 63",
+      "reservationId": "oebb-vienna-budapest-20270204",
+      "unit": "三人已購票",
+      "detail": "13:40–16:29；市區地鐵、機場段和計程車不是這張跨城票的既定包含項目，須分別核對。",
+      "url": "https://www.oebb.at/en/"
+    },
+    "bud-single": {
+      "title": "Budapest 市區單程／時間票備案",
+      "status": "視搭車購買",
+      "unit": "每人各持有效票",
+      "detail": "2/4、2/10 帶大行李以計程車為主；若改搭 BKK 就另買市區票。普通單程票通常不含公車／電車轉乘，需轉乘可比較 90 分鐘票；已持有效市區日票則不重複買。2/12 若前一日 24h 票已過期，去 Keleti 另買票或叫車。",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/"
+    },
+    "bud24-first": {
+      "title": "2/5 Budapest 24 小時交通票",
+      "status": "建議購買",
+      "unit": "每人一張，共三張",
+      "detail": "從 2/5 第一段市區搭車開始設起始時間，涵蓋市界內地鐵、電車、公車與 H5 市區段。此次第一段停留不預設買 72h；2/4 若搭計程車且晚上步行，毋須提早啟用。不是景點套票 Budapest Card，不含聖安德烈市界外段、纜車或觀光遊船。紙本依票面時間，不需另打票；手機票依 App 掃碼／出示。",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+    },
+    "h5-extra": {
+      "title": "H5 Békásmegyer ↔ Szentendre 市界外票",
+      "status": "需額外購票",
+      "unit": "三人來回；或比較一張共用 tour ticket",
+      "detail": "2/5 的 Budapest 24h 只涵蓋到 Békásmegyer；超出市界必須另有有效票。可每人買去回區間票，或比較 H5 tour ticket：最多十人同車廂同行，僅涵蓋 Békásmegyer–Szentendre，仍要各自持市區票。先在車站售票機／售票處備齊來回，或由 MÁV 官方 App 購買適用產品；不必在 Békásmegyer 下車換車。",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/suburban-railway-tour-ticket-h5-h8-h9-full-fare/",
+      "reservationId": "h5-szentendre-extra-ticket"
+    },
+    "hu-pass": {
+      "title": "匈牙利全國 10 日 e-vignette",
+      "reservationId": "hu-vignette-purchase",
+      "unit": "每輛車一份，不是三人三份",
+      "detail": "2/6 取車後先問 SIXT 是否已有有效通行證，核對實際車牌及涵蓋範圍。未含才買全國 10 日票，建議有效期 2027/2/6–2/15（含首尾），可涵蓋 2/6 去程與 2/10 回程；不是跨國通用票。一般 ≤3.5t、最多七座且車籍為 M1／M1G 才屬 D1，按交付車籍核對。上 M3／M30 等收費段前生效，保存確認單；不另買不需要的郡票或奧地利 vignette。",
+      "url": "https://ematrica.nemzetiutdij.hu/en",
+      "sourceUrl": "https://nemzetiutdij.hu/en/e-vignette/tolls/e-vignette-rates"
+    },
+    "sk-pass": {
+      "title": "斯洛伐克 10 日 eZnamka",
+      "reservationId": "sk-vignette-purchase",
+      "unit": "每輛車一份，與匈牙利分開",
+      "detail": "先查 SIXT 是否已提供／代購；未含則依車牌及登記國購買。建議有效期 2027/2/6–2/15（10 個曆日），涵蓋去程與 2/10 回程的 D1／R4 等收費段，2/7 如走收費段亦沿用同一份。兩國通行證都須獨立有效，不必每天重買。官方 eznamka.sk 可購買並查核，進入收費段前完成。",
+      "url": "https://eznamka.sk/en",
+      "sourceUrl": "https://eznamka.sk/en/evignettes/glossary"
+    },
+    "pl-road": {
+      "title": "波蘭小客車道路費用",
+      "status": "主線不需多日 pass",
+      "unit": "按實際車輛及路段",
+      "detail": "以一般無拖車、核定總重不超過 3.5t 小客車為前提，本次 DK47／S7／DK7 等主線不購買全國 vignette，亦不需 e-TOLL。若導航改走民營收費高速段則另付費；A4 Kraków–Katowice 在 2027 年 2 月仍須按營運商規則付費，不能套用 3/16 起免費的公告。停車與 Kraków SCT 登錄另計。",
+      "url": "https://etoll.gov.pl/en/news/are-you-planning-a-may-day-break-in-an-rv-or-a-car-with-a-caravan-check-whether-you-need-to-pay-for-your-journey-via-e-toll/",
+      "sourceUrl": "https://www.gov.pl/web/gddkia/koniec-oplat-dla-kierowcow-osobowek-i-motocykli-na-a4-katowice---krakow"
+    },
+    "parking": {
+      "title": "沿途／飯店停車費",
+      "status": "依停車場另付",
+      "unit": "每輛車，依時段／場地",
+      "detail": "高速通行證不含停車。Košice、湖區、Zakopane、Kraków 與飯店分別看停車標誌、時段及車牌付款規則；飯店有停車位不等於免費或保證有位。可優先用現場售票機／櫃台，無須因 EasyPark／SkyCash 註冊問題預設不能付款。"
+    },
+    "gubalowka": {
+      "title": "Gubałówka 登山纜車來回票",
+      "status": "待購票",
+      "unit": "三人各一張",
+      "detail": "2/7 如按原行程搭登山纜車，另買 PKL Gubałówka 上下山票；不含在 Zakopane 公車日票或高速通行證。不是 Kasprowy Wierch 纜車票；日期、營運時間與雪況再確認。",
+      "url": "https://www.pkl.pl/gubalowka/faq-gubalowka.html?setlang=2"
+    },
+    "zak24": {
+      "title": "Zakopane 市營公車 24h／單程票",
+      "status": "搭市營公車才買",
+      "unit": "每人一張，共三人",
+      "detail": "2/8 去回 Kuźnice 如都搭 TESKO 市營公車，可選 24h 票；只搭一趟就比較單程票。現行 24h 12 PLN、單程 6 PLN，2027 重新核價。一般私營 minibus、計程車與 PKL 纜車不包含。可在車上售票機購買並按票面打票規則操作；司機售票備剛好現金。全程改搭計程車就不必買公車日票；本次不預設買三日票。",
+      "url": "https://www.zakopane.pl/komunikacjamiejska/informacje-praktyczne"
+    },
+    "kasprowy": {
+      "title": "Kasprowy Wierch 纜車來回／時段票",
+      "reservationId": "kasprowy-ticket",
+      "unit": "三人，各按指定時段",
+      "detail": "2/8 纜車上山票另購，不含在市營公車 24h 票中；先確認上山時段、下山安排與報到時間。",
+      "url": "https://www.sklep.pkl.pl/en/"
+    },
+    "snow-transfer": {
+      "title": "雪地摩托活動接送",
+      "status": "待確認是否包含",
+      "unit": "依業者訂單",
+      "detail": "2/8 集合地址與接送尚未確認；若活動不含接送，另外安排計程車／交通費。不能假定 Zakopane 公車票涵蓋私人接駁。",
+      "url": "https://www.zakopane.pl/komunikacjamiejska/rozklady-jazdy"
+    },
+    "sct": {
+      "title": "Kraków SCT 外國車牌登錄",
+      "reservationId": "krakow-sct",
+      "unit": "每輛車，須確認通行資格",
+      "detail": "2/6 取車取得實際車牌、登記國及車籍／排放資料後儘早辦，2/9 進城前確認成功，2/10 離城亦須有效。外國車牌即使符合排放標準也須登錄；符合資格不是一律要再買付費 pass，不符資格依 2027 官方付費／豁免規則核對。SCT 不取代老城限制車道及飯店停車許可。",
+      "url": "https://sct.zdmk.krakow.pl/",
+      "sourceUrl": "https://krakow.pl/getHtml?dok_id=303918"
+    },
+    "bud24-second": {
+      "title": "2/11 Budapest 24 小時交通票",
+      "status": "建議購買",
+      "unit": "每人一張，共三張",
+      "detail": "2/10 還車後若僅去公寓，可用計程車／單程票；2/11 第一次市區搭車再啟用 24h。記下結束日期與分鐘：2/12 去 Keleti 若仍在效期內可沿用，過期則另買市區票。2/5 的票早已到期，不能沿用；不預設為 2/10–2/12 買 72h。若實際搭車很少可比較單程／時間票。",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+    },
+    "rjx-return": {
+      "title": "2/12 Budapest-Keleti → Wien Hbf 跨城火車票",
+      "reservationId": "train-budapest-vienna",
+      "unit": "三人車票及座位分別核對",
+      "detail": "目前仍待購票；2027 班次與 Business 升等供應另確認。Budapest 與 Vienna 市區日票都不含這段跨國火車，跨城車票也不自動包含兩端所有地鐵。",
+      "url": "https://www.oebb.at/en/"
+    },
+    "vienna-single": {
+      "title": "2/12 Vienna 市區單程票／24h 比較",
+      "status": "依搭乘次數購買",
+      "unit": "每人各持有效票",
+      "detail": "Wien Hbf → 飯店若搭 U1 轉 U4，用一張涵蓋單向連續轉乘的市區票；入住後再搭車需另票。當日若多次搭乘再比較 24 Stunden WIEN；下午啟用的 24h 通常不足以涵蓋 2/13 全日。若搭計程車且其他都步行，可不買市區票。",
+      "url": "https://www.wien.info/en/travel-info/transport/tickets-361360"
+    },
+    "vienna24": {
+      "title": "2/13 24 Stunden WIEN 市區交通票",
+      "status": "建議購買",
+      "unit": "每人一張，共三張",
+      "detail": "2/13 出發去 Schönbrunn 前生效，涵蓋當日市區地鐵、電車與公車；如前一日票仍有效，先沿用並在到期前補足後續旅程。2026 起一般 48／72 小時 WIEN 票已停售；本次兩天市區停留通常比較單程＋24h／兩張24h，不預設買7 Tage WIEN。紙本需打票的版本在第一次搭車前打票；數位票核對起始時間及身分證明。市區票不含 VIE 外區或 CAT。",
+      "url": "https://www.wienerlinien.at/24-stunden-wien",
+      "sourceUrl": "https://www.wienerlinien.at/7-tage-wien",
+      "reservationId": "vienna-city-tickets"
+    },
+    "airport-transfer": {
+      "title": "2/14 06:15 Vienna 飯店 → VIE 預約接送",
+      "reservationId": "airport-transfer-booking",
+      "unit": "三人三件大行李，確認車型",
+      "detail": "接送尚待預約；接送車費另付，不屬市區 pass。維持預約車主方案，不為此另買奧地利自駕通行證；若改搭火車／CAT，才另買涵蓋機場外區／該產品的票。",
+      "url": "https://www.oebb.at/en/regionale-angebote/ueberregionale-angebote/anreise-zum-flughafen"
+    }
+  },
+  "days": {
+    "2/3": {
+      "none": "飛行／轉機，無歐洲市區票需求",
+      "items": []
+    },
+    "2/4": {
+      "items": [
+        {
+          "id": "vie-airport",
+          "tag": "另購：VIE→Hbf",
+          "kind": "extra",
+          "action": "先核對機場段是否已含，未含另買三人車票。"
+        },
+        {
+          "id": "rjx-out",
+          "tag": "已購：RJX 63",
+          "kind": "booked",
+          "action": "13:40–16:29，三人已購。"
+        },
+        {
+          "id": "bud-single",
+          "tag": "備案：Budapest 單程",
+          "kind": "optional",
+          "action": "Keleti→飯店搭計程車；改搭M2才買市區票，日票可留到2/5再開。"
+        }
+      ]
+    },
+    "2/5": {
+      "items": [
+        {
+          "id": "bud24-first",
+          "tag": "建議：Budapest 24h",
+          "kind": "buy",
+          "action": "三人各一張，第一段市區搭車前生效。"
+        },
+        {
+          "id": "h5-extra",
+          "tag": "另購：H5 市界外來回",
+          "kind": "extra",
+          "action": "Békásmegyer↔Szentendre另買，市區24h不含此段。"
+        }
+      ]
+    },
+    "2/6": {
+      "items": [
+        {
+          "id": "hu-pass",
+          "tag": "確認／購買：HU 10日",
+          "kind": "road",
+          "action": "先查SIXT已含與否；未含買2/6–2/15全國10日。"
+        },
+        {
+          "id": "sk-pass",
+          "tag": "確認／購買：SK 10日",
+          "kind": "road",
+          "action": "另查／買2/6–2/15 eZnamka；進收費段前生效。"
+        },
+        {
+          "id": "sct",
+          "tag": "開始辦：Kraków SCT",
+          "kind": "road",
+          "action": "取車取得車牌／車籍後儘早登錄，2/9前完成。"
+        },
+        {
+          "id": "parking",
+          "tag": "另付：停車",
+          "kind": "road",
+          "action": "Košice與湖區／飯店停車按現場或住宿規則另付。"
+        }
+      ]
+    },
+    "2/7": {
+      "items": [
+        {
+          "id": "sk-pass",
+          "tag": "查有效：沿用 SK pass",
+          "kind": "road",
+          "action": "如走SK收費段，沿用2/6確認的通行證，不重買。"
+        },
+        {
+          "id": "pl-road",
+          "tag": "PL：主線無多日 pass",
+          "kind": "road",
+          "action": "一般≤3.5t小客車按既定道路走；民營收費路段另核對。"
+        },
+        {
+          "id": "gubalowka",
+          "tag": "另購：Gubałówka 來回",
+          "kind": "extra",
+          "action": "三人PKL登山纜車票，與公車票分開。"
+        },
+        {
+          "id": "parking",
+          "tag": "另付：停車",
+          "kind": "road",
+          "action": "木教堂／Gubałówka／飯店分別確認停車費。"
+        }
+      ]
+    },
+    "2/8": {
+      "items": [
+        {
+          "id": "zak24",
+          "tag": "公車方案：Zakopane 24h",
+          "kind": "optional",
+          "action": "搭市營公車來回Kuźnice可選24h；搭計程車則不買。"
+        },
+        {
+          "id": "kasprowy",
+          "tag": "另購：Kasprowy 纜車",
+          "kind": "extra",
+          "action": "三人上山時段／來回票，公車日票不包含。"
+        },
+        {
+          "id": "snow-transfer",
+          "tag": "確認：雪地摩托接送",
+          "kind": "optional",
+          "action": "活動是否含接送待確認；未含的交通另付。"
+        }
+      ]
+    },
+    "2/9": {
+      "items": [
+        {
+          "id": "sct",
+          "tag": "入城前確認：Kraków SCT",
+          "kind": "road",
+          "action": "外國車牌須已登錄並確認資格，非一律買付費pass。"
+        },
+        {
+          "id": "pl-road",
+          "tag": "PL：主線無多日 pass",
+          "kind": "road",
+          "action": "DK47／S7／DK7主線不需全國vignette；改走收費A4段另付。"
+        },
+        {
+          "id": "parking",
+          "tag": "另付：飯店停車",
+          "kind": "road",
+          "action": "飯店停車及老城合法車道分別確認；停妥後以步行為主。"
+        }
+      ]
+    },
+    "2/10": {
+      "items": [
+        {
+          "id": "pl-road",
+          "tag": "PL：依路段付費",
+          "kind": "road",
+          "action": "離城主線無全國pass；改走民營收費高速段另付。"
+        },
+        {
+          "id": "sct",
+          "tag": "離城仍需：SCT 有效",
+          "kind": "road",
+          "action": "出發前保持登錄及通行資格有效。"
+        },
+        {
+          "id": "sk-pass",
+          "tag": "查有效：沿用 SK pass",
+          "kind": "road",
+          "action": "核對2/6–2/15效期涵蓋今天，不重買。"
+        },
+        {
+          "id": "hu-pass",
+          "tag": "查有效：沿用 HU pass",
+          "kind": "road",
+          "action": "回到HU收費道路前核對車牌與效期，不重買。"
+        },
+        {
+          "id": "bud-single",
+          "tag": "備案：還車後市區票",
+          "kind": "optional",
+          "action": "還車後可叫車；改搭BKK才另買票，24h建議留2/11開。"
+        }
+      ]
+    },
+    "2/11": {
+      "items": [
+        {
+          "id": "bud24-second",
+          "tag": "建議：Budapest 24h",
+          "kind": "buy",
+          "action": "三人各一張；記下到期時間，2/12是否可沿用須核對。"
+        }
+      ]
+    },
+    "2/12": {
+      "items": [
+        {
+          "id": "bud24-second",
+          "tag": "查效期：Budapest 24h",
+          "kind": "optional",
+          "action": "去Keleti若在前一天日票效期內可沿用；過期另買或叫車。"
+        },
+        {
+          "id": "rjx-return",
+          "tag": "待購：Budapest→Vienna",
+          "kind": "buy",
+          "action": "三人跨城票／座位另購，不含在兩地市區pass。"
+        },
+        {
+          "id": "vienna-single",
+          "tag": "另購：Vienna 市區票",
+          "kind": "extra",
+          "action": "Hbf→飯店搭地鐵需市區票；多次搭乘再比較24h。"
+        }
+      ]
+    },
+    "2/13": {
+      "items": [
+        {
+          "id": "vienna24",
+          "tag": "建議：Vienna 24h",
+          "kind": "buy",
+          "action": "出發去Schönbrunn前生效；若前一天票仍有效，先沿用、到期前補票。"
+        }
+      ]
+    },
+    "2/14": {
+      "items": [
+        {
+          "id": "airport-transfer",
+          "tag": "待預約：06:15 機場接送",
+          "kind": "buy",
+          "action": "預約車費另付；不買市區pass來涵蓋機場，也不買奧地利自駕pass。"
+        }
+      ]
+    },
+    "2/15": {
+      "none": "飛行／返台，無歐洲市區票需求",
+      "items": []
+    }
+  }
+},
   transportGuide: {
   "checkedDate": "2026-10-10",
   "note": "依三人、冬季、既定住宿與交通方式整理。已訂班次明確標示；其餘路線與時間為行程規劃，2027 班次、票價、路況與規則須在出發前再查。站名保留當地拼寫，便於現場找指標。",
@@ -2291,10 +2671,37 @@ const TRIP_DATA = {
     { id: "winter-tires", label: "確認四輪冬季胎／預約適配雪鏈備用（尺寸、輪軸、安裝許可）", group: "租車" },
     { id: "krakow-sct", label: "Kraków 車輛進城許可｜SCT 外國車牌登錄與資格確認", group: "租車", date: "2/6 取車後儘早辦理；2/9 入城前確認", status: "待辦理", detail: "取車後取得實際車牌／登記國、車籍證明影本、品牌／型號、製造年份、燃料及 Euro 排放資料；先問 SIXT 是否已登錄，未完成則到官方系統申請並確認通行資格，保存確認畫面。外國車牌即使符合排放標準仍須登錄；尚未取得車牌，現在不能標記完成。SCT 資格不等於老城限制車道或飯店停車許可，另向 Holiday Inn 確認合法入口。依 2026/10/11 查核的官方規定整理，出發前再核對。", url: "https://sct.zdmk.krakow.pl/" },
     { id: "backup", label: "雲端備份護照／訂單／租車文件", group: "出發前" },
-    { id: "budapest-day-pass", label: "確認布達佩斯搭車是否需要買一日券", group: "車票／交通" }
+    { id: "budapest-day-pass", label: "Budapest 24h 市區票｜2/5、2/11 各三人", group: "車票／交通", date: "2/5、2/11 首次搭車前", status: "建議購買", detail: "各日每人一張；2/5 另買 H5 市界外來回。2/11 日票可否用到 2/12 去 Keleti，按到期時間核對；不是兩段住宿共用一張連續多日票。", url: "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/" }
   ],
   // 共用預約待辦：網站所有訪客都會看到。確認訂妥後請更新 status；修改此區即可同步公開清單。
   reservations: [
+    {
+      "id": "vie-airport-link-ticket",
+      "label": "VIE → Wien Hbf｜三人機場火車區間票",
+      "group": "車票／交通預約",
+      "date": "2/4 完成入境後",
+      "status": "待確認／購買",
+      "detail": "2/4 已購 RJX 63 從 Wien Hbf 起，不能推定含機場段。先核對完整票券；未含就另買 Flughafen Wien Bahnhof → Wien Hbf 的 Railjet／IC 車票。不是 CAT，也不由維也納市區票自動涵蓋。",
+      "url": "https://www.oebb.at/en/regionale-angebote/ueberregionale-angebote/anreise-zum-flughafen"
+    },
+    {
+      "id": "h5-szentendre-extra-ticket",
+      "label": "H5 聖安德烈市界外來回｜與 Budapest 日票分開",
+      "group": "車票／交通預約",
+      "date": "2/5 出發前",
+      "status": "待確認／購買",
+      "detail": "2/5 的 Budapest 24h 只涵蓋到 Békásmegyer；超出市界必須另有有效票。可每人買去回區間票，或比較 H5 tour ticket：最多十人同車廂同行，僅涵蓋 Békásmegyer–Szentendre，仍要各自持市區票。先在車站售票機／售票處備齊來回，或由 MÁV 官方 App 購買適用產品；不必在 Békásmegyer 下車換車。",
+      "url": "https://bkk.hu/en/tickets-and-passes/prices/suburban-railway-tour-ticket-h5-h8-h9-full-fare/"
+    },
+    {
+      "id": "vienna-city-tickets",
+      "label": "Vienna 市區交通票｜2/12 單程／2/13 24h",
+      "group": "車票／交通預約",
+      "date": "2/12–2/13 首次搭車前",
+      "status": "待確認／購買",
+      "detail": "2/13 出發去 Schönbrunn 前生效，涵蓋當日市區地鐵、電車與公車；如前一日票仍有效，先沿用並在到期前補足後續旅程。2026 起一般 48／72 小時 WIEN 票已停售；本次兩天市區停留通常比較單程＋24h／兩張24h，不預設買7 Tage WIEN。紙本需打票的版本在第一次搭車前打票；數位票核對起始時間及身分證明。市區票不含 VIE 外區或 CAT。",
+      "url": "https://www.wienerlinien.at/24-stunden-wien"
+    },
     {
       "id": "oebb-vienna-budapest-20270204",
       "label": "Wien Hbf → Budapest-Keleti｜ÖBB RJX 63 三人車票",
@@ -2406,18 +2813,18 @@ const TRIP_DATA = {
       "id": "hu-vignette-purchase",
       "label": "匈牙利高速公路 e-vignette（依租車車牌購買）",
       "group": "租車／道路通行",
-      "date": "取車後、上高速前",
+      "date": "2/6 取車核對後、進收費段前；建議效期 2/6–2/15",
       "status": "待辦理",
-      "detail": "先確認租車是否已含通行費；若需自購，核對車種、車牌與有效日期。",
+      "detail": "2/6 取車後先問 SIXT 是否已有有效通行證，核對實際車牌及涵蓋範圍。未含才買全國 10 日票，建議有效期 2027/2/6–2/15（含首尾），可涵蓋 2/6 去程與 2/10 回程；不是跨國通用票。一般 ≤3.5t、最多七座且車籍為 M1／M1G 才屬 D1，按交付車籍核對。上 M3／M30 等收費段前生效，保存確認單；不另買不需要的郡票或奧地利 vignette。",
       "url": "https://ematrica.nemzetiutdij.hu/en"
     },
     {
       "id": "sk-vignette-purchase",
       "label": "斯洛伐克高速公路 e-vignette（依租車車牌購買）",
       "group": "租車／道路通行",
-      "date": "進入收費路段前",
+      "date": "2/6 取車核對後、進收費段前；建議效期 2/6–2/15",
       "status": "待辦理",
-      "detail": "先確認 SIXT 是否已提供或代購；若自購，只使用官方 eznamka 網站。",
+      "detail": "先查 SIXT 是否已提供／代購；未含則依車牌及登記國購買。建議有效期 2027/2/6–2/15（10 個曆日），涵蓋去程與 2/10 回程的 D1／R4 等收費段，2/7 如走收費段亦沿用同一份。兩國通行證都須獨立有效，不必每天重買。官方 eznamka.sk 可購買並查核，進入收費段前完成。",
       "url": "https://eznamka.sk/en"
     }
   ],
@@ -3346,6 +3753,7 @@ const TRIP_DATA = {
     {"key":"DanubeCruise","name":"多瑙河夜景遊船","en":"Danube Legend · Legenda","description":"2/5 晚上規劃約一小時觀光船，從河上看國會大廈、鏈橋與城堡山。首選 Legenda Dock 7；2027 時段及票價待確認，尚未購票。","day":3,"tag":"夜景／遊船／待購票","duration":"約 1h＋報到緩衝","lens":"16–55mm／X100VI；手持提高快門","image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg","map":"https://www.google.com/maps/search/?api=1&query=Legenda+Dock+7+Jane+Haining+rakpart+Budapest"}
   ]
 };
+
 
 
 
