@@ -3,6 +3,13 @@ const TRIP_DATA = {
   "checkedDate": "2026-11-01",
   "note": "依目前三人行程整理購買建議，不代表已購票。市區票通常每人一張；高速通行證每輛車一份。2027 票種、票價與管制出發前再核對；已購狀態以共用預約資料為準。",
   "products": {
+    "krakow-walk": {
+      "title": "Kraków 老城步行｜不預購市區日票",
+      "status": "步行為主",
+      "unit": "三人同行；無須交通票",
+      "detail": "車停 Holiday Inn 後步行遊 Wawel、Kanonicza、Grodzka、聖母聖殿及主廣場。飯店至 Wawel 預留 15–20 分鐘，主廣場回飯店約 5–10 分鐘；冬季濕滑或走累可改搭合規計程車，在可通車路口上下車，車資另付。",
+      "url": "https://www.ihg.com/holidayinn/hotels/us/en/krakow/krkcc/hoteldetail"
+    },
     "vie-airport": {
       "title": "VIE → Wien Hbf 機場火車區間票",
       "status": "待確認／購買",
@@ -267,6 +274,12 @@ const TRIP_DATA = {
     },
     "2/9": {
       "items": [
+        {
+          "id": "krakow-walk",
+          "tag": "老城步行：免買日票",
+          "kind": "optional",
+          "action": "車停飯店後步行；疲累時計程車另付，這天不預購市區多日票。"
+        },
         {
           "id": "sct",
           "tag": "入城前確認：Kraków SCT",
@@ -935,15 +948,19 @@ const TRIP_DATA = {
     },
     "2/9": {
       "mode": "自駕＋老城步行",
-      "title": "Zakopane → Kraków／Holiday Inn → Wawel",
+      "title": "自駕至飯店停車 → Wawel → 聖母聖殿 → 主廣場（步行）",
       "countries": [
         "PL"
       ],
       "steps": [
         "主要道路候選：Zakopane 的 DK47（Zakopianka）→ Nowy Targ／Rabka-Zdrój → S7／DK7 → Kraków；以導航與通行路段為準。09:00–11:30 是原草案，冬季及進城塞車可能延誤。",
         "2/6 取車後儘早辦 Kraków SCT，2/8 再確認申請狀態及通行資格。外國車牌即使符合排放／年份標準仍須登錄；準備實際車牌、車籍影本、品牌／型號、製造年份、燃料與 Euro 排放資料，未確認資格前不進入管制區。官方規則查核：2026/10/11，出發前再確認。",
-        "用飯店提供的合法停車入口作導航終點，預先確認車位及高度限制。SCT 通過不代表可以開進所有老城步行街。",
-        "停妥車、放好行李後維持步行 Wawel → Kanonicza／Grodzka → 主廣場；天冷走累可查當日市營電車，但不再移車找景點車位。"
+        "自駕終點為 Holiday Inn Krakow City Centre（Wielopole 4, 31-072 Kraków）提供的合法停車入口，行前向飯店確認車位、入口及收費；名額有限，不假設抵達即可停到。SCT 通過不代表可以開進老城步行街。11:30 先停車、寄放大行李；客房一般 15:00 起入住，晚餐後再辦入住即可。",
+        "飯店 → Wawel：步行約 15–20 分鐘，約 1 公里；可經 Planty 南側／Stradomska 接城堡上坡入口。12:00–13:00 的一小時包含簡單午餐及走路，約 12:40 前開始往 Wawel 走，不安排慢節奏套餐。",
+        "13:00–13:45 看 Wawel Hill、主教座堂外觀及城堡庭院；13:45–15:00 預留 Castle | Second Floor（State Rooms）一個展區與報到緩衝，實際入場以買到的指定時段為準。主教座堂不入內，免買其室內票。",
+        "Wawel → Kanonicza → Grodzka → Plac Mariacki：步行約 15–20 分鐘（約 1 公里，不含停拍）；15:00–16:00 留一小時慢走、拍照及購票。16:00–16:45 聖母聖殿入內：到 Plac Mariacki 7 購票，走南側遊客入口，勿走主廣場祈禱入口。",
+        "16:45 後步行數分鐘到主廣場／紡織會館外觀，接晚餐和夜景；主廣場回飯店約 5–10 分鐘。全日連同庭院與街拍估約 3–5 公里，依繞行增減；冬季石板路濕滑放慢走。",
+        "本日不預購 Kraków 市區多日交通票。太冷、疲累或結冰時可請飯店叫合規計程車至 Wawel 周邊可停靠處，山丘最後一段及老城核心仍需步行；不為景點重新移車。若臨時搭市營電車／公車，另買適用單次／時間票並依規定驗票。"
       ],
       "sources": [
         {
@@ -957,6 +974,18 @@ const TRIP_DATA = {
         {
           "name": "歐盟／波蘭交通規則",
           "url": "https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/poland/index_en.htm"
+        },
+        {
+          "name": "Holiday Inn｜地址、停車與交通",
+          "url": "https://www.ihg.com/holidayinn/hotels/us/en/krakow/krkcc/hoteldetail/directions"
+        },
+        {
+          "name": "Wawel｜Castle Second Floor（State Rooms）",
+          "url": "https://wawel.krakow.pl/en/route/castle-second-floor"
+        },
+        {
+          "name": "聖母聖殿｜遊客時段、售票與南側入口",
+          "url": "https://mariacki.com/en/tours-of-the-basilica/"
         }
       ]
     },
@@ -2546,7 +2575,7 @@ const TRIP_DATA = {
           "夜拍時加帽子、脖圍、手套；室內可脫外套。"
         ],
         "items": [
-          "Wawel 票券與飯店停車資料",
+          "城堡 State Rooms 票券、聖母聖殿現場購票資料與飯店停車資訊",
           "保溫瓶、備用電池、暖暖包",
           "確定拍夜景才帶腳架"
         ],
@@ -2758,21 +2787,30 @@ const TRIP_DATA = {
     },
     {
       "id": "wawel-tickets",
-      "label": "瓦維爾城堡展覽／指定時段門票",
+      "label": "瓦維爾城堡｜Castle Second Floor／State Rooms 指定時段票",
       "group": "門票／活動預約",
-      "date": "2/9（二）",
+      "date": "2/9（二）13:45 左右（預計）",
       "status": "待購票",
-      "detail": "選定欲參觀的展覽與時段；官方線上票通常於參觀日前約一個月開售，出發前再確認。",
+      "detail": "只選 State Rooms 所屬的 Castle | Second Floor 一個展區，不加皇家私人寓所／寶庫／軍械庫。13:45–15:00 為行程預留，實際報到及入場依所購時段；尚未購票。官方通常約一個月前開售，2027 開放內容與時段屆時確認。",
       "url": "https://bilety.wawel.krakow.pl/wawel"
     },
     {
       "id": "wawel-cathedral-entry",
-      "label": "瓦維爾主教座堂入場方式與開放時間",
+      "label": "瓦維爾主教座堂｜改看外觀",
       "group": "門票／活動預約",
       "date": "2/9（二）",
-      "status": "待確認",
-      "detail": "與城堡展覽票分開核對；確認大教堂、鐘樓或地下墓室是否要另購票，以及當日宗教活動時段。",
-      "url": "https://wawel.krakow.pl/en/explore"
+      "status": "無須購室內票",
+      "detail": "2/9 13:00–13:45 隨 Wawel Hill／庭院一起看主教座堂外觀；本次不入內，不購鐘樓／墓室參觀票。此項保留作安排核對，並非已購票。",
+      "url": "https://www.katedra-wawelska.pl/en/"
+    },
+    {
+      "id": "krakow-st-mary-entry",
+      "label": "克拉科夫聖母聖殿｜入內參觀門票",
+      "group": "門票／活動預約",
+      "date": "2/9（二）16:00–16:45（預計）",
+      "status": "待現場購票",
+      "detail": "目前官網列週一至週六 11:30–18:00，售票處提早 15 分鐘關閉；到 Plac Mariacki 7 購票，南側遊客入口入內，重點看 Veit Stoss 木雕祭壇。2027 時段／禮拜調整出發前再確認；二月不排登塔。尚未購票，不預設勾選。",
+      "url": "https://mariacki.com/en/tours-of-the-basilica/"
     },
     {
       "id": "train-budapest-vienna",
@@ -3118,23 +3156,108 @@ const TRIP_DATA = {
       notes: ["Jaszczurówka 排在 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
     },
     {
-      date: "2/9", weekday: "二", title: "Zakopane → Kraków｜Wawel → Old Town", city: "Zakopane → Kraków", hotel: "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）", theme: "city", photo: "https://dcontent.inviacdn.net/shared/img/web-830/2018/1/11/m0/537301.jpg",
-      summary: "只住 Kraków 一晚，將核心老城一次走完；不塞 Schindler Factory／Kazimierz。",
-      highlights: ["Wawel", "Cathedral", "Kanonicza", "Main Market Square", "St Mary’s", "Old Town 夜景"],
-      items: [
-        ["09:00–11:30", "drive", "Zakopane → Kraków", "冬季道路與進城車流預留緩衝", "約 2h30"],
-        ["11:30–12:00", "hotel", "抵達飯店／停車／寄放行李", "確認停車位；大行李留在飯店", "30m"],
-        ["12:00–13:00", "food", "午餐並步行至 Wawel", "找 żurek 酸裸麥湯或 pierogi 波蘭餃子；步行至 Wawel，避免再次移車", "1h"],
-        ["13:00–15:00", "place", "Wawel Castle 室內展覽／城堡區", "先買指定時段票；冬季展覽與最後入場依官網", "2h"],
-        ["15:00–15:45", "place", "Wawel Cathedral", "參觀區域及最後入場時間出發前確認", "45m"],
-        ["15:45–16:15", "photo", "Kanonicza Street", "步行前往老城", "30m"],
-        ["16:15–16:45", "photo", "Grodzka Street", "步行街拍", "30m"],
-        ["16:45–17:30", "photo", "Main Market Square／Cloth Hall", "廣場與建築外觀；依日落調整", "45m"],
-        ["17:30–18:00", "place", "St Mary’s Basilica", "外觀或可入內部分；先核對宗教活動與遊客時段", "30m"],
-        ["18:00–19:00", "food", "晚餐｜克拉科夫經典菜", "可試 bigos 燉酸菜肉或 pierogi；老城餐館用餐", "1h"],
-        ["19:00 後", "photo", "Kraków Old Town 夜景", "主要步行", ""]
+      "date": "2/9",
+      "weekday": "二",
+      "title": "Zakopane → Kraków｜Wawel → Old Town",
+      "city": "Zakopane → Kraków",
+      "hotel": "Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店）",
+      "theme": "city",
+      "photo": "https://dcontent.inviacdn.net/shared/img/web-830/2018/1/11/m0/537301.jpg",
+      "summary": "自駕到飯店停車後步行：主教座堂看外觀，城堡只選 State Rooms；16:00 聖母聖殿入內，再逛主廣場、晚餐與夜景。",
+      "highlights": [
+        "主教座堂外觀",
+        "城堡 State Rooms",
+        "Kanonicza／Grodzka",
+        "16:00 聖母聖殿入內",
+        "Main Market Square",
+        "老城全程步行"
       ],
-      notes: ["Holiday Inn Krakow City Centre（克拉科夫市中心假日酒店） 內有受控停車，但名額有限，建議預訂／確認。", "租車為外國車牌，進入 Kraków SCT 前依當時規定完成登錄。", "大型行李盡量留在飯店，不帶進老城核心。"]
+      "items": [
+        [
+          "09:00–11:30",
+          "drive",
+          "Zakopane → Kraków",
+          "自駕 DK47 → S7／DK7 → 飯店合法停車入口；2h30 為預估，冬季道路與進城車流可能延誤",
+          "約 2h30"
+        ],
+        [
+          "11:30–12:00",
+          "hotel",
+          "飯店停車／寄放行李",
+          "Holiday Inn，Wielopole 4；車位及合法入口預先確認。先寄放大行李，客房一般 15:00 起入住",
+          "30m"
+        ],
+        [
+          "12:00–13:00",
+          "food",
+          "簡單午餐＋步行至 Wawel",
+          "選湯品、pierogi 等簡單午餐；約 12:40 前出發，飯店至 Wawel 步行約 15–20 分鐘（約 1 公里，含上坡緩衝），不再移車",
+          "1h 含步行"
+        ],
+        [
+          "13:00–13:45",
+          "photo",
+          "Wawel Hill／Wawel Cathedral 外觀／城堡庭院",
+          "主教座堂只看外觀，免購其室內票；在山丘、庭院拍建築，不排鐘樓與墓室",
+          "45m"
+        ],
+        [
+          "13:45–15:00",
+          "place",
+          "Wawel Castle｜State Rooms",
+          "只選 Castle | Second Floor（含 State Rooms）一個展區，重點看王室大廳、掛毯與天花板；預留約 50 分鐘參觀及報到緩衝。13:45 為預計，依實際可售時段訂票，尚未購票",
+          "1h15 含緩衝"
+        ],
+        [
+          "15:00–15:30",
+          "photo",
+          "Kanonicza Street",
+          "從 Wawel 步行下山，沿卡諾尼察街慢走街拍，往老城方向前進",
+          "30m"
+        ],
+        [
+          "15:30–16:00",
+          "photo",
+          "Grodzka Street → 聖母聖殿售票處",
+          "沿格羅茲卡街到 Plac Mariacki 7 購票；Wawel 到聖母聖殿純步行約 15–20 分鐘，這一小時含兩街拍照和購票",
+          "30m"
+        ],
+        [
+          "16:00–16:45",
+          "place",
+          "St Mary’s Basilica｜入內參觀",
+          "南側遊客入口，重點看 Veit Stoss 木雕祭壇與哥德式室內；主廣場正門供祈禱使用。現行週二遊客時段 11:30–18:00，2027 出發前再確認；二月不排登塔",
+          "45m"
+        ],
+        [
+          "16:45–18:00",
+          "photo",
+          "Main Market Square／Cloth Hall 外觀",
+          "步行數分鐘即到；拍廣場、雙塔和紡織會館拱廊，依天色彈性安排暖身休息",
+          "1h15"
+        ],
+        [
+          "18:00–19:00",
+          "food",
+          "晚餐｜克拉科夫經典菜",
+          "可試 bigos 燉酸菜肉或 pierogi；老城餐館用餐",
+          "1h"
+        ],
+        [
+          "19:00 後",
+          "photo",
+          "Kraków Old Town 夜景 → 步行回飯店",
+          "按體力簡短夜拍；主廣場回 Holiday Inn 約 5–10 分鐘，全日含庭院與街拍估約 3–5 公里",
+          "彈性"
+        ]
+      ],
+      "notes": [
+        "Holiday Inn 停車名額有限，預先確認合法入口、車位與收費；到店先寄放行李，晚間回來再入住。",
+        "租車為外國車牌，2/9 進 Kraków SCT 前確認登錄及通行資格；SCT 不等於可開進老城步行街。",
+        "城堡展覽與聖母聖殿門票分開購買；主教座堂改看外觀。2027 開放時段與宗教活動再確認，未購項目保持未勾選。",
+        "若冬季塞車延誤，先縮短午餐／外觀拍照；不要為了拍街景錯過城堡已訂時段或聖母聖殿遊客時間。嚴重延誤時優先保留聖母聖殿，城堡依票券退改規則處理。",
+        "老城不預購市區日票；全程步行，太冷或走累則計程車另付，在可通車路口上下車。"
+      ]
     },
     {
       date: "2/10", weekday: "三", title: "Kraków → Budapest", city: "Kraków → Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "drive", photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=82",
@@ -3462,9 +3585,9 @@ const TRIP_DATA = {
     "lat": 50.0542,
     "lng": 19.9367,
     "direction": "從庭院邊緣拍拱廊與對稱建築，以柱列製造前後層次。",
-    "time": "原行程下午",
+    "time": "2/9 13:00–13:45（含主教座堂外觀）",
     "lens": "XF16–55mm",
-    "note": "庭院開放與票務依現場；室內展覽的拍攝規定另行確認。",
+    "note": "主教座堂只看外觀；庭院開放依現場。接續城堡 State Rooms 室內展區，拍攝規則另行確認。",
     "source": "https://www.krakow.com/guides/krakow-photography-guide"
   },
   {
@@ -3732,11 +3855,11 @@ const TRIP_DATA = {
     { key:"Kasprowy", name:"卡斯普羅維峰", en:"Kasprowy Wierch", description:"搭纜車登上塔特拉高山觀景點；風雪可能影響營運，山頂注意保暖。", day:6, tag:"高山／雪景", duration:"3h", lens:"70–300mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kasprowy%20Wierch.jpg", images:["https://i.iplsc.com/000M9LTSPOCOG6KD-C323-F4.webp","https://z-ne.pl/images/20181115_-_PKL_Kasprowy_Wierch_1.jpg","https://ff4.xcdn.pl/i/I18FAAAABRQC7gAknnWJ/8d83d583f3bd6de6cdee2bf949b91692.jpg"], imageSources:["https://kobieta.interia.pl/podroze/news-ferie-w-pelni-a-w-zakopanem-pusto-malopolska-nigdy-zbytnio-n%2CnId%2C22545504","https://z-ne.pl/s%2Cdocid%2C59316%2Ctatry_kolej_linowa_pkl_na_kasprowy_wierch_przygotowana_na_sezon_zimowy.html","https://krakow.gosc.pl/doc/8076024.Zima-na-Podhalu-Kolejka-na-Kasprowy-Wierch-od-7-lutego-bedzie"], map:"https://www.google.com/maps/search/?api=1&query=Kasprowy+Wierch" },
     { key:"Jaszczurowka", name:"亞斯楚羅夫卡木造教堂", en:"Jaszczurówka Chapel", description:"山地木構風格的聖心教堂，可細看木作、屋頂與冬日林景。", day:5, tag:"木造建築", duration:"30m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", images:["https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://upload.wikimedia.org/wikipedia/commons/5/52/Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/uploads/seeing/tok308040229395/1666270144.jpg"], imageSources:["https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://commons.wikimedia.org/wiki/File:Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/warto-zobaczyc/1041%2Ckaplica-na-jaszczurowce-zakopane.html"], map:"https://www.google.com/maps/search/?api=1&query=Jaszczurowka+Chapel" },
     { key:"Snowmobile", name:"雪地摩托車體驗（Snowmobile）", en:"Snowmobile / Kościelisko", description:"由業者帶隊的雪地摩托體驗；集合地址、裝備和雪況須事先確認。", day:6, tag:"雪地活動", duration:"2h", lens:"X100VI／16–55mm", image:"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg", images:["https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","https://www.skutery.pl/wp-content/uploads/2023/02/6-1024x683.jpg","https://www.witowextreme.pl/uploads/files/images/58e5f5f432b76.jpg"], imageSources:["https://www.skutery.pl/oferta/","https://www.skutery.pl/","https://www.witowextreme.pl/en/snowmobiles-gallery"], map:"https://www.google.com/maps/search/?api=1&query=Snowmobile+Koscielisko" },
-    { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王權與歷史核心，包括城堡建築、庭院和俯瞰維斯瓦河的高地。", day:7, tag:"古蹟／城堡", duration:"2h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
-    { key:"WawelCathedral", name:"瓦維爾主教座堂", en:"Katedra Wawelska", description:"波蘭君主加冕與安葬之地，融合多時期建築，入場區域依規定。", day:7, tag:"教堂／歷史", duration:"30m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Cathedral%2C%20Krak%C3%B3w.JPG", images:["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560"], imageSources:["https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://parade.com/travel/cozy-winter-getaways"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Cathedral" },
+    { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王室城堡與維斯瓦河畔高地；本次 2/9 只選 Castle | Second Floor 的 State Rooms，一個展區看王室大廳、掛毯與天花板，不加私人寓所／寶庫／軍械庫。", day:7, tag:"古蹟／城堡", duration:"1h15＋外觀", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
+    { key:"WawelCathedral", name:"瓦維爾主教座堂", en:"Katedra Wawelska", description:"波蘭君主加冕與安葬之地，融合多時期建築。本次 2/9 隨 Wawel Hill 看外觀，不入內、不購鐘樓／墓室票，把室內參觀時間留給城堡 State Rooms 與聖母聖殿。", day:7, tag:"教堂／歷史", duration:"外觀約 15–20m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Cathedral%2C%20Krak%C3%B3w.JPG", images:["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560"], imageSources:["https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://parade.com/travel/cozy-winter-getaways"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Cathedral" },
     { key:"Kanonicza", name:"卡諾尼察街", en:"ul. Kanonicza", description:"克拉科夫保存完好的歷史街道，石板路與文藝復興立面適合街拍。", day:7, tag:"街景／黃昏", duration:"30m", lens:"X100VI／16–55mm", image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/483af9109628805.5fd851b49452b.jpg", images:["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ab825a159090891.63980a91d0568.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/fs/dc8713113668005.602c9a3605fc2.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://www.behance.net/gallery/159090891/Winter-Krakow-part-I","https://www.behance.net/gallery/113668005/Winter-in-the-center-of-Krakow/modules/649377461","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Kanonicza+Street+Krakow" },
     { key:"MainMarket", name:"克拉科夫中央集市廣場", en:"Rynek Główny", description:"中世紀廣場，周圍串連聖母聖殿、市政塔與紡織會館。", day:7, tag:"廣場／夜景", duration:"45m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Krakow%20Main%20Square%20%288125539580%29.jpg", images:["https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Rynek+Glowny+Krakow" },
-    { key:"StMary", name:"克拉科夫聖母聖殿", en:"Bazylika Mariacka", description:"廣場地標雙塔哥德式教堂，可留意木雕祭壇與整點號角傳統。", day:7, tag:"教堂／廣場", duration:"30m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/a/a1/Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg", images:["https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://parade.com/travel/cozy-winter-getaways","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=St+Marys+Basilica+Krakow" },
+    { key:"StMary", name:"克拉科夫聖母聖殿", en:"Bazylika Mariacka", description:"主廣場雙塔哥德式地標，Veit Stoss 木雕祭壇是入內重點。本次 2/9 16:00–16:45 參觀室內；到 Plac Mariacki 7 購票，由南側遊客入口進入。二月不排登塔，宗教活動與 2027 時段再確認。", day:7, tag:"教堂／廣場", duration:"45m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/a/a1/Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg", images:["https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://parade.com/travel/cozy-winter-getaways","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=St+Marys+Basilica+Krakow" },
     { key:"ClothHall", name:"克拉科夫紡織會館", en:"Sukiennice", description:"廣場中央的文藝復興紡織會館，拱廊與長廊適合拍建築細節。", day:7, tag:"建築／夜景", duration:"30m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Krak%C3%B3w%20-%20Sukiennice%20%26%20Wie%C5%BCa%20Ratuszowa.jpg", images:["https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://i.pinimg.com/736x/17/5e/9b/175e9bcc786d9a1de4538c116bc9c06b.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://in.pinterest.com/pin/696439529904253598/","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Cloth+Hall+Krakow" },
     { key:"Parliament", name:"匈牙利國會大廈", en:"Országház", description:"新哥德式國會建築沿多瑙河展開，可在廣場近拍或河對岸取景。", day:9, tag:"建築／河岸", duration:"2h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg", images:["https://peika.bg/pictures/89277_715_.jpg","https://amadeus-rivercruises.com/fileadmin/_processed_/4/b/csm__c_Budapest_Winter_LU793746169_851c8df2a4.webp","https://www.reisewelt.at/fileadmin/_processed_/9/f/csm_Budapest_im_Winter_afa913ef6e.png"], imageSources:["https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html","https://www.amadeus-rivercruises.com/river-cruises/detail/2026/new-years-eve-cruise-on-the-danube-7-days.html","https://www.reisewelt.at/de/reisen/rv/silvester-auf-der-donau-flusskreuzfahrt"], map:"https://www.google.com/maps/search/?api=1&query=Hungarian+Parliament+Budapest" },
     { key:"Shoes", name:"多瑙河畔之鞋紀念碑", en:"Shoes on the Danube Bank", description:"河岸紀念二戰期間遇害的猶太人，請以安靜、尊重的方式參觀。", day:9, tag:"紀念地／河岸", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Hungary-02400%20-%20Shoes%20on%20the%20Danube%20%2832460224482%29.jpg", images:["https://www.reisewelt.at/fileadmin/_processed_/9/f/csm_Budapest_im_Winter_afa913ef6e.png","https://peika.bg/pictures/89277_715_.jpg","https://www.amadeus-rivercruises.com/fileadmin/_processed_/4/b/csm__c_Budapest_Winter_LU793746169_851c8df2a4.webp"], imageSources:["https://www.reisewelt.at/de/reisen/rv/silvester-auf-der-donau-2026.html","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html","https://www.amadeus-rivercruises.com/river-cruises/detail/2026/new-years-eve-cruise-on-the-danube-7-days.html"], map:"https://www.google.com/maps/search/?api=1&query=Shoes+on+the+Danube+Bank" },
@@ -3753,6 +3876,7 @@ const TRIP_DATA = {
     {"key":"DanubeCruise","name":"多瑙河夜景遊船","en":"Danube Legend · Legenda","description":"2/5 晚上規劃約一小時觀光船，從河上看國會大廈、鏈橋與城堡山。首選 Legenda Dock 7；2027 時段及票價待確認，尚未購票。","day":3,"tag":"夜景／遊船／待購票","duration":"約 1h＋報到緩衝","lens":"16–55mm／X100VI；手持提高快門","image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg","map":"https://www.google.com/maps/search/?api=1&query=Legenda+Dock+7+Jane+Haining+rakpart+Budapest"}
   ]
 };
+
 
 
 
