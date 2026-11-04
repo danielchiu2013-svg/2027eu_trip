@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v55';
+const CACHE = '2027eu-app-v56';
 const VERSIONED_SHELL = [
-  './index.html?v=sk-photos-20261105',
-  './trip-data.js?v=sk-photos-20261105',
+  './index.html?v=all-item-photos-20261105',
+  './trip-data.js?v=all-item-photos-20261105',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -51,6 +51,7 @@ self.addEventListener('fetch', event => {
         .catch(() => cached))
   );
 });
+
 
 
 

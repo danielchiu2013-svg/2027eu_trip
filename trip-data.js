@@ -3878,10 +3878,440 @@ const TRIP_DATA = {
   ]
 };
 
-
-
-
-
-
-
-
+// Representative photos: reference images do not change bookings, routes, or meal choices.
+TRIP_DATA.timelinePhotoCatalog = {
+  "Scoot": {
+    "key": "Scoot",
+    "name": "酷航 Boeing 787（航空公司參考，實際機型依航班）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/(SGP-Singapore)_Scoot_Boeing_787-9_9V-OJG_%40_WSSS_2024-02-09_(1).jpg/960px-(SGP-Singapore)_Scoot_Boeing_787-9_9V-OJG_%40_WSSS_2024-02-09_(1).jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Scoot_Boeing_787-9_9V-OJG_%40_WSSS_2024-02-09_(1).jpg",
+    "credit": "S5A-0043",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "VIE": {
+    "key": "VIE",
+    "name": "維也納機場 VIE（機場外觀參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vienna_Airport_VIE_2018.jpeg/960px-Vienna_Airport_VIE_2018.jpeg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Vienna_Airport_VIE_2018.jpeg",
+    "credit": "JTs",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "TPE": {
+    "key": "TPE",
+    "name": "桃園機場第一航廈（航廈場景參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88%E5%87%BA%E5%A2%83%E5%A4%A7%E5%BB%B3.jpg/960px-%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88%E5%87%BA%E5%A2%83%E5%A4%A7%E5%BB%B3.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4%E7%AC%AC%E4%B8%80%E8%88%AA%E5%BB%88%E5%87%BA%E5%A2%83%E5%A4%A7%E5%BB%B3.jpg",
+    "credit": "LookJamesWu",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "Railjet": {
+    "key": "Railjet",
+    "name": "ÖBB Railjet／Wien Hbf 月台（車型與車站參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/%C3%96BB_Railjet_at_Wien_Hauptbahnhof.jpg/960px-%C3%96BB_Railjet_at_Wien_Hauptbahnhof.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:%C3%96BB_Railjet_at_Wien_Hauptbahnhof.jpg",
+    "credit": "JIP",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "HEV": {
+    "key": "HEV",
+    "name": "H5 HÉV 列車／Szentendre 車站（參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Szentendre%2C_H%C3%89V_%C3%A1llom%C3%A1s.jpg/960px-Szentendre%2C_H%C3%89V_%C3%A1llom%C3%A1s.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Szentendre%2C_H%C3%89V_%C3%A1llom%C3%A1s.jpg",
+    "credit": "Christo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "GubalowkaRail": {
+    "key": "GubalowkaRail",
+    "name": "Gubałówka 登山纜車（歷史車輛照片參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Zakopane_-_skiing_(86).JPG/960px-Zakopane_-_skiing_(86).JPG",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Zakopane_-_skiing_(86).JPG",
+    "credit": "Jonathanawhite",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Kuznice": {
+    "key": "Kuznice",
+    "name": "Kuźnice 纜車下站（站體參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Zakopane_Kuznice_dolna_stacja_2.jpg/960px-Zakopane_Kuznice_dolna_stacja_2.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Zakopane_Kuznice_dolna_stacja_2.jpg",
+    "credit": "Andrzej Otrębski",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "Gulyas": {
+    "key": "Gulyas",
+    "name": "Gulyás 匈牙利燉牛肉湯（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Guly%C3%A1s_soup.jpg/960px-Guly%C3%A1s_soup.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Guly%C3%A1s_soup.jpg",
+    "credit": "Top Budapest",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "Paprikash": {
+    "key": "Paprikash",
+    "name": "Paprikás csirke 紅椒燉雞（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Paprikahuhn.jpg/960px-Paprikahuhn.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Paprikahuhn.jpg",
+    "credit": "Kobako",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/"
+  },
+  "Halusky": {
+    "key": "Halusky",
+    "name": "Bryndzové halušky 羊乳起司麵疙瘩（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bryndzov%C3%A9_halu%C5%A1ky_so_slaninou.jpg/960px-Bryndzov%C3%A9_halu%C5%A1ky_so_slaninou.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Bryndzov%C3%A9_halu%C5%A1ky_so_slaninou.jpg",
+    "credit": "Gregory finster",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Pierogi": {
+    "key": "Pierogi",
+    "name": "Pierogi 波蘭餃子（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/20250426_Pierogi.jpg/960px-20250426_Pierogi.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:20250426_Pierogi.jpg",
+    "credit": "Rakoon",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Bigos": {
+    "key": "Bigos",
+    "name": "Bigos 燉酸菜肉（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Bigos_in_bread.jpg/960px-Bigos_in_bread.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Bigos_in_bread.jpg",
+    "credit": "Ratoncito Perez",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Schnitzel": {
+    "key": "Schnitzel",
+    "name": "Wiener Schnitzel 維也納炸肉排（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Wiener_Schnitzel.jpg/960px-Wiener_Schnitzel.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Wiener_Schnitzel.jpg",
+    "credit": "Leipnizkeks",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "Tafelspitz": {
+    "key": "Tafelspitz",
+    "name": "Tafelspitz 水煮牛肉（餐點參考）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tafelspitz_of_veal%2C_Vienna.jpg/960px-Tafelspitz_of_veal%2C_Vienna.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Tafelspitz_of_veal%2C_Vienna.jpg",
+    "credit": "Gerda Arendt",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Presov": {
+    "key": "Presov",
+    "name": "Prešov 冬季市景（途經城市參考，不另加停留）",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Presov10Slovakia31.JPG/960px-Presov10Slovakia31.JPG",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Presov10Slovakia31.JPG",
+    "credit": "Ing. Mgr. Jozef Kotulič",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+  },
+  "Changi": {
+    "key": "Changi",
+    "name": "樟宜機場候機區（場景參考）",
+    "image": "https://changiairport.scene7.com/is/image/changiairport/THA%20photo%3A7by5?hei=679&qlt=85%2C0&resMode=sharp2&wid=950",
+    "imageSource": "https://www.changiairport.com/en/corporate/our-media-hub/publications/changi-journeys.how-changi-creates-a-safe-but-positive-transit-experience.2020.changi-experience.html",
+    "credit": "Changi Airport"
+  },
+  "Keleti": {
+    "key": "Keleti",
+    "name": "Budapest-Keleti 車站外觀（車站參考）",
+    "image": "https://bkk.hu/static/content/2025/08/keletipu_2.webp",
+    "imageSource": "https://bkk.hu/hirek/2025/08/expresszvillamossal-es-jaratsuritesekkel-segiti-a-bkk-a-kozlekedoket-a-keleti-palyaudvar-lezarasa-idejen.15164/",
+    "credit": "BKK"
+  },
+  "ICBudapest": {
+    "key": "ICBudapest",
+    "name": "InterContinental Budapest 外觀",
+    "image": "https://cdn.prod.website-files.com/64d62cbfcfb74dd7d238dcf7/693ac8ba53893abcd8be054d_InterContinental%20Budapest_exterior_small.jpg",
+    "imageSource": "https://www.budapest.intercontinental.com/en/home",
+    "credit": "InterContinental Budapest"
+  },
+  "Panorama": {
+    "key": "Panorama",
+    "name": "Hotel Panorama 冬季外觀",
+    "image": "https://cdn.prod.website-files.com/66fad8b9c90f9ed155a02ce0/6714d46dd76a8f4aa37af8f6_DSC09189.webp",
+    "imageSource": "https://www.hotelpanorama.sk/",
+    "credit": "Hotel Panorama"
+  },
+  "Cristina": {
+    "key": "Cristina",
+    "name": "Aparthotel Cristina 外觀",
+    "image": "https://wa-uploads.profitroom.com/aparthotelcristina/580x460/17792725148316_dsc8178.jpg",
+    "imageSource": "https://aparthotelcristina.pl/en",
+    "credit": "Aparthotel Cristina"
+  },
+  "HIKrakow": {
+    "key": "HIKrakow",
+    "name": "Holiday Inn Krakow City Centre 外觀",
+    "image": "https://digital.ihg.com/is/image/ihg/holiday-inn-krakow-4037544566-2x1?wid=960",
+    "imageSource": "https://www.ihg.com/holidayinn/hotels/us/en/krakow/krkcc/hoteldetail",
+    "credit": "IHG"
+  },
+  "ICVienna": {
+    "key": "ICVienna",
+    "name": "InterContinental Vienna 外觀",
+    "image": "https://digital.ihg.com/is/image/ihg/intercontinental-vienna-6114070505-16x9?wid=960",
+    "imageSource": "https://www.ihg.com/intercontinental/hotels/us/en/vienna/vieha/hoteldetail",
+    "credit": "IHG"
+  },
+  "Moskole": {
+    "key": "Moskole",
+    "name": "Moskole 高地馬鈴薯餅（餐點參考）",
+    "image": "https://www.dietamojapasja.com/wp-content/uploads/2021/10/Moskole-przepis-768x576.jpg",
+    "imageSource": "https://www.dietamojapasja.com/2021/10/moskole-przepis.html",
+    "credit": "Dieta Moja Pasja"
+  },
+  "Poprad": {
+    "key": "Poprad",
+    "name": "Poprad 冬季市景（途經城市參考，不另加停留）",
+    "image": "https://www.visitpoprad.sk/wp-content/uploads/2020/07/0Q2A7870-1200x800.jpg",
+    "imageSource": "https://www.visitpoprad.sk/tipy-na-vylety-v-zime/",
+    "credit": "Visit Poprad"
+  }
+};
+TRIP_DATA.timelinePhotoRefs = {
+  "2/3": {
+    "TR867": [
+      "Scoot"
+    ],
+    "抵達樟宜機場": [
+      "Changi"
+    ],
+    "轉機整理": [
+      "Changi"
+    ],
+    "休息／前往候機區": [
+      "Changi"
+    ],
+    "TR60": [
+      "Scoot"
+    ]
+  },
+  "2/4": {
+    "抵達 Vienna VIE／入境領行李": [
+      "VIE"
+    ],
+    "Flughafen Wien Bahnhof → Wien Hbf": [
+      "Railjet"
+    ],
+    "Wien Hbf 站內午餐／休息": [
+      "Railjet"
+    ],
+    "確認月台／車廂／準備上車": [
+      "Railjet"
+    ],
+    "Wien Hbf → Budapest-Keleti｜ÖBB RJX 63 已購票": [
+      "Railjet"
+    ],
+    "Budapest-Keleti → InterContinental Budapest（布達佩斯洲際酒店）": [
+      "Keleti",
+      "ICBudapest"
+    ],
+    "入住／休息／補水": [
+      "ICBudapest"
+    ],
+    "晚餐／河岸散步（選擇性）": [
+      "ChainBridge"
+    ]
+  },
+  "2/5": {
+    "飯店 → Batthyány tér": [
+      "Batthyany"
+    ],
+    "H5 → Szentendre": [
+      "HEV"
+    ],
+    "午餐｜匈牙利家常菜": [
+      "Gulyas"
+    ],
+    "Szentendre → Batthyány tér": [
+      "HEV"
+    ],
+    "前往 Buda Castle 區": [
+      "Buda Castle"
+    ],
+    "晚餐｜城堡區就近用餐": [
+      "Paprikash"
+    ],
+    "城堡區 → 多瑙河遊船碼頭": [
+      "DanubeCruise"
+    ],
+    "遊船報到／登船緩衝": [
+      "DanubeCruise"
+    ],
+    "返回 InterContinental Budapest／休息": [
+      "ICBudapest"
+    ]
+  },
+  "2/6": {
+    "SIXT Budapest Chain Bridge 取車｜已預訂": [
+      "ICBudapest"
+    ],
+    "Budapest → Košice": [
+      "Kosice"
+    ],
+    "Košice → Prešov → Poprad": [
+      "Presov",
+      "Poprad"
+    ],
+    "Poprad → Štrbské Pleso": [
+      "Strbske"
+    ],
+    "Hotel Panorama（全景酒店）": [
+      "Panorama"
+    ],
+    "晚餐｜斯洛伐克山區料理": [
+      "Halusky"
+    ]
+  },
+  "2/7": {
+    "Štrbské Pleso → Zakopane": [
+      "Krupowki"
+    ],
+    "午餐｜波蘭高塔特拉料理": [
+      "Moskole"
+    ],
+    "停車／前往 Gubałówka 下站": [
+      "GubalowkaRail"
+    ],
+    "前往 Aparthotel Cristina（克莉絲蒂娜公寓酒店）": [
+      "Cristina"
+    ],
+    "入住、與朋友會合／晚餐": [
+      "Cristina",
+      "Pierogi"
+    ]
+  },
+  "2/8": {
+    "飯店 → Kuźnice": [
+      "Kuznice"
+    ],
+    "報到／候車": [
+      "Kuznice"
+    ],
+    "下山並返回 Zakopane": [
+      "Kuznice"
+    ],
+    "午餐｜波蘭高塔特拉料理": [
+      "Moskole"
+    ],
+    "報到／裝備／安全說明": [
+      "Snowmobile"
+    ],
+    "晚餐｜波蘭山地料理": [
+      "Pierogi"
+    ]
+  },
+  "2/9": {
+    "Zakopane → Kraków": [
+      "MainMarket"
+    ],
+    "飯店停車／寄放行李": [
+      "HIKrakow"
+    ],
+    "簡單午餐＋步行至 Wawel": [
+      "Pierogi"
+    ],
+    "晚餐｜克拉科夫經典菜": [
+      "Bigos"
+    ]
+  },
+  "2/10": {
+    "服務區午餐／駕駛休息": [
+      "Gulyas"
+    ],
+    "繼續前往 Budapest": [
+      "ChainBridge"
+    ],
+    "SIXT Budapest Keleti Train Station 還車準備": [
+      "Keleti"
+    ]
+  },
+  "2/11": {
+    "前往 Central Market Hall": [
+      "CentralMarket"
+    ],
+    "午餐｜布達佩斯經典菜": [
+      "Gulyas"
+    ],
+    "前往 Batthyány tér": [
+      "Batthyany"
+    ],
+    "前往 Chain Bridge": [
+      "ChainBridge"
+    ],
+    "晚餐｜匈牙利經典菜": [
+      "Paprikash"
+    ]
+  },
+  "2/12": {
+    "退房並前往 Budapest-Keleti": [
+      "Keleti"
+    ],
+    "Budapest → Wien Hbf": [
+      "Railjet"
+    ],
+    "Wien Hbf → InterContinental Vienna（維也納洲際酒店）": [
+      "ICVienna"
+    ],
+    "寄放行李／午餐／休息": [
+      "ICVienna",
+      "Schnitzel"
+    ],
+    "晚餐／返回飯店": [
+      "Tafelspitz"
+    ]
+  },
+  "2/13": {
+    "飯店 → Schönbrunn": [
+      "Schonbrunn"
+    ],
+    "午餐": [
+      "Schnitzel"
+    ],
+    "前往 Belvedere": [
+      "Belvedere"
+    ],
+    "前往 Hofburg": [
+      "Hofburg"
+    ],
+    "晚餐／自由活動": [
+      "Tafelspitz"
+    ]
+  },
+  "2/14": {
+    "起床、退房與行李確認": [
+      "ICVienna"
+    ],
+    "預約車：飯店 → VIE": [
+      "VIE"
+    ],
+    "報到／托運／安檢／出境": [
+      "VIE"
+    ],
+    "TR61": [
+      "Scoot"
+    ]
+  },
+  "2/15": {
+    "抵達 Singapore SIN": [
+      "Changi"
+    ],
+    "TR874": [
+      "Scoot"
+    ],
+    "抵達桃園 TPE": [
+      "TPE"
+    ]
+  }
+};
