@@ -66,6 +66,25 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 .check-status.booked{background:var(--green);color:#1b6c47}
 
 .mobility-chips{margin:10px 0 13px}.mobility-label{font-size:11px;color:#667085;font-weight:800;margin-top:10px}.mobility-chip{text-decoration:none;border:1px solid #cbd5e1;line-height:1.5;max-width:100%;white-space:normal}.mobility-chip:focus-visible{outline:3px solid #3157d6;outline-offset:3px}.mobility-buy,.mobility-extra{background:#fff4d6;color:#795300;border-color:#efd18c}.mobility-road{background:#eef3ff;color:#2948a8;border-color:#c7d3f3}.mobility-booked{background:#eaf8f0;color:#17623f;border-color:#b5dfc8}.mobility-optional{background:#f0f5fa;color:#42576e}.mobility-none{background:#f4f5f7;color:#667085}.mobility-grid{padding:0 14px}.mobility-day{display:grid;grid-template-columns:65px 1fr 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line);scroll-margin-top:180px}.mobility-day:first-child{border-top:0}.mobility-date{font-size:14px;font-weight:900;color:#2948a8;text-decoration:none}.mobility-day h4{font-size:11px;color:#667085;margin:0 0 6px}.mobility-row{margin:0 0 9px;font-size:12px}.mobility-row:last-child{margin-bottom:0}.mobility-row .chip{display:inline-block;margin-bottom:4px}.mobility-row p{margin:0;line-height:1.7;color:#4b5563}.mobility-item{padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.mobility-item:last-child{border-bottom:0}.mobility-item p{margin:5px 0}.mobility-item .badge{margin-left:6px}.mobility-unit{font-size:11px;color:#667085}.mobility-purchases{padding:10px 12px;background:#f8faff;border:1px solid #e0e7f2;border-radius:12px;margin:10px 0}.mobility-purchases h4{margin:0 0 4px}.mobility-purchases ul{margin:5px 0;padding-left:18px}.mobility-purchases li{font-size:12px;line-height:1.8;margin:5px 0}#transport-passes{scroll-margin-top:180px}@media(max-width:600px){.mobility-day{grid-template-columns:1fr;gap:9px}.mobility-date{padding:2px 0}.mobility-grid{padding:0 13px}.mobility-day h4{margin-bottom:5px}}
+
+/* Daily date navigation and attraction photos */
+.sticky-tools{top:var(--header-height,74px)}
+.day-tabs{display:flex;gap:7px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding:9px 1px 4px;scroll-padding-inline:8px}
+.day-tabs[hidden]{display:none}
+.day-tabs a{flex:none;min-height:42px;display:flex;align-items:center;gap:5px;padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:11px;text-decoration:none;font-size:13px;font-weight:800;touch-action:manipulation;white-space:nowrap}
+.day-tabs a small{font-size:11px;font-weight:500;color:var(--muted)}
+.day-tabs a[aria-current="page"]{background:var(--accent);border-color:var(--accent);color:white;box-shadow:0 3px 9px #3157d626}
+.day-tabs a[aria-current="page"] small{color:#e6ecff}
+.day-tabs a:focus-visible{outline:3px solid #91a7ff;outline-offset:2px}
+.timeline-media{margin:0 55px 14px 95px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;min-width:0}
+.timeline-photo{margin:0;min-width:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#f6f8fb}
+.timeline-photo>a{display:block}.timeline-photo img{width:100%;height:210px;object-fit:cover;display:block;background:#e4e8ee}
+.timeline-photo figcaption{display:flex;justify-content:space-between;gap:8px;align-items:baseline;padding:7px 9px;font-size:11px;color:var(--muted)}
+.timeline-photo figcaption a{font-size:10px;white-space:nowrap;text-underline-offset:2px}
+.timeline-photo.photo-unavailable>a{display:none}.photo-unavailable figcaption::before{content:'照片暫時無法載入';color:#667085}
+.photo-unavailable .photo-name{display:none}
+@media(max-width:600px){.day-tabs{gap:6px;padding-top:7px}.day-tabs a{padding:8px 10px;min-height:40px}.timeline-media{margin-left:76px;margin-right:0;grid-template-columns:minmax(0,1fr)}.timeline-photo img{height:auto;aspect-ratio:4/3}.timeline-photo figcaption{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -78,7 +97,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
 <main>
   <div class="sticky-tools"><div class="tabs" id="tabs">
     <button data-view="overview" class="active">總覽</button><button data-view="days">每日</button><button data-view="places">景點</button><button data-view="photo-map">攝影機位</button><button data-view="logistics">交通／住宿</button><button data-view="guide">文化／遊記</button><button data-view="checklist">清單</button>
-  </div></div>
+  </div><nav id="dayTabs" class="day-tabs" aria-label="每日日期分頁" hidden></nav></div>
 
   <section id="overview" class="view">
     <div class="card summary">
@@ -160,12 +179,13 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=krakow-20261101"></script>
+<script src="trip-data.js?v=daily-photos-20261105"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 let currentView='overview';
+let selectedDay=0;
 const attractionZh=[['Fisherman’s Bastion','漁人堡'],["Fisherman's Bastion",'漁人堡'],['Matthias Church','馬提亞斯教堂'],['Szentendre','聖安德烈'],['Buda Castle','布達城堡'],['Jaszczurówka','亞斯楚羅夫卡'],['Gubałówka','古巴沃夫卡山'],['Krupówki','克魯波夫基街'],['Kasprowy Wierch','卡斯普羅維峰'],['Snowmobile','雪地摩托車'],['Wawel Cathedral','瓦維爾主教座堂'],['Wawel Castle','瓦維爾城堡'],['Wawel','瓦維爾'],['Kanonicza Street','卡諾尼察街'],['Grodzka Street','格羅茲卡街'],['Main Market Square','中央集市廣場'],['Cloth Hall','紡織會館'],["St Mary’s Basilica",'聖母聖殿'],["St Mary’s",'聖母聖殿'],['Central Market Hall','中央市場大廳'],['Central Market','中央市場'],['Hungarian Parliament','匈牙利國會大廈'],['Parliament','國會大廈'],['Shoes on the Danube','多瑙河畔之鞋'],['St. Stephen’s Basilica','聖史蒂芬大教堂'],['Basilica','大教堂'],['Chain Bridge','塞切尼鏈橋'],['Schönbrunn Palace','熊布朗宮'],['Schönbrunn','熊布朗宮'],['Belvedere Palace','美景宮'],['Belvedere','美景宮'],['Hofburg','霍夫堡皇宮'],['Stephansdom','聖史蒂芬主教座堂'],['Graben','格拉本大街'],['Kohlmarkt','科爾市場街'],['Štrbské Pleso','斯特爾布斯克湖區'],['Batthyány tér','巴蒂亞尼廣場'],['Váci utca','瓦茨街'],['Danube','多瑙河'],['Old Town','老城區'],['Cathedral','主教座堂'],['Zakopane','扎科帕內'],['Kraków','克拉科夫']];
 const attractionPattern=new RegExp(attractionZh.map(([en])=>en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|'),'g');
 const attractionChinese=new Map(attractionZh);
@@ -175,11 +195,13 @@ function scrollNow(top){document.scrollingElement.scrollTop=top;}
 function go(view, scroll=true, updateHash=true){
   if(!document.getElementById(view)) return;
   currentView=view;
+  $('#dayTabs').hidden=view!=='days';
+  if(view==='days')syncDayTabs();
   $$('.view').forEach(v=>v.classList.toggle('hidden',v.id!==view));
   $$('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
   $$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b.dataset.goto===view));
   $$('#tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
-  if(updateHash) history.replaceState(null,'','#'+view);
+  if(updateHash) history.replaceState(null,'',view==='days'&&selectedDay?'#day-'+selectedDay:'#'+view);
   if(scroll && view!=='overview') scrollNow(0);
   if(view==='photo-map') ensurePhotoMap();
 }
@@ -312,9 +334,48 @@ $('#dayList').addEventListener('click',e=>{
   const button=e.target.closest('[data-timeline-action]');if(!button)return;
   button.closest('.day-card').querySelectorAll('details[data-timeline-key]').forEach(item=>{item.open=button.dataset.timelineAction==='expand';rememberTimeline(item)});
 });
+
+function renderDayTabs(){
+  $('#dayTabs').innerHTML='<a href="#days" data-all-days>全部</a>'+D.days.map((d,i)=>'<a href="#day-'+(i+1)+'" data-day-link="'+(i+1)+'" aria-label="'+esc(d.date)+'（'+esc(d.weekday)+'） '+esc(d.city)+'">'+esc(d.date)+'<small>'+esc(d.weekday)+'</small></a>').join('');
+  syncDayTabs();
+}
+function syncDayTabs(){
+  $$('#dayTabs a').forEach(a=>{const active=a.hasAttribute('data-all-days')?selectedDay===0:Number(a.dataset.dayLink)===selectedDay;if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  const active=$('#dayTabs [aria-current="page"]');
+  if(active){const nav=$('#dayTabs');const left=active.offsetLeft-nav.offsetLeft;if(left<nav.scrollLeft)nav.scrollLeft=left-5;else if(left+active.offsetWidth>nav.scrollLeft+nav.clientWidth)nav.scrollLeft=left+active.offsetWidth-nav.clientWidth+5}
+}
+function updateHeaderHeight(){document.documentElement.style.setProperty('--header-height',document.querySelector('header').offsetHeight+'px')}
+updateHeaderHeight();
+if('ResizeObserver' in window)new ResizeObserver(updateHeaderHeight).observe(document.querySelector('header'));
+else window.addEventListener('resize',updateHeaderHeight);
+const dailyPhotoAliases={
+  Szentendre:['Szentendre'], 'Buda Castle':['Buda Castle','城堡區藍調'], 'Matthias Church':['Matthias Church'],
+  "Fisherman's Bastion":["Fisherman's Bastion","Fisherman’s Bastion"],Gubalowka:['Gubałówka'],Krupowki:['Krupówki'],
+  Kasprowy:['Kasprowy Wierch'],Jaszczurowka:['Jaszczurówka'],Snowmobile:['Snowmobile'],
+  Wawel:['Wawel Castle','Wawel Hill'],WawelCathedral:['Wawel Cathedral'],Kanonicza:['Kanonicza'],Grodzka:['Grodzka'],
+  MainMarket:['Main Market Square','Kraków Old Town 夜景'],ClothHall:['Cloth Hall'],StMary:['St Mary’s'],
+  CentralMarket:['Central Market'],Vaci:['Váci'],Basilica:['St. Stephen’s Basilica'],Parliament:['Hungarian Parliament'],
+  Shoes:['Shoes on the Danube'],Batthyany:['Batthyány tér'],ChainBridge:['Chain Bridge','Budapest 夜景'],
+  Schonbrunn:['Schönbrunn'],Belvedere:['Belvedere'],Hofburg:['Hofburg'],Stephansdom:['Stephansdom'],Graben:['Graben'],Kohlmarkt:['Kohlmarkt'],DanubeCruise:['多瑙河夜景遊船']
+};
+const extraDailyPhotos={
+  Grodzka:{key:'Grodzka',name:'格羅茲卡街',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Grodzka%20street%2C%20view%20to%20N%2C%20Old%20Town%2C%20Krakow%2C%20Poland.jpg',imageSource:'https://commons.wikimedia.org/wiki/File:Grodzka_street,_view_to_N,_Old_Town,_Krakow,_Poland.jpg'},
+  Batthyany:{key:'Batthyany',name:'巴蒂亞尼廣場河岸',image:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Budapest%2C%20Batthy%C3%A1ny%20t%C3%A9r%2C%20Duna-part.jpg',imageSource:'https://commons.wikimedia.org/wiki/File:Budapest,_Batthyány_tér,_Duna-part.jpg'}
+};
+const dailyPhotoOverrides={"Szentendre":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg/960px-Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg","source":"https://commons.wikimedia.org/wiki/File:Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg"},"Buda Castle":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Buda_Castle.jpg/960px-Buda_Castle.jpg","source":"https://commons.wikimedia.org/wiki/File:Buda_Castle.jpg"},"Matthias Church":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Matthias_Church_%286001573321%29.jpg/960px-The_Matthias_Church_%286001573321%29.jpg","source":"https://commons.wikimedia.org/wiki/File:The_Matthias_Church_%286001573321%29.jpg"},"Fisherman's Bastion":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Fisherman_s_Bastion.jpg/960px-Fisherman_s_Bastion.jpg","source":"https://commons.wikimedia.org/wiki/File:Fisherman_s_Bastion.jpg"},"Strbske":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Strbske_pleso.jpg/960px-Strbske_pleso.jpg","source":"https://commons.wikimedia.org/wiki/File:Strbske_pleso.jpg"},"Gubalowka":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Zakopane_Gubalowka_dron_%282%29.jpg/960px-Zakopane_Gubalowka_dron_%282%29.jpg","source":"https://commons.wikimedia.org/wiki/File:Zakopane_Gubalowka_dron_%282%29.jpg"},"Krupowki":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Zakopane_krup%C3%B3wki.jpg/960px-Zakopane_krup%C3%B3wki.jpg","source":"https://commons.wikimedia.org/wiki/File:Zakopane_krup%C3%B3wki.jpg"},"Kasprowy":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kasprowy_Wierch.jpg/960px-Kasprowy_Wierch.jpg","source":"https://commons.wikimedia.org/wiki/File:Kasprowy_Wierch.jpg"},"Jaszczurowka":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg/960px-Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","source":"https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg"},"Snowmobile":{"src":"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","source":"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg"},"Wawel":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Wawel_Castle_in_Krakow.jpg/960px-Wawel_Castle_in_Krakow.jpg","source":"https://commons.wikimedia.org/wiki/File:Wawel_Castle_in_Krakow.jpg"},"WawelCathedral":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Wawel_Cathedral%2C_Krak%C3%B3w.JPG/960px-Wawel_Cathedral%2C_Krak%C3%B3w.JPG","source":"https://commons.wikimedia.org/wiki/File:Wawel_Cathedral%2C_Krak%C3%B3w.JPG"},"Kanonicza":{"src":"https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/483af9109628805.5fd851b49452b.jpg","source":"https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/483af9109628805.5fd851b49452b.jpg"},"MainMarket":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Krakow_Main_Square_%288125539580%29.jpg/960px-Krakow_Main_Square_%288125539580%29.jpg","source":"https://commons.wikimedia.org/wiki/File:Krakow_Main_Square_%288125539580%29.jpg"},"StMary":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg/960px-Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg","source":"https://commons.wikimedia.org/wiki/File:Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg"},"ClothHall":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Krak%C3%B3w_-_Sukiennice_%26_Wie%C5%BCa_Ratuszowa.jpg/960px-Krak%C3%B3w_-_Sukiennice_%26_Wie%C5%BCa_Ratuszowa.jpg","source":"https://commons.wikimedia.org/wiki/File:Krak%C3%B3w_-_Sukiennice_%26_Wie%C5%BCa_Ratuszowa.jpg"},"Parliament":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HungarianParliamentBuilding.jpg/960px-HungarianParliamentBuilding.jpg","source":"https://commons.wikimedia.org/wiki/File:HungarianParliamentBuilding.jpg"},"Shoes":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hungary-02400_-_Shoes_on_the_Danube_%2832460224482%29.jpg/960px-Hungary-02400_-_Shoes_on_the_Danube_%2832460224482%29.jpg","source":"https://commons.wikimedia.org/wiki/File:Hungary-02400_-_Shoes_on_the_Danube_%2832460224482%29.jpg"},"Basilica":{"src":"https://www.obletsvet.sk/images/e4c7ca00-75ba-419c-968c-76d85b2f7d50/bazilika-svateho-stepena--1080x1080.jpg","source":"https://www.obletsvet.sk/images/e4c7ca00-75ba-419c-968c-76d85b2f7d50/bazilika-svateho-stepena--1080x1080.jpg"},"Vaci":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/V%C3%A1ci_utca.jpg/960px-V%C3%A1ci_utca.jpg","source":"https://commons.wikimedia.org/wiki/File:V%C3%A1ci_utca.jpg"},"CentralMarket":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Central_Market_Hall_Budapest_1.jpg/960px-Central_Market_Hall_Budapest_1.jpg","source":"https://commons.wikimedia.org/wiki/File:Central_Market_Hall_Budapest_1.jpg"},"ChainBridge":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Chain_Bridge_in_Budapest.jpg/960px-Chain_Bridge_in_Budapest.jpg","source":"https://commons.wikimedia.org/wiki/File:Chain_Bridge_in_Budapest.jpg"},"Belvedere":{"src":"https://images.gowithguide.com/gowithguide/cities/4501/101127.jpg","source":"https://images.gowithguide.com/gowithguide/cities/4501/101127.jpg"},"Hofburg":{"src":"https://images.musement.com/cover/0165/16/thumb_16415080_cover_header.jpg","source":"https://images.musement.com/cover/0165/16/thumb_16415080_cover_header.jpg?fit=crop&h=630&q=95&w=1200"},"DanubeCruise":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HungarianParliamentBuilding.jpg/960px-HungarianParliamentBuilding.jpg","source":"https://commons.wikimedia.org/wiki/File:HungarianParliamentBuilding.jpg"},"Schonbrunn":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Sch%C3%B6nbrunn_Palace%2C_Front%2C_August_2021_03.jpg/960px-Sch%C3%B6nbrunn_Palace%2C_Front%2C_August_2021_03.jpg","source":"https://commons.wikimedia.org/wiki/File:Sch%C3%B6nbrunn_Palace%2C_Front%2C_August_2021_03.jpg"},"Stephansdom":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/960px-Wien_-_Stephansdom_%281%29.JPG","source":"https://commons.wikimedia.org/wiki/File:Wien_-_Stephansdom_%281%29.JPG"},"Graben":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Wien_-_Graben_%282%29.jpg/960px-Wien_-_Graben_%282%29.jpg","source":"https://commons.wikimedia.org/wiki/File:Wien_-_Graben_%282%29.jpg"},"Kohlmarkt":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wien_Kohlmarkt.jpg/960px-Wien_Kohlmarkt.jpg","source":"https://commons.wikimedia.org/wiki/File:Wien_Kohlmarkt.jpg"},"Grodzka":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Grodzka_street%2C_view_to_N%2C_Old_Town%2C_Krakow%2C_Poland.jpg/960px-Grodzka_street%2C_view_to_N%2C_Old_Town%2C_Krakow%2C_Poland.jpg","source":"https://commons.wikimedia.org/wiki/File:Grodzka_street%2C_view_to_N%2C_Old_Town%2C_Krakow%2C_Poland.jpg"},"Batthyany":{"src":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Budapest%2C_Batthy%C3%A1ny_t%C3%A9r%2C_Duna-part.jpg/960px-Budapest%2C_Batthy%C3%A1ny_t%C3%A9r%2C_Duna-part.jpg","source":"https://commons.wikimedia.org/wiki/File:Budapest%2C_Batthy%C3%A1ny_t%C3%A9r%2C_Duna-part.jpg"}};
+function timelinePhotoPlaces(d,x){
+  if(!['place','photo','cruise','adventure'].includes(x[1]))return [];
+  return Object.entries(dailyPhotoAliases).filter(([key,aliases])=>aliases.some(alias=>x[2].includes(alias))).map(([key])=>extraDailyPhotos[key]||D.places.find(p=>p.key===key)).filter(Boolean);
+}
+function renderTimelinePhotos(d,x){
+  const places=timelinePhotoPlaces(d,x);if(!places.length)return '';
+  return '<div class="timeline-media">'+places.map(p=>{const photo=dailyPhotoOverrides[p.key]||{src:p.image,source:p.imageSource||p.image};const caption=p.key==='DanubeCruise'?'遊船沿途國會大廈景色參考':p.name;return '<figure class="timeline-photo"><a href="'+esc(photo.src)+'" target="_blank" rel="noopener" aria-label="查看'+esc(caption)+'大圖"><img src="'+esc(photo.src)+'" alt="'+esc(caption)+'" loading="lazy" decoding="async" width="960" height="640"></a><figcaption><span class="photo-name">'+esc(caption)+'</span><a href="'+esc(photo.source)+'" target="_blank" rel="noopener">照片來源 ↗</a></figcaption></figure>'}).join('')+'</div>';
+}
+$('#dayList').addEventListener('error',e=>{if(e.target.matches('.timeline-photo img'))e.target.closest('figure').classList.add('photo-unavailable')},true);
+
 function renderTimelineItem(d,x){
   const key=timelineKey(d,x);
-  return `<details class="item timeline-item" data-timeline-key="${esc(key)}"${collapsedTimeline.has(key)?'':' open'}><summary><span class="time">${esc(x[0])}</span><span class="itype">${esc(localizeAttractions(x[2]))}<span class="badge">${esc(typeLabel(x[1]))}</span>${x[4]?`<span class="duration">${esc(x[4])}</span>`:''}</span><span class="timeline-toggle"><span class="when-open">收合 ▴</span><span class="when-closed">展開 ▾</span></span></summary><div class="detail">${esc(x[3])}</div></details>`;
+  return `<details class="item timeline-item" data-timeline-key="${esc(key)}"${collapsedTimeline.has(key)?'':' open'}><summary><span class="time">${esc(x[0])}</span><span class="itype">${esc(localizeAttractions(x[2]))}<span class="badge">${esc(typeLabel(x[1]))}</span>${x[4]?`<span class="duration">${esc(x[4])}</span>`:''}</span><span class="timeline-toggle"><span class="when-open">收合 ▴</span><span class="when-closed">展開 ▾</span></span></summary><div class="detail">${esc(x[3])}</div>${renderTimelinePhotos(d,x)}</details>`;
 }
 function renderOverviewDayLinks(){
   document.querySelectorAll('[data-overview-dates]').forEach(el=>{
@@ -324,7 +385,7 @@ function renderOverviewDayLinks(){
 }
 function renderDays(q=''){
   const needle=q.trim().toLowerCase();
-  const filtered=D.days.filter(d=>!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date],guideCountries(d.date),guideBlogs(d.date),D.transportGuide?.days?.[d.date],mobilitySearch(d.date)]).toLowerCase().includes(needle));
+  const filtered=D.days.filter((d,i)=>(!selectedDay||i+1===selectedDay)&&(!needle || JSON.stringify([d,D.outingAdvice?.days?.[d.date],guideCountries(d.date),guideBlogs(d.date),D.transportGuide?.days?.[d.date],mobilitySearch(d.date)]).toLowerCase().includes(needle)));
   const html=filtered.map((d)=>{
     const n=D.days.indexOf(d)+1;
     return `<article class="card day-card" id="day-${n}">
@@ -342,6 +403,7 @@ function renderDays(q=''){
       <div class="notes">${d.notes.map(x=>`<div>• ${esc(x)}</div>`).join('')}</div>
       ${d.sources?.length?guideSources(d.sources):''}${photoDayButton(d.date)}</div></article>`;
   }).join('');
+  syncDayTabs();
   $('#dayList').innerHTML=filtered.length?html:`<div class="card empty">找不到符合條件的行程。</div>`;
 }
 function renderPlaces(q=''){
@@ -467,7 +529,7 @@ function openPhotoMap({date='',placeKey='',id=''}={}){
 }
 function openDay(n){
   if(!Number.isInteger(n)||n<1||n>D.days.length)return;
-  $('#daySearch').value='';renderDays();go('days',false,false);
+  selectedDay=n;$('#daySearch').value='';renderDays();go('days',false,false);
   history.replaceState(null,'','#day-'+n);
   const target=document.getElementById('day-'+n);
   if(target){const tools=$('.sticky-tools');target.style.scrollMarginTop=(Math.max(document.querySelector('header').offsetHeight,parseFloat(getComputedStyle(tools).top)||0)+tools.offsetHeight+12)+'px';target.scrollIntoView({behavior:'instant',block:'start'})}
@@ -480,7 +542,8 @@ function routeHash(){
   if(hash==='photo-map'){go('photo-map',true,false);return}
   if(hash.startsWith('photo-')){const id=hash.slice(6);if(photoSpots.some(s=>s.id===id)){openPhotoMap({id});return}}
   if(/^day-\d+$/.test(hash)){openDay(Number(hash.slice(4)));return}
-  if(['overview','days','places','logistics','guide','checklist'].includes(hash))go(hash,true,false);
+  if(hash==='days'){selectedDay=0;$('#daySearch').value='';renderDays();go('days',true,false);return}
+  if(['overview','places','logistics','guide','checklist'].includes(hash))go(hash,true,false);
 }
 initPhotoFilters();renderPhotoSpots();
 ['photoCity','photoDate','photoSearch'].forEach(id=>$('#'+id).addEventListener(id==='photoSearch'?'input':'change',()=>{
@@ -491,6 +554,7 @@ $('#photoReset').addEventListener('click',()=>openPhotoMap());
 $('#photoFit').addEventListener('click',fitPhotoMap);
 $('#photoRetry').addEventListener('click',ensurePhotoMap);
 document.addEventListener('click',e=>{
+  const all=e.target.closest('[data-all-days]');if(all){e.preventDefault();selectedDay=0;$('#daySearch').value='';renderDays();go('days');return}
   const mobility=e.target.closest('[data-mobility-date]');if(mobility){e.preventDefault();openMobility(mobility.dataset.mobilityDate);return}
   const day=e.target.closest('[data-photo-date]');if(day){e.preventDefault();openPhotoMap({date:day.dataset.photoDate});return}
   const place=e.target.closest('[data-photo-place]');if(place){e.preventDefault();openPhotoMap({placeKey:place.dataset.photoPlace});return}
@@ -522,15 +586,16 @@ document.addEventListener('click',e=>{
   const nav=e.target.closest('[data-goto]');
   if(nav){ e.preventDefault(); go(nav.dataset.goto); }
 });
-$('#daySearch').addEventListener('input',e=>renderDays(e.target.value));
+$('#daySearch').addEventListener('input',e=>{selectedDay=0;history.replaceState(null,'','#days');renderDays(e.target.value)});
 $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();st[id]=e.target.checked;saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
-initGuide();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderOverviewDayLinks();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=krakow-20261101').catch(()=>{}));}
+initGuide();renderDayTabs();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderOverviewDayLinks();renderChecklist();renderOutingBasics();routeHash();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=daily-photos-20261105').catch(()=>{}));}
 </script>
 </body>
 </html>
+
 
 
 
