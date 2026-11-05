@@ -2434,7 +2434,8 @@ const TRIP_DATA = {
       }
     ],
     "photography": [
-      "城市日帶標準變焦或 X100VI；2/7、2/8 再按拍攝需求加望遠，不必每天背全部器材。",
+      "全程攝影裝備為 X‑T50、X100VI、XF16‑55 II、Sigma 12mm F1.4 與 Sigma 50–120mm F2.8。機身含機內電池與記憶卡，合計約 1,994 g；相機包、背帶、備用電池與濾鏡另計。",
+      "白天以 X‑T50＋XF16‑55 II 為主。城市拍完整建築立面時加帶 Sigma 12mm，上山拍遠峰與山景層次時加帶 Sigma 50–120mm。晚餐、咖啡館或散步可單帶 X100VI。",
       "備用電池放內層口袋保暖，避免裸露金屬接點接觸其他物品；低溫會降低可用容量。",
       "相機從冷處帶進暖室內前，先收妥於相機包或密封袋，逐漸回溫後再取出，減少結露。"
     ],
@@ -2478,7 +2479,7 @@ const TRIP_DATA = {
           "耳塞／眼罩、充電用品",
           "換洗內衣襪放隨身包"
         ],
-        "photo": "移動日以手機或輕便相機為主。",
+        "photo": "移動日以 X100VI 或手機隨手拍。",
         "notes": [
           "抵達日要穿的保暖衣物也放隨身行李，避免下機後才找大行李。"
         ]
@@ -2494,7 +2495,7 @@ const TRIP_DATA = {
           "抵達日衣物、充電用品",
           "水與少量點心"
         ],
-        "photo": "河岸散步用 X100VI 或標準變焦，先以輕便為主。",
+        "photo": "抵達後若去河岸散步或吃晚餐，單帶 X100VI。",
         "notes": [
           "重要證件、衣物與充電用品放容易取用的位置。"
         ]
@@ -2512,7 +2513,7 @@ const TRIP_DATA = {
           "有結冰路況時攜鞋用防滑裝備",
           "遊船電子票、集合碼頭資訊（購票後保存）"
         ],
-        "photo": "標準變焦為主，街拍可用 X100VI；望遠按河岸細節需求帶。",
+        "photo": "X‑T50＋XF16‑55 II 為主。拍馬提亞斯教堂等建築完整立面時，可加帶 Sigma 12mm；晚間散步用 X100VI。",
         "notes": [
           "進室內脫外套或中層，步行時避免穿到流汗。",
           "購票時確認室內保暖與戶外區；船上拍照以手持為主，避免玻璃反光。"
@@ -2529,7 +2530,7 @@ const TRIP_DATA = {
           "手機車架／車充、道路與住宿資料",
           "水、點心、備用保暖衣物"
         ],
-        "photo": "Košice 順拍用標準變焦或輕便相機；貴重物品隨身。",
+        "photo": "X‑T50＋XF16‑55 II 拍 Košice 老城與湖景；若要取 Štrbské Pleso 遠處雪峰，可加帶 Sigma 50–120mm。",
         "notes": [
           "當天要用的保暖衣物不要壓在行李箱最底層。"
         ]
@@ -2545,7 +2546,7 @@ const TRIP_DATA = {
           "備用襪子、暖暖包、相機電池",
           "有結冰路況時攜鞋用簡易冰爪"
         ],
-        "photo": "標準變焦＋選定的望遠鏡頭，兼顧市區、山景與同行者；X100VI 按負重選帶。",
+        "photo": "X‑T50＋XF16‑55 II 拍湖區、山城與全景，Sigma 50–120mm 留給 Gubałówka 的遠山和屋頂層次；晚餐或散步可單帶 X100VI。",
         "notes": [
           "車內可脫外套，Gubałówka 與黃昏街拍再加強保暖。"
         ]
@@ -2562,7 +2563,7 @@ const TRIP_DATA = {
           "鞋用簡易冰爪（按冰面與路線使用）",
           "纜車及活動預約資料、集合聯絡資訊"
         ],
-        "photo": "標準變焦＋按需求選帶望遠；騎乘時相機收包，停車再拍。",
+        "photo": "X‑T50＋XF16‑55 II 拍 Kasprowy 全景，Sigma 50–120mm 拍雪峰細節。騎雪地摩托車時相機收包，停車再拍。",
         "notes": [
           "確認業者提供或租借的雪衣、雪褲、靴子、手套、頭盔及護目鏡。",
           "簡易冰爪不取代陡峭雪山所需裝備與經驗；以當日開放觀景範圍為準。"
@@ -2579,7 +2580,7 @@ const TRIP_DATA = {
           "保溫瓶、備用電池、暖暖包",
           "確定拍夜景才帶腳架"
         ],
-        "photo": "標準變焦為主；街拍與晚餐可改用 X100VI。",
+        "photo": "X‑T50＋XF16‑55 II 為主；近距離拍城堡、教堂完整立面時加帶 Sigma 12mm。晚餐散步可單帶 X100VI。",
         "notes": [
           "入住或寄放行李後減少背包重量，方便老城步行。"
         ]
@@ -2595,7 +2596,7 @@ const TRIP_DATA = {
           "水、點心、加油收據",
           "還車後要隨身帶走的證件與物品"
         ],
-        "photo": "移動日以輕便為主；還車車況紀錄可用手機拍。",
+        "photo": "移動日用 X100VI 或手機隨手拍；還車車況紀錄可用手機拍。",
         "notes": [
           "還車前檢查座椅下、門邊置物格、後廂及所有充電線。"
         ]
@@ -2611,7 +2612,7 @@ const TRIP_DATA = {
           "手套、帽子、脖圍",
           "確定長曝光夜拍才帶腳架"
         ],
-        "photo": "標準變焦／X100VI；想拍國會立面局部時加望遠。",
+        "photo": "X‑T50＋XF16‑55 II 拍河岸與建築全景。近距離拍完整立面可加帶 Sigma 12mm；若主拍對岸國會細節，選帶 Sigma 50–120mm。",
         "notes": [
           "步行與靜止拍照的保暖需求不同，等藍調時刻前先加衣。"
         ]
@@ -2626,7 +2627,7 @@ const TRIP_DATA = {
           "火車票、座位與飯店資料",
           "水、點心、行動電源與充電線"
         ],
-        "photo": "傍晚以 X100VI 或標準變焦為主，減少轉城市時的負重。",
+        "photo": "X‑T50＋XF16‑55 II 為主；近距離拍聖史蒂芬主教座堂完整立面時加帶 Sigma 12mm。晚餐散步可單帶 X100VI。",
         "notes": [
           "上車要用的物品先放小包，不必一路打開大行李。"
         ]
@@ -2641,7 +2642,7 @@ const TRIP_DATA = {
           "宮殿門票、輕便背包",
           "水、備用電池、帽子與手套"
         ],
-        "photo": "標準變焦為主；超廣角按建築需求選帶，遵守各參觀區拍攝規範。",
+        "photo": "X‑T50＋XF16‑55 II 為主；拍宮殿完整立面且站位受限時用 Sigma 12mm。遵守各參觀區拍攝規範。",
         "notes": [
           "依票券／展館規定確認背包與寄物安排。"
         ]
@@ -3403,7 +3404,7 @@ const TRIP_DATA = {
     "lng": 19.0404,
     "direction": "在城堡面向多瑙河的觀景區，往東北拍鏈橋與佩斯河岸。",
     "time": "原行程下午",
-    "lens": "XF16–55mm；長焦拍河岸細節",
+    "lens": "XF16–55mm；Sigma 50–120mm拍河岸細節",
     "note": "標記為東側觀景區約略位置；施工圍籬或入口開放以現場為準。",
     "source": "https://www.budapestinfo.hu/"
   },
@@ -3439,7 +3440,7 @@ const TRIP_DATA = {
     "lng": 19.0345,
     "direction": "沿面向多瑙河的拱廊，往東至東北以石拱框住國會大廈。",
     "time": "下午／藍調時刻",
-    "lens": "XF16–55mm；長焦拍國會細節",
+    "lens": "XF16–55mm；Sigma 50–120mm拍國會細節",
     "note": "圖釘為拱廊區域；選可合法進入的露台，部分區域可能收費。",
     "source": "https://www.budapestinfo.hu/"
   },
@@ -3458,7 +3459,7 @@ const TRIP_DATA = {
     "lng": 19.0395,
     "direction": "從布達側河岸往東拍國會全貌，以河面作前景。",
     "time": "2/5 順拍；2/11 原行程傍晚",
-    "lens": "XF16–55mm；長焦壓縮立面",
+    "lens": "XF16–55mm；Sigma 50–120mm壓縮立面",
     "note": "2/5 經 Batthyány tér 時可順拍；2/11 原行程也在此拍對岸全景。與 Kossuth Lajos tér 近拍機位不同。",
     "source": "https://www.budapestinfo.hu/"
   },
@@ -3493,7 +3494,7 @@ const TRIP_DATA = {
     "lng": 20.058144,
     "direction": "從南岸往北拍湖面、雪山與湖畔建築；用岸邊樹木作前景。",
     "time": "2/7 早餐前若有餘裕；2/6 視到達天色",
-    "lens": "XF16–55mm；長焦取雪峰",
+    "lens": "XF16–55mm；Sigma 50–120mm取雪峰",
     "note": "2/6 原定傍晚抵達，可能已暗；晨拍不延後 2/7 出發。只走開放步道，不踏上冰湖。",
     "source": "https://www.outdooractive.com/en/poi/slovakia/view-to-the-strbske-pleso-lake/31493722/"
   },
@@ -3530,7 +3531,7 @@ const TRIP_DATA = {
     "lng": 19.933019,
     "direction": "在上站旁面山的觀景步道往南拍 Zakopane 與塔特拉山群峰。",
     "time": "原行程下午",
-    "lens": "XF16–55mm 拍全景；長焦取山峰",
+    "lens": "XF16–55mm 拍全景；Sigma 50–120mm取山峰",
     "note": "圖釘靠近上站，沿面山步道選不被商攤遮擋的位置；不要進入滑雪道。",
     "source": "https://www.sklep.pkl.pl/en/resorts/details%2C4%2Cgubalowka.html"
   },
@@ -3567,7 +3568,7 @@ const TRIP_DATA = {
     "lng": 19.9817,
     "direction": "在上站外開放觀景範圍拍周邊塔特拉群峰，依能見度選方向。",
     "time": "原行程上午",
-    "lens": "XF16–55mm；長焦取雪峰",
+    "lens": "XF16–55mm；Sigma 50–120mm取雪峰",
     "note": "標記為上站周邊，不是稜線登山路線；風雪時服從工作人員指示。",
     "source": "https://mapakasprowy.pkl.pl/203-pkl-jeden-bilet-dwie-atrakcje"
   },
@@ -3847,22 +3848,22 @@ const TRIP_DATA = {
   places: [
     {"key":"Kosice","name":"科西策老城／聖伊莉莎白大教堂","en":"Košice · Hlavná / St. Elisabeth Cathedral","description":"2/6 午餐停靠城市。Hlavná 老城廣場周邊可見聖伊莉莎白大教堂與聖烏爾班塔；只有停車位置及午餐時間允許時才順拍外觀，不另排入內參觀。","day":4,"tag":"午餐停靠／老城外觀","duration":"午餐時視餘裕順拍","lens":"X100VI／16–55mm","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ko%C5%A1ice_-_Hlavn%C3%A1_%28Main_Street%29_-_Hlavn%C3%A9_n%C3%A1mestie_%28Main_Square%29_-_View_of_St_Urban_Tower_and_the_Cathedral_of_Saint_Elisabeth_from_the_city_park_%28December_2025%29.jpg/960px-Ko%C5%A1ice_-_Hlavn%C3%A1_%28Main_Street%29_-_Hlavn%C3%A9_n%C3%A1mestie_%28Main_Square%29_-_View_of_St_Urban_Tower_and_the_Cathedral_of_Saint_Elisabeth_from_the_city_park_%28December_2025%29.jpg","imageSource":"https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_%28Main_Street%29_-_Hlavn%C3%A9_n%C3%A1mestie_%28Main_Square%29_-_View_of_St_Urban_Tower_and_the_Cathedral_of_Saint_Elisabeth_from_the_city_park_%28December_2025%29.jpg","images":["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cathedral_of_St._Elizabeth_in_Ko%C5%A1ice.jpg/960px-Cathedral_of_St._Elizabeth_in_Ko%C5%A1ice.jpg"],"imageSources":["https://commons.wikimedia.org/wiki/File:Cathedral_of_St._Elizabeth_in_Ko%C5%A1ice.jpg"],"map":"https://www.google.com/maps/search/?api=1&query=St+Elisabeth+Cathedral+Kosice"},
     { key:"Szentendre", name:"聖安德烈老城（Szentendre）", en:"Szentendre Old Town", description:"多瑙河畔的巴洛克小鎮，沿巷弄可看彩色立面、藝廊與河岸風景。", day:3, tag:"古城／街拍", duration:"2h", lens:"X100VI／16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/2/2c/Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg", images:["https://panadea.com/images/st4/utazasi-kalauz-utikonyv/hu-szentendre-magyarorszag-panadea-gb-sd-3044681-0065.jpg","https://cdn.borsonline.hu/2025/12/yBvx6_9cvl0n8Zzh9GbtxPn_R47hU7CovRujGy3h8tE/fit/1200/800/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2YwMTEwZTZmYTM2ZTRiNzM5N2RiYmRjNTZjYjBiM2Yw.webp","https://commons.wikimedia.org/wiki/Special:Redirect/file/Szentendre%20l%C3%A1tk%C3%A9p%20a%20Duna%20fel%C5%91l.jpg"], imageSources:["https://www.panadea.com/hu/utazasi-kalauz-utikonyv/europa/magyarorszag/budapest-es-kornyeke/dunakanyar/szentendre/fotogaleria/gal-002","https://www.borsonline.hu/belfoldi-utazas/2026/02/szentendre-latnivaloi-telen-is","https://commons.wikimedia.org/wiki/File:Szentendre_l%C3%A1tk%C3%A9p_a_Duna_fel%C5%91l.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Szentendre+Old+Town" },
-    { key:"Buda Castle", name:"布達城堡", en:"Budavári Palota", description:"布達城堡區俯瞰多瑙河與佩斯市區，可逛庭院並欣賞王宮外觀。", day:3, tag:"城堡／城市景", duration:"1h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Buda%20Castle.jpg", images:["https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg","https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://peika.bg/pictures/89277_715_.jpg"], imageSources:["https://welovebudapest.com/hely/budai-var","https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html"], map:"https://www.google.com/maps/search/?api=1&query=Buda+Castle+Budapest" },
+    { key:"Buda Castle", name:"布達城堡", en:"Budavári Palota", description:"布達城堡區俯瞰多瑙河與佩斯市區，可逛庭院並欣賞王宮外觀。", day:3, tag:"城堡／城市景", duration:"1h", lens:"16–55mm／Sigma 50–120mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Buda%20Castle.jpg", images:["https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg","https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://peika.bg/pictures/89277_715_.jpg"], imageSources:["https://welovebudapest.com/hely/budai-var","https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html"], map:"https://www.google.com/maps/search/?api=1&query=Buda+Castle+Budapest" },
     { key:"Matthias Church", name:"馬提亞斯教堂", en:"Mátyás-templom", description:"哥德式教堂以彩色屋瓦和尖塔聞名；室內參觀依開放時間。", day:3, tag:"教堂／建築", duration:"1h", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Matthias%20Church%20%286001573321%29.jpg", images:["https://www.visitesztergom-budapest.hu/storage/photos/shares/Latnivalok/Templomok/Matyas_templom/matyas_templom_4_1.jpg","https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg"], imageSources:["https://www.visitesztergom-budapest.hu/en/the-church-of-our-lady-of-buda-castle","https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://welovebudapest.com/hely/budai-var"], map:"https://www.google.com/maps/search/?api=1&query=Matthias+Church+Budapest" },
-    { key:"Fisherman's Bastion", name:"漁人堡", en:"Halászbástya", description:"白色觀景廊台可拍國會大廈、多瑙河與佩斯河岸全景。", day:3, tag:"城市全景／黃昏", duration:"1h15", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Fisherman%20s%20Bastion.jpg", images:["https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg","https://peika.bg/pictures/89277_715_.jpg"], imageSources:["https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://welovebudapest.com/hely/budai-var","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html"], map:"https://www.google.com/maps/search/?api=1&query=Fishermans+Bastion+Budapest" },
-    {"key":"Strbske","name":"斯特爾布斯克湖區（Štrbské Pleso）","en":"Štrbské Pleso","description":"高塔特拉山湖畔步道，冬季可賞雪山湖景，留意結冰路面。","day":5,"tag":"雪景／山景","duration":"1h45","lens":"16–55mm／70–300mm","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Strbske_Pleso_winter.jpg/960px-Strbske_Pleso_winter.jpg","images":["https://commons.wikimedia.org/wiki/Special:Redirect/file/Strbske%20pleso.jpg"],"imageSources":["https://commons.wikimedia.org/wiki/File:Strbske_pleso.jpg"],"map":"https://www.google.com/maps/search/?api=1&query=Strbske+Pleso","imageSource":"https://commons.wikimedia.org/wiki/File:Strbske_Pleso_winter.jpg"},
-    { key:"Gubalowka", name:"古巴沃夫卡山", en:"Gubałówka", description:"搭纜車登上山脊，俯瞰 Zakopane 屋頂與塔特拉山群峰。", day:5, tag:"雪景／Tatra", duration:"1h45", lens:"70–300mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakopane%20Gubalowka%20dron%20%282%29.jpg", images:["https://www.pkl.pl/data/posts/569/570x0px_gubalowka-nowa.jpg","https://sielok.hu/fotodir/lengyelorszag-telen/lengyelorszag-teli-kepek-tatra28.jpg","https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dauto%2Cquality%3D60%2Cwidth%3D450%2Cheight%3D450%2Cdpr%3D2/tour_img/e470ede57c0af50804fa3e9c8beede25e6dc426041df6d821d6bba91124076d7.jpg"], imageSources:["https://www.pkl.pl/the-history-of-pkl.html?setlang=2","https://sielok.hu/fotoalbum/lengyelorszag-telen/kep/5/","https://www.getyourguide.com/tr-tr/krakow-l40/krakow-dan-ozel-sofor-ile-zakopane-ve-termal-banyolar-t934798/"], map:"https://www.google.com/maps/search/?api=1&query=Gubalowka+Zakopane" },
+    { key:"Fisherman's Bastion", name:"漁人堡", en:"Halászbástya", description:"白色觀景廊台可拍國會大廈、多瑙河與佩斯河岸全景。", day:3, tag:"城市全景／黃昏", duration:"1h15", lens:"16–55mm／Sigma 50–120mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Fisherman%20s%20Bastion.jpg", images:["https://www.budapestinfo.hu/storage/og-images/u208shpv4fdLwQy2g0GJAhVMLfjBLic0vYpffx0F.jpg","https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg","https://peika.bg/pictures/89277_715_.jpg"], imageSources:["https://www.budapestinfo.hu/vallasi-sokszinuseg-budapesten","https://welovebudapest.com/hely/budai-var","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html"], map:"https://www.google.com/maps/search/?api=1&query=Fishermans+Bastion+Budapest" },
+    {"key":"Strbske","name":"斯特爾布斯克湖區（Štrbské Pleso）","en":"Štrbské Pleso","description":"高塔特拉山湖畔步道，冬季可賞雪山湖景，留意結冰路面。","day":5,"tag":"雪景／山景","duration":"1h45","lens":"16–55mm／Sigma 50–120mm","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Strbske_Pleso_winter.jpg/960px-Strbske_Pleso_winter.jpg","images":["https://commons.wikimedia.org/wiki/Special:Redirect/file/Strbske%20pleso.jpg"],"imageSources":["https://commons.wikimedia.org/wiki/File:Strbske_pleso.jpg"],"map":"https://www.google.com/maps/search/?api=1&query=Strbske+Pleso","imageSource":"https://commons.wikimedia.org/wiki/File:Strbske_Pleso_winter.jpg"},
+    { key:"Gubalowka", name:"古巴沃夫卡山", en:"Gubałówka", description:"搭纜車登上山脊，俯瞰 Zakopane 屋頂與塔特拉山群峰。", day:5, tag:"雪景／Tatra", duration:"1h45", lens:"Sigma 50–120mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakopane%20Gubalowka%20dron%20%282%29.jpg", images:["https://www.pkl.pl/data/posts/569/570x0px_gubalowka-nowa.jpg","https://sielok.hu/fotodir/lengyelorszag-telen/lengyelorszag-teli-kepek-tatra28.jpg","https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dauto%2Cquality%3D60%2Cwidth%3D450%2Cheight%3D450%2Cdpr%3D2/tour_img/e470ede57c0af50804fa3e9c8beede25e6dc426041df6d821d6bba91124076d7.jpg"], imageSources:["https://www.pkl.pl/the-history-of-pkl.html?setlang=2","https://sielok.hu/fotoalbum/lengyelorszag-telen/kep/5/","https://www.getyourguide.com/tr-tr/krakow-l40/krakow-dan-ozel-sofor-ile-zakopane-ve-termal-banyolar-t934798/"], map:"https://www.google.com/maps/search/?api=1&query=Gubalowka+Zakopane" },
     { key:"Krupowki", name:"克魯波夫基街", en:"Krupówki Street", description:"Zakopane 熱鬧步行街，木造風格店舖、餐館與街頭小吃集中。", day:5, tag:"街拍／夜景", duration:"1h25", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakopane%20krup%C3%B3wki.jpg", images:["https://s30.flog.pl/media/foto/13961844_zakopane--krupowki-.jpg","https://d.wpimg.pl/999483127-325828036/Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg","https://static.webcamera.pl/camsbig/zakopane-krupowki-street-poland.jpg?nc=1764169738"], imageSources:["https://piotrzegar.flog.pl/wpis/13961844/zakopane--krupowki-","https://turystyka.wp.pl/zakopane-6049946277500033c","https://zakopane-krupowki-street-poland.webcamera.pl/"], map:"https://www.google.com/maps/search/?api=1&query=Krupowki+Zakopane" },
-    { key:"Kasprowy", name:"卡斯普羅維峰", en:"Kasprowy Wierch", description:"搭纜車登上塔特拉高山觀景點；風雪可能影響營運，山頂注意保暖。", day:6, tag:"高山／雪景", duration:"3h", lens:"70–300mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kasprowy%20Wierch.jpg", images:["https://i.iplsc.com/000M9LTSPOCOG6KD-C323-F4.webp","https://z-ne.pl/images/20181115_-_PKL_Kasprowy_Wierch_1.jpg","https://ff4.xcdn.pl/i/I18FAAAABRQC7gAknnWJ/8d83d583f3bd6de6cdee2bf949b91692.jpg"], imageSources:["https://kobieta.interia.pl/podroze/news-ferie-w-pelni-a-w-zakopanem-pusto-malopolska-nigdy-zbytnio-n%2CnId%2C22545504","https://z-ne.pl/s%2Cdocid%2C59316%2Ctatry_kolej_linowa_pkl_na_kasprowy_wierch_przygotowana_na_sezon_zimowy.html","https://krakow.gosc.pl/doc/8076024.Zima-na-Podhalu-Kolejka-na-Kasprowy-Wierch-od-7-lutego-bedzie"], map:"https://www.google.com/maps/search/?api=1&query=Kasprowy+Wierch" },
+    { key:"Kasprowy", name:"卡斯普羅維峰", en:"Kasprowy Wierch", description:"搭纜車登上塔特拉高山觀景點；風雪可能影響營運，山頂注意保暖。", day:6, tag:"高山／雪景", duration:"3h", lens:"Sigma 50–120mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kasprowy%20Wierch.jpg", images:["https://i.iplsc.com/000M9LTSPOCOG6KD-C323-F4.webp","https://z-ne.pl/images/20181115_-_PKL_Kasprowy_Wierch_1.jpg","https://ff4.xcdn.pl/i/I18FAAAABRQC7gAknnWJ/8d83d583f3bd6de6cdee2bf949b91692.jpg"], imageSources:["https://kobieta.interia.pl/podroze/news-ferie-w-pelni-a-w-zakopanem-pusto-malopolska-nigdy-zbytnio-n%2CnId%2C22545504","https://z-ne.pl/s%2Cdocid%2C59316%2Ctatry_kolej_linowa_pkl_na_kasprowy_wierch_przygotowana_na_sezon_zimowy.html","https://krakow.gosc.pl/doc/8076024.Zima-na-Podhalu-Kolejka-na-Kasprowy-Wierch-od-7-lutego-bedzie"], map:"https://www.google.com/maps/search/?api=1&query=Kasprowy+Wierch" },
     { key:"Jaszczurowka", name:"亞斯楚羅夫卡木造教堂", en:"Jaszczurówka Chapel", description:"山地木構風格的聖心教堂，可細看木作、屋頂與冬日林景。", day:5, tag:"木造建築", duration:"30m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", images:["https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://upload.wikimedia.org/wikipedia/commons/5/52/Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/uploads/seeing/tok308040229395/1666270144.jpg"], imageSources:["https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://commons.wikimedia.org/wiki/File:Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/warto-zobaczyc/1041%2Ckaplica-na-jaszczurowce-zakopane.html"], map:"https://www.google.com/maps/search/?api=1&query=Jaszczurowka+Chapel" },
     { key:"Snowmobile", name:"雪地摩托車體驗（Snowmobile）", en:"Snowmobile / Kościelisko", description:"由業者帶隊的雪地摩托體驗；集合地址、裝備和雪況須事先確認。", day:6, tag:"雪地活動", duration:"2h", lens:"X100VI／16–55mm", image:"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg", images:["https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","https://www.skutery.pl/wp-content/uploads/2023/02/6-1024x683.jpg","https://www.witowextreme.pl/uploads/files/images/58e5f5f432b76.jpg"], imageSources:["https://www.skutery.pl/oferta/","https://www.skutery.pl/","https://www.witowextreme.pl/en/snowmobiles-gallery"], map:"https://www.google.com/maps/search/?api=1&query=Snowmobile+Koscielisko" },
-    { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王室城堡與維斯瓦河畔高地；本次 2/9 只選 Castle | Second Floor 的 State Rooms，一個展區看王室大廳、掛毯與天花板，不加私人寓所／寶庫／軍械庫。", day:7, tag:"古蹟／城堡", duration:"1h15＋外觀", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
+    { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王室城堡與維斯瓦河畔高地；本次 2/9 只選 Castle | Second Floor 的 State Rooms，一個展區看王室大廳、掛毯與天花板，不加私人寓所／寶庫／軍械庫。", day:7, tag:"古蹟／城堡", duration:"1h15＋外觀", lens:"16–55mm／Sigma 50–120mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
     { key:"WawelCathedral", name:"瓦維爾主教座堂", en:"Katedra Wawelska", description:"波蘭君主加冕與安葬之地，融合多時期建築。本次 2/9 隨 Wawel Hill 看外觀，不入內、不購鐘樓／墓室票，把室內參觀時間留給城堡 State Rooms 與聖母聖殿。", day:7, tag:"教堂／歷史", duration:"外觀約 15–20m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Cathedral%2C%20Krak%C3%B3w.JPG", images:["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560"], imageSources:["https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://parade.com/travel/cozy-winter-getaways"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Cathedral" },
     { key:"Kanonicza", name:"卡諾尼察街", en:"ul. Kanonicza", description:"克拉科夫保存完好的歷史街道，石板路與文藝復興立面適合街拍。", day:7, tag:"街景／黃昏", duration:"30m", lens:"X100VI／16–55mm", image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/483af9109628805.5fd851b49452b.jpg", images:["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ab825a159090891.63980a91d0568.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/fs/dc8713113668005.602c9a3605fc2.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://www.behance.net/gallery/159090891/Winter-Krakow-part-I","https://www.behance.net/gallery/113668005/Winter-in-the-center-of-Krakow/modules/649377461","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Kanonicza+Street+Krakow" },
     { key:"MainMarket", name:"克拉科夫中央集市廣場", en:"Rynek Główny", description:"中世紀廣場，周圍串連聖母聖殿、市政塔與紡織會館。", day:7, tag:"廣場／夜景", duration:"45m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Krakow%20Main%20Square%20%288125539580%29.jpg", images:["https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Rynek+Glowny+Krakow" },
     { key:"StMary", name:"克拉科夫聖母聖殿", en:"Bazylika Mariacka", description:"主廣場雙塔哥德式地標，Veit Stoss 木雕祭壇是入內重點。本次 2/9 16:00–16:45 參觀室內；到 Plac Mariacki 7 購票，由南側遊客入口進入。二月不排登塔，宗教活動與 2027 時段再確認。", day:7, tag:"教堂／廣場", duration:"45m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/a/a1/Church_of_the_Assumption_of_the_Blessed_Virgin_Mary%2C_Winter%2C_Mariacki_square%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg", images:["https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://parade.com/travel/cozy-winter-getaways","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=St+Marys+Basilica+Krakow" },
     { key:"ClothHall", name:"克拉科夫紡織會館", en:"Sukiennice", description:"廣場中央的文藝復興紡織會館，拱廊與長廊適合拍建築細節。", day:7, tag:"建築／夜景", duration:"30m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Krak%C3%B3w%20-%20Sukiennice%20%26%20Wie%C5%BCa%20Ratuszowa.jpg", images:["https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://i.pinimg.com/736x/17/5e/9b/175e9bcc786d9a1de4538c116bc9c06b.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://in.pinterest.com/pin/696439529904253598/","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Cloth+Hall+Krakow" },
-    { key:"Parliament", name:"匈牙利國會大廈", en:"Országház", description:"新哥德式國會建築沿多瑙河展開，可在廣場近拍或河對岸取景。", day:9, tag:"建築／河岸", duration:"2h", lens:"16–55mm／70–300mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg", images:["https://peika.bg/pictures/89277_715_.jpg","https://amadeus-rivercruises.com/fileadmin/_processed_/4/b/csm__c_Budapest_Winter_LU793746169_851c8df2a4.webp","https://www.reisewelt.at/fileadmin/_processed_/9/f/csm_Budapest_im_Winter_afa913ef6e.png"], imageSources:["https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html","https://www.amadeus-rivercruises.com/river-cruises/detail/2026/new-years-eve-cruise-on-the-danube-7-days.html","https://www.reisewelt.at/de/reisen/rv/silvester-auf-der-donau-flusskreuzfahrt"], map:"https://www.google.com/maps/search/?api=1&query=Hungarian+Parliament+Budapest" },
+    { key:"Parliament", name:"匈牙利國會大廈", en:"Országház", description:"新哥德式國會建築沿多瑙河展開，可在廣場近拍或河對岸取景。", day:9, tag:"建築／河岸", duration:"2h", lens:"16–55mm／Sigma 50–120mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/HungarianParliamentBuilding.jpg", images:["https://peika.bg/pictures/89277_715_.jpg","https://amadeus-rivercruises.com/fileadmin/_processed_/4/b/csm__c_Budapest_Winter_LU793746169_851c8df2a4.webp","https://www.reisewelt.at/fileadmin/_processed_/9/f/csm_Budapest_im_Winter_afa913ef6e.png"], imageSources:["https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html","https://www.amadeus-rivercruises.com/river-cruises/detail/2026/new-years-eve-cruise-on-the-danube-7-days.html","https://www.reisewelt.at/de/reisen/rv/silvester-auf-der-donau-flusskreuzfahrt"], map:"https://www.google.com/maps/search/?api=1&query=Hungarian+Parliament+Budapest" },
     { key:"Shoes", name:"多瑙河畔之鞋紀念碑", en:"Shoes on the Danube Bank", description:"河岸紀念二戰期間遇害的猶太人，請以安靜、尊重的方式參觀。", day:9, tag:"紀念地／河岸", duration:"30m", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Hungary-02400%20-%20Shoes%20on%20the%20Danube%20%2832460224482%29.jpg", images:["https://www.reisewelt.at/fileadmin/_processed_/9/f/csm_Budapest_im_Winter_afa913ef6e.png","https://peika.bg/pictures/89277_715_.jpg","https://www.amadeus-rivercruises.com/fileadmin/_processed_/4/b/csm__c_Budapest_Winter_LU793746169_851c8df2a4.webp"], imageSources:["https://www.reisewelt.at/de/reisen/rv/silvester-auf-der-donau-2026.html","https://www.peika.bg/statia/Budapeshta_prez_zimata_toplina_pod_snega_i_svetlini_nad_Dunava_l.a_i.136761.html","https://www.amadeus-rivercruises.com/river-cruises/detail/2026/new-years-eve-cruise-on-the-danube-7-days.html"], map:"https://www.google.com/maps/search/?api=1&query=Shoes+on+the+Danube+Bank" },
     { key:"Basilica", name:"布達佩斯聖史蒂芬大教堂", en:"Szent István Bazilika", description:"布達佩斯重要教堂，圓頂可登高看市景；留意服裝與禮拜時段。", day:9, tag:"教堂／市中心", duration:"1h", lens:"16–55mm", image:"https://www.obletsvet.sk/images/e4c7ca00-75ba-419c-968c-76d85b2f7d50/bazilika-svateho-stepena--1080x1080.jpg", images:["https://shewandersabroad.com/wp-content/uploads/2026/01/St.-Stephens-Basilica-Budapest-8.jpg","https://www.rivieratravel.co.uk/sites/default/files/assetbank/RCY_budapest-snow-GettyImages-1087617696.jpg","https://img-fotki.yandex.ru/get/4422/3134664.5/0_7bdf0_65bf671f_-1-XL.jpg"], imageSources:["https://shewandersabroad.com/things-to-do-in-budapest-in-winter/","https://tourhub.co/tour/riviera-travel/new-year-on-the-danube-river-cruise-ms-riviera-radiance/rcyn","https://ru-travel.livejournal.com/20627487.html"], map:"https://www.google.com/maps/search/?api=1&query=St+Stephens+Basilica+Budapest" },
     { key:"Vaci", name:"瓦茨街", en:"Váci Street", description:"市中心購物步行街，連接中央市場與廣場，適合沿途街拍。", day:9, tag:"街拍／商店", duration:"1h", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/V%C3%A1ci_utca.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:V%C3%A1ci_utca.jpg", images:["https://hips.hearstapps.com/hmg-prod/images/illuminated-cityscape-of-zrinyi-street-in-budapest-royalty-free-image-1607319848.?crop=0.66635xw%3A1xh%3Bcenter%2Ctop","https://static.liligo.com/img/cms/content-gallery/inspirational-new-year/istock-ny-budapest/classic/320/image%4012.0.webp","https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/12/24/5f15f0773e79f.jpeg"], imageSources:["https://www.redbookmag.com/life/g34886089/winter-scenes-around-the-world/","https://www.liligo.fr/ou-partir-au-nouvel-an","https://www.lavanguardia.com/ocio/viajes/20191229/472464052759/budapest-historia-contemporanea-orillas-del-danubio.html"], map:"https://www.google.com/maps/search/?api=1&query=Vaci+utca+Budapest" },
