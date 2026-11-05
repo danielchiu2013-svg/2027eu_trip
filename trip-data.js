@@ -935,10 +935,10 @@ const TRIP_DATA = {
         "PL"
       ],
       "steps": [
-        "08:45 出門：優先由飯店叫合規計程車，或查附近站往 Kuźnice 的市營公車。等車、交通與步行合計抓 45 分鐘。",
+        "09:15 出門：優先由飯店叫合規計程車，或查附近站往 Kuźnice 的市營公車。等車、交通與步行合計抓 45 分鐘。",
         "Kuźnice 車道禁止一般私家車；不開租車直達纜車下站。若先開車到合法停車場，也要另算最後接駁與停車時間。",
-        "纜車下站 Kuźnice 14，暫排 09:30 到站、10:00 上山；PKL 要求至少提早 15 分鐘。往返票會指定下山班次，購票時先確認約 12:00 能下山。",
-        "回程搭市營公車或計程車；午餐後暫留 40 分鐘轉場、20 分鐘報到及整裝。雪地摩托集合地址和報到要求確認後，再定實際交通與出發時間。"
+        "纜車下站 Kuźnice 14，暫排 10:00 到站、10:30 上山；PKL 要求至少提早 15 分鐘。往返票會指定下山班次，購票時先確認約 12:30 能下山。",
+        "回程搭市營公車或計程車；雪地摩托暫定 15:00–16:00，午餐後暫留 40 分鐘轉場、20 分鐘報到及整裝。雪地摩托集合地址和報到要求確認後，再定實際交通與出發時間。"
       ],
       "sources": [
         {
@@ -2783,16 +2783,16 @@ const TRIP_DATA = {
       "group": "門票／活動預約",
       "date": "2/8（一）上午",
       "status": "待購票",
-      "detail": "選接近 10:00 的上山時段；確認票種、下山安排與風雪停駛退改規則。",
+      "detail": "選接近 10:30 的上山時段；確認票種、下山安排與風雪停駛退改規則。",
       "url": "https://www.sklep.pkl.pl/en/"
     },
     {
       "id": "snowmobile-booking",
       "label": "Zakopane／Kościelisko 雪地摩托車體驗",
       "group": "門票／活動預約",
-      "date": "2/8（一）14:30",
+      "date": "2/8（一）15:00–16:00（暫定）",
       "status": "待預約",
-      "detail": "尚未指定業者；先確認集合地址、接送、報到時間、三人名額、裝備、雪況不足時的取消／改期規則。",
+      "detail": "暫定 1 小時體驗，尚未預約。先確認業者、集合地址、接送、報到時間、三人名額、裝備與雪況不足時的退改規則。",
       "url": "https://www.google.com/maps/search/?api=1&query=snowmobile+Koscielisko+Zakopane"
     },
     {
@@ -3156,21 +3156,21 @@ const TRIP_DATA = {
     },
     {
       date: "2/8", weekday: "一", title: "Kasprowy Wierch → Snowmobile", city: "Zakopane / Kościelisko", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://www.pkl.pl/data/pages/338/cp_cp_cp_20200108_a6500ab606436ab2.jpg",
-      summary: "08:45 出發前往 Kuźnice，上午搭 Kasprowy 纜車，下午暫排 14:30 雪地摩托，集合地址及報到要求待業者確認。",
-      highlights: ["08:45 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "14:30 Snowmobile"],
+      summary: "09:15 出發前往 Kuźnice，上午搭 Kasprowy 纜車，雪地摩托暫定 15:00–16:00，集合地址及報到要求待業者確認。",
+      highlights: ["09:15 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "15:00–16:00 雪地摩托（暫定）"],
       items: [
-        ["08:45–09:30", "transit", "飯店 → Kuźnice", "計程車／市營公車；45 分鐘含等車、週一早上車流及雪地步行", "45m"],
-        ["09:30–10:00", "transit", "報到／候車", "目標 09:30 到；PKL 要求至少於票面班次前 15 分鐘到下站", "30m"],
-        ["10:00–約 12:00", "photo", "Kasprowy Wierch", "纜車上山及山頂雪景；往返票會指定回程班次，購票時核對，規劃約 12:00 開始下山", "約 2h"],
-        ["約 12:00–13:00", "transit", "下山並返回 Zakopane", "含下山、等車和回市區；回程依票面班次與當日營運", "約 1h"],
-        ["13:00–13:30", "food", "午餐｜波蘭高塔特拉料理", "以熱湯或快速簡餐為主；纜車延誤時改外帶", "30m"],
-        ["13:30–14:10", "transit", "前往 Snowmobile 集合點", "暫留 40 分鐘，依業者的確切地址、接駁和雪況重算", "暫留 40m"],
-        ["14:10–14:30", "adventure", "報到／裝備／安全說明", "暫留 20 分鐘，實際依業者要求提前到場", "暫留 20m"],
-        ["14:30–16:30", "adventure", "Snowmobile", "Kościelisko／Butorów 區域；2h 體驗", "2h"],
+        ["09:15–10:00", "transit", "飯店 → Kuźnice", "計程車／市營公車；45 分鐘含等車、週一早上車流及雪地步行", "45m"],
+        ["10:00–10:30", "transit", "報到／候車", "目標 10:00 到；PKL 要求至少於票面班次前 15 分鐘到下站", "30m"],
+        ["10:30–約 12:30", "photo", "Kasprowy Wierch", "纜車上山及山頂雪景；往返票會指定回程班次，購票時核對，規劃約 12:30 開始下山", "約 2h"],
+        ["約 12:30–13:30", "transit", "下山並返回 Zakopane", "含下山、等車和回市區；回程依票面班次與當日營運", "約 1h"],
+        ["13:30–14:00", "food", "午餐｜波蘭高塔特拉料理", "以熱湯或快速簡餐為主；纜車延誤時改外帶", "30m"],
+        ["14:00–14:40", "transit", "前往 Snowmobile 集合點", "暫留 40 分鐘，依業者的確切地址、接駁和雪況重算", "暫留 40m"],
+        ["14:40–15:00", "adventure", "報到／裝備／安全說明", "暫留 20 分鐘，實際依業者要求提前到場", "暫留 20m"],
+        ["暫定 15:00–16:00", "adventure", "Snowmobile", "暫定 1 小時體驗；集合地點、接送與報到時間待業者確認", "1h"],
         ["18:00–19:30", "food", "晚餐｜波蘭山地料理", "可選 kwaśnica 酸菜湯、pierogi 波蘭餃子或烤羊乳起司；冬季起司供應依店家為準", "1h30"]
       ],
       sources: [{"name":"PKL｜Kasprowy 纜車報到與營運","url":"https://www.pkl.pl/kasprowy-wierch/faq-kasprowy-wierch.html"}],
-      notes: ["山上風力和能見度以 PKL 當日公告為準；若纜車延遲開行、回程時段過晚，先確認能否銜接活動再上山。", "Jaszczurówka 排在 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
+      notes: ["山上風力和能見度以 PKL 當日公告為準；若纜車延遲開行、回程時段過晚，先確認能否銜接活動再上山。", "Jaszczurówka 排在 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:30 的上山時段並確認退改規則。"]
     },
     {
       "date": "2/9",
@@ -3877,7 +3877,7 @@ const TRIP_DATA = {
     { key:"Krupowki", name:"克魯波夫基街", en:"Krupówki Street", description:"Zakopane 熱鬧步行街，木造風格店舖、餐館與街頭小吃集中。", day:5, tag:"街拍／夜景", duration:"1h25", lens:"X100VI", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Zakopane%20krup%C3%B3wki.jpg", images:["https://s30.flog.pl/media/foto/13961844_zakopane--krupowki-.jpg","https://d.wpimg.pl/999483127-325828036/Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg","https://static.webcamera.pl/camsbig/zakopane-krupowki-street-poland.jpg?nc=1764169738"], imageSources:["https://piotrzegar.flog.pl/wpis/13961844/zakopane--krupowki-","https://turystyka.wp.pl/zakopane-6049946277500033c","https://zakopane-krupowki-street-poland.webcamera.pl/"], map:"https://www.google.com/maps/search/?api=1&query=Krupowki+Zakopane" },
     { key:"Kasprowy", name:"卡斯普羅維峰", en:"Kasprowy Wierch", description:"搭纜車登上塔特拉高山觀景點；風雪可能影響營運，山頂注意保暖。", day:6, tag:"高山／雪景", duration:"3h", lens:"Sigma 50–120mm／16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kasprowy%20Wierch.jpg", images:["https://i.iplsc.com/000M9LTSPOCOG6KD-C323-F4.webp","https://z-ne.pl/images/20181115_-_PKL_Kasprowy_Wierch_1.jpg","https://ff4.xcdn.pl/i/I18FAAAABRQC7gAknnWJ/8d83d583f3bd6de6cdee2bf949b91692.jpg"], imageSources:["https://kobieta.interia.pl/podroze/news-ferie-w-pelni-a-w-zakopanem-pusto-malopolska-nigdy-zbytnio-n%2CnId%2C22545504","https://z-ne.pl/s%2Cdocid%2C59316%2Ctatry_kolej_linowa_pkl_na_kasprowy_wierch_przygotowana_na_sezon_zimowy.html","https://krakow.gosc.pl/doc/8076024.Zima-na-Podhalu-Kolejka-na-Kasprowy-Wierch-od-7-lutego-bedzie"], map:"https://www.google.com/maps/search/?api=1&query=Kasprowy+Wierch" },
     { key:"Jaszczurowka", name:"亞斯楚羅夫卡木造教堂", en:"Jaszczurówka Chapel", description:"山地木構風格的聖心教堂，可細看木作、屋頂與冬日林景。", day:5, tag:"木造建築", duration:"30m", lens:"16–55mm", image:"https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", imageSource:"https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg", images:["https://upload.wikimedia.org/wikipedia/commons/9/97/Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://upload.wikimedia.org/wikipedia/commons/5/52/Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/uploads/seeing/tok308040229395/1666270144.jpg"], imageSources:["https://commons.wikimedia.org/wiki/File:Kaplica_w_Jaszczur%C3%B3wce_zim%C4%85.jpg","https://commons.wikimedia.org/wiki/File:Jaszczur%C3%B3wka_at_Winter.jpg","https://infoturystyka.pl/warto-zobaczyc/1041%2Ckaplica-na-jaszczurowce-zakopane.html"], map:"https://www.google.com/maps/search/?api=1&query=Jaszczurowka+Chapel" },
-    { key:"Snowmobile", name:"雪地摩托車體驗（Snowmobile）", en:"Snowmobile / Kościelisko", description:"由業者帶隊的雪地摩托體驗；集合地址、裝備和雪況須事先確認。", day:6, tag:"雪地活動", duration:"2h", lens:"X100VI／16–55mm", image:"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg", images:["https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","https://www.skutery.pl/wp-content/uploads/2023/02/6-1024x683.jpg","https://www.witowextreme.pl/uploads/files/images/58e5f5f432b76.jpg"], imageSources:["https://www.skutery.pl/oferta/","https://www.skutery.pl/","https://www.witowextreme.pl/en/snowmobiles-gallery"], map:"https://www.google.com/maps/search/?api=1&query=Snowmobile+Koscielisko" },
+    { key:"Snowmobile", name:"雪地摩托車體驗（Snowmobile）", en:"Snowmobile / Kościelisko", description:"由業者帶隊的雪地摩托體驗；集合地址、裝備和雪況須事先確認。", day:6, tag:"雪地活動", duration:"1h（暫定）", lens:"X100VI／16–55mm", image:"https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg", images:["https://www.skutery.pl/wp-content/uploads/2023/02/8-1024x683.jpg","https://www.skutery.pl/wp-content/uploads/2023/02/6-1024x683.jpg","https://www.witowextreme.pl/uploads/files/images/58e5f5f432b76.jpg"], imageSources:["https://www.skutery.pl/oferta/","https://www.skutery.pl/","https://www.witowextreme.pl/en/snowmobiles-gallery"], map:"https://www.google.com/maps/search/?api=1&query=Snowmobile+Koscielisko" },
     { key:"Wawel", name:"瓦維爾皇家城堡", en:"Zamek Królewski na Wawelu", description:"波蘭王室城堡與維斯瓦河畔高地；本次 2/9 只選 Castle | Second Floor 的 State Rooms，一個展區看王室大廳、掛毯與天花板，不加私人寓所／寶庫／軍械庫。", day:7, tag:"古蹟／城堡", duration:"1h15＋外觀", lens:"16–55mm／Sigma 50–120mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Castle%20in%20Krakow.jpg", images:["https://pictolic.com/img/2023/heres-a-glimpse-into-a/heres-a-glimpse-into-a-13.jpg","https://ocdn.eu/pulscms-transforms/1/DVik9kpTURBXy82NzE4ODUyMzc0NTk2ZWY3MThkN2U3YWZjOTA2ZDY5YS5qcGeTlQMAzKfNFODNC76TCaY0YmJmOWQGkwXNBLDNAnbeAAGhMAE/krakowski-rynek.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://pictolic.com/article/heres-a-glimpse-into-a-snowy-journey-throughout-the-medieval-town-of-krakow-captured-with-my-camera-lens.html","https://wiadomosci.onet.pl/krakow/kiedy-drzewa-na-krakowskim-rynku-glownym-padla-data/cmc3s02","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Castle+Krakow" },
     { key:"WawelCathedral", name:"瓦維爾主教座堂", en:"Katedra Wawelska", description:"波蘭君主加冕與安葬之地，融合多時期建築。本次 2/9 隨 Wawel Hill 看外觀，不入內、不購鐘樓／墓室票，把室內參觀時間留給城堡 State Rooms 與聖母聖殿。", day:7, tag:"教堂／歷史", duration:"外觀約 15–20m", lens:"16–55mm", image:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Wawel%20Cathedral%2C%20Krak%C3%B3w.JPG", images:["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://photos.smugmug.com/Krakow/Krakow-Winter/i-PvqKSnm/0/MvWMNnCbcfvJXJgrfQqLJwnwxFvzZK2J9gPdWXkQJ/L/krakow-winter-snowy-archway-L.jpg","https://parade.com/.image/ODowMDAwMDAwMDAxNDYyMzYz/wonderful-snowy-winter-day-on-old-streets-of-krakow-city-poland.jpg?io=1&profile=w2560"], imageSources:["https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg","https://visitkrakow.com/krakow-winter-weekend-itinerary/","https://parade.com/travel/cozy-winter-getaways"], map:"https://www.google.com/maps/search/?api=1&query=Wawel+Cathedral" },
     { key:"Kanonicza", name:"卡諾尼察街", en:"ul. Kanonicza", description:"克拉科夫保存完好的歷史街道，石板路與文藝復興立面適合街拍。", day:7, tag:"街景／黃昏", duration:"30m", lens:"X100VI／16–55mm", image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/483af9109628805.5fd851b49452b.jpg", images:["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ab825a159090891.63980a91d0568.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/fs/dc8713113668005.602c9a3605fc2.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg/1280px-Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], imageSources:["https://www.behance.net/gallery/159090891/Winter-Krakow-part-I","https://www.behance.net/gallery/113668005/Winter-in-the-center-of-Krakow/modules/649377461","https://commons.wikimedia.org/wiki/File:Florianska_street%2C_Old_Town%2C_Krakow%2C_Poland.jpg"], map:"https://www.google.com/maps/search/?api=1&query=Kanonicza+Street+Krakow" },
