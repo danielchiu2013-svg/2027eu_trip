@@ -3944,14 +3944,19 @@ TRIP_DATA.timelinePhotoCatalog = {
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
+  "BatthyanyDay": {
+    "key": "BatthyanyDay",
+    "name": "Batthyány tér 廣場與聖安娜教堂 · 冬季白天",
+    "image": "https://berniegourley.files.wordpress.com/2019/12/d05182b2-191f-4e5a-8894-a71dbbf447f0.jpeg?w=1168",
+    "imageSource": "https://berniegourley.com/2019/12/29/daily-photo-batthyany-ter-budapest/",
+    "credit": "Bernie Gourley"
+  },
   "Gulyas": {
     "key": "Gulyas",
-    "name": "Gulyás 匈牙利燉牛肉湯（餐點參考）",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Guly%C3%A1s_soup.jpg/960px-Guly%C3%A1s_soup.jpg",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Guly%C3%A1s_soup.jpg",
-    "credit": "Top Budapest",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "name": "Gulyás 匈牙利燉牛肉湯與麵包（餐點參考）",
+    "image": "https://kep.cdn.indexvas.hu/welove-media/df/baltazar-budapest.exact1980w.jpg",
+    "imageSource": "https://welovebudapest.com/en/venue/baltazar-budapest-1/",
+    "credit": "We Love Budapest"
   },
   "Paprikash": {
     "key": "Paprikash",
@@ -4328,7 +4333,7 @@ TRIP_DATA.timelinePhotoRefs = {
   },
   "2/5": {
     "飯店 → Batthyány tér": [
-      "Batthyany"
+      "BatthyanyDay"
     ],
     "H5 → Szentendre": [
       "HEV"

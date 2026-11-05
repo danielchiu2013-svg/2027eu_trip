@@ -181,7 +181,7 @@ main{max-width:980px;margin:auto;padding:14px 14px 90px}.sticky-tools{position:s
   <footer>資料與介面分離：行程只需修改 trip-data.js。外部圖片不需要放入 Repository 圖片資料夾。</footer>
 </main>
 <div class="bottom-nav"><div class="inner"><button data-goto="overview" class="active">總覽</button><button data-goto="days">每日</button><button data-goto="places">景點</button><button data-goto="photo-map">攝影機位</button><button data-goto="logistics">更多</button></div></div>
-<script src="trip-data.js?v=winter-photo-timing-20261105"></script>
+<script src="trip-data.js?v=budapest-photo-fix-20261105"></script>
 <script>
 const D=TRIP_DATA;
 const $=s=>document.querySelector(s);
@@ -621,7 +621,7 @@ $('#placeSearch').addEventListener('input',e=>renderPlaces(e.target.value));
 $('#checklistList').addEventListener('change',e=>{const id=e.target.dataset.check;if(!id)return;const st=loadChecks();st[id]=e.target.checked;saveChecks(st);e.target.closest('.check')?.classList.toggle('done',e.target.checked)});
 
 initGuide();renderDayTabs();renderTransportGuide();renderDays();renderPlaces();renderFlights();renderHotels();renderOverviewHotelAmenities();renderOverviewDayLinks();renderChecklist();renderOutingBasics();routeHash();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=winter-photo-timing-20261105').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js?v=budapest-photo-fix-20261105').catch(()=>{}));}
 </script>
 </body>
 </html>
