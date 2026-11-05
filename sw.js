@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v59';
+const CACHE = '2027eu-app-v60';
 const VERSIONED_SHELL = [
-  './index.html?v=budapest-photo-fix-20261105',
-  './trip-data.js?v=budapest-photo-fix-20261105',
+  './index.html?v=gelej-rest-stop-20261105',
+  './trip-data.js?v=gelej-rest-stop-20261105',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -36,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=budapest-photo-fix-20261105', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=gelej-rest-stop-20261105', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }

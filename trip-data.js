@@ -399,7 +399,7 @@ const TRIP_DATA = {
     "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 保留 06:15 預約接送。",
     "2/5 H5 到 Szentendre 超出 Budapest 市界；一般 Budapest 市區票不能單獨涵蓋全程。市界內與 Békásmegyer–Szentendre 區間須各有有效票。",
     "2/8 Kuźnice 一般私家車禁入；用當地公車／合規計程車到纜車下站。2/9 入 Kraków：匈牙利車牌須先查 SCT 資格與登錄，並確認飯店合法車道。",
-    "2/6 09:00 SIXT 取車、預計 10:00 出發；沿用原車程估算約 16:45 抵達湖區，雪況／休息可能延誤，不保證天黑前到。2/10 的 5.5–6.5h 不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
+    "2/6 09:00 SIXT 取車、預計 10:00 出發；含 Geleji pihenő 短休約 17:00 抵達湖區，雪況／塞車可能延誤，不保證天黑前到。2/10 的 5.5–6.5h 不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
   ],
   "alertSources": [
     {
@@ -862,7 +862,7 @@ const TRIP_DATA = {
     },
     "2/6": {
       "mode": "自駕／HU → SK",
-      "title": "Budapest → Košice → Prešov → Poprad → Štrbské Pleso",
+      "title": "Budapest → Geleji pihenő → Košice → Prešov → Poprad → Štrbské Pleso",
       "countries": [
         "HU",
         "SK"
@@ -871,12 +871,17 @@ const TRIP_DATA = {
         "已預訂 2027/2/6 09:00 SIXT Budapest Chain Bridge 取車：Apáczai Csere János u. 12–14, Budapest, 1052。預留至 10:00 辦理手續、車況拍照、裝行李、確認四輪冬季胎與適配雪鏈；預計 10:00 出發。",
         "取車後儘早取得實際車牌及車籍／排放資料，核對 SIXT 是否已辦 Kraków SCT 登錄；未完成則依官方系統申請，2/9 入城前確認資格。跨境書面許可與 SCT 是不同事項。",
         "主要道路候選：Budapest 的 M3 → M30，經 Miskolc 附近但不進城／不加景點，往 Tornyosnémeti／Milhosť 邊界接 SK R4 → Košice。路線依當日施工與封路調整。",
+        "約 11:30 在 M3 142 公里處的 Geleji pihenő 短停 15 分鐘，選往 Vásárosnamény 方向的 M3GÁLLÓ RESTAURANT。休息後回 M3 東向，再轉 M30 往 Košice。",
         "Košice 午餐：先選合法停車場再步行進中心，出發前記錄停車場名稱／車牌付費規則；不把禁行老城當導航終點。",
         "Košice → Prešov → Poprad 優先查 D1 幹線；Poprad → 湖區查當日開放道路，最後上山可能有積雪、霧與彎道。",
-        "HU／SK 收費段在進入前確認通行證已生效。10:00 出發，沿用原草案純駕駛約 5h45＋午餐 1h，約 16:45 抵達只是規劃值，額外休息／風雪／塞車需另加時間；不保證天黑前到，不以趕日光為由超速。必要時縮短非必要停留並通知飯店。",
+        "HU／SK 收費段在進入前確認通行證已生效。10:00 出發，沿用純駕駛約 5h45，加休息站 15 分鐘與午餐 1h，約 17:00 抵達只是規劃值，額外休息／風雪／塞車需另加時間；不保證天黑前到，不以趕日光為由超速。必要時縮短非必要停留並通知飯店。",
         "湖區末段與飯店入口可能積雪：建議備適配雪鏈，先確認車廠／SIXT 允許的尺寸與輪軸；依當日路面、標誌與管制決定是否安裝。冬季胎與四驅不等於所有雪況都能通行。完整安裝前核對事項見自駕實用操作。"
       ],
       "sources": [
+        {
+          "name": "Google Maps｜M3GÁLLÓ（往 Vásárosnamény）",
+          "url": "https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"
+        },
         {
           "name": "匈牙利官方｜高速通行證",
           "url": "https://nemzetiutdij.hu/en/"
@@ -3109,18 +3114,21 @@ const TRIP_DATA = {
     },
     {
       date: "2/6", weekday: "六", title: "Budapest → Košice（午餐）→ Prešov → Poprad → Štrbské Pleso", city: "Budapest → Štrbské Pleso", hotel: "Hotel Panorama（全景酒店）", theme: "drive", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Strbske_Pleso_winter.jpg/960px-Strbske_Pleso_winter.jpg",
-      summary: "長途冬季自駕日，跳過 Miskolc，直接前往 Košice 午餐，再續行至 Štrbské Pleso。",
-      highlights: ["09:00 SIXT 取車", "預計 10:00 出發", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
+      summary: "冬季跨境自駕，先在 M3 的 Geleji pihenő 短休，再到 Košice 午餐，續行至 Štrbské Pleso。",
+      highlights: ["09:00 SIXT 取車", "預計 10:00 出發", "M3 Geleji pihenő 短休", "Košice 午餐與休息", "跨境：HU → SK", "山區冬季路況"],
       items: [
         ["09:00–10:00", "car", "SIXT Budapest Chain Bridge 取車｜已預訂", "訂單 09:00：Apáczai Csere János u. 12–14, Budapest, 1052；預留手續、車況拍照、裝行李，核對冬季胎／雪鏈與跨境許可，取得車牌及車籍資料辦 Kraków SCT；預計 10:00 出發", "1h"],
-        ["10:00–13:00", "drive", "Budapest → Košice", "直接前往 Košice，不停留 Miskolc；沿用原車程估算，額外休息與冬季延誤另加", "約 3h"],
-        ["13:00–14:00", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
-        ["14:00–16:00", "drive", "Košice → Prešov → Poprad", "沿用原車程估算；雪況／塞車可能延誤", "約 2h"],
-        ["16:00–16:45", "drive", "Poprad → Štrbské Pleso", "山區末段，依積雪、能見度與管制調整", "約 45m"],
-        ["約 16:45–18:00", "hotel", "Hotel Panorama（全景酒店）", "入住；16:45 為規劃值，不保證天黑前到，依冬季路況保留彈性", ""],
+        ["10:00–約 11:30", "drive", "Budapest → Geleji pihenő", "沿 M3 往 Vásárosnamény，前往 142 公里處的東向休息站", "約 1h30"],
+        ["約 11:30–11:45", "rest", "M3GÁLLÓ RESTAURANT Vásárosnamény felé", "Geleji pihenő 東向休息站。預留時間上洗手間、買咖啡或換駕駛，旁邊有 Shell", "約 15m"],
+        ["約 11:45–13:15", "drive", "Geleji pihenő → Košice", "回 M3 東向後轉 M30，經 Tornyosnémeti／Milhosť 邊境接 R4 前往 Košice", "約 1h30"],
+        ["約 13:15–14:15", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
+        ["約 14:15–16:15", "drive", "Košice → Prešov → Poprad", "沿用原車程估算；雪況／塞車可能延誤", "約 2h"],
+        ["約 16:15–17:00", "drive", "Poprad → Štrbské Pleso", "山區末段，依積雪、能見度與管制調整", "約 45m"],
+        ["約 17:00–18:00", "hotel", "Hotel Panorama（全景酒店）", "入住；17:00 為含休息站短停的規劃值，依冬季路況保留彈性", ""],
         ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
-      notes: ["09:00 取車、預計 10:00 出發；約 16:45 抵達沿用原車程估算，額外休息、降雪與塞車會延後。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
+      sources: [{"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
+      notes: ["09:00 取車、預計 10:00 出發；含休息站短停 15 分鐘，預計約 17:00 抵達。降雪、塞車或停留較久時順延。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
     },
     {
       date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
@@ -3881,6 +3889,13 @@ const TRIP_DATA = {
 
 // Representative photos: reference images do not change bookings, routes, or meal choices.
 TRIP_DATA.timelinePhotoCatalog = {
+  "GelejRest": {
+    "key": "GelejRest",
+    "name": "M3GÁLLÓ 東向休息站（白天外觀，6 月拍攝）",
+    "image": "https://villanyautosok.hu/wp-content/uploads/2024/06/2024-06-17-tea-gelej-del-02.jpg",
+    "imageSource": "https://villanyautosok.hu/2024/06/17/a-balaton-es-az-m3-autopalya-kornyeket-is-megszorta-toltokkel-a-tea/",
+    "credit": "Villanyautósok"
+  },
   "Scoot": {
     "key": "Scoot",
     "name": "酷航 Boeing 787（航空公司參考，實際機型依航班）",
@@ -4367,7 +4382,10 @@ TRIP_DATA.timelinePhotoRefs = {
     "SIXT Budapest Chain Bridge 取車｜已預訂": [
       "ICBudapest"
     ],
-    "Budapest → Košice": [
+    "M3GÁLLÓ RESTAURANT Vásárosnamény felé": [
+      "GelejRest"
+    ],
+    "Geleji pihenő → Košice": [
       "Kosice"
     ],
     "Košice → Prešov → Poprad": [
