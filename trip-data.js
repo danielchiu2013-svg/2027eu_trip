@@ -144,7 +144,7 @@ const TRIP_DATA = {
       "reservationId": "vienna-city-tickets"
     },
     "airport-transfer": {
-      "title": "2/14 06:15 Vienna 飯店 → VIE 預約接送",
+      "title": "2/14 06:00 Vienna 飯店 → VIE 預約接送",
       "reservationId": "airport-transfer-booking",
       "unit": "三人三件大行李，確認車型",
       "detail": "接送尚待預約；接送車費另付，不屬市區 pass。維持預約車主方案，不為此另買奧地利自駕通行證；若改搭火車／CAT，才另買涵蓋機場外區／該產品的票。",
@@ -380,7 +380,7 @@ const TRIP_DATA = {
       "items": [
         {
           "id": "airport-transfer",
-          "tag": "待預約：06:15 機場接送",
+          "tag": "待預約：06:00 機場接送",
           "kind": "buy",
           "action": "預約車費另付；不買市區pass來涵蓋機場，也不買奧地利自駕pass。"
         }
@@ -396,7 +396,7 @@ const TRIP_DATA = {
   "checkedDate": "2026-10-10",
   "note": "依三人、冬季、既定住宿與交通方式整理。已訂班次明確標示；其餘路線與時間為行程規劃，2027 班次、票價、路況與規則須在出發前再查。站名保留當地拼寫，便於現場找指標。",
   "alerts": [
-    "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 保留 06:15 預約接送。",
+    "維也納 2026/9/7–2027/10 底 S-Bahn 核心路段施工：S7 改至 St. Marx 起訖，Wien Mitte 的 S-Bahn 月台受影響；U3／U4 地鐵不是一起關閉。不要套用舊遊記「Wien Mitte 搭 S7 直達機場」。2/14 預約接送以 06:00 為目標。",
     "2/5 H5 到 Szentendre 超出 Budapest 市界；一般 Budapest 市區票不能單獨涵蓋全程。市界內與 Békásmegyer–Szentendre 區間須各有有效票。",
     "2/8 Kuźnice 一般私家車禁入；用當地公車／合規計程車到纜車下站。2/9 入 Kraków：匈牙利車牌須先查 SCT 資格與登錄，並確認飯店合法車道。",
     "2/6 09:00 SIXT 取車、預計 10:00 出發；含 Geleji pihenő 短休約 16:25 抵達湖區，雪況／塞車可能延誤，不保證天黑前到。2/10 的 5.5–6.5h 不能當冬季抵達保證。大雪／塞車時先聯絡飯店與 SIXT。"
@@ -806,7 +806,7 @@ const TRIP_DATA = {
         "到 Wien Hbf 後留在站內午餐／休息；三件大行李可找美食區邊角座位，或買方便食用的外帶餐帶上火車。13:10 左右確認出發月台、車廂及座位，預留搬行李時間。",
         "ÖBB RJX 63 三人車票已購：2027/2/4（四）13:40 Wien Hbf → 16:29 Budapest-Keleti，車程 2 小時 49 分鐘；使用者已更正確認 13:40，時間均為當地時間。",
         "截圖的「Wien Hbf (Bahnsteige 3–12)」是車站月台區域，並非已指定的出發月台。實際月台、車廂、座位與 Business 艙等以完整票券、ÖBB App 及當日看板核對；本截圖未顯示艙等及座號。",
-        "16:29 抵達 Budapest-Keleti 後，三人三件 29 吋大箱以搭合規計程車到 InterContinental Budapest 為主，叫車前確認行李容量；含下車、等車及交通約留 30–45 分鐘，規劃 17:00–17:15 抵達飯店，依實際路況調整。公共運輸備案：M2 往 Déli pályaudvar 至 Deák Ferenc tér，再步行到飯店；依 BudapestGO 查當日路線及無階梯通道。",
+        "16:29 抵達 Budapest-Keleti 後，三人三件 29 吋大箱以搭合規計程車到 InterContinental Budapest 為主，叫車前確認行李容量；含下車、叫車及週四下班時段交通約留 30–60 分鐘，規劃 17:00–17:30 抵達飯店，依實際路況調整。公共運輸備案：M2 往 Déli pályaudvar 至 Deák Ferenc tér，再步行到飯店；依 BudapestGO 查當日路線及無階梯通道。",
         "舊 FlixBus 車票曾已購；目前僅確認改搭火車，尚未確認巴士已取消或退款，請至管理訂單核對並處理。飯店入住與晚餐依實際抵達順延，河岸散步保留選擇性。"
       ],
       "sources": [
@@ -836,10 +836,10 @@ const TRIP_DATA = {
       ],
       "steps": [
         "飯店 → Batthyány tér：先查過河路線；可由 Deák Ferenc tér 搭 M2 往 Déli pályaudvar 方向，到 Batthyány tér 再找 H5 郊區鐵路。地鐵與 H5 是不同月台。",
-        "H5 去程看終點 Szentendre（不是提早終止的區間車），車上約 40–45 分鐘為草案估計；到站步行去 Fő tér 老城。回程往 Batthyány tér。",
+        "H5 去程看終點 Szentendre（不是提早終止的區間車），車上約 40 分鐘，單程抓約 1 小時，包含候車與往返 Fő tér 的步行。回程往 Batthyány tér。",
         "市界內需有效 Budapest 票／pass，Békásmegyer 以外另買 H5 區間票；三人同行可比較 H5 tour ticket，但仍需市區票。先買好來回，避免回程找售票點。",
         "回市區後到城堡山：BudapestGO 查往 Dísz tér／Szentháromság tér，16 公車是候選；現場站位與方向再核對，步行上坡遇冰雪時改車。",
-        "18:00 晚餐後下山前往船票指定碼頭；首選 Legenda Dock 7／Jane Haining rakpart。查公車／計程車＋步行末段，留到約 18:40 抵達的緩衝；以實際 2027 船票為準。"
+        "若訂 19:00 航班，17:45 從城堡區下山，搭公車 16 加步行，約 18:35 到 Legenda Dock 7／Jane Haining rakpart；晚餐若排隊就移到船後，實際集合依船票。"
       ],
       "sources": [
         {
@@ -904,12 +904,16 @@ const TRIP_DATA = {
         "PL"
       ],
       "steps": [
-        "維持 09:30–12:00 的原自駕草案；Štrbské Pleso → Poprad 方向接山區幹道 → Tatranská Javorina → Łysa Polana 邊界 → PL 960／961 → Jaszczurówka／Zakopane。先核對山區道路是否開放，約 2h30 不含額外雪況延誤。",
+        "09:30–12:00 含冬季山路與週日車流緩衝。候選路線：Štrbské Pleso → Starý Smokovec → Tatranská Javorina → Łysa Polana 邊界 → Jaszczurówka／Zakopane；出發前查山區路面及邊境路況。",
         "上路前查雪胎、玻璃除霜與油量，山區不為追求最短路線穿小路；嚴重結冰時延後或另查安全路線。",
-        "Jaszczurówka 停合法車位，接著到 Gubałówka 下站周邊合法付費停車場；Krupówki 步行，不把街道本身當汽車導航終點。",
+        "Jaszczurówka 停合法車位，接著到 Gubałówka 下站周邊合法付費停車場，預留 45 分鐘進城、停車及步行；Krupówki 步行，不把街道本身當汽車導航終點。",
         "Cristina 已知 16:00 前不提供標準入住及無行李服務；行李在車內完全遮蔽，相機證件隨身，停車不保證零風險。入住時問車位、出入方法與隔晨 Kuźnice 叫車。"
       ],
       "sources": [
+        {
+          "name": "斯洛伐克｜塔特拉山區即時路況",
+          "url": "https://www.zjazdnost.sk/conditions/current/list.html?direction=1&order=rnumber&region_code=po"
+        },
         {
           "name": "斯洛伐克政府｜道路交通規則",
           "url": "https://www.slovensko.sk/en/life-situation/life-situation/_road-traffic-rules"
@@ -931,10 +935,10 @@ const TRIP_DATA = {
         "PL"
       ],
       "steps": [
-        "09:00 出門：優先飯店預約合規計程車，或查 Krupówki Pomnik hr. Wł. Zamoyskiego 等附近站往 Kuźnice 的市營 10／12 等公車。班次／站位以當日公告，雪天不保證 30 分鐘。",
+        "08:45 出門：優先由飯店叫合規計程車，或查附近站往 Kuźnice 的市營公車。等車、交通與步行合計抓 45 分鐘。",
         "Kuźnice 車道禁止一般私家車；不開租車直達纜車下站。若先開車到合法停車場，也要另算最後接駁與停車時間。",
-        "纜車下站地址 Kuźnice 14；約 09:30 到站、10:00 上山只是原規劃，先取得時段票並按要求報到。記下下山票規則，午餐後還要轉活動集合點。",
-        "回程市營公車／計程車到市區；Snowmobile 業者集合地址尚未指定，14:00–14:20 不能當固定可達保證。訂活動時確認是否接送、停車及提前報到時間，地址確認後才排實際末段。"
+        "纜車下站 Kuźnice 14，暫排 09:30 到站、10:00 上山；PKL 要求至少提早 15 分鐘。往返票會指定下山班次，購票時先確認約 12:00 能下山。",
+        "回程搭市營公車或計程車；午餐後暫留 40 分鐘轉場、20 分鐘報到及整裝。雪地摩托集合地址和報到要求確認後，再定實際交通與出發時間。"
       ],
       "sources": [
         {
@@ -958,7 +962,7 @@ const TRIP_DATA = {
         "PL"
       ],
       "steps": [
-        "主要道路候選：Zakopane 的 DK47（Zakopianka）→ Nowy Targ／Rabka-Zdrój → S7／DK7 → Kraków；以導航與通行路段為準。09:00–11:30 是原草案，冬季及進城塞車可能延誤。",
+        "主要道路候選：Zakopane 的 DK47（Zakopianka）→ Nowy Targ／Rabka-Zdrój → S7／DK7 → Kraków；以導航與通行路段為準。09:00 出發，車程抓 2 小時 10 分鐘，約 11:10 抵達；11:10–12:00 留給停車、寄放及車程再延誤。",
         "2/6 取車後儘早辦 Kraków SCT，2/8 再確認申請狀態及通行資格。外國車牌即使符合排放／年份標準仍須登錄；準備實際車牌、車籍影本、品牌／型號、製造年份、燃料與 Euro 排放資料，未確認資格前不進入管制區。官方規則查核：2026/10/11，出發前再確認。",
         "自駕終點為 Holiday Inn Krakow City Centre（Wielopole 4, 31-072 Kraków）提供的合法停車入口，行前向飯店確認車位、入口及收費；名額有限，不假設抵達即可停到。SCT 通過不代表可以開進老城步行街。11:30 先停車、寄放大行李；客房一般 15:00 起入住，晚餐後再辦入住即可。",
         "飯店 → Wawel：步行約 15–20 分鐘，約 1 公里；可經 Planty 南側／Stradomska 接城堡上坡入口。12:00–13:00 的一小時包含簡單午餐及走路，約 12:40 前開始往 Wawel 走，不安排慢節奏套餐。",
@@ -1114,7 +1118,7 @@ const TRIP_DATA = {
         "AT"
       ],
       "steps": [
-        "維持 06:15 預約接送、約 06:45 到 VIE、10:00 TR61；交通時間是原規劃，出發前確認航空公司報到航廈、截止時間與道路情況。",
+        "接送目標改為 06:00，待預約。約 06:30–06:45 到 VIE，最晚以 07:00 前到航廈為規劃目標；10:00 起飛。出發前確認航廈、報到截止與道路情況。",
         "確認三人＋大行李可裝車、飯店門口集合位置、費用／等待規則與司機聯絡。前晚確認，當天提早下樓。",
         "車輛未到先聯絡業者／飯店安排合規計程車。公共運輸只作預先查好的備案：從 Wien Hbf 查機場長途列車；不臨時照舊遊記走 Wien Mitte 的 S7。",
         "機場火車必須持涵蓋機場外區的票，Vienna core zone 票不足；清晨首班與工程班表以 2027 官方為準。"
@@ -2842,16 +2846,16 @@ const TRIP_DATA = {
       "group": "門票／活動預約",
       "date": "2/13（六）下午",
       "status": "待購票",
-      "detail": "目標約 13:45 入場；確認上宮時段票及是否需要另排下宮或特展。",
+      "detail": "約 13:45 到上宮入口，建議選約 14:00 入場的上宮時段票。",
       "url": "https://www.belvedere.at/en/tickets"
     },
     {
       "id": "airport-transfer-booking",
       "label": "InterContinental Vienna → VIE 清晨接送預約",
       "group": "車票／交通預約",
-      "date": "2/14（日）06:15",
+      "date": "2/14（日）06:00",
       "status": "待預約",
-      "detail": "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:45 抵達機場。"
+      "detail": "確認三人與行李可乘車型、接送地點、費用及司機聯絡方式；目標約 06:30–06:45 抵達機場，07:00 前到航廈。"
     },
     {
       "id": "hu-vignette-purchase",
@@ -2884,7 +2888,7 @@ const TRIP_DATA = {
         ["00:00–01:30", "rest", "休息／前往候機區", "避免睡過頭，留足登機緩衝", ""],
         ["02:45", "flight", "TR60", "Singapore SIN → Vienna VIE", ""]
       ],
-      notes: ["TPE 報到時直接確認行李是否可一路掛到 VIE。", "若為分開票券，是否需要入境新加坡／重新托運，以現場航空公司指示為準。"]
+      notes: ["建議約 13:40 到桃園機場，距 16:40 起飛 3 小時；依出發地的當日路況倒推出門時間。", "TPE 報到時直接確認行李是否可一路掛到 VIE。", "若為分開票券，是否需要入境新加坡／重新托運，以現場航空公司指示為準。"]
     },
     {
       "date": "2/4",
@@ -2894,7 +2898,7 @@ const TRIP_DATA = {
       "hotel": "InterContinental Budapest（布達佩斯洲際酒店）",
       "theme": "train",
       "photo": "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
-      "summary": "ÖBB RJX 63 三人車票已購：13:40 Wien Hbf → 16:29 Budapest-Keleti。機場先搭車到中央車站，站內午餐後前往 Budapest，約 17:00–17:15 到飯店為估計。",
+      "summary": "ÖBB RJX 63 三人車票已購：13:40 Wien Hbf → 16:29 Budapest-Keleti。機場先搭車到中央車站，站內午餐後前往 Budapest，約 17:00–17:30 到飯店為估計。",
       "highlights": [
         "08:30 VIE",
         "RJX 63 已購票 · 3 人",
@@ -2940,11 +2944,11 @@ const TRIP_DATA = {
           "2h49"
         ],
         [
-          "16:29–約 17:15",
+          "16:29–約 17:30",
           "transit",
           "Budapest-Keleti → InterContinental Budapest（布達佩斯洲際酒店）",
-          "以合規計程車為主，叫車前確認三件 29 吋大箱容量；含取行李、等車與市區交通為估計。地鐵備案 M2 至 Deák Ferenc tér 再步行",
-          "規劃約 30–45m"
+          "以合規計程車為主，叫車前確認三件 29 吋大箱容量；含取行李、等車與週四下班時段市區交通。地鐵備案 M2 至 Deák Ferenc tér 再步行",
+          "規劃約 30–60m"
         ],
         [
           "約 17:00–18:00",
@@ -2962,6 +2966,7 @@ const TRIP_DATA = {
         ]
       ],
       "notes": [
+        "08:30 落地到 13:40 發車共有 5 小時 10 分鐘。入境或航班延誤時先直達 Wien Hbf，站內午餐可改外帶。",
         "已購區間為 Wien Hbf → Budapest-Keleti；機場段另行確認／購票。13:40 為使用者更正確認時間。",
         "完整票券核對艙等、座號、車廂及退改條件；飯店交通、入住時間屬規劃估計，依實際抵達順延。",
         "原 FlixBus 車票尚未確認已取消或退款，清單保留待確認退票項目。"
@@ -2985,25 +2990,25 @@ const TRIP_DATA = {
       ],
       "items": [
         [
-          "09:00–09:15",
+          "08:45–09:15",
           "transit",
           "飯店 → Batthyány tér",
-          "步行／市區電車；以 BudapestGO 查當日路線",
-          "15m"
+          "以 M2 過河為主，含走到車站及轉 H5 月台；Batthyány tér 為白天到訪",
+          "30m"
         ],
         [
-          "約 09:15–10:00",
+          "約 09:15–10:15",
           "transit",
           "H5 → Szentendre",
-          "約 40–45 分鐘；班次以當日公告為準",
-          "40–45m"
+          "車上約 40 分鐘，另留候車及到老城的步行時間",
+          "約 1h"
         ],
         [
-          "10:00–11:30",
+          "10:15–11:30",
           "place",
           "Szentendre 老城",
           "Fő tér、巷弄、河岸街景",
-          "1h30"
+          "1h15"
         ],
         [
           "11:30–12:15",
@@ -3013,25 +3018,25 @@ const TRIP_DATA = {
           "45m"
         ],
         [
-          "約 12:15–13:00",
+          "約 12:15–13:15",
           "transit",
           "Szentendre → Batthyány tér",
-          "搭 H5 回市區",
-          "45m"
+          "含步行至車站、候車及約 40 分鐘車程",
+          "約 1h"
         ],
         [
-          "13:00–13:30",
+          "13:15–13:45",
           "transit",
           "前往 Buda Castle 區",
           "公車 16 或步行上城；依當日路況選擇",
           "30m"
         ],
         [
-          "13:30–14:15",
+          "13:45–14:15",
           "place",
           "Buda Castle",
-          "城堡區、庭院與 Danube 視角",
-          "45m"
+          "城堡區、庭院與 Danube 視角；H5 晚到時先縮短這段",
+          "30m"
         ],
         [
           "14:15–15:00",
@@ -3048,32 +3053,32 @@ const TRIP_DATA = {
           "1h15"
         ],
         [
-          "16:15–17:00",
+          "16:15–17:10",
           "photo",
           "城堡區藍調時刻",
-          "依當日日落時間微調",
-          "45m"
+          "日落約 16:51，這段前半仍有日光，後段拍暮色；依雲量彈性調整",
+          "55m"
         ],
         [
-          "17:00–18:00",
+          "17:10–17:45",
           "food",
           "晚餐｜城堡區就近用餐",
-          "可選 Paprikás csirke 雞肉紅椒燉或 Gulyás；用餐後下山前往碼頭",
-          "1h"
+          "先選可快速上菜或外帶的店；若須排隊，改在遊船後用餐",
+          "35m"
         ],
         [
-          "18:00–18:40",
+          "17:45–18:35",
           "transit",
           "城堡區 → 多瑙河遊船碼頭",
-          "公車 16／計程車下山，再前往訂單指定碼頭；若選 Legenda，集合在 Dock 7（Jane Haining rakpart）；依路況留交通緩衝",
-          "約 40m"
+          "週五傍晚首選公車 16 接步行，預留候車與過河時間；若選 Legenda，往 Dock 7（Jane Haining rakpart）",
+          "約 50m"
         ],
         [
-          "18:40–19:00",
+          "18:35–19:00",
           "rest",
           "遊船報到／登船緩衝",
-          "規劃提早約 20 分鐘抵達；以實際船票的集合地點與報到要求為準",
-          "20m"
+          "目標提前約 25 分鐘抵達；以實際船票要求為準",
+          "25m"
         ],
         [
           "約 19:00–20:00",
@@ -3091,13 +3096,14 @@ const TRIP_DATA = {
         ]
       ],
       "notes": [
-        "Szentendre 冬季屬淡季，店家／室內景點營業時間應於出發前再確認。",
+        "Szentendre 冬季屬淡季，先確認午餐店家開門時間；河岸風大或石板濕滑時縮短戶外段。",
         "Fisherman’s Bastion 已在本日完成，2/11 不再排。",
         "遊船安排 2/5，2/4 抵達日維持休息彈性。約 19:00 只是規劃時段：查核時官方仍為 2026 班表，尚未確認 2027-02-05 開航與座位，未完成訂票。",
         "首選 Legenda Danube Legend（一小時觀光船）；購票時確認室內保暖、戶外拍攝區、碼頭與退改規則。二月河上風冷，短暫到戶外拍照後回室內。",
         "船上拍攝以標準變焦為主，注意船身晃動與玻璃反光；提高快門速度並接受較高 ISO，腳架不適合在移動船上長曝光。"
       ],
       "sources": [
+        {"name":"Budapest｜2027 年 2 月日出日落","url":"https://alpenglowapp.com/times/budapest/2027/02"},
         {
           "name": "Legenda｜一小時夜景遊船",
           "url": "https://legenda.hu/en/danube-legend"
@@ -3127,8 +3133,8 @@ const TRIP_DATA = {
         ["約 16:25–18:00", "hotel", "Hotel Panorama（全景酒店）", "約 16:25 抵達後辦理入住，實際時間視冬季路況調整", ""],
         ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
-      sources: [{"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
-      notes: ["09:00 取車、預計 10:00 出發；含休息站短停 15 分鐘與各段預留時間，預計約 16:25 抵達。降雪、塞車或停留較久時順延。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
+      sources: [{"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}, {"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
+      notes: ["16:25 是含既定緩衝的規劃值，湖區日落約 16:45。若晚到 Košice，午餐採簡餐並省略順拍，仍保留駕駛休息。", "09:00 取車、預計 10:00 出發；含休息站短停 15 分鐘與各段預留時間，預計約 16:25 抵達。降雪、塞車或停留較久時順延。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
     },
     {
       date: "2/7", weekday: "日", title: "Štrbské Pleso → Zakopane｜Jaszczurówka → Gubałówka → Krupówki", city: "Štrbské Pleso → Zakopane", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://domalenka.pl/uploads/images/hotel-patria/hotel-patria-nove/hotel-patria-nove-zima.jpg",
@@ -3136,33 +3142,35 @@ const TRIP_DATA = {
       highlights: ["09:00 出發", "Jaszczurówka", "Gubałówka", "Krupówki"],
       items: [
         ["09:00–09:30", "hotel", "早餐、退房與裝車", "貴重物品隨身；確認車況與天候", "30m"],
-        ["09:30–12:00", "drive", "Štrbské Pleso → Zakopane", "經 Poprad／Tatranská Javorina／Łysa Polana；冬季邊境路況留緩衝", "約 2h30"],
+        ["09:30–12:00", "drive", "Štrbské Pleso → Zakopane", "優先查 Starý Smokovec → Tatranská Javorina → Łysa Polana；正常約 1 小時 15–30 分鐘，已含冬季山路和週日進城緩衝", "含緩衝 2h30"],
         ["12:00–12:30", "photo", "Jaszczurówka 木造教堂", "先確認停車與教堂開放；尊重宗教場所拍攝規範", "30m"],
         ["12:30–13:15", "food", "午餐｜波蘭高塔特拉料理", "可點 kwaśnica 酸菜湯、moskole 馬鈴薯餅；煙燻羊乳起司依冬季供應為準", "45m"],
-        ["13:15–13:45", "transit", "停車／前往 Gubałówka 下站", "停合法付費停車場，車內勿留貴重物", "30m"],
-        ["13:45–15:30", "photo", "Gubałówka", "搭纜車或步行上山，依風雪與營運狀況", "1h45"],
+        ["13:15–14:00", "transit", "停車／前往 Gubałówka 下站", "預留週日進城、找車位與走到下站時間；車內勿留貴重物", "45m"],
+        ["14:00–15:30", "photo", "Gubałówka", "搭纜車往返，這段含排隊；若等候較久，順延 Krupówki，並依風雪及營運調整", "1h30"],
         ["15:30–17:00", "photo", "Krupówki", "黃昏街景；可在此用晚餐", "1h30"],
         ["17:00–18:00", "transit", "前往 Aparthotel Cristina（克莉絲蒂娜公寓酒店）", "確認停車與最晚入住方式", "1h"],
         ["18:00 後", "hotel", "入住、與朋友會合／晚餐", "晚餐可選 kwaśnica 酸菜湯、pierogi 波蘭餃子或烤羊乳起司；用餐後回飯店休息", ""]
       ],
-      notes: ["Aparthotel Cristina（克莉絲蒂娜公寓酒店） 無行李服務；16:00 前不提供標準入住。", "車內只放一般行李；護照、相機、現金等貴重物品隨身。", "冬季跨境山區行駛務必保留緩衝。"]
+      sources: [{"name":"波蘭教育部｜2027 寒假日期","url":"https://www.gov.pl/web/edukacja/terminy-ferii-zimowych-w-roku-szkolnym-20262027"},{"name":"波蘭 GDDKiA｜即時國道路況","url":"https://drogi.gddkia.gov.pl/"}],
+      notes: ["2/7 是週日，Mazowieckie 等省正在放寒假；Zakopane 所在的 Małopolskie 自 2/15 才放假。約 16:45 日落，若路況拖延，優先保留 Gubałówka 的日光，縮短木造教堂外拍。", "Aparthotel Cristina（克莉絲蒂娜公寓酒店） 無行李服務；16:00 前不提供標準入住。", "車內只放一般行李；護照、相機、現金等貴重物品隨身。", "冬季跨境山區行駛務必保留緩衝。"]
     },
     {
       date: "2/8", weekday: "一", title: "Kasprowy Wierch → Snowmobile", city: "Zakopane / Kościelisko", hotel: "Aparthotel Cristina（克莉絲蒂娜公寓酒店）", theme: "winter", photo: "https://www.pkl.pl/data/pages/338/cp_cp_cp_20200108_a6500ab606436ab2.jpg",
-      summary: "09:00 出發前往 Kuźnice，上午搭 Kasprowy 纜車，下午只排已確認集合點的 Snowmobile。",
-      highlights: ["09:00 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "14:30 Snowmobile"],
+      summary: "08:45 出發前往 Kuźnice，上午搭 Kasprowy 纜車，下午暫排 14:30 雪地摩托，集合地址及報到要求待業者確認。",
+      highlights: ["08:45 前往 Kuźnice", "Kasprowy Wierch", "午餐／轉場", "14:30 Snowmobile"],
       items: [
-        ["09:00–09:30", "transit", "飯店 → Kuźnice", "計程車／當地 minibus；私家車不可直達纜車站", "30m"],
-        ["09:30–10:00", "transit", "報到／候車", "預留排隊與纜車班次緩衝", "30m"],
-        ["10:00–12:30", "photo", "Kasprowy Wierch", "纜車與山頂雪景；受風雪、能見度與營運影響", "2h30"],
-        ["12:30–13:15", "transit", "下山並返回 Zakopane", "排隊時間視現場調整", "45m"],
-        ["13:15–14:00", "food", "午餐｜波蘭高塔特拉料理", "可點 kwaśnica 酸菜湯、moskole 馬鈴薯餅；煙燻羊乳起司依冬季供應為準", "45m"],
-        ["14:00–14:20", "transit", "前往 Snowmobile 集合點", "必須先取得業者確切地址與接駁方式", "20m"],
-        ["14:20–14:30", "adventure", "報到／裝備／安全說明", "依業者要求提前到場；不要把 5 分鐘當緩衝", "10m"],
+        ["08:45–09:30", "transit", "飯店 → Kuźnice", "計程車／市營公車；45 分鐘含等車、週一早上車流及雪地步行", "45m"],
+        ["09:30–10:00", "transit", "報到／候車", "目標 09:30 到；PKL 要求至少於票面班次前 15 分鐘到下站", "30m"],
+        ["10:00–約 12:00", "photo", "Kasprowy Wierch", "纜車上山及山頂雪景；往返票會指定回程班次，購票時核對，規劃約 12:00 開始下山", "約 2h"],
+        ["約 12:00–13:00", "transit", "下山並返回 Zakopane", "含下山、等車和回市區；回程依票面班次與當日營運", "約 1h"],
+        ["13:00–13:30", "food", "午餐｜波蘭高塔特拉料理", "以熱湯或快速簡餐為主；纜車延誤時改外帶", "30m"],
+        ["13:30–14:10", "transit", "前往 Snowmobile 集合點", "暫留 40 分鐘，依業者的確切地址、接駁和雪況重算", "暫留 40m"],
+        ["14:10–14:30", "adventure", "報到／裝備／安全說明", "暫留 20 分鐘，實際依業者要求提前到場", "暫留 20m"],
         ["14:30–16:30", "adventure", "Snowmobile", "Kościelisko／Butorów 區域；2h 體驗", "2h"],
         ["18:00–19:30", "food", "晚餐｜波蘭山地料理", "可選 kwaśnica 酸菜湯、pierogi 波蘭餃子或烤羊乳起司；冬季起司供應依店家為準", "1h30"]
       ],
-      notes: ["Jaszczurówka 排在 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
+      sources: [{"name":"PKL｜Kasprowy 纜車報到與營運","url":"https://www.pkl.pl/kasprowy-wierch/faq-kasprowy-wierch.html"}],
+      notes: ["山上風力和能見度以 PKL 當日公告為準；若纜車延遲開行、回程時段過晚，先確認能否銜接活動再上山。", "Jaszczurówka 排在 2/7，避免 2/8 纜車後趕景點再趕集合。", "Snowmobile 集合地址尚須向業者核實；雪況不足可能改期、取消或改活動。", "Kasprowy 纜車受風雪與營運影響；預約時選接近 10:00 的上山時段並確認退改規則。"]
     },
     {
       "date": "2/9",
@@ -3183,18 +3191,18 @@ const TRIP_DATA = {
       ],
       "items": [
         [
-          "09:00–11:30",
+          "09:00–11:10",
           "drive",
           "Zakopane → Kraków",
-          "自駕 DK47 → S7／DK7 → 飯店合法停車入口；2h30 為預估，冬季道路與進城車流可能延誤",
-          "約 2h30"
+          "自駕 DK47 → S7／DK7，常態約 1 小時 30 分鐘，另留約 40 分鐘給冬季路面與 Kraków 進城車流",
+          "約 2h10"
         ],
         [
-          "11:30–12:00",
+          "約 11:10–12:00",
           "hotel",
           "飯店停車／寄放行李",
-          "Holiday Inn，Wielopole 4；車位及合法入口預先確認。先寄放大行李，客房一般 15:00 起入住",
-          "30m"
+          "Holiday Inn，Wielopole 4；車位及合法入口預先確認，含寄放行李與額外車程緩衝；客房一般 15:00 起入住",
+          "約 50m"
         ],
         [
           "12:00–13:00",
@@ -3242,7 +3250,7 @@ const TRIP_DATA = {
           "16:45–18:00",
           "photo",
           "Main Market Square／Cloth Hall 外觀",
-          "步行數分鐘即到；拍廣場、雙塔和紡織會館拱廊，依天色彈性安排暖身休息",
+          "日落約 16:48，出教堂後以暮色與點燈街景為主；想拍日光可在 16:00 入場前先拍幾張",
           "1h15"
         ],
         [
@@ -3260,6 +3268,7 @@ const TRIP_DATA = {
           "彈性"
         ]
       ],
+      "sources": [{"name":"波蘭 GDDKiA｜即時國道路況","url":"https://drogi.gddkia.gov.pl/"}],
       "notes": [
         "Holiday Inn 停車名額有限，預先確認合法入口、車位與收費；到店先寄放行李，晚間回來再入住。",
         "租車為外國車牌，2/9 進 Kraków SCT 前確認登錄及通行資格；SCT 不等於可開進老城步行街。",
@@ -3273,15 +3282,16 @@ const TRIP_DATA = {
       summary: "09:00 出發，保留休息與冬季路況緩衝；已預訂 19:30 在 Budapest Keleti Train Station 還車，之後前往公寓休息。",
       highlights: ["09:00 出發", "純駕駛約 5.5–6.5h", "19:30 Keleti 還車｜已預訂", "不排景點"],
       items: [
-        ["09:00–12:00", "drive", "Kraków → Slovakia 路段", "長途自駕；依導航與冬季路況", "約 3h"],
+        ["09:00–12:00", "drive", "Kraków → Slovakia 路段", "長途自駕；依導航與冬季路況，中途視需要短停休息", "約 3h"],
         ["12:00–12:45", "rest", "服務區午餐／駕駛休息", "以熱湯或 Gulyás 匈牙利燉牛肉為優先；不要為趕還車壓縮休息", "45m"],
-        ["12:45–約 16:00", "drive", "繼續前往 Budapest", "純駕駛約 5.5–6.5 小時是估算；塞車／雪況會延後，如可能超過 19:30 還車先聯絡 SIXT", "約 3h15"],
+        ["12:45 後", "drive", "繼續前往 Budapest", "中部幹道路線純駕駛約 5.5–6.5 小時；含午餐及短休，約 16:00–17:00 到布達佩斯周邊，市區車流另留時間", "依路況"],
         ["抵達後–19:00", "rest", "路況緩衝／休息／還車前補油", "抵達時間為估算，保留休息、加油與市區交通時間；若提早到，先詢問能否提前還車，不額外排景點", "依路況"],
         ["19:00–19:30", "car", "SIXT Budapest Keleti Train Station 還車準備", "Baross tér 7–8, Budapest, 1087；訂單還車時間 19:30。預先核對入口、停車位及晚間交還流程，拍油量／里程／車況並保留交還證明", "約 30m"],
         ["19:30 後", "hotel", "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", "還車後按公寓實際地址搭車、入住；通知房東晚間抵達，入住及晚餐時間依交車／交通順延", ""],
         ["入住後", "food", "晚餐／休息", "按實際時間選公寓附近營業餐廳或外帶，把體力留給 2/11", ""]
       ],
-      notes: ["不要為了塞景點壓縮高速路程緩衝。", "取車 Chain Bridge、還車 Keleti，兩處門市不同；2/10 19:30 為已預訂時間，現場交車／鑰匙投遞及提前還車須向 SIXT 核對。", "Kraków SCT 依實際車牌完成；回程出發前仍要確認通行資格。"]
+      sources: [{"name":"波蘭 GDDKiA｜即時國道路況","url":"https://drogi.gddkia.gov.pl/"},{"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}],
+      notes: ["週三午後進城先補油、確認 Keleti 還車入口；17:30 前重查抵達預估，若可能趕不上 19:30 就先聯絡 SIXT。", "不要為了塞景點壓縮高速路程緩衝。", "取車 Chain Bridge、還車 Keleti，兩處門市不同；2/10 19:30 為已預訂時間，現場交車／鑰匙投遞及提前還車須向 SIXT 核對。", "Kraków SCT 依實際車牌完成；回程出發前仍要確認通行資格。"]
     },
     {
       date: "2/11", weekday: "四", title: "Central Market → Váci utca → Basilica → Parliament → Shoes on the Danube → Chain Bridge", city: "Budapest", hotel: "Sleek premium Aprqtment with Park（附停車位的時尚高級公寓）", theme: "city", photo: "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=82",
@@ -3296,55 +3306,58 @@ const TRIP_DATA = {
         ["13:30–15:00", "photo", "Hungarian Parliament", "Kossuth Lajos tér 建築視角", "1h30"],
         ["15:00–15:30", "photo", "Shoes on the Danube", "紀念地；保持安靜與尊重", "30m"],
         ["15:30–16:15", "transit", "前往 Batthyány tér", "", "45m"],
-        ["16:15–17:15", "photo", "Batthyány tér", "多瑙河對岸 Parliament 全景", "1h"],
+        ["16:15–17:15", "photo", "Batthyány tér", "多瑙河對岸 Parliament 全景，約 17:00 日落，可由日光拍到暮色", "1h"],
         ["17:15–17:45", "transit", "前往 Chain Bridge", "", "30m"],
-        ["17:45–18:45", "photo", "Chain Bridge＋Danube", "黃昏、藍調時刻", "1h"],
+        ["17:45–18:45", "photo", "Chain Bridge＋Danube", "夜景與橋燈；日落及藍調主要留在前一站 Batthyány tér", "1h"],
         ["18:45–19:45", "food", "晚餐｜匈牙利經典菜", "可選燉牛肉 Gulyás 或雞肉紅椒燉 Paprikás csirke", "1h"],
         ["19:45 後", "photo", "Budapest 夜景", "返回飯店", ""]
       ],
-      notes: ["Parliament 可拍兩個方向：Kossuth Lajos tér 近拍，以及 Batthyány tér 對岸全景。", "不重複 Fisherman’s Bastion。"]
+      sources: [{"name":"Budapest｜2027 年 2 月日出日落","url":"https://alpenglowapp.com/times/budapest/2027/02"}],
+      notes: ["週四傍晚過河以 M2 為主；河岸遇強風或濕滑時縮短停拍，45 分鐘的過河轉乘緩衝可保留。", "Parliament 可拍兩個方向：Kossuth Lajos tér 近拍，以及 Batthyány tér 對岸全景。", "不重複 Fisherman’s Bastion。"]
     },
     {
       date: "2/12", weekday: "五", title: "Budapest → Vienna", city: "Budapest → Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "train", photo: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1400&q=82",
       summary: "退房後搭直達 Railjet／EC 前往 Wien Hbf；抵達後只走市中心夜景。",
       highlights: ["Budapest-Keleti", "直達 Railjet／EC", "Wien Hbf", "Stephansdom", "Graben／Kohlmarkt"],
       items: [
-        ["09:00–09:30", "hotel", "退房並前往 Budapest-Keleti", "預留找月台與候車時間", "30m"],
+        ["08:45–09:30", "hotel", "退房並前往 Budapest-Keleti", "以約 10:00 車次為例，含週五早上叫車、裝行李與路程；目標提前 30 分鐘到站", "45m"],
         ["約 10:00–13:00", "train", "Budapest → Wien Hbf", "直達 Railjet／EC；2027 班次開售後選定", "約 2h40–3h"],
-        ["13:00–13:30", "transit", "Wien Hbf → InterContinental Vienna（維也納洲際酒店）", "大行李搭計程車，或依 Wiener Linien 路線規劃", "約 30m"],
-        ["13:30–16:00", "hotel", "寄放行李／午餐／休息", "午餐可吃 Wiener Schnitzel 維也納炸肉排；依房間是否可提前入住調整", "2h30"],
+        ["約 13:00–13:45", "transit", "Wien Hbf → InterContinental Vienna（維也納洲際酒店）", "含下車、帶行李走到乘車點與候車；大行李可搭計程車", "約 45m"],
+        ["13:45–16:00", "hotel", "寄放行李／午餐／休息", "午餐可吃 Wiener Schnitzel 維也納炸肉排；依房間是否可提前入住調整", "2h15"],
         ["16:00–17:00", "photo", "Stephansdom", "外觀拍攝；入內遵守禮拜時間", "1h"],
         ["17:00–18:00", "photo", "Graben／Kohlmarkt", "步行街景與商店立面", "1h"],
         ["18:00 後", "food", "晚餐／返回飯店", "可選 Wiener Schnitzel 維也納炸肉排或 Tafelspitz 水煮牛肉；市中心步行", ""]
       ],
-      notes: ["國際火車票常在出發前數月逐步開放；2027 班次以 ÖBB 最終時刻表為準。", "不再安排 Szentendre；此日專心換城市。"]
+      notes: ["班次訂好後，按實際發車時間倒推抵達 Keleti 的時間；若列車延誤，市中心散步可直接順延。", "國際火車票常在出發前數月逐步開放；2027 班次以 ÖBB 最終時刻表為準。", "不再安排 Szentendre；此日專心換城市。"]
     },
     {
       date: "2/13", weekday: "六", title: "Schönbrunn → Belvedere → Hofburg", city: "Vienna", hotel: "InterContinental Vienna（維也納洲際酒店）", theme: "city", photo: "https://www.avanse.com/blogs/images/Blog-10july.jpg",
-      summary: "09:00 出發參觀 Schönbrunn、Belvedere、Hofburg；市中心教堂與街景已於前一晚完成。",
-      highlights: ["09:00 出發", "Schönbrunn", "Belvedere", "Hofburg", "市區自由晚餐"],
+      summary: "08:45 出發參觀 Schönbrunn、Belvedere、Hofburg；市中心教堂與街景已於前一晚完成。",
+      highlights: ["08:45 出發", "Schönbrunn", "Belvedere", "Hofburg", "市區自由晚餐"],
       items: [
-        ["09:00–09:30", "transit", "飯店 → Schönbrunn", "搭 U4／計程車；依入場時段與當日路線", "30m"],
+        ["08:45–09:30", "transit", "飯店 → Schönbrunn", "以 U4 為主，含出站走到宮殿入口及報到；約 09:30 入場", "45m"],
         ["09:30–12:00", "place", "Schönbrunn Palace", "宮殿＋庭園；2027 開放時間及票券再確認", "2h30"],
         ["12:00–13:00", "food", "午餐", "Schönbrunn 周邊可找 Wiener Schnitzel 炸肉排、Gulasch 燉牛肉或香腸小吃", "1h"],
         ["13:00–13:45", "transit", "前往 Belvedere", "U-Bahn／電車；用 Wiener Linien 查當日路線", "45m"],
-        ["13:45–15:30", "place", "Belvedere Palace", "上宮／庭園；室內展覽依時段票", "1h45"],
+        ["13:45–15:30", "place", "Belvedere Palace", "約 13:45 到上宮入口，建議選約 14:00 的時段票；遇雪或冰先看室內展覽", "1h45"],
         ["15:30–16:00", "transit", "前往 Hofburg", "電車／步行，依當日路況", "30m"],
         ["16:00–16:45", "photo", "Hofburg 外觀與廣場", "戶外建築拍攝；不排室內博物館", "45m"],
         ["16:45 後", "food", "晚餐／自由活動", "可選 Tafelspitz 水煮牛肉或 Wiener Schnitzel 維也納炸肉排；市中心景點已於 2/12 完成", ""]
       ],
-      notes: ["Schönbrunn 的 2027 冬季營業時間與入場方式出發前重查。", "最後完整拍攝日，不安排高強度步行。"]
+      sources: [{"name":"上美景宮｜指定時段入場","url":"https://www.belvedere.at/en/faq"},{"name":"Schönbrunn｜冬季開放時間","url":"https://www.schoenbrunn.at/en/visitor-information/opening-times"}],
+      notes: ["Hofburg 約 16:00–16:45 拍外觀，日落約 17:12。若館內或轉車延誤，先縮短庭園，讓 Hofburg 保留日光。", "Schönbrunn 的 2027 冬季營業時間與入場方式出發前重查。", "最後完整拍攝日，不安排高強度步行。"]
     },
     {
       date: "2/14", weekday: "日", title: "Vienna → Singapore", city: "Vienna → Singapore", hotel: "機上", theme: "flight", photo: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1400&q=82",
       summary: "最後一天只做機場轉移與航班。",
-      highlights: ["06:15 預約車出發", "約 06:45 抵達 VIE", "10:00 TR61"],
+      highlights: ["06:00 接送目標（待預約）", "約 06:30–06:45 抵達 VIE", "10:00 TR61"],
       items: [
-        ["05:45–06:15", "hotel", "起床、退房與行李確認", "早餐採外帶或前一晚準備", "30m"],
-        ["06:15–06:45", "transit", "預約車：飯店 → VIE", "前一晚再次確認司機與集合點", "約 30m"],
-        ["06:45–09:00", "airport", "報到／托運／安檢／出境", "預留 3 小時以上國際線緩衝", "2h15"],
+        ["05:30–06:00", "hotel", "起床、退房與行李確認", "早餐採外帶或前一晚準備", "30m"],
+        ["06:00 出發，約 06:30–06:45 抵達", "transit", "預約車：飯店 → VIE", "前晚確認司機、集合點和道路狀況", "約 30–45m"],
+        ["抵達後–約 09:00", "airport", "報到／托運／安檢／出境", "維也納機場建議有托運行李提早 3 小時到；10:00 起飛，目標 07:00 前到航廈", "依現場"],
         ["10:00", "flight", "TR61", "Vienna VIE → Singapore SIN", ""]
       ],
+      sources: [{"name":"維也納機場｜出發與報到建議","url":"https://viennaairport.com/en/passengers/arrival__departure/tips_for_departure"}],
       notes: ["最後一天不排任何觀光。", "清晨交通以預約車／可靠計程車為主。"]
     },
     {
@@ -3356,7 +3369,7 @@ const TRIP_DATA = {
         ["08:30", "flight", "TR874", "Singapore SIN → Taipei TPE", ""],
         ["13:15", "arrival", "抵達桃園 TPE", "旅程結束", ""]
       ],
-      notes: ["回國後整理照片與租車／旅程文件備份。"]
+      notes: ["新加坡轉機間隔 3 小時 50 分鐘，按當日看板確認 TR874 登機門；前段晚到時先往登機區。", "回國後整理照片與租車／旅程文件備份。"]
     }
   ],
   // 攝影圖釘為建議站位區域，日期只連結既有行程，不增加必到活動。
