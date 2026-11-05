@@ -4078,6 +4078,207 @@ TRIP_DATA.timelinePhotoCatalog = {
     "image": "https://www.visitpoprad.sk/wp-content/uploads/2020/07/0Q2A7870-1200x800.jpg",
     "imageSource": "https://www.visitpoprad.sk/tipy-na-vylety-v-zime/",
     "credit": "Visit Poprad"
+  },
+  "ParliamentFebruaryNight": {
+    "key": "ParliamentFebruaryNight",
+    "name": "多瑙河與國會大廈 · 二月亮燈夜景",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Danube_and_Hungarian_Parliament_Building_by_night.jpg/960px-Danube_and_Hungarian_Parliament_Building_by_night.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Danube_and_Hungarian_Parliament_Building_by_night.jpg",
+    "credit": "Florian Fèvre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "ParliamentBlue": {
+    "key": "ParliamentBlue",
+    "name": "多瑙河上的國會大廈 · 藍調光線參考",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Hungarian_Parliament_Building_from_the_Danube_during_blue_hour.jpg/960px-Hungarian_Parliament_Building_from_the_Danube_during_blue_hour.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_the_Danube_during_blue_hour.jpg",
+    "credit": "Vermont",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "BudaTwilight": {
+    "key": "BudaTwilight",
+    "name": "布達城堡 · 傍晚亮燈參考",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Buda_Castle_at_night_20180824.jpg/960px-Buda_Castle_at_night_20180824.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Buda_Castle_at_night_20180824.jpg",
+    "credit": "Suicasmo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "KeletiNight": {
+    "key": "KeletiNight",
+    "name": "Budapest-Keleti 車站外觀 · 夜間參考",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Keleti_p%C3%A1lyaudvar_%C3%A9jszaka_-_Budapest.jpg/960px-Keleti_p%C3%A1lyaudvar_%C3%A9jszaka_-_Budapest.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Keleti_p%C3%A1lyaudvar_%C3%A9jszaka_-_Budapest.jpg",
+    "credit": "Civertan",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/"
+  },
+  "KrupowkiFebruary": {
+    "key": "KrupowkiFebruary",
+    "name": "Krupówki · 二月雪夜街景",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg/960px-Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Zakopane_ulica_Krupowki_zima_noc-by_Robert_Parma.jpg",
+    "credit": "Robert Parma",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "KasprowyWinter": {
+    "key": "KasprowyWinter",
+    "name": "Kasprowy Wierch 山頂 · 冬季白天雪景",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/20161230_Kasprowy_Wierch_2612.jpg/960px-20161230_Kasprowy_Wierch_2612.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:20161230_Kasprowy_Wierch_2612.jpg",
+    "credit": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "WawelWinter": {
+    "key": "WawelWinter",
+    "name": "瓦維爾皇家城堡 · 冬季白天外觀",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Wawel_Royal_Castle_Krakow_Poland_by_blaat.jpg/960px-Wawel_Royal_Castle_Krakow_Poland_by_blaat.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Wawel_Royal_Castle_Krakow_Poland_by_blaat.jpg",
+    "credit": "ATom",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "WawelHillWinter": {
+    "key": "WawelHillWinter",
+    "name": "瓦維爾山丘 · 冬季白天外觀",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Wzg%C3%B3rze_wawelskie_zim%C4%85.jpg/960px-Wzg%C3%B3rze_wawelskie_zim%C4%85.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Wzg%C3%B3rze_wawelskie_zim%C4%85.jpg",
+    "credit": "Christinagrabelusshaikh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "SchonbrunnWinter": {
+    "key": "SchonbrunnWinter",
+    "name": "熊布朗宮 · 冬季白天外觀",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/01_Schloss_Sch%C3%B6nbrunn%2C_Winter_2023.jpg/960px-01_Schloss_Sch%C3%B6nbrunn%2C_Winter_2023.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:01_Schloss_Sch%C3%B6nbrunn%2C_Winter_2023.jpg",
+    "credit": "Michellethewise",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "SchonbrunnGardenWinter": {
+    "key": "SchonbrunnGardenWinter",
+    "name": "熊布朗宮與花園 · 冬季白天",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/1130_Schloss_Sch%C3%B6nbrunn_im_Schnee_IMG_1807.jpg/960px-1130_Schloss_Sch%C3%B6nbrunn_im_Schnee_IMG_1807.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:1130_Schloss_Sch%C3%B6nbrunn_im_Schnee_IMG_1807.jpg",
+    "credit": "Ewald Judt",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "StephansdomNight": {
+    "key": "StephansdomNight",
+    "name": "維也納聖史蒂芬主教座堂 · 入夜亮燈參考",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wien_Stephansdom_Nacht-03.jpg/960px-Wien_Stephansdom_Nacht-03.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Wien_Stephansdom_Nacht-03.jpg",
+    "credit": "Radler59",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "KohlmarktNight": {
+    "key": "KohlmarktNight",
+    "name": "維也納 Kohlmarkt · 入夜光線參考",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Kohlmarkt_Wien_at_night_2022-08-08_04.jpg/960px-Kohlmarkt_Wien_at_night_2022-08-08_04.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Kohlmarkt_Wien_at_night_2022-08-08_04.jpg",
+    "credit": "Leonhard Lenz",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "ChainBridgeWinterNight": {
+    "key": "ChainBridgeWinterNight",
+    "name": "塞切尼鏈橋 · 冬夜亮燈與河上霧景",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/20231223.Kettenbr%C3%BCcke_Budapest.-015.jpg/960px-20231223.Kettenbr%C3%BCcke_Budapest.-015.jpg",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:20231223.Kettenbr%C3%BCcke_Budapest.-015.jpg",
+    "credit": "Bybbisch94",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "BudaWinter": {
+    "key": "BudaWinter",
+    "name": "布達城堡山 · 冬季白天市景",
+    "image": "https://welovebudapest.com/i/d0/teli-budapest_bodis-krisztian_20160104.inbox1560x1170.jpg",
+    "imageSource": "https://welovebudapest.com/hely/budai-var",
+    "credit": "Bódis Krisztián／We Love Budapest"
+  },
+  "FishermanWinter": {
+    "key": "FishermanWinter",
+    "name": "漁人堡 · 冬季白天觀景台",
+    "image": "https://runway-media-production.global.ssl.fastly.net/us/originals/2024/12/Tourists-enjoy-the-view-from-Fishermans-Bastion-in-Budapest-Hungary_-Stevens-Fremont.jpg?width=2048",
+    "imageSource": "https://thepointsguy.com/travel/great-european-winter-destinations/",
+    "credit": "Stevens Frémont／The Points Guy"
+  },
+  "GubalowkaRailWinter": {
+    "key": "GubalowkaRailWinter",
+    "name": "Gubałówka 登山纜車 · 冬季場景",
+    "image": "https://www.pkl.pl/data/pages/38/20181216_a9dsc06983v1.jpg",
+    "imageSource": "https://www.pkl.pl/gubalowka/gubalowka.html",
+    "credit": "PKL"
+  },
+  "KuzniceWinter": {
+    "key": "KuzniceWinter",
+    "name": "Kuźnice 纜車下站 · 冬季白天",
+    "image": "https://d-art.ppstatic.pl/kadry/k/r/1/c9/a2/5c503c37be010_o_medium.jpg",
+    "imageSource": "https://gazetakrakowska.pl/zakopane-piekna-pogoda-w-tatrach-tlumy-chca-wjechac-na-kasprowy-wierch-zdjecia/ar/13844764",
+    "credit": "Gazeta Krakowska"
+  },
+  "KrakowMarketWinterNight": {
+    "key": "KrakowMarketWinterNight",
+    "name": "克拉科夫主廣場與紡織會館 · 冬季亮燈夜景",
+    "image": "https://images.pexels.com/photos/19606024/pexels-photo-19606024.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "imageSource": "https://www.pexels.com/photo/main-market-in-krakow-at-night-19606024/",
+    "credit": "Janusz Mitura／Pexels"
+  },
+  "KrakowFebruaryNight": {
+    "key": "KrakowFebruaryNight",
+    "name": "克拉科夫老城 · 冬季雪夜街景",
+    "image": "https://images.unsplash.com/photo-1613159263819-c9ce2636c225?auto=format&fit=crop&w=1200&q=82",
+    "imageSource": "https://unsplash.com/photos/brown-concrete-building-during-daytime-FjRuqY6LZhk",
+    "credit": "Jacek Dylag／Unsplash"
+  },
+  "GrabenNight": {
+    "key": "GrabenNight",
+    "name": "維也納 Graben · 入夜光線參考",
+    "image": "https://images.squarespace-cdn.com/content/v1/569e766e69492e9dd5373ef6/1722855398565-U2A64LQ7GB7X5O5NCBIA/_ABZ4683-alex.jpg",
+    "imageSource": "https://www.aperturetours.com/vienna-night-photo-tour",
+    "credit": "Aperture Tours"
+  },
+  "HofburgWinter": {
+    "key": "HofburgWinter",
+    "name": "霍夫堡皇宮 · 冬季白天外觀",
+    "image": "https://i0.wp.com/www.lescarnetsderoutedesophie.com/wp-content/uploads/2023/12/visiter-vienne-5.jpeg?resize=960%2C723&ssl=1",
+    "imageSource": "https://www.lescarnetsderoutedesophie.com/en/visit-vienna-what-to-do-in-the-austrian-capital/",
+    "credit": "Les Carnets de Route de Sophie"
+  },
+  "VIENight": {
+    "key": "VIENight",
+    "name": "維也納機場 · 夜間外觀與清晨抵達光線參考",
+    "image": "https://moodiedavittreport.com/wp-content/uploads/2023/07/Vienna-Airport-terminal-shot-scaled.jpg",
+    "imageSource": "https://moodiedavittreport.com/vienna-airport-reports-leap-in-revenue-and-passenger-traffic-in-2022/",
+    "credit": "The Moodie Davitt Report"
+  },
+  "ScootNight": {
+    "key": "ScootNight",
+    "name": "酷航客機 · 夜間場景參考",
+    "image": "https://ik.imgkit.net/3vlqs5axxjf/TW-Asia/ik-seo/uploadedImages/Industry/Aviation/Scott-goes-hangzhou/Scoot-takes-over-Hangzhou-from-SilkAir.jpg?tr=w-780%2Ch-440%2Cfo-auto",
+    "imageSource": "https://www.travelweekly-asia.com/Travel-News/Airline-News/Scoot-takes-over-Hangzhou-from-SilkAir",
+    "credit": "Travel Weekly Asia"
+  },
+  "SzentendreWinter": {
+    "key": "SzentendreWinter",
+    "name": "Szentendre 老城 · 冬季白天街景",
+    "image": "https://panadea.com/images/st5/travel-guide-guidebook/en-szentendre-hungary-panadea-gb-sd-3044681-0057.jpg",
+    "imageSource": "https://www.panadea.com/en/travel-guide-guidebook/europe/hungary/budapest-and-surrounding/danube-bend/szentendre/photo-gallery/gal-002",
+    "credit": "Panadea"
+  },
+  "BelvedereWinter": {
+    "key": "BelvedereWinter",
+    "name": "上美景宮 · 冬季白天外觀",
+    "image": "https://www.novo-monde.com/app/uploads/2022/09/Belvedere-Vienne.jpg",
+    "imageSource": "https://www.novo-monde.com/en/vienna-in-winter-christmas/",
+    "credit": "Novo-monde"
   }
 };
 TRIP_DATA.timelinePhotoRefs = {
@@ -4095,7 +4296,7 @@ TRIP_DATA.timelinePhotoRefs = {
       "Changi"
     ],
     "TR60": [
-      "Scoot"
+      "ScootNight"
     ]
   },
   "2/4": {
@@ -4145,13 +4346,16 @@ TRIP_DATA.timelinePhotoRefs = {
       "Paprikash"
     ],
     "城堡區 → 多瑙河遊船碼頭": [
-      "DanubeCruise"
+      "ParliamentFebruaryNight"
     ],
     "遊船報到／登船緩衝": [
-      "DanubeCruise"
+      "ParliamentFebruaryNight"
     ],
     "返回 InterContinental Budapest／休息": [
       "ICBudapest"
+    ],
+    "城堡區藍調時刻": [
+      "BudaTwilight"
     ]
   },
   "2/6": {
@@ -4177,13 +4381,13 @@ TRIP_DATA.timelinePhotoRefs = {
   },
   "2/7": {
     "Štrbské Pleso → Zakopane": [
-      "Krupowki"
+      "Jaszczurowka"
     ],
     "午餐｜波蘭高塔特拉料理": [
       "Moskole"
     ],
     "停車／前往 Gubałówka 下站": [
-      "GubalowkaRail"
+      "GubalowkaRailWinter"
     ],
     "前往 Aparthotel Cristina（克莉絲蒂娜公寓酒店）": [
       "Cristina"
@@ -4195,13 +4399,13 @@ TRIP_DATA.timelinePhotoRefs = {
   },
   "2/8": {
     "飯店 → Kuźnice": [
-      "Kuznice"
+      "KuzniceWinter"
     ],
     "報到／候車": [
-      "Kuznice"
+      "KuzniceWinter"
     ],
     "下山並返回 Zakopane": [
-      "Kuznice"
+      "KuzniceWinter"
     ],
     "午餐｜波蘭高塔特拉料理": [
       "Moskole"
@@ -4215,7 +4419,7 @@ TRIP_DATA.timelinePhotoRefs = {
   },
   "2/9": {
     "Zakopane → Kraków": [
-      "MainMarket"
+      "WawelHillWinter"
     ],
     "飯店停車／寄放行李": [
       "HIKrakow"
@@ -4225,6 +4429,15 @@ TRIP_DATA.timelinePhotoRefs = {
     ],
     "晚餐｜克拉科夫經典菜": [
       "Bigos"
+    ],
+    "Wawel Hill／Wawel Cathedral 外觀／城堡庭院": [
+      "WawelHillWinter"
+    ],
+    "Main Market Square／Cloth Hall 外觀": [
+      "KrakowMarketWinterNight"
+    ],
+    "Kraków Old Town 夜景 → 步行回飯店": [
+      "KrakowFebruaryNight"
     ]
   },
   "2/10": {
@@ -4232,10 +4445,10 @@ TRIP_DATA.timelinePhotoRefs = {
       "Gulyas"
     ],
     "繼續前往 Budapest": [
-      "ChainBridge"
+      "Parliament"
     ],
     "SIXT Budapest Keleti Train Station 還車準備": [
-      "Keleti"
+      "KeletiNight"
     ]
   },
   "2/11": {
@@ -4253,6 +4466,9 @@ TRIP_DATA.timelinePhotoRefs = {
     ],
     "晚餐｜匈牙利經典菜": [
       "Paprikash"
+    ],
+    "Batthyány tér": [
+      "ParliamentBlue"
     ]
   },
   "2/12": {
@@ -4295,10 +4511,10 @@ TRIP_DATA.timelinePhotoRefs = {
       "ICVienna"
     ],
     "預約車：飯店 → VIE": [
-      "VIE"
+      "VIENight"
     ],
     "報到／托運／安檢／出境": [
-      "VIE"
+      "VIENight"
     ],
     "TR61": [
       "Scoot"
@@ -4315,4 +4531,79 @@ TRIP_DATA.timelinePhotoRefs = {
       "TPE"
     ]
   }
+};
+
+// Winter and time-of-day reference photos for the itinerary and place cards.
+TRIP_DATA.seasonalPlacePhotos = {
+  "Szentendre": [
+    "SzentendreWinter"
+  ],
+  "Buda Castle": [
+    "BudaWinter",
+    "BudaTwilight"
+  ],
+  "Fisherman's Bastion": [
+    "FishermanWinter"
+  ],
+  "Gubalowka": [
+    "GubalowkaRailWinter"
+  ],
+  "Krupowki": [
+    "KrupowkiFebruary"
+  ],
+  "Kasprowy": [
+    "KasprowyWinter",
+    "KuzniceWinter"
+  ],
+  "Wawel": [
+    "WawelWinter",
+    "WawelHillWinter"
+  ],
+  "MainMarket": [
+    "KrakowMarketWinterNight"
+  ],
+  "ClothHall": [
+    "KrakowMarketWinterNight"
+  ],
+  "ChainBridge": [
+    "ChainBridgeWinterNight"
+  ],
+  "Schonbrunn": [
+    "SchonbrunnWinter",
+    "SchonbrunnGardenWinter"
+  ],
+  "Belvedere": [
+    "BelvedereWinter"
+  ],
+  "Hofburg": [
+    "HofburgWinter"
+  ],
+  "Stephansdom": [
+    "StephansdomNight"
+  ],
+  "Graben": [
+    "GrabenNight"
+  ],
+  "Kohlmarkt": [
+    "KohlmarktNight"
+  ],
+  "DanubeCruise": [
+    "ParliamentFebruaryNight",
+    "ParliamentBlue"
+  ]
+};
+TRIP_DATA.seasonalDayCovers = {
+  "2/3": "Scoot",
+  "2/4": "ICBudapest",
+  "2/5": "BudaWinter",
+  "2/6": "Strbske",
+  "2/7": "GubalowkaRailWinter",
+  "2/8": "KasprowyWinter",
+  "2/9": "WawelHillWinter",
+  "2/10": "KeletiNight",
+  "2/11": "ParliamentFebruaryNight",
+  "2/12": "StephansdomNight",
+  "2/13": "SchonbrunnWinter",
+  "2/14": "VIENight",
+  "2/15": "TPE"
 };
