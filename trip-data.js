@@ -3129,13 +3129,13 @@ const TRIP_DATA = {
         ["約 11:45–13:15", "drive", "Geleji pihenő → Košice", "回 M3 東向後轉 M30，經 Tornyosnémeti／Milhosť 邊境接 R4 前往 Košice", "約 1h30"],
         ["約 13:15–14:15", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
         ["約 14:15–15:10", "drive", "Košice → Spišské Podhradie", "沿 D1 經 Prešov 外圍，在 Spišské Podhradie 下交流道", "約 55m"],
-        ["約 15:10–15:40", "photo", "Spišský hrad（斯皮什城堡）｜山下遠拍", "從 Spišské Podhradie 山下找合法車位，遠拍山脊上的城堡。30 分鐘含進出小鎮與停車，使用 Sigma 50–120mm；風雪、低能見度或車程延誤時略過", "約 30m"],
+        ["約 15:10–15:40", "photo", "Spišský hrad（斯皮什城堡）｜山下遠拍", "停在 Spišská Kapitula 主教花園旁停車場，從附近朝東遠拍山脊上的城堡。30 分鐘含進出小鎮與停車，使用 Sigma 50–120mm；風雪、低能見度或車程延誤時略過", "約 30m"],
         ["約 15:40–16:10", "drive", "Spišské Podhradie → Poprad", "回到 D1，經 Levoča 外圍前往 Poprad", "約 30m"],
         ["約 16:10–16:55", "drive", "Poprad → Štrbské Pleso", "山區末段，依積雪、能見度與管制調整", "約 45m"],
         ["約 16:55–18:00", "hotel", "Hotel Panorama（全景酒店）", "約 16:55 抵達後辦理入住，實際時間視冬季路況調整", ""],
         ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
-      sources: [{"name":"Google Maps｜Spišské Podhradie 山下小鎮","url":"https://www.google.com/maps/search/?api=1&query=Spi%C5%A1sk%C3%A9%20Podhradie%2C%20Slovakia"}, {"name":"斯洛伐克國家博物館｜城堡冬季開放資訊","url":"https://www.snm.sk/muzea-snm/spisske-muzeum/spisske-muzeum/navstivte/otvaracie-hodiny"}, {"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}, {"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
+      sources: [{"name":"Google Maps｜主教花園旁停車場","url":"https://www.google.com/maps/dir/?api=1&destination=49.001595%2C20.740098&travelmode=driving"}, {"name":"斯洛伐克國家博物館｜城堡冬季開放資訊","url":"https://www.snm.sk/muzea-snm/spisske-muzeum/spisske-muzeum/navstivte/otvaracie-hodiny"}, {"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}, {"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
       notes: ["含城堡短停預計 16:55 抵達，晚於湖區約 16:45 的日落。若優先在日落前到，或遇雪況、塞車，略過城堡，按原車程估計約 16:25 抵達。", "09:00 取車、預計 10:00 出發；含休息站 15 分鐘、城堡 30 分鐘與各段車程緩衝。降雪、塞車或停留較久時順延。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
     },
     {
@@ -3501,6 +3501,22 @@ const TRIP_DATA = {
     "lens": "XF16–55mm；X100VI",
     "note": "只在午餐停留時間與停車位置允許時順拍；不另加教堂參觀行程。",
     "source": "https://visitkosice.org/en/vidiet-a-zazit/st-elisabeths-cathedral"
+  },
+  {
+    "id": "spis-castle-kapitula",
+    "city": "Spišské Podhradie",
+    "dates": [
+      "2/6"
+    ],
+    "placeKeys": [],
+    "name": "斯皮什城堡｜主教花園旁停車場",
+    "lat": 49.001595,
+    "lng": 20.740098,
+    "direction": "停在 Spišská Kapitula 的主教花園旁停車場（Parkovisko pri Biskupskej záhrade），在附近找朝東、視野開闊的位置，隔著小鎮拍城堡與山脊。",
+    "time": "2/6 約 15:10–15:40，含進出小鎮與停車",
+    "lens": "X‑T50＋Sigma 50–120mm；50mm 帶入小鎮，100–120mm 拍塔樓與城牆",
+    "note": "圖釘是停車位置；到場在可通行的人行區找構圖。風雪、能見度低或車程延誤時略過。",
+    "source": "https://www.tatryspispieniny.sk/sk/featured_item/spisska-kapitula/"
   },
   {
     "id": "lake-south",
