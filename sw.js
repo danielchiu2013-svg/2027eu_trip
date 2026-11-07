@@ -1,7 +1,7 @@
-const CACHE = '2027eu-app-v65';
+const CACHE = '2027eu-app-v66';
 const VERSIONED_SHELL = [
-  './index.html?v=spis-castle-photo-pin-20261107',
-  './trip-data.js?v=spis-castle-photo-pin-20261107',
+  './index.html?v=spis-town-hall-photo-20261107',
+  './trip-data.js?v=spis-town-hall-photo-20261107',
   './manifest.webmanifest',
   './icon.svg'
 ];
@@ -36,7 +36,7 @@ self.addEventListener('fetch', event => {
           if (response.ok) caches.open(CACHE).then(cache => cache.put(request, response.clone())).catch(() => {});
           return response;
         })
-      .catch(async () => await caches.match(new URL('./index.html?v=spis-castle-photo-pin-20261107', self.registration.scope).href) || await caches.match(request))
+      .catch(async () => await caches.match(new URL('./index.html?v=spis-town-hall-photo-20261107', self.registration.scope).href) || await caches.match(request))
     );
     return;
   }

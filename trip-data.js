@@ -873,7 +873,7 @@ const TRIP_DATA = {
         "主要道路候選：Budapest 的 M3 → M30，經 Miskolc 附近但不進城／不加景點，往 Tornyosnémeti／Milhosť 邊界接 SK R4 → Košice。路線依當日施工與封路調整。",
         "約 11:30 在 M3 142 公里處的 Geleji pihenő 短停 15 分鐘，選往 Vásárosnamény 方向的 M3GÁLLÓ RESTAURANT。休息後回 M3 東向，再轉 M30 往 Košice。",
         "Košice 午餐：先選合法停車場再步行進中心，出發前記錄停車場名稱／車牌付費規則；不把禁行老城當導航終點。",
-        "Košice → Poprad 沿 D1 經 Prešov 外圍，車程共抓約 1 小時 25 分鐘（含原有約 15 分鐘緩衝）。在 Spišské Podhradie 下交流道，另留約 30 分鐘進出小鎮、停車與遠拍 Spišský hrad。Poprad → 湖區依當日路況調整。",
+        "Košice → Poprad 沿 D1 經 Prešov 外圍，車程共抓約 1 小時 25 分鐘（含原有約 15 分鐘緩衝）。在 Spišské Podhradie 下交流道，另留約 30 分鐘進出小鎮，在 Mestský úrad 市公所（Mariánske námestie 37）旁按標誌停車，再步行到廣場遠拍 Spišský hrad。Poprad → 湖區依當日路況調整。",
         "HU／SK 收費段在進入前確認通行證已生效。10:00 出發，各段車程含預留緩衝共約 5 小時 10 分鐘，加上休息站 15 分鐘與午餐 1 小時，再加城堡短停 30 分鐘，預計約 16:55 抵達。湖區約 16:45 日落；山路有降雪、低能見度或時間落後時可略過城堡，按導航重估抵達時間。",
         "湖區末段與飯店入口可能積雪：建議備適配雪鏈，先確認車廠／SIXT 允許的尺寸與輪軸；依當日路面、標誌與管制決定是否安裝。冬季胎與四驅不等於所有雪況都能通行。完整安裝前核對事項見自駕實用操作。"
       ],
@@ -3129,13 +3129,13 @@ const TRIP_DATA = {
         ["約 11:45–13:15", "drive", "Geleji pihenő → Košice", "回 M3 東向後轉 M30，經 Tornyosnémeti／Milhosť 邊境接 R4 前往 Košice", "約 1h30"],
         ["約 13:15–14:15", "food", "Košice 午餐／休息", "在 Košice 用午餐並讓駕駛休息", "1h"],
         ["約 14:15–15:10", "drive", "Košice → Spišské Podhradie", "沿 D1 經 Prešov 外圍，在 Spišské Podhradie 下交流道", "約 55m"],
-        ["約 15:10–15:40", "photo", "Spišský hrad（斯皮什城堡）｜山下遠拍", "停在 Spišská Kapitula 主教花園旁停車場，從附近朝東遠拍山脊上的城堡。30 分鐘含進出小鎮與停車，使用 Sigma 50–120mm；風雪、低能見度或車程延誤時略過", "約 30m"],
+        ["約 15:10–15:40", "photo", "Spišský hrad（斯皮什城堡）｜山下遠拍", "停在 Mestský úrad 市公所旁的標示車位，從 Mariánske námestie 廣場朝東拍紅屋頂與山脊上的城堡。30 分鐘含進出小鎮與停車，使用 Sigma 50–120mm；風雪、低能見度或車程延誤時略過", "約 30m"],
         ["約 15:40–16:10", "drive", "Spišské Podhradie → Poprad", "回到 D1，經 Levoča 外圍前往 Poprad", "約 30m"],
         ["約 16:10–16:55", "drive", "Poprad → Štrbské Pleso", "山區末段，依積雪、能見度與管制調整", "約 45m"],
         ["約 16:55–18:00", "hotel", "Hotel Panorama（全景酒店）", "約 16:55 抵達後辦理入住，實際時間視冬季路況調整", ""],
         ["18:00–19:00", "food", "晚餐｜斯洛伐克山區料理", "推薦 Bryndzové halušky 羊乳起司馬鈴薯麵疙瘩配培根；先確認餐廳供應", "1h"]
       ],
-      sources: [{"name":"Google Maps｜主教花園旁停車場","url":"https://www.google.com/maps/dir/?api=1&destination=49.001595%2C20.740098&travelmode=driving"}, {"name":"斯洛伐克國家博物館｜城堡冬季開放資訊","url":"https://www.snm.sk/muzea-snm/spisske-muzeum/spisske-muzeum/navstivte/otvaracie-hodiny"}, {"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}, {"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
+      sources: [{"name":"Google Maps｜Mestský úrad 市公所旁停車","url":"https://www.google.com/maps/dir/?api=1&destination=48.999804%2C20.751894&travelmode=driving"}, {"name":"斯洛伐克國家博物館｜城堡冬季開放資訊","url":"https://www.snm.sk/muzea-snm/spisske-muzeum/spisske-muzeum/navstivte/otvaracie-hodiny"}, {"name":"斯洛伐克 NDS｜即時高速公路路況","url":"https://ndsas.sk/sluzby/dopravne-informacie"}, {"name":"Google Maps｜M3GÁLLÓ（往 Vásárosnamény）","url":"https://www.google.com/maps/search/?api=1&query=M3G%C3%81LL%C3%93%20RESTAURANT%20V%C3%A1s%C3%A1rosnam%C3%A9ny%20fel%C3%A9%2C%20Geleji%20pihen%C5%91%20M3%2C%203444%20Gelej%2C%20Hungary"}],
       notes: ["含城堡短停預計 16:55 抵達，晚於湖區約 16:45 的日落。若優先在日落前到，或遇雪況、塞車，略過城堡，按原車程估計約 16:25 抵達。", "09:00 取車、預計 10:00 出發；含休息站 15 分鐘、城堡 30 分鐘與各段車程緩衝。降雪、塞車或停留較久時順延。", "跨境許可需明確包含斯洛伐克與波蘭。", "匈牙利／斯洛伐克 e-vignette 於出發前依 2027 最新規則購買。", "四輪冬季胎優先；建議向 SIXT 預約適配雪鏈備用，核對尺寸、允許輪軸與安裝方式。遇強制雪鏈標誌／管制須遵守；四驅不自動豁免。"]
     },
     {
@@ -3509,14 +3509,14 @@ const TRIP_DATA = {
       "2/6"
     ],
     "placeKeys": [],
-    "name": "斯皮什城堡｜主教花園旁停車場",
-    "lat": 49.001595,
-    "lng": 20.740098,
-    "direction": "停在 Spišská Kapitula 的主教花園旁停車場（Parkovisko pri Biskupskej záhrade），在附近找朝東、視野開闊的位置，隔著小鎮拍城堡與山脊。",
+    "name": "斯皮什城堡｜Mestský úrad 市公所旁",
+    "lat": 48.999804,
+    "lng": 20.751894,
+    "direction": "在 Mestský úrad 市公所（Mariánske námestie 37）旁按現場標誌停車。步行到 Mariánske námestie 廣場，在人行區朝東取景，把彩色立面和紅屋頂放在前景，帶入山脊上的城堡。",
     "time": "2/6 約 15:10–15:40，含進出小鎮與停車",
     "lens": "X‑T50＋Sigma 50–120mm；50mm 帶入小鎮，100–120mm 拍塔樓與城牆",
-    "note": "圖釘是停車位置；到場在可通行的人行區找構圖。風雪、能見度低或車程延誤時略過。",
-    "source": "https://www.tatryspispieniny.sk/sk/featured_item/spisska-kapitula/"
+    "note": "圖釘是市公所旁車位位置；依現場標誌確認能否停車與是否收費。拍攝站位到廣場再微調。風雪、能見度低或車程延誤時略過。",
+    "source": "https://www.oma.sk/w1423673702?s=poi"
   },
   {
     "id": "lake-south",
