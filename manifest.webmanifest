@@ -7,6 +7,13 @@
   "theme_color": "#0b1220",
   "lang": "zh-Hant",
   "icons": [
-    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
-  ]
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "./",
+  "scope": "./"
 }
