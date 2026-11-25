@@ -1,9 +1,9 @@
-const CACHE='2027eu-app-v68';
+const CACHE='2027eu-app-v69';
 const scope=self.registration.scope;
 const page=new URL('index.html',scope).href;
 const data=new URL('trip-data.js',scope).href;
 const assets=['manifest.webmanifest','icon.svg'];
-const optionalIcons=['winter-travel-icon-180.png','winter-travel-icon-192.png','winter-travel-icon-512.png'];
+const optionalIcons=['winter-travel-icon-180.png','winter-travel-icon-192.png','winter-travel-icon-512.png','trip-overview-map.png'];
 const absolute=p=>new URL(p,scope).href;
 async function fresh(url){const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout?AbortSignal.timeout(9000):undefined});if(!r.ok)throw Error('HTTP '+r.status);return r}
 let syncing;

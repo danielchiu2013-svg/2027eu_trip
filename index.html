@@ -109,6 +109,7 @@ main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env
 @media(max-width:680px){.search,.photo-filters select,.guide-filter select{font-size:16px}.hero-sub{font-size:11px}.brand{font-size:15px}.sticky-tools{padding:5px 0}.bottom-nav .inner{gap:2px}}
 
 .place-guide{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#f8faff;overflow:hidden}.place-guide>summary{padding:12px;font-size:13px;font-weight:800;color:var(--accent);cursor:pointer;min-height:44px}.place-guide-body{padding:0 12px 12px;font-size:13px;line-height:1.7;overflow-wrap:anywhere}.place-guide-body h4{font-size:13px;margin:12px 0 4px;color:var(--ink)}.place-guide-body p{margin:4px 0}.place-guide-body ul{padding-left:20px;margin:4px 0}.place-guide-body li{margin:4px 0}.place-guide-tip{background:var(--warn);padding:9px;border-radius:8px}.place-guide-note{font-size:11px;color:var(--muted)}
+.trip-map-card{margin:12px 0;overflow:hidden}.trip-map-image{display:block;touch-action:manipulation}.trip-map-image[hidden],.trip-map-fallback[hidden]{display:none!important}.trip-map-image img{display:block;width:100%;height:auto}.trip-map-card figcaption{padding:10px 14px;color:var(--muted);font-size:12px;line-height:1.6}.trip-map-fallback{padding:14px;font-size:13px;overflow-wrap:anywhere}.trip-map-fallback p{margin:7px 0}
 </style>
 </head>
 <body>
@@ -131,6 +132,12 @@ main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env
       </div>
       <div class="quick"><a href="#" data-goto="days">看每日行程</a><a href="#" data-goto="places">看景點</a><a href="#photo-map" data-goto="photo-map">攝影機位地圖</a><a href="#" data-goto="logistics">航班／住宿</a><a href="#guide" data-goto="guide">文化／遊記</a><a href="#" data-goto="checklist">出發清單</a></div>
     </div>
+    <div class="section-title">中歐總行程地圖</div>
+    <figure class="card trip-map-card">
+      <a class="trip-map-image" href="./trip-overview-map.png" target="_blank" rel="noopener" aria-label="開啟原尺寸總行程地圖" hidden><img src="./trip-overview-map.png" alt="中歐冬季旅行總行程插畫地圖" decoding="async" onload="this.parentElement.hidden=false;document.getElementById('trip-map-fallback').hidden=true" onerror="this.parentElement.hidden=true;document.getElementById('trip-map-fallback').hidden=false"></a>
+      <div id="trip-map-fallback" class="trip-map-fallback"><b>中歐移動路線</b><p>維也納 → 布達佩斯 → Košice → Spišský hrad → Štrbské Pleso → Zakopane → Kraków → 布達佩斯 → 維也納</p><p>插畫地圖未載入時，仍可查閱上述路線及下方每日行程。</p></div>
+      <figcaption>點擊圖片開啟原尺寸，可雙指縮放。插畫為路線示意，日期、住宿、交通及實際導航以下方最新行程為準。</figcaption>
+    </figure>
     <div class="section-title">行程濃縮概要</div>
     <div class="card summary">
       <div class="overview-route">台北 → 新加坡 → 維也納 → 布達佩斯 → 高塔特拉山區 → Zakopane → 克拉科夫 → 布達佩斯 → 維也納 → 台北</div>
