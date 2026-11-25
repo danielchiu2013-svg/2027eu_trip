@@ -4675,3 +4675,648 @@ TRIP_DATA.seasonalDayCovers = {
   "2/14": "VIENight",
   "2/15": "TPE"
 };
+
+// Expanded destination guide; does not alter itinerary.
+TRIP_DATA.placeGuides = {
+  "Kosice": {
+    "intro": "斯洛伐克東部歷史中心，Hlavná 主街的哥德式教堂與廣場是城市核心。",
+    "see": [
+      "聖伊莉莎白大教堂外觀",
+      "聖烏爾班塔",
+      "聖米迦勒小教堂",
+      "國家劇院外觀（有餘裕才走）"
+    ],
+    "shop": [
+      "Hlavná 主街小店",
+      "Aupark 商場（補給、洗手間）",
+      "不特別安排購物"
+    ],
+    "food": [
+      "Villa Regia（季節菜單，午餐候選）",
+      "bryndzové halušky 羊乳酪麵疙瘩",
+      "kapustnica 酸菜湯"
+    ],
+    "tip": "午餐及停車優先，外觀順拍，不增加入內行程。",
+    "sources": [
+      "https://www.visit.kosice.sk/en"
+    ]
+  },
+  "Szentendre": {
+    "intro": "多瑙河畔藝術小鎮，塞爾維亞移民留下教堂與商人宅邸，彩色街道適合慢走。",
+    "see": [
+      "Fő tér 主廣場",
+      "Blagovestenska 教堂外觀",
+      "Church Hill 教堂山",
+      "Dumtsa Jenő utca",
+      "河岸散步"
+    ],
+    "shop": [
+      "Szamos Marzipan Museum and Pastry Shop 杏仁糖",
+      "Kovács Margit 陶藝博物館（有餘裕）",
+      "在地藝廊及陶器"
+    ],
+    "food": [
+      "杏仁糖、Dobos 蛋糕、匈牙利熱湯",
+      "Szamos 甜點店"
+    ],
+    "tip": "二月小店可能縮短營業；兩小時以老城步行為主。",
+    "sources": [
+      "https://iranyszentendre.hu/en/"
+    ]
+  },
+  "Buda Castle": {
+    "intro": "歷代匈牙利王室宮殿所在的城堡山，現為文化機構與公共庭院所在。",
+    "see": [
+      "Savoy Terrace 觀景台",
+      "Hunyadi Court",
+      "Matthias Fountain",
+      "王宮外立面"
+    ],
+    "shop": [
+      "城堡區紀念品店",
+      "博物館商店依開放情況"
+    ],
+    "food": [
+      "城堡區咖啡館",
+      "gulyás 牛肉湯",
+      "pörkölt 燉肉"
+    ],
+    "tip": "不額外加入大型博物館；留意工程圍欄及石階結冰。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Matthias Church": {
+    "intro": "布達城堡區的歷史教堂，彩色釉面屋瓦與新哥德式修復外觀鮮明。",
+    "see": [
+      "彩色屋瓦",
+      "南側尖塔",
+      "Holy Trinity Square 聖三一廣場",
+      "如有入內則看彩繪與祭壇"
+    ],
+    "shop": [
+      "城堡區手工藝品店",
+      "教堂紀念品視開放"
+    ],
+    "food": [
+      "周邊糕點店",
+      "rétes 匈牙利捲餅",
+      "熱咖啡"
+    ],
+    "tip": "禮拜時段可能限制觀光，室內拍照遵守現場規定。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Fisherman's Bastion": {
+    "intro": "新羅曼式觀景建築，七座塔象徵匈牙利早期部族，最適合欣賞佩斯河岸。",
+    "see": [
+      "白色拱廊",
+      "國會大廈正面視角",
+      "聖史蒂芬騎馬像",
+      "城堡區街景"
+    ],
+    "shop": [
+      "附近紀念品店",
+      "購物不是此處重點"
+    ],
+    "food": [
+      "城堡區咖啡館",
+      "熱巧克力、匈牙利蛋糕"
+    ],
+    "tip": "上層觀景區可能收費；樓梯冰滑，勿為取景跨越護欄。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Strbske": {
+    "intro": "高塔特拉山的冰蝕湖與度假村，湖畔可望雪峰、森林及山地旅館。",
+    "see": [
+      "湖岸開放步道",
+      "湖面與雪山構圖",
+      "車站周邊",
+      "湖畔木構建築"
+    ],
+    "shop": [
+      "車站與飯店周邊小型補給店，選擇有限",
+      "大宗補給宜在山下"
+    ],
+    "food": [
+      "Koliba Patria 湖畔餐廳",
+      "Hotel FIS 餐廳",
+      "halušky、酸菜湯"
+    ],
+    "tip": "只走已開放步道，勿踏上冰封湖面；不增加高山健行。",
+    "sources": [
+      "https://www.strbskepleso.sk/services/dining?filter_cena=0&filter_lokalita=0"
+    ]
+  },
+  "Gubalowka": {
+    "intro": "Zakopane 北側山脊，可由登山纜車抵達，南望塔特拉山。",
+    "see": [
+      "上站觀景區",
+      "山脊步道",
+      "Zakopane 與 Giewont 山景",
+      "纜車沿線"
+    ],
+    "shop": [
+      "山頂市集攤位",
+      "羊毛製品、木雕",
+      "比價後購買"
+    ],
+    "food": [
+      "烤燻乳酪配蔓越莓醬",
+      "熱茶",
+      "山頂餐飲攤"
+    ],
+    "tip": "能見度差時縮短停留；確認末班下山纜車。",
+    "sources": [
+      "https://www.zakopane.pl/en/tourist-area/tourism/tourist-attractions",
+      "https://www.pkl.pl/lifts.html?setlang=2"
+    ]
+  },
+  "Krupowki": {
+    "intro": "山城主要步行商業街，集合高地人建築、餐飲與紀念品。",
+    "see": [
+      "Krupówki 主街",
+      "往 Gubałówka 山腳市集方向",
+      "木造店面",
+      "街道夜景"
+    ],
+    "shop": [
+      "山腳市集",
+      "Dom Oscypka（另需時間，非必入）",
+      "羊毛拖鞋、木作、區域乳酪"
+    ],
+    "food": [
+      "oscypek 燻羊乳酪",
+      "kwaśnica 酸菜湯",
+      "moskole 馬鈴薯餅",
+      "pierogi 餃子"
+    ],
+    "tip": "週日一般零售可能受限，餐廳與觀光攤位依各店營業；注意乳酪產季及標示。",
+    "sources": [
+      "https://www.zakopane.pl/en/tourist-area/tourism/tourist-attractions"
+    ]
+  },
+  "Kasprowy": {
+    "intro": "海拔約 1,985 公尺的波蘭與斯洛伐克邊境山峰，纜車可由 Kuźnice 上山。",
+    "see": [
+      "Kuźnice 下站",
+      "纜車途中山谷",
+      "山頂站附近合法觀景區",
+      "塔特拉主稜線"
+    ],
+    "shop": [
+      "山頂以觀景及基本補給為主",
+      "不安排購物"
+    ],
+    "food": [
+      "山頂站餐廳（依營運）",
+      "熱湯、熱茶",
+      "自備水及小點"
+    ],
+    "tip": "高風、低溫及白霧可能停駛；不走未具備裝備的雪地山徑。",
+    "sources": [
+      "https://www.pkl.pl/lifts.html?setlang=2"
+    ]
+  },
+  "Jaszczurowka": {
+    "intro": "Stanisław Witkiewicz 設計的 Zakopane 風格木造聖心小教堂，位於森林邊。",
+    "see": [
+      "木瓦屋頂",
+      "石基座",
+      "木雕入口",
+      "周邊林景",
+      "若開放可安靜入內"
+    ],
+    "shop": [
+      "教堂周圍非購物區，紀念品留至 Krupówki"
+    ],
+    "food": [
+      "不安排餐飲",
+      "回市區再吃高地料理"
+    ],
+    "tip": "宗教場所保持安靜，停車與道路安全優先。",
+    "sources": [
+      "https://www.zakopane.pl/en/tourist-area/tourism/tourist-attractions"
+    ]
+  },
+  "Snowmobile": {
+    "intro": "冬季由業者帶隊的雪地體驗，實際路線依雪況與安全限制調整。",
+    "see": [
+      "集合點報到",
+      "裝備及安全說明",
+      "合法路線景觀停拍（依領隊）"
+    ],
+    "shop": [
+      "不安排購物",
+      "手套、護目鏡及保暖裝備事前準備"
+    ],
+    "food": [
+      "活動前輕食",
+      "結束後回 Zakopane 喝熱湯或茶"
+    ],
+    "tip": "暫定一小時，不指定未確認業者；核對保險、駕駛資格、雪況與取消規則。",
+    "sources": [
+      "https://www.zakopane.pl/en/tourist-area/tourism/tourist-attractions"
+    ]
+  },
+  "Wawel": {
+    "intro": "維斯瓦河畔的王室權力中心，文藝復興宮殿與歷代王室收藏是重點。",
+    "see": [
+      "王宮拱廊庭院",
+      "State Rooms 二樓",
+      "王室肖像、掛毯及裝飾天花板（依展出）"
+    ],
+    "shop": [
+      "城堡官方商店",
+      "藝術明信片及書籍"
+    ],
+    "food": [
+      "城堡周邊咖啡館",
+      "Grodzka 街波蘭家常料理"
+    ],
+    "tip": "維持只選 State Rooms；其他展區不加購，依票券時段入場。",
+    "sources": [
+      "https://wawel.krakow.pl/en/exhibition-constant/state-rooms"
+    ]
+  },
+  "WawelCathedral": {
+    "intro": "波蘭歷代君主加冕與安葬的重要教堂，哥德與文藝復興建築並存。",
+    "see": [
+      "Sigismund Chapel 金色圓頂外觀",
+      "主入口",
+      "鐘塔外觀",
+      "城堡山庭院"
+    ],
+    "shop": [
+      "不特別安排購物",
+      "城堡商店可順路"
+    ],
+    "food": [
+      "不在教堂內飲食",
+      "下山後 Grodzka 用餐"
+    ],
+    "tip": "本次僅外觀，不購鐘樓、墓室及室內票。",
+    "sources": [
+      "https://www.poland.travel/en/krakow-city-break/"
+    ]
+  },
+  "Kanonicza": {
+    "intro": "連接城堡山與老城的古老街道，歷史宅邸與石板路保存良好。",
+    "see": [
+      "歷史宅邸門窗",
+      "街道朝城堡方向構圖",
+      "聖伯多祿聖保祿教堂外觀（Grodzka 附近）"
+    ],
+    "shop": [
+      "Grodzka 小店",
+      "明信片、波蘭工藝"
+    ],
+    "food": [
+      "Grodzka 咖啡館",
+      "obwarzanek 圓環麵包、熱咖啡"
+    ],
+    "tip": "步行路面可能結冰；不為商店繞路。",
+    "sources": [
+      "https://www.poland.travel/en/krakow-city-break/"
+    ]
+  },
+  "MainMarket": {
+    "intro": "十三世紀規劃的老城核心廣場，周圍歷史建築形成完整城市景觀。",
+    "see": [
+      "紡織會館",
+      "聖母聖殿",
+      "市政廳塔",
+      "Adam Mickiewicz 紀念像",
+      "整點號角"
+    ],
+    "shop": [
+      "Sukiennice 琥珀飾品及工藝",
+      "Floriańska 沿街店舖"
+    ],
+    "food": [
+      "obwarzanek",
+      "pierogi",
+      "żurek 酸黑麥湯",
+      "廣場咖啡館"
+    ],
+    "tip": "廣場餐廳觀光客較多，先看菜單及價格；保留 16:00 教堂行程。",
+    "sources": [
+      "https://www.poland.travel/en/krakow-city-break/"
+    ]
+  },
+  "StMary": {
+    "intro": "雙塔哥德式教堂，內部彩繪與 Veit Stoss 木雕祭壇極具代表性。",
+    "see": [
+      "木雕祭壇",
+      "星空彩繪天花板",
+      "彩繪玻璃",
+      "外部雙塔與整點號角"
+    ],
+    "shop": [
+      "主廣場紡織會館商店",
+      "不在教堂內購物"
+    ],
+    "food": [
+      "廣場周邊咖啡與波蘭甜點 pączki"
+    ],
+    "tip": "保留 16:00–16:45 室內參觀；二月不登塔，確認禮拜與拍照限制。",
+    "sources": [
+      "https://www.poland.travel/en/krakow-city-break/"
+    ]
+  },
+  "ClothHall": {
+    "intro": "中世紀交易中心經文藝復興改建，今天仍以中央商業長廊聞名。",
+    "see": [
+      "中央拱廊",
+      "立面裝飾與屋頂女兒牆",
+      "長廊對稱構圖"
+    ],
+    "shop": [
+      "琥珀飾品、木雕、布藝、Wawel 龍紀念品",
+      "確認產地與材質"
+    ],
+    "food": [
+      "廣場外圍麵包攤與咖啡館",
+      "obwarzanek"
+    ],
+    "tip": "只逛地面商業區，不另加地下博物館或樓上美術館。",
+    "sources": [
+      "https://www.poland.travel/en/krakow-city-break/"
+    ]
+  },
+  "Parliament": {
+    "intro": "多瑙河畔新哥德式國會，中央穹頂與對稱立面是佩斯代表性天際線。",
+    "see": [
+      "Kossuth Lajos tér",
+      "河岸正立面",
+      "廣場雕塑",
+      "對岸 Batthyány tér（原行程有安排才去）"
+    ],
+    "shop": [
+      "遊客中心紀念品視開放",
+      "不安排額外購物"
+    ],
+    "food": [
+      "Kossuth 廣場周邊咖啡館",
+      "匈牙利湯品"
+    ],
+    "tip": "入內須依現有訂票狀態及時段，不視為已購票；河岸風大。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Shoes": {
+    "intro": "以鐵製鞋履紀念二戰期間在多瑙河岸遇害的猶太人，是悼念空間。",
+    "see": [
+      "鞋履紀念裝置",
+      "河岸與國會方向景觀",
+      "閱讀紀念說明"
+    ],
+    "shop": [
+      "不安排商店",
+      "非購物景點"
+    ],
+    "food": [
+      "不在紀念碑旁進食",
+      "往市中心再休息"
+    ],
+    "tip": "保持安靜，不踩踏、移動鞋履或擺拍；河邊留意濕滑。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Basilica": {
+    "intro": "以匈牙利首位國王聖史蒂芬命名的教堂，宏偉穹頂與廣場是市中心地標。",
+    "see": [
+      "Szent István tér",
+      "正面雙塔",
+      "室內穹頂與祭壇（如入內）",
+      "觀景台視票券"
+    ],
+    "shop": [
+      "廣場紀念品及巧克力店",
+      "市中心食材店"
+    ],
+    "food": [
+      "匈牙利蛋糕、熱咖啡",
+      "附近餐廳的 chicken paprikash 紅椒奶油雞"
+    ],
+    "tip": "登頂不是必要項目，依天候、開放與原定時間。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Vaci": {
+    "intro": "佩斯中心步行街，北端通往 Vörösmarty tér，南端連接中央市場附近。",
+    "see": [
+      "Váci utca 南北段歷史立面",
+      "Vörösmarty tér（順路）",
+      "小巷櫥窗"
+    ],
+    "shop": [
+      "紀念品、服飾",
+      "Molnár’s Kürtőskalács 可購煙囪捲",
+      "食材以市場比價"
+    ],
+    "food": [
+      "煙囪捲、rétes、gulyás",
+      "觀光餐廳先確認價格"
+    ],
+    "tip": "避免街頭主動兜售及不透明匯率，不另加購物中心。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "CentralMarket": {
+    "intro": "十九世紀末的大型市場，以鋼鐵結構與彩色屋瓦聞名，也是食材採買點。",
+    "see": [
+      "外部屋瓦",
+      "一樓食材攤",
+      "二樓餐飲與紀念品區"
+    ],
+    "shop": [
+      "甜／辣 paprika 紅椒粉、乾香料、包裝糖果",
+      "比較重量與產地"
+    ],
+    "food": [
+      "lángos 炸餅、gulyás、香腸",
+      "二樓餐飲先看標價"
+    ],
+    "tip": "肉類與乳製品入境台灣限制需另外查核，不建議當作返台伴手禮。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "ChainBridge": {
+    "intro": "連接布達與佩斯的歷史橋樑，以石獅和懸索結構為特色。",
+    "see": [
+      "兩端石獅",
+      "橋上城堡山視角",
+      "多瑙河兩岸",
+      "黃昏燈景"
+    ],
+    "shop": [
+      "橋上不安排購物",
+      "佩斯端市中心店舖"
+    ],
+    "food": [
+      "橋頭附近咖啡館",
+      "晚餐可回市中心吃匈牙利燉肉"
+    ],
+    "tip": "橋面風大，注意自行車及行人動線；依開放通行區域行走。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  },
+  "Schonbrunn": {
+    "intro": "哈布斯堡夏宮，宮殿與巴洛克花園展現帝國生活及園林尺度。",
+    "see": [
+      "宮殿正面",
+      "依原票券參觀室內",
+      "大花園中軸",
+      "Gloriette 遠眺（視時間與路況）"
+    ],
+    "shop": [
+      "宮殿博物館商店",
+      "Sisi、帝國圖案紀念品"
+    ],
+    "food": [
+      "Schönbrunner Schloßcafé",
+      "Hofzuckerbäcker",
+      "Apfelstrudel 蘋果捲"
+    ],
+    "tip": "冬季噴泉、水池及部分花園設施可能不運作；不額外加動物園。",
+    "sources": [
+      "https://www.schoenbrunn.at/en/visitor-information/cafes-restaurants/"
+    ]
+  },
+  "Belvedere": {
+    "intro": "歐根親王的巴洛克宮殿群，上美景宮以奧地利藝術收藏聞名。",
+    "see": [
+      "上美景宮外觀",
+      "花園中軸",
+      "《吻》及 Klimt 作品（僅若安排入內）"
+    ],
+    "shop": [
+      "Belvedere 博物館商店",
+      "藝術印刷品及明信片"
+    ],
+    "food": [
+      "館內咖啡選項依開放",
+      "市區咖啡與蛋糕"
+    ],
+    "tip": "上下宮分別規劃；冬季水池不保證倒影，勿擅自增加展區。",
+    "sources": [
+      "https://www.wien.info/en/see-do/sights-from-a-to-z"
+    ]
+  },
+  "Hofburg": {
+    "intro": "哈布斯堡長期統治的皇宮群，現今由多座博物館、行政及文化設施構成。",
+    "see": [
+      "Michaelerplatz",
+      "Michaelertor 拱門",
+      "Innerer Burghof",
+      "Heldenplatz 外觀"
+    ],
+    "shop": [
+      "Sisi Museum 商店依開放",
+      "Kohlmarkt 精品及甜點"
+    ],
+    "food": [
+      "Demel",
+      "傳統 Melange 咖啡、蘋果捲"
+    ],
+    "tip": "本次依原定外觀安排，不另外增加 Sisi Museum 或騎術學校。",
+    "sources": [
+      "https://www.wien.info/en/see-do/sights-from-a-to-z",
+      "https://www.wien.info/en/see-do/shopping/old-city/shopping-in-the-old-city-food-358438"
+    ]
+  },
+  "Stephansdom": {
+    "intro": "維也納中心的哥德式主教座堂，以南塔、彩瓦屋頂與多時期石雕著稱。",
+    "see": [
+      "Stephansplatz",
+      "彩色屋頂",
+      "南塔外觀",
+      "可進入的教堂區域"
+    ],
+    "shop": [
+      "Kärntner Straße 及廣場周邊商店",
+      "巧克力與明信片"
+    ],
+    "food": [
+      "維也納咖啡 Melange",
+      "Apfelstrudel",
+      "Wiener Schnitzel 炸肉排"
+    ],
+    "tip": "禮拜區需保持安靜；不臨時增加登塔或地下墓穴。",
+    "sources": [
+      "https://www.wien.info/en/see-do/sights-from-a-to-z"
+    ]
+  },
+  "Graben": {
+    "intro": "市中心典雅步行商街，巴洛克紀念柱與歷史商業建築相互映襯。",
+    "see": [
+      "Pestsäule 瘟疫紀念柱",
+      "Peterskirche 外觀（順路）",
+      "街道立面與夜景"
+    ],
+    "shop": [
+      "Julius Meinl am Graben 高級食品店",
+      "周邊精品與巧克力"
+    ],
+    "food": [
+      "Meinl 咖啡",
+      "維也納甜點、巧克力"
+    ],
+    "tip": "以櫥窗及伴手禮為主，星期日零售普遍休息；營業依店家確認。",
+    "sources": [
+      "https://www.wien.info/en/see-do/shopping/old-city/shopping-in-the-old-city-food-358438"
+    ]
+  },
+  "Kohlmarkt": {
+    "intro": "通往霍夫堡的高級商業街，傳統糕點與奢侈品牌聚集。",
+    "see": [
+      "朝 Michaelertor 的街道透視",
+      "歷史櫥窗",
+      "Michaelerplatz"
+    ],
+    "shop": [
+      "Demel（Kohlmarkt 14）",
+      "精品櫥窗",
+      "包裝巧克力與甜點"
+    ],
+    "food": [
+      "Demel 蘋果捲、Kaiserschmarrn 皇帝鬆餅（依菜單）",
+      "咖啡"
+    ],
+    "tip": "排隊過長可改外帶，不影響後續景點。",
+    "sources": [
+      "https://www.wien.info/en/see-do/shopping/old-city/shopping-in-the-old-city-food-358438"
+    ]
+  },
+  "DanubeCruise": {
+    "intro": "從水上觀賞布達佩斯兩岸世界遺產景觀，夜間燈光凸顯橋樑與王宮輪廓。",
+    "see": [
+      "國會大廈",
+      "鏈橋",
+      "布達城堡山",
+      "Elizabeth Bridge（實際依航線）"
+    ],
+    "shop": [
+      "不安排船上購物",
+      "碼頭附近市中心商店"
+    ],
+    "food": [
+      "船上飲品依票種",
+      "晚餐可在登船前後安排匈牙利料理"
+    ],
+    "tip": "首選 Legenda Dock 7，尚未購票；確認集合時間與航班，露天甲板風大。",
+    "sources": [
+      "https://www.budapestinfo.hu/en/"
+    ]
+  }
+};

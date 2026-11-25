@@ -108,6 +108,7 @@ main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env
 .view{min-width:0;overflow-wrap:anywhere}
 @media(max-width:680px){.search,.photo-filters select,.guide-filter select{font-size:16px}.hero-sub{font-size:11px}.brand{font-size:15px}.sticky-tools{padding:5px 0}.bottom-nav .inner{gap:2px}}
 
+.place-guide{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#f8faff;overflow:hidden}.place-guide>summary{padding:12px;font-size:13px;font-weight:800;color:var(--accent);cursor:pointer;min-height:44px}.place-guide-body{padding:0 12px 12px;font-size:13px;line-height:1.7;overflow-wrap:anywhere}.place-guide-body h4{font-size:13px;margin:12px 0 4px;color:var(--ink)}.place-guide-body p{margin:4px 0}.place-guide-body ul{padding-left:20px;margin:4px 0}.place-guide-body li{margin:4px 0}.place-guide-tip{background:var(--warn);padding:9px;border-radius:8px}.place-guide-note{font-size:11px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -154,7 +155,7 @@ main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env
 
   <section id="places" class="view hidden">
     <div class="section-title">景點</div>
-    <input id="placeSearch" class="search" placeholder="搜尋景點／英文名稱">
+    <input id="placeSearch" class="search" placeholder="搜尋景點、商店、美食、英文名稱">
     <div id="placeGrid" class="place-grid" style="margin-top:12px"></div>
   </section>
 
@@ -458,12 +459,17 @@ function renderDays(q=''){
   syncDayTabs();
   $('#dayList').innerHTML=filtered.length?html:`<div class="card empty">找不到符合條件的行程。</div>`;
 }
+function renderPlaceGuide(p){
+ const g=D.placeGuides?.[p.key];if(!g)return '';
+ const section=(title,items)=>`<h4>${title}</h4><ul>${items.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`;
+ return `<details class="place-guide"><summary>景點攻略 · 必看／商店／美食</summary><div class="place-guide-body"><h4>景點介紹</h4><p>${esc(g.intro)}</p>${section('必看與順路景點',g.see)}${section('特色商店與伴手禮',g.shop)}${section('美食與餐飲候選',g.food)}<h4>本次行程與冬季提醒</h4><p class="place-guide-tip">${esc(g.tip)}</p><p class="place-guide-note">商店與餐飲為候選，不代表已預約；2027 年實際營業、菜單及票價出發前核對。</p><div class="guide-links">${g.sources.map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener">旅遊／官方參考 ${i+1} ↗</a>`).join('')}</div></div></details>`;
+}
 function renderPlaces(q=''){
   const needle=q.trim().toLowerCase();
-  const list=D.places.filter(p=>!needle || JSON.stringify([p,guideBlogs('',p.key)]).toLowerCase().includes(needle));
+  const list=D.places.filter(p=>!needle || JSON.stringify([p,D.placeGuides?.[p.key],guideBlogs('',p.key)]).toLowerCase().includes(needle));
   $('#placeGrid').innerHTML=list.length?list.map(p=>{const extra=(p.images||[]).map((src,index)=>({src,source:p.imageSources?.[index]||p.imageSource||src}));const curated=(D.seasonalPlacePhotos?.[p.key]||[]).map(catalogPhoto).filter(Boolean);const photos=curated.length?curated:[{src:p.image,source:p.imageSource||p.image},...extra.filter(x=>x.src&&x.src!==p.image).slice(0,2)];return `<article class="card place-card">
     <div class="place-gallery">${photos.map((photo,i)=>`<img class="place-img" src="${esc(photo.src)}" alt="${esc(photo.caption||p.name)}" loading="lazy" onerror="this.remove()">`).join('')}</div>
-    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((photo,i)=>`<a href="${esc(photo.source)}" target="_blank" rel="noopener">${esc(photo.caption||(i===0?'景點主圖':'所在地照片'))} 來源</a>${photoCredit(photo)}`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div>${photoPlaceButton(p.key)}${renderPlaceReferences(p)}</div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
+    <div class="place-body"><div class="place-name">${esc(p.name)}</div><div class="place-en">${esc(p.en)}</div><div class="place-description">${esc(p.description||'')}</div><div class="place-meta"><span>D${esc(p.day)}</span><span>${esc(p.tag)}</span><span>${esc(p.duration)}</span><span>${esc(p.lens)}</span></div><div class="place-source">${photos.map((photo,i)=>`<a href="${esc(photo.source)}" target="_blank" rel="noopener">${esc(photo.caption||(i===0?'景點主圖':'所在地照片'))} 來源</a>${photoCredit(photo)}`).join(' · ')}</div><div class="place-actions"><a href="#day-${esc(p.day)}" data-day-link="${esc(p.day)}">行程</a><a class="map" href="${esc(p.map)}" target="_blank" rel="noopener">地圖</a></div>${renderPlaceGuide(p)}${photoPlaceButton(p.key)}${renderPlaceReferences(p)}</div></article>`}).join(''):`<div class="card empty">找不到景點。</div>`;
 }
 function renderFlights(){
   $('#flightList').innerHTML=D.flights.map(f=>`<div class="list-row"><div class="list-main"><b>${esc(f.date)}（${esc(f.weekday)}）　<span class="flight-code">${esc(f.flight)}</span></b><div>${esc(f.route)}</div></div><div class="list-action">${esc(f.time)}</div></div>`).join('');
