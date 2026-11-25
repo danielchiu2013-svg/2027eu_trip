@@ -1,8 +1,9 @@
-const CACHE='2027eu-app-v67';
+const CACHE='2027eu-app-v68';
 const scope=self.registration.scope;
 const page=new URL('index.html',scope).href;
 const data=new URL('trip-data.js',scope).href;
 const assets=['manifest.webmanifest','icon.svg'];
+const optionalIcons=['winter-travel-icon-180.png','winter-travel-icon-192.png','winter-travel-icon-512.png'];
 const absolute=p=>new URL(p,scope).href;
 async function fresh(url){const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout?AbortSignal.timeout(9000):undefined});if(!r.ok)throw Error('HTTP '+r.status);return r}
 let syncing;
@@ -30,7 +31,7 @@ self.addEventListener('fetch',e=>{
  if(u.pathname===new URL(data).pathname){
   e.respondWith((async()=>{const c=await caches.open(CACHE);return await c.match(data)||await fresh(data)})());return;
  }
- if(assets.some(a=>u.pathname===new URL(a,scope).pathname)){
+ if([...assets,...optionalIcons].some(a=>u.pathname===new URL(a,scope).pathname)){
   e.respondWith((async()=>{const c=await caches.open(CACHE);try{const r=await fresh(req.url);await c.put(req,r.clone());return r}catch{return await c.match(req)||Response.error()}})());
  }
 });
