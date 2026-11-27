@@ -124,6 +124,7 @@ main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env
 body.image-viewer-open{overflow:hidden}.trip-map-image,.timeline-photo>a,.place-gallery img,.day-cover{cursor:zoom-in}
 
 .day-essentials{margin:12px 0;padding:13px;border-radius:13px;border:1px solid #dbe4f3;background:#f8faff}.day-essentials h3{font-size:15px;color:#244791;margin:0 0 8px}.day-essential-row{border-top:1px solid #e2e8f0;padding:8px 0 2px}.day-essential-row b{font-size:13px}.day-essential-row p{font-size:13px;line-height:1.65;margin:3px 0 5px;overflow-wrap:anywhere}
+.phrase-audio{display:flex;flex-wrap:wrap;gap:6px;margin:5px 0}.phrase-speak{display:inline-flex;align-items:center;gap:6px;border:1px solid #d8e3f7;background:#eef3ff;color:#2948a8;border-radius:9px;min-height:44px;padding:7px 10px;font-size:12px;font-weight:750;text-align:left;cursor:pointer;max-width:100%}.phrase-speak svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.phrase-speak[aria-pressed=true]{background:#3157d6;color:#fff}.phrase-speak:disabled{opacity:.6}.speech-status{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--bottom-height,88px) + 12px);z-index:1000;max-width:calc(100% - 32px);width:max-content;padding:10px 14px;border-radius:12px;background:#101827;color:white;font-size:13px;box-shadow:0 4px 16px #0003}.speech-status[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -269,10 +270,16 @@ function renderOutingBasics(){
 function guideCountries(date){return (D.travelGuide?.dayCountries?.[date]||[]).map(code=>D.travelGuide.countries.find(c=>c.code===code)).filter(Boolean)}
 function guideBlogs(date='',key=''){return (D.travelGuide?.blogs||[]).filter(b=>(!date||b.dates.includes(date))&&(!key||b.placeKeys.includes(key)))}
 function guideSources(list){return '<div class="outing-sources">'+list.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.name)+' ↗</a>').join('')+'</div>'}
-function phraseRows(rows,lang=''){return '<div class="phrase-table">'+rows.map(p=>'<div class="phrase-row"><div>'+esc(p[0])+'</div><div><span class="phrase-native" lang="'+esc(lang)+'">'+esc(p[1])+'</span>'+(p[3]?'<span class="phrase-ipa">IPA '+esc(p[3].ipa)+'</span><span class="phrase-reading">英文拼讀 <span lang="en">'+esc(p[3].reading)+'</span></span>':'')+(p[2]?'<small>'+esc(p[2])+'</small>':'')+'</div></div>').join('')+'</div>'}
+function phraseAudioOptions(s,lang){
+ if(lang==='pl'&&s.includes('Pan/Pani'))return [['Pan',s.replace('Pan/Pani','Pan')],['Pani',s.replace('Pan/Pani','Pani')]];
+ if(s.includes(' / '))return s.split(' / ').map(x=>[x,x]);
+ return [['發音',s]];
+}
+function phraseRows(rows,lang=''){return '<div class="phrase-table">'+rows.map(p=>'<div class="phrase-row"><div>'+esc(p[0])+'</div><div><span class="phrase-native" lang="'+esc(lang)+'">'+esc(p[1])+'</span><div class="phrase-audio">'+phraseAudioOptions(p[1],lang).map(([label,value])=>'<button type="button" class="phrase-speak" data-speak="'+esc(value)+'" data-speak-lang="'+esc(lang)+'" aria-label="'+esc('朗讀 '+value)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3Z"/><path d="M16 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/></svg><span>'+esc(label)+'</span></button>').join('')+'</div>'+(p[3]?'<span class="phrase-ipa">IPA '+esc(p[3].ipa)+'</span><span class="phrase-reading">英文拼讀 <span lang="en">'+esc(p[3].reading)+'</span></span>':'')+(p[2]?'<small>'+esc(p[2])+'</small>':'')+'</div></div>').join('')+'</div>'}
+
 function referenceCards(list){return list.map(b=>'<article class="reference-card"><h4>'+esc(b.title)+'</h4><div class="reference-meta">'+esc(b.author)+' · '+esc(b.language||'英文')+'<br>文章：'+esc(b.articleDate)+'<br>旅行：'+esc(b.travelDate)+'<br>'+esc(b.disclosure)+'</div><p><b>可參考：</b>'+esc(b.takeaway)+'</p><p class="reference-difference"><b>與你行程的差異：</b>'+esc(b.difference)+'</p><a href="'+esc(b.url)+'" target="_blank" rel="noopener">閱讀原遊記 ↗</a>'+(b.officialCheck?' · <a href="'+esc(b.officialCheck.url)+'" target="_blank" rel="noopener">'+esc(b.officialCheck.name)+' ↗</a>':'')+'</article>').join('')}
 function pronunciationHelp(c){const g=D.travelGuide.pronunciationGuide;return '<details class="travel-details pronunciation-help"><summary>發音提示 · '+esc(c.language)+'</summary><div class="travel-content"><p class="outing-caption">'+esc(g.note)+'</p>'+outingList(c.pronunciationHints)+'<h4>英文拼讀怎麼看</h4>'+outingList(g.key)+'<p class="outing-caption">音系與發音教學參考；小抄音標依基本讀法編寫，並非來源的逐句錄音轉寫。</p>'+guideSources(c.pronunciationSources)+'</div></details>'}
-function renderSituations(c){return '<details class="travel-details local-situations"><summary>當地語情境小抄 · 飯店／停車／拍照／結帳<span class="badge">'+esc(c.language)+' · 12 句</span></summary><div class="travel-content"><p class="outing-caption">左欄為中文；右欄依序是當地語、IPA 音標與英文拼讀。大寫表示重音；特殊音請展開「發音提示」。</p>'+phraseRows(c.situations,c.lang)+'<p class="outing-caption">句型參考；部分依本次三人、兩間房的情境改寫。</p>'+guideSources(c.languageSources)+'</div></details>'}
+function renderSituations(c){return '<details class="travel-details local-situations"><summary>當地語情境小抄 · 飯店／停車／拍照／結帳<span class="badge">'+esc(c.language)+' · 12 句</span></summary><div class="travel-content"><p class="outing-caption">左欄為中文；右欄是當地語、發音按鈕、IPA 音標與英文拼讀。點一下播放，再點停止。大寫表示重音；特殊音請展開「發音提示」。</p>'+phraseRows(c.situations,c.lang)+'<p class="outing-caption">句型參考；部分依本次三人、兩間房的情境改寫。</p>'+guideSources(c.languageSources)+'</div></details>'}
 function renderDayCulture(d){
   const list=guideCountries(d.date);if(!list.length)return '';
   return '<details class="travel-details day-culture"><summary>當地文化 · 語言與地雷<span class="badge">'+esc(list.map(c=>c.name).join(' → '))+'</span></summary><div class="travel-content">'+list.map(c=>'<div class="country-mini"><h4>'+esc(c.name)+' · '+esc(c.currency)+'</h4>'+pronunciationHelp(c)+phraseRows([c.phrases[0],c.phrases[2]],c.lang)+outingList(c.quick)+renderSituations(c)+'<button type="button" class="photo-link" data-country-link="'+esc(c.code)+'">完整文化與語言小抄</button></div>').join('')+'</div></details>';
@@ -741,6 +748,33 @@ initGuide();renderDayTabs();renderTransportGuide();renderDays();renderPlaces();r
  stage.addEventListener('touchend',e=>{if(e.touches.length<2)pinchStart=0});
  stage.addEventListener('touchcancel',()=>{pinchStart=0});
  document.addEventListener('click',e=>{const link=e.target.closest('.trip-map-image,.timeline-photo>a');const source=link?.querySelector('img')||e.target.closest('.place-gallery img,.day-cover');if(!source)return;e.preventDefault();openImage(source)});
+})();
+</script>
+<div id="speechStatus" class="speech-status" role="status" aria-live="polite" hidden></div>
+<script>
+(function(){
+ const synth=window.speechSynthesis,status=document.getElementById('speechStatus');
+ const locales={hu:'hu-HU',sk:'sk-SK',pl:'pl-PL',de:'de-AT'};
+ let active=null,utterance=null,serial=0,timer;
+ function notify(message){clearTimeout(timer);status.textContent=message;status.hidden=false;timer=setTimeout(()=>{status.hidden=true},4500)}
+ function reset(){if(active)active.setAttribute('aria-pressed','false');active=null;utterance=null}
+ function stop(){serial++;if(synth)synth.cancel();reset()}
+ function chooseVoice(lang){const voices=synth.getVoices(),locale=locales[lang]||lang;const same=voices.filter(v=>v.lang.toLowerCase().split(/[-_]/)[0]===lang);return same.find(v=>v.lang.toLowerCase()===locale.toLowerCase()&&v.localService)||same.find(v=>v.lang.toLowerCase()===locale.toLowerCase())||same.find(v=>v.localService)||same[0]}
+ if(synth){synth.getVoices();synth.addEventListener?.('voiceschanged',()=>synth.getVoices())}
+ document.addEventListener('click',e=>{
+  const btn=e.target.closest('.phrase-speak');if(!btn)return;
+  if(!synth||!window.SpeechSynthesisUtterance){notify('此瀏覽器不支援語音朗讀，請參考音標。');return}
+  if(active===btn){stop();return}
+  stop();const lang=btn.dataset.speakLang,voice=chooseVoice(lang),id=serial;
+  if(!voice&&synth.getVoices().length){notify('裝置沒有此語言的朗讀語音，請到 iPhone 設定下載對應語音。');return}
+  const u=new SpeechSynthesisUtterance(btn.dataset.speak);u.lang=voice?.lang||locales[lang]||lang;if(voice)u.voice=voice;u.rate=0.8;u.pitch=1;
+  active=btn;utterance=u;btn.setAttribute('aria-pressed','true');
+  u.onend=()=>{if(id===serial)reset()};
+  u.onerror=e=>{if(id!==serial)return;reset();if(e.error!=='canceled'&&e.error!=='interrupted')notify('語音無法播放，請確認音量及該語言語音是否已下載。')};
+  try{synth.speak(u)}catch{reset();notify('語音無法播放，請稍後再試。')}
+ });
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+ window.addEventListener('pagehide',stop);
 })();
 </script>
 </body>
